@@ -1,0 +1,32 @@
+---
+layout: page
+title: Havanna
+tagline: 聪明难，难的是如何耍聪明，糊涂难，要想装糊涂难上加难。聪明人装糊涂，无非不就是耍聪明。
+---
+{% include JB/setup %}
+
+<h3>Latest Articles</h3>
+<!-- This loops through the paginated posts -->
+<ul class="posts">
+  {% for post in paginator.posts %}
+    <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> <span>&rarr; {{ post.date | date_to_string }}</span></li>
+  {% endfor %}
+</ul>
+
+<!-- Pagination links -->
+<div class="pagination btn-group">
+  {% if paginator.previous_page %}
+  {% if paginator.page == 2 %}
+    <a class="btn prev" href="/" >&larr; Previous</a>
+  {% else %}
+    <a class="btn prev" href="/page{{ paginator.previous_page }}">&larr; Previous</a>
+  {% else if paginator.page == 1 %}
+    <a class="btn disabled prev">&larr; Previous</a>
+    {% endif %}{% endif %}
+  <a class="btn" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
+  {% if paginator.next_page %}
+    <a class="btn next" href="/page{{ paginator.next_page }}">Next &rarr;</a>
+  {% else %}
+    <a class="btn next disabled">Next &rarr;</span>
+  {% endif %}
+</div>
