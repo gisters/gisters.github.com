@@ -2,6 +2,7 @@
 layout: post
 title: "GnuPG 介绍"
 description: "GnuPG 是实现安全通信和数据存储的一系列工具集，可以做加密数据和做数字签名之用"
+keywords: "gnupg, pgp, 密钥, 公钥"
 category: Linux
 tags: [GnuPG, Keys, Public]
 ---
@@ -11,6 +12,7 @@ tags: [GnuPG, Keys, Public]
 ![Mutt GnuPG](/assets/images/2012/07/mutt-gnupg.png "Mutt GnuPG")
 
 PGP（Pretty Good Privacy），是一个基于 RSA 公钥加密体系的邮件加密软件。它不但可以对用户的数据保密以防止非授权者阅读，还能对用户的邮件加上数字签名从而使收 信人确信邮件是由该用户发出。让人们可以安全地和从未见过的人们通信，而事先不需要任何保密的渠道用来传递密钥。PGP 采用了审慎的密钥管理，一种 RSA 和传统加密的杂合算法，用于数字签名的邮件文摘算法，加密前压缩等。它功能强大，速度很快。
+
 <!-- more -->
 GnuPG 是实现安全通信和数据存储的一系列工具集，可以做加密数据和做数字签名之用。在功能上，它和 PGP 是 一样的。由于 PGP 使用了 IDEA 专利算法，所以使用 PGP 会有许可证的麻烦。但是 GnuPG 并没有使用这个算法，所以对用户来说使用 GnuPG 没有任何 限制。GnuPG 使用非对称加密算法，安全程度比较高。GnuPG 主要有以下特点：
 

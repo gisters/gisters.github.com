@@ -2,6 +2,7 @@
 layout: post
 title: "Arch 升级 Filesystem 的小问题"
 description: "Arch 升级 Filesystem 的小问题"
+keywords: arch, filesystem, linux, initscripts
 category: Linux
 tags: [Arch, Filesystem]
 ---

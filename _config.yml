@@ -5,7 +5,7 @@ permalink: /:categories/:year-:month/:title.html
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
-paginate: 20
+paginate: 5
 
 markdown: redcarpet
 
@@ -14,6 +14,7 @@ markdown: redcarpet
 #
 title : Havanna's Space
 tagline: Site Tagline
+keywords : linux, gentoo, httpd, browser, internet, media, sql, news, jekyll, havanna
 author :
   name : Havanna
   email : 
@@ -85,7 +86,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : duoshuo
+    provider : custom
     disqus :
       short_name : 
     livefyre :
@@ -98,21 +99,14 @@ JB :
       width: 580
       colorscheme: light
     duoshuo : 
-      short_name : havanna
-      asides_num : 10
-      asides_avatars : 0
-      asides_time : 0
-      asides_title : 0
-      asides_admin : 0
-      asides_length : 18
+      name : havanna
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
   #        
   analytics :
-    provider : baidu
-    baidu : 
+    provider : custom
     google : 
         tracking_id : 'UA-123-12'
     getclicky :

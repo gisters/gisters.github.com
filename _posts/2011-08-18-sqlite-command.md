@@ -2,15 +2,17 @@
 layout: post
 title: "SQLite 命令"
 description: "不管是工作或者个人自娱自乐写东西，只要有数据存储首先就想到了sqlite"
+keywords: sqlite, 命令, xml
 category: SQL
 tags: [SQL, CLI, Usage]
 ---
 {% include JB/setup %}
 
-![](/assets/images/2011/08/sqlite3.png  "sqlite3")
+![Sqlite3](/assets/images/2011/08/sqlite3.png  "sqlite3")
 
 最近使用 sqlite 较多，这东西现在是越用越着迷，不管是工作或者个人自娱自乐写东西，只要有数据存储首先就想到了 sqlite
 
+<!-- more -->
 我一直对 C/S 模式的数据存储很反感，记得在知道 sqlite 之前的很长一段时间里一直用的是 xml 来存数我的数据，我喜欢将数据存储在单一文件里，我可以随时把数据带在身上，而且它们兼容性够好，拿着数据文件到那里都能用，哪怕是在嵌入式系统里照样玩儿的转…
 
 ## SQLite特性
@@ -28,7 +30,6 @@ tags: [SQL, CLI, Usage]
 -    独立: 没有额外依赖
 -    Source完全的Open, 你可以用于任何用途, 包括出售它
 -    支持多种开发语言,C, PHP, Perl, Java, ASP.NET,Python
-<!-- more -->
 ## Sqlite安装
 
 现在各大Linux发型版均有现成的软件包可供安装，而且大部份系统都是自带有的，想确认系统里有没有运行下

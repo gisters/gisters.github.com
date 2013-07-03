@@ -2,6 +2,7 @@
 layout: post
 title: "Convert 常用方法"
 description: "Convert 是 ImageMagick 中的一个常用组件"
+keywords: convert, imagemagick
 category: Linux
 tags: [Convert, Media, Usage]
 ---

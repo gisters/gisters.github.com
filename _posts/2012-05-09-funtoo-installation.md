@@ -2,6 +2,7 @@
 layout: post
 title: "Funtoo 快速安装"
 description: "Funtoo 快速安装"
+keywords: funtoo, gentoo, daniel robbins
 category: Linux
 tags: [Funtoo, Installation]
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: "为 Octopress 添加多说评论系统"
 description: "自带的 `disqus` 自定义选项很少，不能很好的融入到模板中，主要是加载速度实在是缓慢到无法忍受，于是找了个国内的 `duoshuo` 社会化评论插件来使用。"
+keywords: "Octopress, 多说, 添加, 评论, disqus"
 category: Internet
 tags: [Octopress, duoshuo, disqus]
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: "Gentoo 中用 mariadb 替换 mysql"
 description: "Gentoo 中用 mariadb 替换 mysql"
+keywords: Gentoo,mariadb,mysql,替换
 category: SQL
 tags: [SQL, Gentoo]
 ---

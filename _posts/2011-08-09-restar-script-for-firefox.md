@@ -2,6 +2,7 @@
 layout: post
 title: "Firefox 重启脚本"
 description: "脚本的作用：在app menu菜单下增加一个restart firefox项，与快捷键重启firefox。"
+keywords: firefox, restart, 重启, 脚本
 category: Internet
 tags: [Firefox, UserChrome]
 ---

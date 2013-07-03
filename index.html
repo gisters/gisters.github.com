@@ -1,32 +1,45 @@
 ---
-layout: page
+layout: index
 title: Havanna
+description: Havanna's Hobbies, Linux Tips Record。
 tagline: 聪明难，难的是如何耍聪明，糊涂难，要想装糊涂难上加难。聪明人装糊涂，无非不就是耍聪明。
 ---
-{% include JB/setup %}
 
-<h3>Latest Articles</h3>
-<!-- This loops through the paginated posts -->
-<ul class="posts">
-  {% for post in paginator.posts %}
-    <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> <span>&rarr; {{ post.date | date_to_string }}</span></li>
-  {% endfor %}
-</ul>
+{% for post in paginator.posts %}
+<div class="wrapper">
+    <h2 class="h2 entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    {% if post.content contains "<!-- more -->" %}
+      {{ post.content | split:'<!-- more -->' |first }}
+    {% else %}
+      {{ post.content | strip_html | truncatewords:50 }}
+    {% endif %}
+
+    {% if post.content contains "<!-- more -->" %}
+      <p><a class="btn btn-inverse" href="{{ post.url }}" class="more-link"><span class="readmore">Read More &raquo; </span></a></p>
+      <hr></hr>
+    {% endif %}
+</div>
+{% endfor %}
 
 <!-- Pagination links -->
-<div class="pagination btn-group">
+<div id="pagination" style="text-align:right;">
+  <a class="btn btn-inverse" href="/">Home</a>
   {% if paginator.previous_page %}
-  {% if paginator.page == 2 %}
-    <a class="btn prev" href="/" >&larr; Previous</a>
+    {% if paginator.previous_page == 1 %}
+    <a class="btn btn-inverse" href="/" class="current">&larr; prev</a>
+    {% else %}
+    <a class="btn btn-inverse" href="/page{{paginator.previous_page}}/">&larr; prev</a>
+    {% endif %}
   {% else %}
-    <a class="btn prev" href="/page{{ paginator.previous_page }}">&larr; Previous</a>
-  {% else if paginator.page == 1 %}
-    <a class="btn disabled prev">&larr; Previous</a>
-    {% endif %}{% endif %}
-  <a class="btn" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
-  {% if paginator.next_page %}
-    <a class="btn next" href="/page{{ paginator.next_page }}">Next &rarr;</a>
-  {% else %}
-    <a class="btn next disabled">Next &rarr;</span>
+    <span><a class="btn btn-inverse">&larr; prev</a></span>
   {% endif %}
+  <a class="btn btn-inverse" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
+  {% if paginator.next_page %}
+    <a class="btn btn-inverse" href="/page{{paginator.next_page}}/">Next &rarr;</a>
+  {% else if paginator.page == paginator.total_pages %}
+    <span><a class="btn btn-inverse disabled">Next &rarr;</span>
+  {% else %}
+    <span><a class="btn btn-inverse">Next &rarr;</span>
+  {% endif %}
+  <a class="btn btn-inverse" href="/page{{paginator.total_pages}}/">Last</a>
 </div>

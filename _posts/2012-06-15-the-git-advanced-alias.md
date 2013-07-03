@@ -2,6 +2,7 @@
 layout: post
 title: "Git 进阶：alias"
 description: "Git 进阶：alias"
+keywords: git, alias, linux, shell, config
 category: Linux
 tags: [Git, Usage]
 ---

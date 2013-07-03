@@ -2,6 +2,7 @@
 layout: post
 title: "Linux 解决文件名乱码"
 description: "在 Linux 下解决文件名乱码"
+keywords: Linux, 乱码, 文件名
 category: Linux
 tags: [Garbled]
 ---
@@ -15,12 +16,13 @@ tags: [Garbled]
     $ ls -li *.mp3
     2428 -rw-r--r-- 1 havanna users 0 Jun 26 11:24 ????.mp3
     $ find . -inum 2428 -exec rm {} +
+
+<!-- more -->
 or
+
     $ rm -- ????.mp3
 
 ### 需要转码：一般情况下，我们碰到的乱码基本原来都是 GBK 编码的，所以这里我们使用个工具 convmv 来解决
-
-<!-- more -->
 
     $ ls -l
     total 0

@@ -2,6 +2,7 @@
 layout: post
 title: "Steam for Linux 问题与解决"
 description: "Vala 正式发布了其 Linux 版本的平台 Steam。悲催的我在其打折前一晚购买了几款游戏。"
+keywords: Steam, Linux, Gentoo, 游戏
 category: Linux
 tags: [Steam, Gentoo, Game]
 ---

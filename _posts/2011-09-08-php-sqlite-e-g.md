@@ -2,6 +2,7 @@
 layout: post
 title: "PHP SQLite 示例"
 description: "介绍下 SQLite API 所支持的重要方法，提供一个能够用在你开发中的简单脚本模板，从而告诉你如何使用 PHP 与 SQLite 数据库进行交互操作"
+keywords: php, sqlite, 示例, api, 方法
 category: SQL
 tags: [PHP, SQL, Usage]
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: "Vsftpd 建立虚拟用户"
 description: "Vsftpd 建立虚拟用户"
+keywords: vsftpd, virtual, 虚拟, 用户
 category: Linux
 tags: [Vsftpd, Virtual]
 ---
@@ -19,6 +20,7 @@ centos 需要安装一下两个软件包
     user2
     passwd2
 
+<!-- more -->
 生成虚拟用户
 
     # rm -rf /etc/vsftpd/vsftpd.db
@@ -31,7 +33,6 @@ centos 需要安装一下两个软件包
     auth required /lib/security/pam_userdb.so db=/etc/vsftpd/vsftpd crypt=hash
     account required /lib/security/pam_userdb.so db=/etc/vsftpd/vsftpd crypt=hash
 
-<!-- more -->
 添加宿主虚拟用户
 
     # useradd -d /var/ftp -s /sbin/nologin ftpuser

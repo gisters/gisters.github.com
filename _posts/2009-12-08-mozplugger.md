@@ -2,6 +2,7 @@
 layout: post
 title: "MozPlugger 使用"
 description: "mozplugger 是一款 linux 下的 browser 插件"
+keywords: "mozplugger, linux, browser"
 category: Linux
 tags: [Mozplugger, Browser, Usage]
 ---
@@ -13,8 +14,9 @@ arch用户得益于aur，直接
 
     $ yaourt -S mozplugger
 
+<!-- more -->
 不过呢，使用下来发现，播放在线音频，譬如 `mp3`，它都是下载完成后再播放的，于是看了下 mozplugger 的配置文件，很简单的脚本嘛
-直接 cp 了一份到 `~/.mozplugger/mozpluggerrc`，vim 或其他编辑器打开该文件<!-- more -->
+直接 cp 了一份到 `~/.mozplugger/mozpluggerrc`，vim 或其他编辑器打开该文件
 
 其中把
 

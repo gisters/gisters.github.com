@@ -2,6 +2,7 @@
 layout: post
 title: "KVM 内核虚拟化"
 description: "KVM(Kernel-based Virtual Machine) 是一个全虚拟化的解决方案，它自 2.6.20 以后正式成为 Linux 内核的一部分，也就是说，它是 Linux 内核官方支持的一个虚拟化方案"
+keywords: kvm, 内核, 虚拟化
 category: Linux
 tags: [KVM, Kernel, Virtual]
 ---

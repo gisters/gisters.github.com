@@ -2,6 +2,7 @@
 layout: post
 title: "Fontconfig 升级到 2.10.1 后"
 description: "Fontconfig 升级到 2.10.1 后"
+keywords: fontconfig, archlinux
 category: Linux
 tags: [Fontconfig]
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: "SQLite 命令行程序说明"
 description: "SQLite 库包含一个名字叫做 sqlite3 的命令行,它可以让用户手工输入并执行面向 SQLite 数据库的 SQL 命令。本文档提供一个样使用sqlite3 的简要说明"
+keywords: sqlite, 命令, 说明, sql
 category: SQL
 tags: [SQL, CLI, Usage]
 ---
@@ -12,6 +13,7 @@ SQLite 库包含一个名字叫做 sqlite3 的命令行,它可以让用户手工
 ## 开始
 
 启动 sqlite3 程序，仅仅需要敲入带有 SQLite 数据库名字的 `sqlite3` 命令即可。如果文件不存在，则创建一个新的（数据库）文件。然后 sqlite3 程序将提示你输入 SQL。敲入 SQL 语句（以分号“；”结束），敲回车键之后，SQL 语句就会执行。
+
 <!-- more -->
 例如，创建一个包含一个表 ”tb11″ 名字为 ”ex1″ 的 SQLite 数据库，你可以这样做：
 

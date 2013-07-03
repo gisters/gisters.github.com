@@ -1,0 +1,55 @@
+<div class="page-header-wrapper">
+	<div class="page-header">
+  		<h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+  	</div>
+</div>
+
+<div class="row">
+  <div class="span8">
+    {{ content }}
+  </div>
+
+  <div class="span4">
+      <section>
+        <span>
+        <iframe width="300" height="450" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?&width=300&height=450&fansRow=2&ptype=1&speed=0&skin=10&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2074421551&verifier=8aeb337e&colors=282828,282828,bbbbbb,4CB4E8,262626&dpc=1"></iframe>
+        </span>
+      </section>
+
+      <hr></hr>
+
+      <!--<section>
+        <h3>Categories</h3>
+        <span class="category">
+          <ul>
+          {% assign categories_list = site.categories %}
+          {% include JB/categories_list %} 
+          </ul>
+        </span>
+      </section>
+
+      <hr></hr>-->
+
+      <section>
+        <h3>Latest Comments</h3>
+        <span class="category">
+          <ul class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="18"></ul>
+        </span>
+      </section>
+
+      <section style="width:250px;">
+        <h3>Recently Visitors</h3>
+          <ul class="ds-recent-visitors" data-num-items="4" data-avatar-size="45" style="margin-top:10px;"></ul>
+      </section>
+
+      <hr></hr>
+
+      <section>
+        <h3>Links</h3>
+          <ul>
+            <li><a href="http://www.gentoo.org.cn" target="_blank">Gentoo 中文社区</a></li>
+            <li><a href="http://phpcj.org" target="_blank">清风的网络空间</a></li>
+          </ul>
+      </section>
+  </div>
+</div>

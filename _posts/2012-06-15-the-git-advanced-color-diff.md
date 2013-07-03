@@ -2,6 +2,7 @@
 layout: post
 title: "Git 进阶：color/diff"
 description: "gentoo 默认的 git 真的很朴素，默认配置实在是太简单了。"
+keywords: git, color, diff, gentoo
 category: Linux
 tags: [Git, Usage]
 ---

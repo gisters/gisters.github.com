@@ -2,6 +2,7 @@
 layout: post
 title: "PPTP 的使用"
 description: "首页用包管理器去安装pptpclient，名称可能有所不同，用包管理器的好处是无需自己编译，依赖等一并解决"
+keywords: pptp, pptpclient, 配置
 category: Linux
 tags: [pptp, Configuration, CLI]
 ---
@@ -13,8 +14,9 @@ tags: [pptp, Configuration, CLI]
 
     # pptpsetup --create vpncup --server f.vpncup.com --username havanna --password 123456 --encrypt
 
-![pptp 1](/assets/images/2011/08/1.png "pptp 1")<!-- more -->
+![pptp 1](/assets/images/2011/08/1.png "pptp 1")
 
+<!-- more -->
 完毕后的配置文件类似于
 
     # cat /etc/ppp/peers/vpncup

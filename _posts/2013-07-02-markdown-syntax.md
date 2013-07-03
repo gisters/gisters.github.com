@@ -2,6 +2,7 @@
 layout: post
 title: "Markdown 语法说明"
 description: "Markdown 语法说明"
+keywords: markdown, 语法, 说明, 方法
 category: Internet
 tags: [Markdown, Syntax, Usage]
 ---
@@ -18,6 +19,8 @@ tags: [Markdown, Syntax, Usage]
     *   [列表](#list)
     *   [代码区块](#precode)
     *   [分隔线](#hr)
+
+<!-- more -->
 *   [区段元素](#span)
     *   [链接](#link)
     *   [强调](#em)

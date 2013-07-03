@@ -2,6 +2,7 @@
 layout: post
 title: "Nginx 伪静态"
 description: "Nginx 伪静态"
+keywords: nginx, rewrite, wordpress, joomla, uchome, 伪静态
 category: Internet
 tags: [Nginx, Rewrite, Wordpress, Joomla, UChome]
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: "UChome 防注册机"
 description: "uchome 防注册机"
+keywords: "uchome, 注册机"
 category: Internet
 tags: [UChome, RI, Usage]
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: "Gentoo 下 root 你的 Android 设备"
 description: "Gentoo 下 root 你的 Android 设备"
+keywords: gentoo, android, root
 category: Linux
 tags: [Gentoo, Android]
 ---

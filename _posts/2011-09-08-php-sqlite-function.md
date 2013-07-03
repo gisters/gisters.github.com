@@ -2,6 +2,7 @@
 layout: post
 title: "PHP SQLite 函数库"
 description: "PHP SQlite数据库对于拥有相当经验的PHP程序员来说是不会陌生的，但是要想完全掌握PHP SQlite数据库的相关函数的应用也不是一件易事"
+keywords: php, sqlite, 函数
 category: SQL
 tags: [PHP, SQL, Function]
 ---
