@@ -22,24 +22,25 @@ tagline: 聪明难，难的是如何耍聪明，糊涂难，要想装糊涂难�
 {% endfor %}
 
 <!-- Pagination links -->
-<div id="pagination" style="text-align:right;">
-  <a class="btn btn-inverse" href="/">Home</a>
+<div class="pagination pagination-right">
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-    <a class="btn btn-inverse" href="/" class="current">&larr; prev</a>
+    <a class="btn" href="/">Home</a>
+    <a class="btn" href="/">&laquo; prev</a>
     {% else %}
-    <a class="btn btn-inverse" href="/page{{paginator.previous_page}}/">&larr; prev</a>
+    <a class="btn" href="/">Home</a>
+    <a class="btn" href="/page{{paginator.previous_page}}/">&laquo; prev</a>
     {% endif %}
   {% else %}
-    <span><a class="btn btn-inverse">&larr; prev</a></span>
+    <span><a class="btn disabled prev" href="/">Home</a></span>
+    <span><a class="btn disabled prev">&laquo; prev</a></span>
   {% endif %}
-  <a class="btn btn-inverse" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
+  <span><a class="btn disabled">Page: {{paginator.page}} of {{paginator.total_pages}}</a></span>
   {% if paginator.next_page %}
-    <a class="btn btn-inverse" href="/page{{paginator.next_page}}/">Next &rarr;</a>
+    <a class="btn" href="/page{{paginator.next_page}}/">Next &raquo;</a>
+    <a class="btn" href="/page{{paginator.total_pages}}/">Last</a>
   {% else if paginator.page == paginator.total_pages %}
-    <span><a class="btn btn-inverse disabled">Next &rarr;</span>
-  {% else %}
-    <span><a class="btn btn-inverse">Next &rarr;</span>
+    <span><a class="btn disabled">Next &raquo;</span>
+    <span><a class="btn disabled">Last</a></span>
   {% endif %}
-  <a class="btn btn-inverse" href="/page{{paginator.total_pages}}/">Last</a>
 </div>

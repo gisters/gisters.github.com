@@ -2,7 +2,7 @@
 layout: post
 title: "为 Jekyll 添加多说评论系统"
 description: "为 Jekyll 添加多说评论系统"
-keywords: jekyll, 添加, 多说, 评论
+keywords: jekyll, 添加, 多说, 评论, duoshuo
 category: Internet
 tags: [Jekyll, duoshuo]
 ---
@@ -84,3 +84,4 @@ OK，完成手工。
           <ul class="ds-recent-visitors" data-num-items="4" data-avatar-size="45" style="margin-top:10px;"></ul>
       </section>
 ```
+

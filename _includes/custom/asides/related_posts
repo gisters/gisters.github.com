@@ -1,0 +1,9 @@
+      <section>
+        <h3>Related Posts</h3>
+        <ul class="tag_box">
+          {% for post in site.related_posts limit:10 %}
+          <li><a href="{{ BASE_PATH }}{{ post.url }} ">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+      <hr></hr>

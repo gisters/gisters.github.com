@@ -1,0 +1,7 @@
+      <section style="width:250px;">
+        <h3>License</h3>
+        <span>
+          <img width="88px" height="31px" alt="License" src="{{ site.production_url }}/assets/images/CC.png"style="margin-top: 10px;">
+          <p style="line-height:150%;">本站所有作品采用 <a href="http://www.creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">署名-非商业性使用-相同方式共享 3.0 中国大陆</a> 进行协议授权，转载请注明出处。</p>
+        </span>
+      </section>
