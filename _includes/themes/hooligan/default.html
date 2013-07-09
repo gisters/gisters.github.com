@@ -63,6 +63,11 @@
             </ul>
             <ul class="nav pull-right social visible-desktop">
               <li class="divider-vertical"></li>
+              <li>
+                <a href="{{ site.production_url }}/rss.xml" class="zocial rss icon" target="_blank">
+                  <span class="hidden-desktop">RSS</span>
+                </a>
+              </li>
               {% if site.author.github %}
                 <li>
                   <a href="https://github.com/{{ site.author.github }}" class="zocial github icon" target="_blank">
@@ -113,6 +118,9 @@
                 </li>
               {% endif %}
             </ul>
+            <form class="navbar-search pull-right" onsubmit="tmtxt_search_google()" >
+              <input type="text" id="tmtxt-google-search" class="search-query" placeholder="Google Search">
+            </form>
           </div>
         </div>
       </div>
@@ -135,19 +143,9 @@
     <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>
     <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
 
-    <!--多说js加载开始，一个页面只需要加载一次 -->
-    <script type="text/javascript">
-      var duoshuoQuery = {short_name:"{{ site.JB.comments.duoshuo.name }}"};
-      (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = 'http://static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-    </script>
-    <!--多说js加载结束，一个页面只需要加载一次 -->
-
+    {% include custom/search %}
+    {% include custom/duoshuo %}
+    {% include custom/sharing %}
     {% include JB/analytics %}
   </body>
 </html>

@@ -33,7 +33,6 @@ title : Sitemap
       <loc>{{ site.production_url }}{{ post.url }}</loc>
       <changefreq>daily</changefreq>
       <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-
       <priority>1.0</priority>
     </url>
     {% endfor %}

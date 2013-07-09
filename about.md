@@ -6,7 +6,7 @@ group: navigation
 ---
 {% include JB/setup %}
 
-## 友情链接的请留言，或 [@Havanna](http://weibo.com/havanna) 私信本人
+### 友情链接的请留言，或 [@Havanna](http://weibo.com/havanna) 私信本人。
 
 #### About me | 关于我
 

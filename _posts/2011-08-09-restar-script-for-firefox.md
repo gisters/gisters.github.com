@@ -10,8 +10,9 @@ tags: [Firefox, UserChrome]
 
 脚本的作用：在 `app menu` 菜单下增加一个 `restart firefox` 项，与快捷键重启 firefox。
 
-`appmenu` 上居然没有了，快捷键也冲突，所以改了下，`ctrl_shift_z` 为重启，`appmenu` 上也有重启菜单了，很简单的修改。<!-- more -->
+`appmenu` 上居然没有了，快捷键也冲突，所以改了下，`ctrl_shift_z` 为重启，`appmenu` 上也有重启菜单了，很简单的修改。
 
+<!-- more -->
 ```javascript
 // ==UserScript==
 // @name         Restart Firefox

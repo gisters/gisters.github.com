@@ -6,4 +6,4 @@
           {% endfor %}
         </ul>
       </section>
-      <hr></hr>
+      <hr>

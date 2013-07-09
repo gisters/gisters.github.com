@@ -1,6 +1,5 @@
 ---
 layout: index
-title: Havanna
 description: Havanna's Hobbies, Linux Tips Record。
 tagline: 聪明难，难的是如何耍聪明，糊涂难，要想装糊涂难上加难。聪明人装糊涂，无非不就是耍聪明。
 ---
@@ -16,7 +15,7 @@ tagline: 聪明难，难的是如何耍聪明，糊涂难，要想装糊涂难�
 
     {% if post.content contains "<!-- more -->" %}
       <p><a class="btn btn-inverse" href="{{ post.url }}" class="more-link"><span class="readmore">Read More &raquo; </span></a></p>
-      <hr></hr>
+      <hr>
     {% endif %}
 </div>
 {% endfor %}
@@ -26,14 +25,14 @@ tagline: 聪明难，难的是如何耍聪明，糊涂难，要想装糊涂难�
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
     <a class="btn" href="/">Home</a>
-    <a class="btn" href="/">&laquo; prev</a>
+    <a class="btn" href="/">&laquo; Previous</a>
     {% else %}
     <a class="btn" href="/">Home</a>
-    <a class="btn" href="/page{{paginator.previous_page}}/">&laquo; prev</a>
+    <a class="btn" href="/page{{paginator.previous_page}}/">&laquo; Previous</a>
     {% endif %}
   {% else %}
     <span><a class="btn disabled prev" href="/">Home</a></span>
-    <span><a class="btn disabled prev">&laquo; prev</a></span>
+    <span><a class="btn disabled prev">&laquo; Previous</a></span>
   {% endif %}
   <span><a class="btn disabled">Page: {{paginator.page}} of {{paginator.total_pages}}</a></span>
   {% if paginator.next_page %}

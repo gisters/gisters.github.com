@@ -11,20 +11,32 @@
   <div class="span8">
     {{ content }}
     <hr>
-    <div class="pagination btn-group">
-      {% if page.previous %}
-        <a class="btn prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a>
-      {% else %}
-        <a class="btn disabled prev">&larr; Previous</a>
-      {% endif %}
-        <a class="btn" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
-      {% if page.next %}
-        <a class="btn next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a>
-      {% else %}
-        <a class="btn next disabled">Next &rarr;</a>
-      {% endif %}
+    <div class="row-fluid">
+      <div class="span8">
+        <div class="pagination btn-group">
+          {% if page.previous %}
+            <a class="btn prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a>
+          {% else %}
+            <a class="btn disabled prev">&larr; Previous</a>
+          {% endif %}
+            <a class="btn" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
+          {% if page.next %}
+            <a class="btn next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a>
+          {% else %}
+            <a class="btn next disabled">Next &rarr;</a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="span4">
+        <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" style="padding-top:12px;">
+          <a class="bds_tsina"></a>
+          <a class="bds_tqq"></a>
+          <a class="bds_t163"></a>
+          <a class="bds_renren"></a>
+          <span class="bds_more"></span>
+        </div>
+      </div>
     </div>
-    <hr>
     {% include JB/comments %}
   </div>
   
@@ -33,7 +45,7 @@
       <h3>Published</h3>
       <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
     </section>
-      <hr></hr>
+      <hr>
     {% if page.category %}
     <section>
     <h3>Category</h3>
@@ -41,7 +53,7 @@
       {{ page.category }}
     </span>
     </section>
-      <hr></hr>
+      <hr>
     {% endif %}
     {% unless page.tags == empty %}
       <section>
@@ -51,7 +63,7 @@
           {% include JB/tags_list %}
         </ul>
       </section>
-      <hr></hr>
+      <hr>
     {% endunless %}
     <!--{% include custom/asides/recently_posts %}-->
     {% include custom/asides/recently_visitors %}
