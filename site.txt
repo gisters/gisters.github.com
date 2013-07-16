@@ -1,6 +1,0 @@
-http://ihavanna.org/Linux/2013-02/steam-for-linux.html
-http://ihavanna.org/2012-06/version-bump-to-grub-2.html
-http://ihavanna.org/Internet/2013-01/migrate-from-wordpress-to-octopress.html
-http://ihavanna.org/news/628
-http://ihavanna.org/linux/431
-http://ihavanna.org/linux/217
