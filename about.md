@@ -6,8 +6,6 @@ group: navigation
 ---
 {% include JB/setup %}
 
-### 友情链接的请留言，或 [@Havanna](http://weibo.com/havanna) 私信本人。
-
 #### About me | 关于我
 
 由于工作圈子，Havanna，让人多次误认为 Havana (古巴首都名)。可是….当年第一次跨进大上海外资企业时，行政问我英文名，我那脑袋瓜子实在想不出啥好听的名字来，于是，借用当时混迹海外论坛时， 看到的一个ID，”Havanna”，于是，Havanna 就一直成为我英文名，并一直用下去。
@@ -30,4 +28,4 @@ CIO ( 首席信息官 )
 
 QQ:469696558
 
-Weibo: [@Havanna](http://weibo.com/ihavanna)
+Weibo: [@Havanna](http://weibo.com/Havanna)

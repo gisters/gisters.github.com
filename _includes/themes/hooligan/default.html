@@ -2,12 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>
-      {% if page.title %}
-        {{ page.title }} - 
-      {% endif %}
-      {{ site.title }}
-    </title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{%else%}<meta name="keywords" content="{{ site.keywords }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
@@ -22,9 +17,9 @@
     <meta name="baidu-site-verification" content="mtBrwPwXt5wnCQXD" />
     <meta name="google-site-verification" content="a9Rfnx25zuxyOLp55mRVh5MQCIYL59SCkluqFfuP440" />
 
-    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//libs.baidu.com/bootstrap/2.0.4/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
-    <link rel="stylesheet" type="text/css" href="{{ ASSET_PATH }}/css-social-buttons/css/zocial.stripped.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/pygments.css" rel="stylesheet" type="text/css" media="all">
     <link href="{{ ASSET_PATH }}/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
@@ -49,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>      
+          </a>
 
 
           <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
@@ -61,59 +56,45 @@
               {% assign group = 'navigation' %}
               {% include JB/pages_list %}
             </ul>
-            <ul class="nav pull-right social visible-desktop">
+            <ul class="nav pull-right visible-desktop">
               <li class="divider-vertical"></li>
               <li>
-                <a href="{{ site.production_url }}/rss.xml" class="zocial rss icon" target="_blank">
-                  <span class="hidden-desktop">RSS</span>
+                <a href="{{ site.production_url }}/rss.xml" target="_blank" title="RSS">
+                  <span class="icon-rss icon-large icon-border"></span>
                 </a>
               </li>
               {% if site.author.github %}
                 <li>
-                  <a href="https://github.com/{{ site.author.github }}" class="zocial github icon" target="_blank">
-                    <span class="hidden-desktop">Github</span>
+                  <a href="https://github.com/{{ site.author.github }}" target="_blank" title="Github">
+                    <span class="icon-github icon-large icon-border"></span>
                   </a>
                 </li>
               {% endif %}
               {% if site.author.googleplus %}
                 <li>
-                  <a href="https://plus.google.com/{{ site.author.googleplus }}" class="zocial googleplus icon" target="_blank">
-                    <span class="hidden-desktop">Google+</span>
+                  <a href="https://plus.google.com/{{ site.author.googleplus }}" target="_blank" title="Google+">
+                    <span class="icon-google-plus icon-large icon-border"></span>
                   </a>
                 </li>
-              {% endif %}    
+              {% endif %}
               {% if site.author.twitter %}
                 <li>
-                  <a href="https://twitter.com/{{ site.author.twitter }}" class="zocial twitter icon" target="_blank">
-                  <span class="hidden-desktop">Twitter</span>
+                  <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter">
+                  <span class="icon-twitter icon-large icon-border"></span>
                   </a>
                 </li>
-              {% endif %}                          
+              {% endif %}
               {% if site.author.facebook %}
                 <li>
-                  <a href="http://www.facebook.com/{{ site.author.facebook }}" class="zocial facebook icon" target="_blank">
-                    <span class="hidden-desktop">Facebook</span>
-                  </a>
-                </li>
-              {% endif %}           
-              {% if site.author.linkedin %}
-                <li>
-                  <a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" class="zocial linkedin icon" target="_blank">
-                    <span class="hidden-desktop">LinkedIn</span>
-                  </a>
-                </li>
-              {% endif %}                    
-              {% if site.author.feedburner %}
-                <li>
-                  <a href="http://feeds.feedburner.com/{{ site.author.feedburner }}" class="zocial rss icon" target="_blank">
-                    <span class="hidden-desktop">FeedBurner</span>
+                  <a href="http://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook">
+                    <span class="icon-facebook icon-large icon-border"></span>
                   </a>
                 </li>
               {% endif %}
               {% if site.author.weibo %}
                 <li>
-                  <a href="http://weibo.com/{{ site.author.weibo }}" class="zocial weibo icon" target="_blank">
-                    <span class="hidden-desktop">Weibo</span>
+                  <a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="Weibo">
+                    <span class="icon-weibo icon-large icon-border"></span>
                   </a>
                 </li>
               {% endif %}
@@ -132,16 +113,22 @@
       </div>
 
       <footer>
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-      with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>, <a href="http://twitter.github.com/bootstrap/" target="_blank" title="Twitter Bootstrap">Twitter Bootstrap</a>,
-          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
-        </p>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} <a href="http://www.miibeian.gov.cn/" target="_blank" title="沪ICP备13026530号-1">沪ICP备13026530号-1</a></p>
+        <p>Powered by <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>. Theme by <a href="https://github.com/dhulihan/hooligan" target="_blank" title="">Hooligan</a></p>
       </footer>
     </div> <!-- /container -->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>
-    <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//libs.baidu.com/bootstrap/2.0.4/js/bootstrap.min.js"></script>
+    <script src="//libs.baidu.com/webfont/1.3.0/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Trocchi', 'Open Sans']
+        }
+      });
+    </script>
 
     {% include custom/search %}
     {% include custom/duoshuo %}

@@ -12,6 +12,7 @@ tags: [Git, Usage]
 
 Gentoo 默认的 git 真的很朴素，默认配置实在是太简单了。
 
+<!-- more -->
 譬如 diff，譬如 color，
 
 我们还是先将 git 的颜色部分配置好吧。
@@ -38,8 +39,6 @@ Gentoo 默认的 git 真的很朴素，默认配置实在是太简单了。
     changed = green
     untracked = cyan
 ```
-
-<!-- more -->
 
 现在操作 `git status/diff/branch` 时是否眼前一亮？再也不用在白茫茫的一片中寻找信息了。
 

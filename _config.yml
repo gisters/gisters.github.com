@@ -5,7 +5,7 @@ permalink: /:categories/:year-:month/:title.html
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
-paginate: 5
+paginate: 3
 
 markdown: redcarpet
 
@@ -14,12 +14,13 @@ markdown: redcarpet
 #
 title : Havanna's Space
 tagline: Site Tagline
-keywords : linux, gentoo, httpd, browser, internet, media, sql, news, jekyll, havanna
+keywords : linux, gentoo, internet, sql, jekyll, havanna
 author :
   name : Havanna
   email : 
-  github : 
+  github : Ihavanna
   twitter : 
+  facebook : 
   feedburner : 
   weibo : Havanna
 

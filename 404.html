@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Page not found - Havanna's Space
-    </title>
+    <title>Page not found - Havanna's Space</title>
     <meta name="description" content="Havanna's Hobbies, Linux Tips Record。">
     <meta name="keywords" content="linux, gentoo, httpd, browser, internet, media, sql, news, jekyll, havanna">
     <meta name="author" content="Havanna">
@@ -18,15 +17,15 @@
     <meta name="baidu-site-verification" content="mtBrwPwXt5wnCQXD" />
     <meta name="google-site-verification" content="a9Rfnx25zuxyOLp55mRVh5MQCIYL59SCkluqFfuP440" />
 
-    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
-    <link rel="stylesheet" type="text/css" href="/assets/themes/hooligan/css-social-buttons/css/zocial.stripped.css">
-    <link href="/assets/themes/hooligan/css/pygments.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/assets/themes/hooligan/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
-    <link href="/assets/themes/hooligan/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="//libs.baidu.com/bootstrap/2.0.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="{{ ASSET_PATH }}/css-social-buttons/css/zocial.stripped.css">
+    <link href="{{ ASSET_PATH }}/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
+    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <link rel="shortcut icon" href="/favicon.png">
-    <link rel="canonical" href="http://ihavanna.org/" />
+    <link rel="canonical" href="{{ site.production_url }}{{ page.url | replace:'index.html','' }}" />
     <!-- fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.png">
@@ -61,27 +60,73 @@ function countDown(secs,surl){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>      
-          <a class="brand" href="/">Havanna's Space</a>
+          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
           <div class="nav-collapse">
-            <ul class="nav">	
-      	      <li><a href="/about.html">About</a></li>
-      	      <li><a href="/tags.html">Tags</a></li>
-      	      <li><a href="/categories.html">Categories</a></li>
-      	      <li><a href="/archive.html">Archive</a></li>
+            <ul class="nav">
+              {% assign pages_list = site.pages %}
+              {% assign group = 'navigation' %}
+              {% include JB/pages_list %}
             </ul>
             <ul class="nav pull-right social visible-desktop">
               <li class="divider-vertical"></li>
+              <li>
+                <a href="{{ site.production_url }}/rss.xml" class="zocial rss icon" target="_blank">
+                  <span class="hidden-desktop">RSS</span>
+                </a>
+              </li>
+              {% if site.author.github %}
                 <li>
-                  <a href="https://github.com/Ihavanna" class="zocial github icon" target="_blank">
+                  <a href="https://github.com/{{ site.author.github }}" class="zocial github icon" target="_blank">
                     <span class="hidden-desktop">Github</span>
                   </a>
                 </li>
+              {% endif %}
+              {% if site.author.googleplus %}
                 <li>
-                  <a href="http://weibo.com/Havanna" class="zocial weibo icon" target="_blank">
+                  <a href="https://plus.google.com/{{ site.author.googleplus }}" class="zocial googleplus icon" target="_blank">
+                    <span class="hidden-desktop">Google+</span>
+                  </a>
+                </li>
+              {% endif %}
+              {% if site.author.twitter %}
+                <li>
+                  <a href="https://twitter.com/{{ site.author.twitter }}" class="zocial twitter icon" target="_blank">
+                  <span class="hidden-desktop">Twitter</span>
+                  </a>
+                </li>
+              {% endif %}
+              {% if site.author.facebook %}
+                <li>
+                  <a href="http://www.facebook.com/{{ site.author.facebook }}" class="zocial facebook icon" target="_blank">
+                    <span class="hidden-desktop">Facebook</span>
+                  </a>
+                </li>
+              {% endif %}
+              {% if site.author.linkedin %}
+                <li>
+                  <a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" class="zocial linkedin icon" target="_blank">
+                    <span class="hidden-desktop">LinkedIn</span>
+                  </a>
+                </li>
+              {% endif %}
+              {% if site.author.feedburner %}
+                <li>
+                  <a href="http://feeds.feedburner.com/{{ site.author.feedburner }}" class="zocial rss icon" target="_blank">
+                    <span class="hidden-desktop">FeedBurner</span>
+                  </a>
+                </li>
+              {% endif %}
+              {% if site.author.weibo %}
+                <li>
+                  <a href="http://weibo.com/{{ site.author.weibo }}" class="zocial weibo icon" target="_blank">
                     <span class="hidden-desktop">Weibo</span>
                   </a>
                 </li>
+              {% endif %}
             </ul>
+            <form class="navbar-search pull-right" onsubmit="tmtxt_search_google()" >
+              <input type="text" id="tmtxt-google-search" class="search-query" placeholder="Google Search">
+            </form>
           </div>
         </div>
       </div>
@@ -89,36 +134,36 @@ function countDown(secs,surl){
 
     <div class="container">
       <div class="content">
-        
-<div class="page-header-wrapper">
-	<div class="page-header">
-  		<h1>Havanna  <small>聪明难，难的是如何耍聪明，糊涂难，要想装糊涂难上加难。聪明人装糊涂，无非不就是耍聪明。</small></h1>
-  	</div>
-</div>
 
-<div class="row">
-  <div style="text-align:center;">
-    <h1>404</h1>
-    <p><strong>There isn't a Page here.</strong></p>
-    <p> Jump to <a href="http://ihavanna.org">Havanna's Space</a> after <span id="jumpTo" style="font-weight: bold"> 5 </span> seconds</p>
-    <script type="text/javascript">countDown(5,'http://ihavanna.org');</script>
-  </div>
-</div>
+        <div class="row">
+          <div style="text-align:center;">
+            <h1>404</h1>
+            <p><strong>There isn't a Page here.</strong></p>
+            <p> Jump to <a href="http://ihavanna.org">Havanna's Space</a> after <span id="jumpTo" style="font-weight: bold"> 5 </span> seconds</p>
+            <script type="text/javascript">countDown(5,'http://ihavanna.org');</script>
+          </div>
+        </div>
 
 
       </div>
 
       <footer>
-      <p>&copy; 2013 Havanna
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
-        </p>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} <a href="http://www.miibeian.gov.cn/" target="_blank" title="沪ICP备13026530号-1">沪ICP备13026530号-1</a></p>
+        <p>Powered by <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>. Theme by <a href="https://github.com/dhulihan/hooligan" target="_blank" title="">Hooligan</a></p>
       </footer>
     </div> <!-- /container -->
 
-    <script src="/assets/themes/hooligan/js/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/assets/themes/hooligan/js/jquery.min.js"><\/script>')</script>
-    <script src="/assets/themes/hooligan/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>
+    <script src="//libs.baidu.com/bootstrap/2.0.4/js/bootstrap.min.js"></script>
+    <script src="//libs.baidu.com/webfont/1.3.0/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Trocchi', 'Open Sans']
+        }
+      });
+    </script>
 
   </body>
 </html>

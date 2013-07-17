@@ -18,6 +18,7 @@ tags: [SQL, CLI]
 
     mysqladmin -uroot -p password ‘newpassword’
 
+<!-- more -->
 重设root密码
 
     /etc/rc.d/mysqld stop
@@ -28,7 +29,6 @@ tags: [SQL, CLI]
     mysql> exit
 
 ## 二、登录数据库
-<!-- more -->
 
     # 连接本地mysql
     mysql -uroot -p
