@@ -26,6 +26,7 @@
 
     <link rel="shortcut icon" href="/favicon.png">
     <link rel="canonical" href="{{ site.production_url }}{{ page.url | replace:'index.html','' }}" />
+    <link rel="alternate" type="application/rss+xml" title="Havanna's Space &raquo; Feed" href="{{ site.url }}/rss.xml" />
     <!-- fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.png">
@@ -60,41 +61,41 @@
               <li class="divider-vertical"></li>
               <li>
                 <a href="{{ site.production_url }}/rss.xml" target="_blank" title="RSS">
-                  <span class="icon-rss icon-large icon-border"></span>
+                  <span class="icon-rss icon-large"></span>
                 </a>
               </li>
               {% if site.author.github %}
                 <li>
                   <a href="https://github.com/{{ site.author.github }}" target="_blank" title="Github">
-                    <span class="icon-github icon-large icon-border"></span>
+                    <span class="icon-github icon-large"></span>
                   </a>
                 </li>
               {% endif %}
               {% if site.author.googleplus %}
                 <li>
                   <a href="https://plus.google.com/{{ site.author.googleplus }}" target="_blank" title="Google+">
-                    <span class="icon-google-plus icon-large icon-border"></span>
+                    <span class="icon-google-plus icon-large"></span>
                   </a>
                 </li>
               {% endif %}
               {% if site.author.twitter %}
                 <li>
                   <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter">
-                  <span class="icon-twitter icon-large icon-border"></span>
+                  <span class="icon-twitter icon-large"></span>
                   </a>
                 </li>
               {% endif %}
               {% if site.author.facebook %}
                 <li>
                   <a href="http://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook">
-                    <span class="icon-facebook icon-large icon-border"></span>
+                    <span class="icon-facebook icon-large"></span>
                   </a>
                 </li>
               {% endif %}
               {% if site.author.weibo %}
                 <li>
                   <a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="Weibo">
-                    <span class="icon-weibo icon-large icon-border"></span>
+                    <span class="icon-weibo icon-large"></span>
                   </a>
                 </li>
               {% endif %}
