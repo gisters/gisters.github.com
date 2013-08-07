@@ -5,7 +5,7 @@ permalink: /:categories/:year-:month/:title.html
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
-paginate: 3
+paginate: 5
 
 markdown: redcarpet
 
@@ -19,8 +19,8 @@ author :
   name : Havanna
   email : 
   github : Ihavanna
-  twitter : IHavanna
-  facebook : Ihavanna
+  twitter : 
+  facebook : 
   feedburner : 
   weibo : Havanna
 

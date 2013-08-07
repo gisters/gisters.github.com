@@ -1,5 +1,5 @@
       <section>
-        <h3>Blogroll</h3>
+        <h4>Blogroll</h4>
         <span class="category">
           <ul>
             <li><a href="http://phpcj.org" target="_blank">清风的网络空间</a></li>
@@ -7,4 +7,3 @@
           </ul>
         </span>
       </section>
-      <hr>

@@ -16,14 +16,14 @@ tags: [Git, Usage]
 
 ### 增加一个 Submodule 到你的项目
 
-```
+```sh
 $ git submodule add git@domain.com:another_project.git another_project
 ```
 
 <!-- more -->
 该命令会在你的项目 Repository 下产生一个 .gitmodules 文件，来记录你的 Submodule 信息，同时 another_project项目也clone下来，此时观察你的 Repo
 
-```
+```sh
 $ git status
 # On branch master
 # Changes to be committed:
@@ -35,7 +35,7 @@ $ git status
 
 你可能会注意到，git 只记录了 submodule 目录，而没有记录目录下的文件。实际上，git 是按照 commit id 来比对 submodule 变动的
 
-```
+```sh
 $ git add .gitmodules another_project
 $ git commit -m "Add another_project submodule"
 $ git submodule init
@@ -43,7 +43,7 @@ $ git submodule init
 
 ### 更新你项目中的 Submodule
 
-```
+```sh
 $ cd another_project
 $ git pull origin master
 $ cd your_project
@@ -54,20 +54,20 @@ $ git push
 
 一次性更新你repo下所有的submodules
 
-```
-git pull --recurse-submodules
-git submodule update --recursive
+```sh
+$ git pull --recurse-submodules
+$ git submodule update --recursive
 ```
 或者
 
-```
-git pull && git submodule init && git submodule update && git submodule status
+```sh
+$ git pull && git submodule init && git submodule update && git submodule status
 ```
 ### 修改你项目中的 Submodule
 
 如果你恰巧拥有 Submodule 远程 commit 权限，进入你的 Submodule 目录，作些修改，提交
 
-```
+```sh
 $ cd another_project
 ...make your changes...
 $ git commit -a -m "fixed a bug"
@@ -82,7 +82,7 @@ $ git push origin master
 
 ### 删除 Submodule
 
-```
+```sh
 $ cd your_project
 $ git rm --cached another_project
 $ rm -rf another_project

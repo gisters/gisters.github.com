@@ -1,5 +1,5 @@
       <section style="width:250px;">
-        <h3>Recently Visitors</h3>
+        <h4>Recently Visitors</h4>
           <ul class="ds-recent-visitors" data-num-items="4" data-avatar-size="45" style="margin-top:10px;"></ul>
       </section>
       <hr>

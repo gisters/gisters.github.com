@@ -14,7 +14,7 @@ tags: [Nginx,Domain]
 
 想到就做，将 `ihavanna.org` 解析到阿里云指定IP：
 
-```bash
+```sh
 $ dig ihavanna.org +nostats +nocomments +nocmd
 
 ; <<>> DiG 9.9.2-P2 <<>> ihavanna.org +nostats +nocomments +nocmd
@@ -26,7 +26,7 @@ ihavanna.org.           3600    IN      A       111.111.111.111
 <!-- more -->
 将 `www.ihavanna.org` cname 到 `ihavanna.org`：
 
-```bash
+```sh
 $ dig www.ihavanna.org +nostats +nocomments +nocmd
 
 ; <<>> DiG 9.9.2-P2 <<>> www.ihavanna.org +nostats +nocomments +nocmd
