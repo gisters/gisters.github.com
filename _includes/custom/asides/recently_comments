@@ -1,7 +1,6 @@
       <section>
         <h4>Recently Comments</h4>
-        <span class="category">
+        <div class="category">
           <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="15"></ul>
-        </span>
+        </div>
       </section>
-      <hr>

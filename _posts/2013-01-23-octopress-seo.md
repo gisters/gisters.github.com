@@ -14,7 +14,7 @@ SEO 的问题已经在这篇文章 [SEO for Octopress,Heroku](http://www.yatishm
 
 octopress 默认已经提供了关键字和描述，问题在于 `new_post` 不生成，所以我们应该手动添加它。
 
-## Every Page
+### Every Page
 
 每次添加一篇文章的时候都要添加 keywords & description，如下
 
@@ -32,18 +32,18 @@ description: Octopress 的 SEO 在默认情况下已经表现不错了，不过�
 ---
 ```
 
-## Home Page
+### Home Page
 
 octopress 默认的在首页的描述是，最后一篇文章截取一定的长度作为首页的描述，这有点不符我们的习惯，我们可以这样来修改
 
-### _config.yml
+#### _config.yml
 
 编辑 `_config.yml`，添加 keywords 和 description 变量，如下
 
     keywords: linux, gentoo, httpd, browser, internet, media, sql, news, havanna
     description: Havanna's Hobbies, Linux Tips Record。
 
-### head.html
+#### head.html
 
 修改 `.themes/classic/source/_includes/head.html` 文件，在 author tag 后面，用如下替换 description/keywords 代码
 
@@ -56,9 +56,7 @@ octopress 默认的在首页的描述是，最后一篇文章截取一定的长�
 ```
 {% endraw %}
 
-OK，完工
-
----
+#### keywords & description
 
 有个问题，在 `rake new_post[]` 或者 `rake new_page[]` 时，模板生成的 md 文件，没有 keywords & description
 

@@ -1,11 +1,10 @@
       <section>
        <h4>Recently Posts</h4>
-       <span class="category">
+       <div class="category">
          <ul>
            {% for post in site.posts limit:5 %}
            <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
            {% endfor %}
          </ul>
-       </span>
+       </div>
       </section>
-      <hr>

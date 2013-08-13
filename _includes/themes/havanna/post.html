@@ -1,34 +1,34 @@
 <div class="row">
 
-  <div class="span9 offset3">
+  <div class="span9">
     <div class="page-header">
-      <h1>
+      <h2>
         {{ page.title }} 
         {% if page.tagline %}
           <small>{{ page.tagline }}</small>
         {% endif %}
-      </h1>
+      </h2>
     </div>
     {{ content }}
     <hr>
-    <div class="row-fluid">
-      <div class="span8">
+    <div class="row">
+      <div class="col-md-8">
         <div class="pagination btn-group">
           {% if page.previous %}
-            <a class="btn prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a>
+            <a class="btn btn-default" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a>
           {% else %}
-            <a class="btn disabled prev">&larr; Previous</a>
+            <a class="btn btn-default disabled">&larr; Previous</a>
           {% endif %}
-            <a class="btn" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
+            <a class="btn btn-default" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
           {% if page.next %}
-            <a class="btn next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a>
+            <a class="btn btn-default" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a>
           {% else %}
-            <a class="btn next disabled">Next &rarr;</a>
+            <a class="btn btn-default disabled">Next &rarr;</a>
           {% endif %}
         </div>
       </div>
-      <div class="span4">
-        <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" style="padding-top:12px;">
+      <div class="col-md-4">
+        <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" style="margin: 20px 0px; float:right;">
           <a class="bds_tsina"></a>
           <a class="bds_tqq"></a>
           <a class="bds_t163"></a>
@@ -40,21 +40,19 @@
     {% include JB/comments %}
   </div>
 
-  <div class="span3 visible-desktop" data-spy="affix">
-    {% include custom/asides/logo %}
+  <div class="span3 visible-desktop offset9" data-spy="affix">
+    {% include custom/asides/search_box %}
     <section>
       <h4>Published</h4>
       <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
     </section>
-      <hr>
     {% if page.category %}
     <section>
     <h4>Categories</h4>
-    <span class="category">
+    <div class="category">
       {{ page.category }}
-    </span>
+    </div>
     </section>
-      <hr>
     {% endif %}
     {% unless page.tags == empty %}
       <section>
@@ -64,7 +62,6 @@
           {% include JB/tags_list %}
         </ul>
       </section>
-      <hr>
     {% endunless %}
     {% include custom/asides/license %}
   </div>

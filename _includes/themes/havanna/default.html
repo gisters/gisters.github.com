@@ -12,20 +12,14 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <meta property="qc:admins" content="4256312401616616727" />
-    <meta property="wb:webmaster" content="0f9755c09e879b59" />
-    <meta name="baidu-site-verification" content="mtBrwPwXt5wnCQXD" />
-    <meta name="google-site-verification" content="a9Rfnx25zuxyOLp55mRVh5MQCIYL59SCkluqFfuP440" />
-
-    <link href="//libs.baidu.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ ASSET_PATH }}/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" media="all">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css " rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link href="{{ ASSET_PATH }}/css/pygments.css" rel="stylesheet" type="text/css" media="all">
 
     <link rel="shortcut icon" href="/favicon.png">
     <link rel="canonical" href="{{ site.production_url }}{{ page.url | replace:'index.html','' }}" />
-    <link rel="alternate" type="application/rss+xml" title="Havanna's Space &raquo; Feed" href="{{ site.url }}/rss.xml" />
     <!-- fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.png">
@@ -33,93 +27,74 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+
+    <!-- atom & rss feed -->
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="{{ site.title }} ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="{{ site.title }} RSS Feed">
+
   </head>
 
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-
-
-          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-
-
-          <div class="nav-collapse">
-            <ul class="nav">
-              {% assign pages_list = site.pages %}
-              {% assign group = 'navigation' %}
-              {% include JB/pages_list %}
-            </ul>
-            <ul class="nav pull-right visible-desktop">
-              <li class="divider-vertical"></li>
-              <li>
-                <a href="{{ site.production_url }}/rss.xml" target="_blank" title="RSS">
-                  <span class="icon-rss icon-large"></span>
-                </a>
-              </li>
-              {% if site.author.github %}
-                <li>
-                  <a href="https://github.com/{{ site.author.github }}" target="_blank" title="Github">
-                    <span class="icon-github icon-large"></span>
-                  </a>
-                </li>
-              {% endif %}
-              {% if site.author.googleplus %}
-                <li>
-                  <a href="https://plus.google.com/{{ site.author.googleplus }}" target="_blank" title="Google+">
-                    <span class="icon-google-plus icon-large"></span>
-                  </a>
-                </li>
-              {% endif %}
-              {% if site.author.twitter %}
-                <li>
-                  <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter">
-                  <span class="icon-twitter icon-large"></span>
-                  </a>
-                </li>
-              {% endif %}
-              {% if site.author.facebook %}
-                <li>
-                  <a href="http://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook">
-                    <span class="icon-facebook icon-large"></span>
-                  </a>
-                </li>
-              {% endif %}
-              {% if site.author.weibo %}
-                <li>
-                  <a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="Weibo">
-                    <span class="icon-weibo icon-large"></span>
-                  </a>
-                </li>
-              {% endif %}
-            </ul>
-          </div>
-        </div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ HOME_PATH }}" title="{{ site.title }}">{{ site.title }}</a>
       </div>
-    </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          {% assign pages_list = site.pages %}
+          {% assign group = 'navigation' %}
+          {% include JB/pages_list %}
+          <li><a href="{{ HOME_PATH }}vimwiki" target="_blank" title="Vimwiki">Vimwiki</a><li>
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{{ site.production_url }}/rss.xml" target="_blank" title="RSS"><span class="icon-rss icon-large"></span></a></li>
+          {% if site.author.github %}
+            <li><a href="https://github.com/{{ site.author.github }}" target="_blank" title="Github"><span class="icon-github icon-large"></span></a></li>
+          {% endif %}
+          {% if site.author.googleplus %}
+            <li><a href="https://plus.google.com/{{ site.author.googleplus }}" target="_blank" title="Google+"><span class="icon-google-plus icon-large"></span></a></li>
+          {% endif %}
+          {% if site.author.twitter %}
+            <li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter"><span class="icon-twitter icon-large"></span></a></li>
+          {% endif %}
+          {% if site.author.facebook %}
+            <li><a href="http://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook"><span class="icon-facebook icon-large"></span></a></li>
+          {% endif %}
+          {% if site.author.weibo %}
+            <li><a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="Weibo"><span class="icon-weibo icon-large"></span></a></li>
+          {% endif %}
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
 
     <div class="container">
       <div class="content">
         {{ content }}
       </div>
 
-      <footer class="text-right">
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} <a href="http://www.miibeian.gov.cn/" target="_blank" title="沪ICP备13026530号-1">沪ICP备13026530号-1</a></p>
-        <p>Powered by <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>.</p>
+      <footer class="text-left">
+        <p>&copy; 2009-{{ site.time | date: '%Y' }} <a href="{{ HOME_PATH }}" target="_blank">{{ site.author.name }}</a>. Help from <a href="http://jekyllrb.com/" target="_blank" title="Jekyll">Jekyll</a></p>
+        <p><a href="http://www.miibeian.gov.cn/" target="_blank" title="沪ICP备13026530号-1">沪ICP备13026530号-1</a></p>
       </footer>
     </div> <!-- /container -->
 
+    {% include custom/search_script %}
     <script src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>
-    <script src="//libs.baidu.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-    {% include custom/search %}
     {% include custom/duoshuo %}
     {% include custom/sharing %}
     {% include JB/analytics %}

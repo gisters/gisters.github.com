@@ -21,7 +21,7 @@ Gentoo 用户可以通过添加 steam overlay 来安装
 
 安装完成后，运行 `steam` 有一些小问题：
 
-## 无法输入字符
+### 无法输入字符
 
 此问题是最近的更新引起的
 
@@ -31,13 +31,15 @@ Gentoo 用户可以通过添加 steam overlay 来安装
 
     $ export LC_CTYPE="en_US.UTF-8" && steam
 
-## 游戏中无声音
+### 游戏中无声音
 
 这个很简单，修改 `/etc/portage/make.conf` 在 `USE` 行添加 `pulseaudio`，然后 `# emerge -avuDN @world` 即可。
 
 在22天之前，开发者说已经添加了 `alsa` 的支持，只需 `SDL_AUDIODRIVER=alsa` 即可，不过经过我测试，无效。不存在 `~/.steam/root/ubuntu12_32/libsdl2-2.0.so.0`。也许后面会更新吧
 
-## `GL_EXT_texture_compression_s3tc`
+### 黑屏问题
+
+`GL_EXT_texture_compression_s3tc`
 
 64位 gentoo 用户运行游戏 `counter-strike:source` 可能会出现的提示
 

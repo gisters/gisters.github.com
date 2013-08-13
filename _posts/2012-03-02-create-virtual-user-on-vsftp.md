@@ -49,7 +49,7 @@ centos 需要安装一下两个软件包
 
 vsftpd 全局设置
 
-```
+```ini
 # vim /etc/vsftpd/vsftpd.conf
 listen_port=21002
 anonymous_enable=NO

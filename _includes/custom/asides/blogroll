@@ -1,9 +1,9 @@
       <section>
         <h4>Blogroll</h4>
-        <span class="category">
+        <div class="category">
           <ul>
             <li><a href="http://phpcj.org" target="_blank">清风的网络空间</a></li>
             <li><a href="http://www.jovesky.com" target="_blank">JoveSky</a></li>
           </ul>
-        </span>
+        </div>
       </section>

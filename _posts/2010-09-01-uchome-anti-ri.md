@@ -18,7 +18,7 @@ tags: [UChome, RI, Usage]
 
 解决的过程很简单，这里就简单公布下代码和一个通用的邮件程序，即使你的服务器没装或没开通邮件服务，也可以借助像 `qq mail` 这样的第三方发送邮件，好了，废话不多说了，详细内容看下面：
 
-###首先建一个验证邮箱的数据表，在 `mysql client` 或者 `phpmyadmin` 里执行，注意你自己的版本编码和数据库表前缀
+#### 首先建一个验证邮箱的数据表，在 `mysql client` 或者 `phpmyadmin` 里执行，注意你自己的版本编码和数据库表前缀
 
 ```sql
 CREATE TABLE IF NOT EXISTS `uh_checkusermail` (
@@ -32,7 +32,7 @@ PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
 ```
 
-### 打开 uchome 根目录下的 `template\default\do_register.htm` 文件
+#### 打开 uchome 根目录下的 `template\default\do_register.htm` 文件
 
 在里面找到下面这句代码
 
@@ -48,9 +48,9 @@ PRIMARY KEY (`id`)
  <tr><th>邮箱验证码</th><td><input type="text" id="mailcode" name="mailcode" value="" tabindex="6" /></td></tr>
 ```
 
-### 再在上面那个文件里找到
+#### 再在上面那个文件里找到
 
-```javascript
+```html
 <script>
 function register(id, result) {
 if(result) {
@@ -65,7 +65,7 @@ updateseccode();
 
 替换为
 
-```javascript
+```html
 <script>
 function register(id, result) {
 if(result) {
@@ -82,11 +82,11 @@ ajaxget(’r_checkmail.php?mail=’+mail+’&time=’+new Date().getTime()+’&a
 </script>
 ```
 
-### 打开uchome根目录下的`source/do_register.php`文件
+#### 打开uchome根目录下的`source/do_register.php`文件
 
 在里面找到下面这句代码
 
-```
+```php
 //检查邮件
  if($_SCONFIG['checkemail']) {
  if($count = getcount(’spacefield’, array(’email’=>$email))) {
@@ -97,16 +97,16 @@ ajaxget(’r_checkmail.php?mail=’+mail+’&time=’+new Date().getTime()+’&a
 
 在这段代码下面加上
 
-```
+```php
 $query = $_SGLOBAL['db']->query(”SELECT * FROM “.tname(’checkusermail’).” where mail=’”.$email.”‘ and checknum=’”.$_POST['mailcode'].”‘ and statu=0″);
  if(!$value = $_SGLOBAL['db']->fetch_array($query,1)) {
  showmessage(’邮箱验证码错误’);
  }
 ```
 
-### 再在上面那个文件里找到
+#### 再在上面那个文件里找到
 
-```
+```php
 //开通空间
  include_once(S_ROOT.’./source/function_space.php’);
  $space = space_open($newuid, $username, 0, $email);
@@ -114,16 +114,16 @@ $query = $_SGLOBAL['db']->query(”SELECT * FROM “.tname(’checkusermail’).
 
 在这段代码下面加上
 
-```
+```php
 //更新邮箱状态
  $_SGLOBAL['db']->query(”update “.tname(’spacefield’).” set emailcheck=1 where uid=’”.$newuid.”‘”);
 ```
 
-### 下载压缩包，解压后打开里面的 r_checkmail.php 文件
+#### 下载压缩包，解压后打开里面的 r_checkmail.php 文件
 
 找到如下代码
 
-```
+```php5
 $mail->Host = “smtp.qq.com”; //邮件服务器
 $mail->Port = “25″; //邮件服务器端口
 $mail->SMTPAuth = true;
@@ -134,7 +134,7 @@ $mail->From = “111111@qq.com“; //发送邮件帐号
 
 参考说明配置你的邮件发送程序，如果你选用的是 `qq mail` 的话，一定要在你的 `qq mail` 设置里开启 `smtp`。
 
-###修改完以上步骤后，把压缩包的 `r_checkmail.php` 和 `phpmailer` 全都放到你的 `uchome` 根目录下
+#### 修改完以上步骤后，把压缩包的 `r_checkmail.php` 和 `phpmailer` 全都放到你的 `uchome` 根目录下
 
 下载：[codefile](/assets/images/2010/09/codefile.zip)
 

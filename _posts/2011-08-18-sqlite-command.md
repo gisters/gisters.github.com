@@ -15,7 +15,7 @@ tags: [SQL, CLI, Usage]
 <!-- more -->
 我一直对 C/S 模式的数据存储很反感，记得在知道 sqlite 之前的很长一段时间里一直用的是 xml 来存数我的数据，我喜欢将数据存储在单一文件里，我可以随时把数据带在身上，而且它们兼容性够好，拿着数据文件到那里都能用，哪怕是在嵌入式系统里照样玩儿的转…
 
-## SQLite特性
+### SQLite特性
 
 -    ACID事务
 -    零配置 – 无需安装和管理配置
@@ -30,7 +30,8 @@ tags: [SQL, CLI, Usage]
 -    独立: 没有额外依赖
 -    Source完全的Open, 你可以用于任何用途, 包括出售它
 -    支持多种开发语言,C, PHP, Perl, Java, ASP.NET,Python
-## Sqlite安装
+
+### Sqlite安装
 
 现在各大Linux发型版均有现成的软件包可供安装，而且大部份系统都是自带有的，想确认系统里有没有运行下
 
@@ -52,18 +53,18 @@ tags: [SQL, CLI, Usage]
 
 它看起来就是这个样子
 
-## SQlite内置命令
+### SQlite内置命令
 
 它除了能执行SQL语句以外还提供一组内置的命令，它们是以点.开始，比如说查看帮助信息就是 .help退出是 .exit 跟 .quit
 
-### 创建表
+#### 创建表
 
 在命令行里大部份的SQL语句它都是支持的，现在来新建两个表
 
     sqlite>create table Artists (
     --->ArtistID INTEGER PRIMARY KEY,
     --->ArtistName TEXT);
-    
+
 sqlite 对SQL语句大小写不敏感，所以大写小写随便
 
     sqlite>create table CDs (
@@ -74,7 +75,7 @@ sqlite 对SQL语句大小写不敏感，所以大写小写随便
 
 这里注意，除了INTEGER PRIMARY KEY其它字段是都可以是无类型的，也就是不关声明什么或者不声明，这个字段是可以存储任何数据的。
 
-### 插入数据
+#### 插入数据
 
     sqlite>insert into Artists (ArtistID,ArtistName) values (NULL,'Peter Gabriel');
     sqlite>insert into Artists (ArtistID,ArtistName) values (NULL,'Bruce Hornsby');
@@ -106,7 +107,7 @@ sqlite是支持导入sql文件的，只要使用内置命令.read即可,比如�
 
     sqlite>.read insert_table.sql
 
-### 表查询
+#### 表查询
 
 来看看现在这两张表里都有那些内容，执行
 
@@ -147,7 +148,7 @@ sqlite是支持导入sql文件的，只要使用内置命令.read即可,比如�
     sqlite>SELECT DISTINCT Date FROM CDs;
     sqlite>SELECT Title FROM CDs GROUP BY ArtistID;
 
-### 多表查询
+#### 多表查询
 
 执行
 
@@ -164,7 +165,7 @@ sqlite是支持导入sql文件的，只要使用内置命令.read即可,比如�
     Lyle Lovett |Joshua Judge Ruth
     Beach Boys |Pet Sounds
 
-### 更新字段
+#### 更新字段
 
 插入一条数据
 
@@ -176,7 +177,7 @@ sqlite是支持导入sql文件的，只要使用内置命令.read即可,比如�
 
 即可
 
-### 删除字段
+#### 删除字段
 
 首先执行
 

@@ -10,7 +10,7 @@ tags: [SQL, CLI, Usage]
 
 SQLite 库包含一个名字叫做 sqlite3 的命令行,它可以让用户手工输入并执行面向 SQLite 数据库的 SQL 命令。本文档提供一个样使用sqlite3 的简要说明。
 
-## 开始
+#### 开始
 
 启动 sqlite3 程序，仅仅需要敲入带有 SQLite 数据库名字的 `sqlite3` 命令即可。如果文件不存在，则创建一个新的（数据库）文件。然后 sqlite3 程序将提示你输入 SQL。敲入 SQL 语句（以分号“；”结束），敲回车键之后，SQL 语句就会执行。
 
@@ -38,7 +38,7 @@ SQLite 库包含一个名字叫做 sqlite3 的命令行,它可以让用户手工
     sqlite>
 
 
-### 题外话：查询 SQLITE_MASTER 表
+##### 题外话：查询 SQLITE_MASTER 表
 
 SQLite数据库的框架被保存在一个名叫”sqlite_master”的特殊的表中。你可以像查询其它表一样通过执行“SELECT”查询这个特殊的表。例如：
 
@@ -57,7 +57,7 @@ SQLite数据库的框架被保存在一个名叫”sqlite_master”的特殊的�
 
 TEMPORARY 表的结构没有存储在 sqlite_master 表中，由于 TEMPORARY 表对应用是不可见的，而不是应用程序创建这个表。TEMPORARY 表结构被存储在另外一个名叫 sqlite_temp_master 的特定的表中。sqlite_temp_master 表是临时表自身。
 
-## sqlite3 的特殊命令
+#### sqlite3 的特殊命令
 
 大多数候，sqlite3 读入输入行，并把它们传递到 SQLite 库中去运行。但是如果输入行以一个点（“.”）开始，那么这行将被 sqlite3 程序自己截取并解释。这些 “点命令” 通常被用来改变查询输出的格式，或者执行鞭个预封包（预定义prepackaged）的查询语句。
 
@@ -112,7 +112,7 @@ TEMPORARY 表的结构没有存储在 sqlite_master 表中，由于 TEMPORARY �
     .timer ON|OFF          Turn the CPU timer measurement on or off
 
 
-## 改变输出格式
+#### 改变输出格式
 
 sqlite3 程序可以以八种不同的格式显示一个查询的结果：”csv”, “列”, “html”, “插入”, “行”, “制表”和”tcl”。你可以用`.mode`点命令在这些输出格式之间切换。
 
@@ -186,7 +186,7 @@ sqlite3 程序可以以八种不同的格式显示一个查询的结果：”csv
 
 最新的输出格式是 “html”。在这种模式下，sqlite3 把查询的结果写做 XHTML 表。开始的和结束的（标记）没有写出，但有、和等分界符。html 输出对 CGI 来说是相当有用地。
 
-## 把结果写到文件中
+#### 把结果写到文件中
 
 默认情况下，sqlte3 把结送到标准输出。你可以用 `.output` 命令改变它。只须把输出文件名做为 `.output` 命令的输出参数然后所有后续查询结果将被写到那个文件中。用 `.output stdout` 再一次改为标准输出。例如：
 
@@ -200,7 +200,7 @@ sqlite3 程序可以以八种不同的格式显示一个查询的结果：”csv
     goodbye|20
     $
 
-## 查询数据库结构
+#### 查询数据库结构
 
 sqlite3 程序提供几个有用的用于查询数据库结构的快捷命令。这些不是不可以用别的方式来实现。这些命令仅仅是一个快捷方式而已。
 
@@ -274,7 +274,7 @@ sqlite3 程序提供几个有用的用于查询数据库结构的快捷命令。
 
     sqlite> .databases
 
-## 将整个数据库转换为 ASCII 文本文件
+#### 将整个数据库转换为 ASCII 文本文件
 
 `.dump` 命令成一个单一的 ASCII 文本文件。这个文件可以被用作管道传递给 sqlite3 命令来转换回数据库。
 
@@ -291,7 +291,7 @@ sqlite3 程序提供几个有用的用于查询数据库结构的快捷命令。
     $ createdb ex2
     $ sqlite3 ex1 .dump | psql ex2
 
-## 其它的点命令
+#### 其它的点命令
 
 `.explain` 命令可以被用来设置输出格式为 “column” 并设置列宽为 EXPLAIN 命令看起来比较合理的宽度。EXPLAIN 命令是 SQLite 特有的 SQL 扩展，它是对调试有用。如果任何常规的 SQL 被 EXPLAIN 执行，那么 SQL 命令被分解并分析但并不执行。取而代之的是，虚拟机指令序列将被用于执行SQL命令并返回一个类似的查询结果。如：
 

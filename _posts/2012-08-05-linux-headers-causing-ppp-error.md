@@ -8,7 +8,7 @@ tags: [Patch]
 ---
 {% include JB/setup %}
 
-## ppp-2.4.5-r3已经解决该情况
+**ppp-2.4.5-r3已经解决该情况**
 
 Gentoo 中，最近升级 sys-kernel/linux-headers 到 3.5 后会出现 ppp-2.4.5-r2 编译不过的情况，具体的错误为
 

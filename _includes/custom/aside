@@ -1,4 +1,4 @@
-      {% include custom/asides/logo %}
+      {% include custom/asides/search_box %}
 
       {% include custom/asides/recently_posts %}
 

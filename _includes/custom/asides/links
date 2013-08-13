@@ -1,9 +1,9 @@
       <section>
         <h4>Links</h4>
-        <span class="category">
+        <div class="category">
           <ul>
             <li><a href="http://www.gentoo.org.cn" target="_blank">Gentoo 中文</a></li>
             <li><a href="http://www.linuxfromscratch.org" target="_blank">Linux From Scratch</a></li>
           </ul>
-        </span>
+        </div>
       </section> 

@@ -15,6 +15,7 @@ markdown: redcarpet
 title : Havanna's Space
 tagline: Site Tagline
 keywords : linux, gentoo, internet, sql, jekyll, havanna
+description: Havanna Hobbies, Linux Tips Record。
 author :
   name : Havanna
   email : 

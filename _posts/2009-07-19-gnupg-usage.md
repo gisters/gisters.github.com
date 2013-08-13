@@ -7,7 +7,8 @@ category: Linux
 tags: [GnuPG, Keys, Public]
 ---
 {% include JB/setup %}
-## 介绍
+
+#### 一、介绍
 
 ![Mutt GnuPG](/assets/images/2012/07/mutt-gnupg.png "Mutt GnuPG")
 
@@ -28,14 +29,14 @@ GnuPG 是实现安全通信和数据存储的一系列工具集，可以做加�
 10. 支持匿名信息接收
 11. 支持HKP密钥服务
 
-## 命令
+#### 二、命令
 
-### 创建密钥对
+##### 创建密钥对
 
     $ gpg --gen-key                   # 生成密钥对
     $ gpg --gen-revoke ID             # 为 ID 生成吊销密钥
 
-### 公钥处理
+##### 公钥处理
 
     $ gpg --output filename.asc --export Havanna # 导出公钥
     $ gpg -o filename.asc --export Havanna
@@ -45,14 +46,14 @@ GnuPG 是实现安全通信和数据存储的一系列工具集，可以做加�
     $ gpg --check-sig                            # 监测公钥环中公钥的签名信息
     $ gpg --fingerprint Havanna                  # 查看公钥指纹信息
 
-### 私钥处理
+##### 私钥处理
 
     $ gpg -o filename --export-secret-keys Havanna    # 导出用户标志为 Havanna 的私钥，不加用户标志，则导出所有私钥
     $ gpg -o filename -a --export-secret-keys Havanna # 以 ASSCII 码方式导出
     $ gpg --list-secret-keys                          # 显示所有私钥
     $ gpg -K
 
-### 其他
+##### 其他
 
     $ gpg --import Havanna.asc                    # 导入私钥或公钥
     $ gpg --delete-secret-and-public-key Havanna # 删除私钥和公钥
@@ -83,34 +84,34 @@ GnuPG 是实现安全通信和数据存储的一系列工具集，可以做加�
            17）expire 修改私钥的失效时间
            18）save 保存修改
 
-## 应用
+#### 三、应用
 
-### 加密与解密
+##### 加密与解密
 
     $ gpg -e -r Havanna.asc filename              # 使用 Havanna 的公钥对 filename 加密，生成二进制 filename.pgp
     $ gpg -ea -r Havanna filename -o filename.asc # 同上，不过已 ASCII 方式输入结果，并输出 asc 文件
     $ gpg -d filename.pgp -o filename             # 对 filename.pgp 解密，保存为 filename
 
-### 打包方式进行签名与验证
+##### 打包方式进行签名与验证
 
     $ gpg -s filename                            # 使用默认的用户对 filename 进行打包方式的签名
     $ gpg -u Havanna -s filename -o filename.sig # 使用指定的用户 Havanna 对 filename 进行签名
     $ gpg --verify filename.gpg                  # 验证签名
     $ gpg -d filename.gpg -o filename            # 解包并验证签名
 
-### 分离方式进行签名与验证
+##### 分离方式进行签名与验证
 
     $ gpg -sb filename
     $ gpg -u Havanna -sb filename
     $ gpg -u Havanna -o filename.sig -sb filename
     $ gpg --verify filename.gpg filename
 
-### 签名并加密
+##### 签名并加密
 
     $ gpg -es -r Havanna -u Havanna -o filename.gpg filename  # 使用 Havanna 的公钥进行加密，并使用 Havanna 的私钥进行签名，生成的二进制文件是 filename.gpg
     $ gpg -esa -r Havanna -u Havanna -o filename.asc filename # 同上，加上以 ASCII 编码
 
-### mutt 中的使用
+##### mutt 中的使用
 
 编辑 $HOME/.gnupg/gpg.conf，注销下面两行
 

@@ -10,7 +10,7 @@ tags: [Import, Display, Usage, Media]
 
 Import & Display 也是 Imagemagick 中的两个常用的组件。
 
-### Import 通常用于截屏，譬如
+#### Import 通常用于截屏，譬如
 
 鼠标选取范围截图：
 
@@ -26,7 +26,7 @@ Import & Display 也是 Imagemagick 中的两个常用的组件。
     $ import -resize 50% /path/output.png
     $ import -thumbnail 50% /path/output.png
 
-### Display 是用于显示图片，譬如
+#### Display 是用于显示图片，譬如
 
 最简单的显示图片
 

@@ -8,11 +8,11 @@ tags: [Wordpress, Widget]
 ---
 {% include JB/setup %}
 
-### 插件简介
+#### 插件简介
 
 Widget Logic 插件给每个 widget 一个扩展控制 Widget logic，你可以通过它根据不同页面自定义你的侧边栏内容。
 
-### 插件使用方法
+#### 插件使用方法
 
 <!-- more -->
 1. 首先在本页下方链接下载 Widget Logic 插件，安装到您的博客上并激活。
@@ -21,7 +21,7 @@ Widget Logic 插件给每个 widget 一个扩展控制 Widget logic，你可以�
 
 怎么样？是不是非常简单呢？这样简单的插件对于不太熟悉代码的朋友提供了很大的帮助，赶快试试吧！
 
-### 插件设置一些常用的标记
+#### 插件设置一些常用的标记
 
     is_home() 主页
     is_single() 文章页
@@ -33,7 +33,7 @@ Widget Logic 插件给每个 widget 一个扩展控制 Widget logic，你可以�
     is_search() 搜索结果页
     is_feed() 订阅页
 
-### 插件语法
+#### 插件语法
 
 `||` 表示或，`&&` 表示和，`!` 表示非，示例语言如下：
 

@@ -23,11 +23,11 @@ vsftpd 2.3.5 的 changelog 如下：
 <!-- more -->
 解决方法有两种
 
-#### 如果你的 ftp 根目录必须要可写，那么：
+#### 1. 如果你的 ftp 根目录必须要可写，那么：
 
     allow_writeable_chroot=YES
 
-#### 如果你对你的 ftp 根目录没有写的要求，那么就去掉写权限：
+#### 2. 如果你对你的 ftp 根目录没有写的要求，那么就去掉写权限：
 
     chmod a-w /var/ftp
 

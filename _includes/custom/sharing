@@ -1,6 +1,6 @@
     <!-- Baidu Button BEGIN -->
-    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1539895" ></script>
     <script type="text/javascript" id="bdshell_js"></script>
+    <script>document.write(unescape('%3Cscript%20type%3D%22text/javascript%22%20id%3D%22bdshare_js%22%20data%3D%22type%3Dtools%26amp%3Buid%3D1539895%22%3E%3C/script%3E'));</script>
     <script type="text/javascript">
       var bds_config = {
         'wbUid':2074421551,

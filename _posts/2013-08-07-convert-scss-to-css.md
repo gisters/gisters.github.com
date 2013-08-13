@@ -10,7 +10,7 @@ tags: [style]
 
 最近经常接触 [Jekyll](http://jekyllrb.com/)，进而又认识到 [Sass](http://sass-lang.com/)（从 Sass 3 开始的新语法规则被称为 SCSS，之前的语法规则为 Syntaxes） 这个 CSS 的处理器，同时 [Compass](http://compass-style.org/) 又是一个高效的开发 SASS 的利器。
 
-闲话少说，Jekyll 下的安装
+闲话少说，[RubyGems](http://rubygems.org/) 下的安装
 
 ```sh
 $ gem install sass
@@ -37,7 +37,7 @@ $ compass create .
 以下是我的配置
 
 ```ruby
-# Require any additional compass plugins here.                                                                                                                       
+# Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -94,20 +94,21 @@ Thumbs.db
             └── js
                 └── jquery.min.js
 ```
+这里是本人博客的 scss：[https://github.com/Ihavanna/ihavanna.github.io/tree/master/assets/themes/havanna/_sass](https://github.com/Ihavanna/ihavanna.github.io/tree/master/assets/themes/havanna/_sass)
 
 以下是关于 SASS 的具体用法，转自：[SASS用法指南 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/06/sass.html)
 
 - - -
 
-### 一、什么是SASS
+#### 一、什么是SASS
 
 SASS 是一种 CSS 的开发工具，提供了许多便利的写法，大大节省了设计者的时间，使得 CSS 的开发，变得简单和可维护。
 
 本文总结了 SASS 的主要用法。我的目标是，有了这篇文章，日常的一般使用就不需要去看[官方文档](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html)了。
 
-### 二、安装和使用
+#### 二、安装和使用
 
-#### 2.1 安装
+##### 2.1 安装
 
 SASS 是 Ruby 语言写的，但是两者的语法没有关系。不懂 Ruby，照样使用。只是必须先[安装 Ruby](http://www.ruby-lang.org/zh_cn/downloads/)，然后再安装 SASS。
 
@@ -119,7 +120,7 @@ gem install sass
 
 然后，就可以使用了。
 
-#### 2.2 使用
+##### 2.2 使用
 
 SASS 文件就是普通的文本文件，里面可以直接使用 CSS 语法。文件后缀名是 `.scss`，意思为 **Sassy CSS**。
 
@@ -159,9 +160,9 @@ sass --watch app/sass:public/stylesheets
 
 SASS 的官方网站，提供了一个[在线转换器](http://sass-lang.com/try.html)。你可以在那里，试运行下面的各种例子。
 
-### 三、基本用法
+#### 三、基本用法
 
-#### 3.1 变量
+##### 3.1 变量
 
 SASS 允许使用变量，所有变量以 `$` 开头。
 
@@ -181,7 +182,7 @@ $side : left;
 }
 ```
 
-3.2 计算功能
+##### 3.2 计算功能
 
 SASS 允许在代码中使用算式：
 
@@ -193,7 +194,7 @@ body {
 }
 ```
 
-3.3 嵌套
+##### 3.3 嵌套
 
 SASS 允许选择器嵌套。比如，下面的 CSS 代码：
 
@@ -233,7 +234,7 @@ a {
 }
 ```
 
-#### 3.4 注释
+##### 3.4 注释
 
 SASS 共有两种注释风格。
 
@@ -249,9 +250,9 @@ SASS 共有两种注释风格。
     */
 ```
 
-### 四、代码的重用
+#### 四、代码的重用
 
-#### 4.1 继承
+##### 4.1 继承
 
 SASS 允许一个选择器，继承另一个选择器。比如，现有 class1：
 
@@ -270,7 +271,7 @@ class2 要继承 class1，就要使用 `@extend` 命令：
 }
 ```
 
-#### 4.2 Mixin
+##### 4.2 Mixin
 
 Mixin 有点像 C 语言的宏 ( macro )，是可以重用的代码块。
 
@@ -325,7 +326,7 @@ div {
 #footer { @include rounded(top, left, 5px); }
 ```
 
-#### 4.3 颜色函数
+##### 4.3 颜色函数
 
 SASS 提供了一些内置的颜色函数，以便生成系列颜色。
 
@@ -336,7 +337,7 @@ grayscale(#cc3) // #808080
 complement(#cc3) // #33c
 ```
 
-#### 4.4 插入文件
+##### 4.4 插入文件
 
 `@import` 命令，用来插入外部文件。
 
@@ -350,9 +351,9 @@ complement(#cc3) // #33c
 @import "foo.css";
 ```
 
-### 五、高级用法
+#### 五、高级用法
 
-#### 5.1 条件语句
+##### 5.1 条件语句
 
 `@if` 可以用来判断：
 
@@ -373,7 +374,7 @@ p {
 }
 ```
 
-#### 5.2 循环语句
+##### 5.2 循环语句
 
 SASS 支持 for 循环：
 
@@ -406,7 +407,7 @@ each 命令，作用与 for 类似：
 }
 ```
 
-#### 5.3 自定义函数
+##### 5.3 自定义函数
 
 SASS 允许用户编写自己的函数。
 

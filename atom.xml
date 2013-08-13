@@ -12,12 +12,11 @@ title : {{ page.title | xml_escape }}
  <id>{{ site.production_url }}</id>
  <author>
    <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
  </author>
 
- {% for post in site.posts %}
+ {% for post in site.posts limit:10 %}
  <entry>
-   <title>{{ post.title }}</title>
+   <title><![CDATA[{{ post.title | xml_escape }}]]></title>
    <link href="{{ site.production_url }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{ site.production_url }}{{ post.id }}</id>

@@ -14,7 +14,7 @@ tags: [Git, Usage]
 
 下面说说一些基本的操作
 
-### 增加一个 Submodule 到你的项目
+#### 1. 增加一个 Submodule 到你的项目
 
 ```sh
 $ git submodule add git@domain.com:another_project.git another_project
@@ -41,7 +41,7 @@ $ git commit -m "Add another_project submodule"
 $ git submodule init
 ```
 
-### 更新你项目中的 Submodule
+#### 2. 更新你项目中的 Submodule
 
 ```sh
 $ cd another_project
@@ -63,7 +63,7 @@ $ git submodule update --recursive
 ```sh
 $ git pull && git submodule init && git submodule update && git submodule status
 ```
-### 修改你项目中的 Submodule
+#### 3. 修改你项目中的 Submodule
 
 如果你恰巧拥有 Submodule 远程 commit 权限，进入你的 Submodule 目录，作些修改，提交
 
@@ -80,7 +80,7 @@ $ git push origin master
 
 重要一点：由于 Submodule 只比对 commit id，所以你务必要在 Submodule 内做 commit、push后，再到你当前的 Repo 作 push
 
-### 删除 Submodule
+#### 4. 删除 Submodule
 
 ```sh
 $ cd your_project

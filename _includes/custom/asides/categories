@@ -1,10 +1,10 @@
       <section>
         <h4>Categories</h4>
-        <span class="tag_box">
+        <div class="tag_box">
           <ul>
           {% assign categories_list = site.categories %}
           {% include JB/categories_list %} 
           </ul>
-        </span>
+        </div>
       </section>
       <hr>

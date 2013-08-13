@@ -10,11 +10,11 @@ tags: [tty]
 
 两个方法：
 
-#### 在 `/etc/X11/xorg.conf.d/10-keyboards.conf文件的Section “InputClass”` 中添加以下内容
+#### 1. 在 `/etc/X11/xorg.conf.d/10-keyboards.conf文件的Section “InputClass”` 中添加以下内容
 
     Option “XkbOptions” “terminate:ctrl_alt_bksp”
 
-#### 在~ `/.xinitrc` 文件中加入以下内容（需要 `xorg-xset` 工具包）
+#### 2. 在~ `/.xinitrc` 文件中加入以下内容（需要 `xorg-xset` 工具包）
 
     setxkbmap -option terminate:ctrl_alt_bksp
 

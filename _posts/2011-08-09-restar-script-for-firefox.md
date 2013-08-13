@@ -13,7 +13,7 @@ tags: [Firefox, UserChrome]
 `appmenu` 上居然没有了，快捷键也冲突，所以改了下，`ctrl_shift_z` 为重启，`appmenu` 上也有重启菜单了，很简单的修改。
 
 <!-- more -->
-```javascript
+```js
 // ==UserScript==
 // @name         Restart Firefox
 // @namespace    http://www.xuldev.org/

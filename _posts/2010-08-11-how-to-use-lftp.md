@@ -16,14 +16,14 @@ tags: [Lftp, Usage, Configuration, CLI]
 
 另外，lftp 支持 tab 自动补全，记不得命令是，多打两个 tab，就可以看到可能的选项了。
 
-### 登录ftp
+#### 登录ftp
 
     lftp ftp://user:password@ip:port
 
 也可以先不带用户名登录，然后在接口界面下用login命令来用指定账号登录，密码不显示。
 
 <!-- more -->
-### 查看文件与改变目录
+#### 查看文件与改变目录
 
     ls
     cd ftpdir
@@ -33,7 +33,8 @@ tags: [Lftp, Usage, Configuration, CLI]
 
     find . -name "*.mp3"
 
-### 下载
+#### 下载
+
 get 当然是可以的，还可以
 
     mget -c a.pdf
@@ -49,14 +50,15 @@ get 当然是可以的，还可以
 以最多10个线程以允许断点续传的方式下载 file.dat
 可以通过设置 pget:default-n 的值而使用默认值。
 
-### 上传
+#### 上传
+
 同样的 put，mput，都是对文件的操作，和下载类似。
 
     mirror -R localdir
 
 将本地目录以迭代（包括子目录）的方式反向上传到 ftp site。
 
-### 模式设置。
+#### 模式设置。
 
     set ftp:charset gbk
 
@@ -70,7 +72,8 @@ get 当然是可以的，还可以
 
 使用被动模式登录，有些 site 要求必须用被动模式或者主动模式才可以登录，这个开关就是设置这个的。0 代表不用被动模式。
 
-### 书签
+#### 书签
+
 其实命令行也可以有书签，在 lftp 终端提示符下：
 
     bookmark add linuxbbs
@@ -85,7 +88,7 @@ get 当然是可以的，还可以
 
 会调用编辑器手动修改书签。当然，也可以看到，这个书签其实就是个简单的文本文件。密码，用户名都可以看到。
 
-### 配置文件 /etc/lftp.conf
+#### 配置文件 /etc/lftp.conf
 
 一般，我会添加这几行：
 

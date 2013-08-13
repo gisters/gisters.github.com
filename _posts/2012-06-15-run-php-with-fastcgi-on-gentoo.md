@@ -10,7 +10,7 @@ tags: [Gentoo, php-fpm, fastcgi, Lighttpd, Nginx, Apache]
 
 PHP 的 FastCGI 使你的所有 php 应用软件通过 mod_fastci 运行，而不是 mod_phpsusexec 。FastCGI 应用速度很快是因为他们持久稳定。不必对每一个请求都启动和初始化。好处是 PHP 脚本运行速度提升 3-30 倍；并不需要对现有的PHP代码做任何的更改；PHP 解释程序被载入内存而不用每次需要时从存储器读取，极大的提升了依靠脚本运行的站点的性能；同时速度的提升并不会增加 CPU 的负担。
 
-### php
+#### php
 
 很简单，打开 fpm 这个 USE 标记即可。
 
@@ -26,7 +26,7 @@ listen = /var/run/php-fpm.sock
 
 <!-- more -->
 
-### nginx
+#### nginx
 
 打开 fastcgi USE 标记
 
@@ -43,7 +43,7 @@ location ~ .*\.php$ {
     include        fastcgi_params;
 }
 ```
-### lighttpd
+#### lighttpd
 
 打开 php USE 标记
 
@@ -64,7 +64,7 @@ fastcgi.server = ( ".php" =>
 fastcgi.map-extensions = ( ".php3" => ".php", ".php4" => ".php", ".php5" => ".php" )
 ```
 
-### apache
+#### apache
 
 首先需安装 `www-apache/mod_fastcgi_handler`
 
