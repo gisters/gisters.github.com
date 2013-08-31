@@ -1,6 +1,6 @@
-    <form class="form-search" role="search" onsubmit="tmtxt_search_google()">
-      <div class="col-lg-8">
-        <input type="text" class="form-control input-medium search-query" placeholder="Google Search" id="my-google-search">
+    <form class="form-inline" role="form" onsubmit="tmtxt_search_google()">
+      <div class="col-lg-8 form-group">
+        <input type="text" class="form-control input-sm" placeholder="Google Search" id="my-google-search">
       </div>
-      <button type="submit" class="btn btn-default">Search</button>
+      <button type="submit" class="btn btn-default btn-sm">Search</button>
     </form>

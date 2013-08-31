@@ -1,6 +1,6 @@
 <div class="row">
 
-  <div class="span9">
+  <div class="col-md-9">
     <div class="page-header">
       <h2>
         {{ page.title }} 
@@ -13,22 +13,22 @@
     <hr>
     <div class="row">
       <div class="col-md-8">
-        <div class="pagination btn-group">
+        <div class="btn btn-group">
           {% if page.previous %}
-            <a class="btn btn-default" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a>
+            <a class="btn btn-default btn-sm" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Prev</a>
           {% else %}
-            <a class="btn btn-default disabled">&larr; Previous</a>
+            <a class="btn btn-default btn-sm disabled">&laquo; Prev</a>
           {% endif %}
-            <a class="btn btn-default" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
+            <a class="btn btn-default btn-sm" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
           {% if page.next %}
-            <a class="btn btn-default" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a>
+            <a class="btn btn-default btn-sm" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a>
           {% else %}
-            <a class="btn btn-default disabled">Next &rarr;</a>
+            <a class="btn btn-default btn-sm disabled">Next &raquo;</a>
           {% endif %}
         </div>
       </div>
       <div class="col-md-4">
-        <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" style="margin: 20px 0px; float:right;">
+        <div id="bdshare" class="bdshare_t bds_tools_24 get-codes-bdshare btn btn-group pull-right">
           <a class="bds_tsina"></a>
           <a class="bds_tqq"></a>
           <a class="bds_t163"></a>
@@ -40,7 +40,7 @@
     {% include JB/comments %}
   </div>
 
-  <div class="span3 visible-desktop offset9" data-spy="affix">
+  <div class="col-md-3 visible-lg">
     {% include custom/asides/search_box %}
     <section>
       <h4>Published</h4>

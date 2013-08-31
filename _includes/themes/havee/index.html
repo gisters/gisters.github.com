@@ -1,6 +1,6 @@
 <div class="row">
 
-  <div class="span9">
+  <div class="col-md-9">
     <div class="page-header-wrapper">
       <div class="page-header">
         <h2>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h2>
@@ -9,7 +9,7 @@
     {{ content }}
   </div>
 
-  <div class="span3 visible-desktop offset9" data-spy="affix">
+  <div class="col-md-3 visible-lg">
     {% include custom/aside %}
   </div>
 

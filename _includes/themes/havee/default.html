@@ -13,7 +13,6 @@
     <![endif]-->
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css " rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link href="{{ ASSET_PATH }}/css/pygments.css" rel="stylesheet" type="text/css" media="all">
@@ -31,6 +30,8 @@
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="{{ site.title }} ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="{{ site.title }} RSS Feed">
+
+    {% include JB/analytics %}
 
   </head>
 
@@ -56,7 +57,7 @@
           {% include JB/pages_list %}
           <li><a href="{{ HOME_PATH }}vimwiki" target="_blank" title="Vimwiki">Vimwiki</a><li>
         </ul>
-        
+
         <ul class="nav navbar-nav navbar-right">
           <li><a href="{{ site.production_url }}/rss.xml" target="_blank" title="RSS"><span class="icon-rss icon-large"></span></a></li>
           {% if site.author.github %}
@@ -86,7 +87,7 @@
 
       <footer class="text-left">
         <p>&copy; 2009-{{ site.time | date: '%Y' }} <a href="{{ HOME_PATH }}" target="_blank">{{ site.author.name }}</a>. Help from <a href="http://jekyllrb.com/" target="_blank" title="Jekyll">Jekyll</a></p>
-        <p><a href="http://www.miibeian.gov.cn/" target="_blank" title="沪ICP备13026530号-1">沪ICP备13026530号-1</a></p>
+        <p><a href="http://www.miibeian.gov.cn/" target="_blank" title="沪ICP备13026530号-1">沪ICP备13026530号-2</a></p>
       </footer>
     </div> <!-- /container -->
 
@@ -97,6 +98,5 @@
 
     {% include custom/duoshuo %}
     {% include custom/sharing %}
-    {% include JB/analytics %}
   </body>
 </html>

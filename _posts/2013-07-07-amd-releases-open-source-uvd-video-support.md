@@ -58,3 +58,4 @@ Device Drivers  --->
 
 - [http://wiki.gentoo.org/wiki/Radeon#Firmware](http://wiki.gentoo.org/wiki/Radeon#Firmware)
 - [http://chithanh.blogspot.com/2013/04/new-mesa-features-for-adventurous.html](http://chithanh.blogspot.com/2013/04/new-mesa-features-for-adventurous.html)
+- [http://www.x.org/wiki/RadeonFeature/](http://www.x.org/wiki/RadeonFeature/)

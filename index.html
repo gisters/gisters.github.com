@@ -1,6 +1,6 @@
 ---
 layout: index
-description: Havanna Hobbies, Linux Tips Record。
+description: Havee Hobbies, Linux Tips Record。
 tagline: 王者不可刚，阴柔三寸力，铁指寸进，劲断霸阳
 ---
 
@@ -14,58 +14,32 @@ tagline: 王者不可刚，阴柔三寸力，铁指寸进，劲断霸阳
     {% endif %}
 
     {% if post.content contains "<!-- more -->" %}
-      <p><a class="btn more-link" href="{{ post.url }}"><span class="readmore">Read More &raquo; </span></a></p>
+      <p><a class="btn btn-default btn-sm pull-right" href="{{ post.url }}"><span class="readmore">Read More &raquo; </span></a></p>
+      <div class="clearfix"></div>
     {% endif %}
 </div>
 {% endfor %}
 
 <!-- Pagination links -->
-  <div id="post-pagination" class="pagination pagination-centered">
-    <ul class="pagination">
-      {% if paginator.previous_page %}
-      <li>
-        {% if paginator.previous_page == 1 %}
-        <a href="/"><span class="icon-chevron-left"></span></a>
-        {% else %}
-        <a href="/page{{ paginator.previous_page }}"><span class="icon-chevron-left"></span></a>
-        {% endif %}
-      </li>
-      {% else %}
-      <li class="disabled">
-      <span><span class="icon-chevron-left"></span></span>
-      </li>
-      {% endif %}
-
-      {% if paginator.page == 1 %}
-      <li class="active">
-      <a href="#">1</a>
-      </li>
-      {% else %}
-      <li>
-      <a href="/">1</a>
-      </li>
-      {% endif %}
-
-      {% for count in (2..paginator.total_pages) %}
-      {% if count == paginator.page %}
-      <li class="active">
-      <a href="#">{{ count }}</a>
-      </li>
-      {% else %}
-      <li>
-      <a href="/page{{ count }}">{{ count }}</a>
-      </li>
-      {% endif %}
-      {% endfor %}
-
-      {% if paginator.next_page %}
-      <li>
-      <a href="/page{{ paginator.next_page }}"><span class="icon-chevron-right"></span></a>
-      </li>
-      {% else %}
-      <li class="disabled">
-      <span><span class="icon-chevron-right"></span></span>
-      </li>
-      {% endif %}
-    </ul>
-  </div>
+<div class="btn pull-right">
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+    <a class="btn btn-default btn-sm" href="/">Home</a>
+    <a class="btn btn-default btn-sm" href="/">&laquo; Prev</a>
+    {% else %}
+    <a class="btn btn-default btn-sm" href="/">Home</a>
+    <a class="btn btn-default btn-sm" href="/page{{paginator.previous_page}}/">&laquo; Prev</a>
+    {% endif %}
+  {% else %}
+    <span><a class="btn btn-default btn-sm disabled" href="/">Home</a></span>
+    <span><a class="btn btn-default btn-sm disabled">&laquo; Prev</a></span>
+  {% endif %}
+  <span><a class="btn btn-default btn-sm disabled">Page: {{paginator.page}} of {{paginator.total_pages}}</a></span>
+  {% if paginator.next_page %}
+    <a class="btn btn-default btn-sm" href="/page{{paginator.next_page}}/">Next &raquo;</a>
+    <a class="btn btn-default btn-sm" href="/page{{paginator.total_pages}}/">Last</a>
+  {% else if paginator.page == paginator.total_pages %}
+    <span><a class="btn btn-default btn-sm disabled">Next &raquo;</a></span>
+    <span><a class="btn btn-default btn-sm disabled">Last</a></span>
+  {% endif %}
+</div>
