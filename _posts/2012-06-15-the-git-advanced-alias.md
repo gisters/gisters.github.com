@@ -64,11 +64,10 @@ git config --global alias.ll "log --graph --all --pretty=format:'%C(yellow)%h%C(
 [alias]
     ll= log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(w    hite)- %an, %ar%Creset' --decorate --abbrev-commit --max-count=20
     l = log --stat --decorate --abbrev-commit --max-count=3
-    # git svn asliases
-    si = git si
-    sr = git svn rebase
-    sd = git svn dcommit
-    sf = git svn fetch
+    sbi = submodule init
+    sbu = submodule update
+    sbp = submodule foreach git pull
+    sbc = submodule foreach git checkout master
 ```
 
 参考资料：[https://git.wiki.kernel.org/index.php/Aliases](https://git.wiki.kernel.org/index.php/Aliases)

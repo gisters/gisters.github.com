@@ -1,39 +1,39 @@
+---
+layout: nill
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Page not found - Havee's Space</title>
-  
-    <link href="/assets/themes/havee/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <title>Page not found - {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.png">
 
     <script type="text/javascript">
-    function countDown(secs,surl){
-      //alert(surl);
-      var jumpTo = document.getElementById('jumpTo');
-      jumpTo.innerHTML=secs;
-      if(--secs>0){
-        setTimeout("countDown("+secs+",'"+surl+"')",1000);
-      }
-      else{
-        location.href=surl;
-      }
-     }
+      function countDown(secs,surl){
+        //alert(surl);
+        var jumpto = document.getElementById('jumpto');
+        jumpto.innerHTML=secs;
+        if(--secs>0){
+          setTimeout("countDown("+secs+",'"+surl+"')",1000);
+        }
+        else{
+          location.href=surl;
+        }
+       }
     </script>
+
+    <style type="text/css">
+      .center { float: none; margin-left: auto; margin-right: auto; text-align: center; }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <div class="content">
-        <div class="row">
-          <div style="text-align:center;">
-            <h1>404</h1>
-            <p><strong>There isn't a Page here.</strong></p>
-            <p> Jump to <a href="http://havee.me">Havee's Space</a> after <span id="jumpTo" style="font-weight: bold"> 5 </span> seconds</p>
-            <script type="text/javascript">countDown(5,'http://havee.me');</script>
-          </div>
-        </div>
-      </div>
+    <div class="center">
+      <h1>404</h1>
+      <p>There isn't a Page here.</p>
+      <p>Jump to <a href="/">{{ site.title }}</a> after <span id="jumpto" style="font-weight: bold"> 5 </span> seconds,</p>
+      <script type="text/javascript">countDown(5,'/');</script>
+      <p>or click <a href="/" target="_parent"><span style="font-weight: bold">Here</span></a> to return.</p>
     </div>
   </body>
 </html>
-

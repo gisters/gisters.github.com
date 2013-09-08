@@ -102,6 +102,16 @@ JB :
       colorscheme: light
     duoshuo : 
       name : havanna
+      comments : 
+        num: 10
+        avatar : 0
+        time: 0
+        title : 0
+        admin : 0
+        length : 14
+      visitors : 
+        num : 12
+        size : 45
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.

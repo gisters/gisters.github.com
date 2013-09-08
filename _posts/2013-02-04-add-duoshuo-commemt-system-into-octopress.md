@@ -55,7 +55,7 @@ duoshuo_short_name: yourname
 {% raw %}
 ```html
 <!-- Duoshuo Comment BEGIN -->
-<div class="ds-thread"></div>
+<div class="ds-thread" data-title="{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}"></div>
 <script type="text/javascript">
   var duoshuoQuery = {short_name:"{{ site.duoshuo_short_name }}"};
   (function() {
@@ -136,3 +136,7 @@ duoshuo_asides_length: 18   # 侧边栏评论截取的长度
     custom/asides/recent_comments.html
 
 收工。
+
+##### Update
+
+多说评论似乎升级了系统，无法自动获取到页面文章标题，所以手动在评论页插入 **data-title**。--2013.09.10

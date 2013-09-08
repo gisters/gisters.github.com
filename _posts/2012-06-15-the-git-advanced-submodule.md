@@ -55,14 +55,11 @@ $ git push
 一次性更新你repo下所有的submodules
 
 ```sh
-$ git pull --recurse-submodules
-$ git submodule update --recursive
+$ git submodule foreach git pull
+$ git add .
+$ git commit -m "Update all Submodules to latest HEAD"
 ```
-或者
 
-```sh
-$ git pull && git submodule init && git submodule update && git submodule status
-```
 #### 3. 修改你项目中的 Submodule
 
 如果你恰巧拥有 Submodule 远程 commit 权限，进入你的 Submodule 目录，作些修改，提交

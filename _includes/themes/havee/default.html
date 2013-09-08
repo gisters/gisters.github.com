@@ -56,6 +56,11 @@
           {% assign group = 'navigation' %}
           {% include JB/pages_list %}
           <li><a href="{{ HOME_PATH }}vimwiki" target="_blank" title="Vimwiki">Vimwiki</a><li>
+          <li>
+            <form class="form-inline visible-lg visible-md" role="form" onsubmit="tmtxt_search_google()">
+              <input type="text" class="form-control input-sm" placeholder="Google Search" id="my-google-search">
+            </form>
+          </li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">

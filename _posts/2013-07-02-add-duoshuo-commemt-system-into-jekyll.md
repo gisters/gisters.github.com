@@ -27,11 +27,13 @@ tags: [Jekyll, duoshuo]
 
 填充如下内容
 
+{% raw %}
 ```html
 <!-- Duoshuo Comment BEGIN -->
-    <div id="comments" class="ds-thread"></div>
+    <div id="comments" class="ds-thread" data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
 <!-- Duoshuo Comment END -->
 ```
+{% endraw %}
 
 由于同一页面调用多个多说系统的数据，其 js 只需加载一次即可。所以相关的 javascript 我们放到默认的 default 中，编辑 `_includes/themes/havanna/default` 文件，在
 
@@ -85,3 +87,6 @@ OK，完成手工。
       </section>
 ```
 
+##### Update:
+
+多说评论似乎升级了系统，无法自动获取到页面文章标题，所以手动在评论页插入 **data-title**。--2013.09.10

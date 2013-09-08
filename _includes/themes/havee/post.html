@@ -12,8 +12,8 @@
     {{ content }}
     <hr>
     <div class="row">
-      <div class="col-md-8">
-        <div class="btn btn-group">
+      <div class="col-md-6">
+        <div class="btn-group">
           {% if page.previous %}
             <a class="btn btn-default btn-sm" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Prev</a>
           {% else %}
@@ -27,8 +27,8 @@
           {% endif %}
         </div>
       </div>
-      <div class="col-md-4">
-        <div id="bdshare" class="bdshare_t bds_tools_24 get-codes-bdshare btn btn-group pull-right">
+      <div class="col-md-6">
+        <div id="bdshare" class="bdshare_t bds_tools_24 get-codes-bdshare btn-group pull-right">
           <a class="bds_tsina"></a>
           <a class="bds_tqq"></a>
           <a class="bds_t163"></a>
@@ -40,8 +40,7 @@
     {% include JB/comments %}
   </div>
 
-  <div class="col-md-3 visible-lg">
-    {% include custom/asides/search_box %}
+  <div class="col-md-3 visible-lg visible-md">
     <section>
       <h4>Published</h4>
       <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
