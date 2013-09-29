@@ -33,32 +33,32 @@ GnuPG 是实现安全通信和数据存储的一系列工具集，可以做加�
 
 ##### 创建密钥对
 
-    $ gpg --gen-key                   # 生成密钥对
-    $ gpg --gen-revoke ID             # 为 ID 生成吊销密钥
+    $ gpg --gen-key                                     # 生成密钥对
+    $ gpg --gen-revoke ID                               # 为 ID 生成吊销密钥
 
 ##### 公钥处理
 
-    $ gpg --output filename.asc --export Havanna # 导出公钥
+    $ gpg --output filename.asc --export Havanna        # 导出公钥
     $ gpg -o filename.asc --export Havanna
-    $ gpg -o filename.asc -a --export Havanna    # -a 选项是以 ASSCII 码方式导出
-    $ gpg --list-public-keys                     # 显示所有公钥
+    $ gpg -o filename.asc -a --export Havanna           # -a 选项是以 ASSCII 码方式导出
+    $ gpg --list-public-keys                            # 显示所有公钥
     $ gpg -k
-    $ gpg --check-sig                            # 监测公钥环中公钥的签名信息
-    $ gpg --fingerprint Havanna                  # 查看公钥指纹信息
+    $ gpg --check-sig                                   # 监测公钥环中公钥的签名信息
+    $ gpg --fingerprint Havanna                         # 查看公钥指纹信息
 
 ##### 私钥处理
 
-    $ gpg -o filename --export-secret-keys Havanna    # 导出用户标志为 Havanna 的私钥，不加用户标志，则导出所有私钥
-    $ gpg -o filename -a --export-secret-keys Havanna # 以 ASSCII 码方式导出
-    $ gpg --list-secret-keys                          # 显示所有私钥
+    $ gpg -o filename --export-secret-keys Havanna      # 导出用户标志为 Havanna 的私钥，不加用户标志，则导出所有私钥
+    $ gpg -o filename -a --export-secret-keys Havanna   # 以 ASSCII 码方式导出
+    $ gpg --list-secret-keys                            # 显示所有私钥
     $ gpg -K
 
 ##### 其他
 
-    $ gpg --import Havanna.asc                    # 导入私钥或公钥
-    $ gpg --delete-secret-and-public-key Havanna # 删除私钥和公钥
-    $ gpg --delete-secret-key Havanna            # 删除公钥
-    $ gpg --delete-key Havanna                   # 删除私钥
+    $ gpg --import Havanna.asc                          # 导入私钥或公钥
+    $ gpg --delete-secret-and-public-key Havanna        # 删除私钥和公钥
+    $ gpg --delete-secret-key Havanna                   # 删除私钥
+    $ gpg --delete-key Havanna                          # 删除公钥
 
 
     $ gpg --edit-key Havanna  # 编辑密钥，要帮助输入 help
@@ -88,16 +88,16 @@ GnuPG 是实现安全通信和数据存储的一系列工具集，可以做加�
 
 ##### 加密与解密
 
-    $ gpg -e -r Havanna.asc filename              # 使用 Havanna 的公钥对 filename 加密，生成二进制 filename.pgp
-    $ gpg -ea -r Havanna filename -o filename.asc # 同上，不过已 ASCII 方式输入结果，并输出 asc 文件
-    $ gpg -d filename.pgp -o filename             # 对 filename.pgp 解密，保存为 filename
+    $ gpg -e -r Havanna.asc filename                    # 使用 Havanna 的公钥对 filename 加密，生成二进制 filename.pgp
+    $ gpg -ea -r Havanna filename -o filename.asc       # 同上，不过已 ASCII 方式输入结果，并输出 asc 文件
+    $ gpg -d filename.pgp -o filename                   # 对 filename.pgp 解密，保存为 filename
 
 ##### 打包方式进行签名与验证
 
-    $ gpg -s filename                            # 使用默认的用户对 filename 进行打包方式的签名
-    $ gpg -u Havanna -s filename -o filename.sig # 使用指定的用户 Havanna 对 filename 进行签名
-    $ gpg --verify filename.gpg                  # 验证签名
-    $ gpg -d filename.gpg -o filename            # 解包并验证签名
+    $ gpg -s filename                                   # 使用默认的用户对 filename 进行打包方式的签名
+    $ gpg -u Havanna -s filename -o filename.sig        # 使用指定的用户 Havanna 对 filename 进行签名
+    $ gpg --verify filename.gpg                         # 验证签名
+    $ gpg -d filename.gpg -o filename                   # 解包并验证签名
 
 ##### 分离方式进行签名与验证
 
@@ -130,7 +130,7 @@ GnuPG 是实现安全通信和数据存储的一系列工具集，可以做加�
     set pgp_autosign=yes
     set pgp_replysign=yes
     set pgp_replyencrypt=yes
-    set pgp_sign_as=BB34888A  #你自己的公钥标志 ID
+    set pgp_sign_as=BB34888A                            #你自己的公钥标志 ID
     set pgp_timeout=60
     set pgp_verify_sig=yes
 

@@ -14,7 +14,7 @@ tags: [Grub, Syslinux]
 
     emerge -av syslinux
 
-一些说明：
+#### 说明：
 
 - SYSLINUX - FAT 文件系统引导
 - EXTLINUX - ext2/3/4 及 btrfs等文件系统引导
@@ -22,6 +22,8 @@ tags: [Grub, Syslinux]
 - ISOLINUX - ISO-9660 (CDROM) bootloader
 
 <!-- more -->
+#### 操作：
+
 对于 `/boot` 独立分区的用户，需将 `/boot` 分区设置为 **active**：
 
 ```
@@ -51,10 +53,12 @@ Command (m for help): w
 
 接下来就是引导文件安装，由于我的 **/boot** 是独立分区，且是 ext2 文件系统，所以我使用的是 extlinux。
 
-    mount /boot
-    mkdir /boot/extlinux
-    extlinux --install /boot/extlinux
-    ln -snf . /boot/boot
+```
+mount /boot
+mkdir /boot/extlinux
+extlinux --install /boot/extlinux
+ln -snf . /boot/boot
+```
 
 需要用到的一些模块：
 
@@ -105,7 +109,7 @@ LABEL windows
 
 具体的用法，可以参考：[http://git.kernel.org/cgit/boot/syslinux/syslinux.git/tree/doc/menu.txt](http://git.kernel.org/cgit/boot/syslinux/syslinux.git/tree/doc/menu.txt)。
 
-一些技巧：
+#### 技巧：
 
 1. 无法删除 **ldlinux.sys**
 
@@ -121,7 +125,7 @@ LABEL windows
 
   `boot: LINUX /boot/3.11.0-gentoo root=/dev/sda3`
 
-参考：
+#### 参考：
 
 - [http://www.syslinux.org/wiki/index.php/The_Syslinux_Project](http://www.syslinux.org/wiki/index.php/The_Syslinux_Project)
 - [https://wiki.gentoo.org/wiki/Syslinux](https://wiki.gentoo.org/wiki/Syslinux)
