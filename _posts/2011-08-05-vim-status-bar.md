@@ -4,7 +4,7 @@ title: "Vim 状态栏"
 description: "动手让vim的状态栏显示出编码格式"
 keywords: vim, 状态栏, bom
 category: Linux
-tags: [vim, Usage, Configuration]
+tags: [Vim, Usage, Configuration]
 ---
 {% include JB/setup %}
 
