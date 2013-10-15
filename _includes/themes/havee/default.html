@@ -103,24 +103,19 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{ ASSET_PATH }}/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-<script>
-$(document).ready(function() {
-  $("p img").each(function() {
-    var strA = "<a id='fancyBox' href='" + this.src + "'></a>";
-    $(this).wrapAll(strA);
-  });
-});
+    <script>
+    $(document).ready(function() {
+      $("p img").each(function() {
+        var strA = "<a id='fancyBox' href='" + this.src + "'></a>";
+        $(this).wrapAll(strA);
+      });
+    });
 
-$("#fancyBox").fancybox({
-  openEffect	: 'elastic',
-  closeEffect	: 'elastic',
-  helpers : {
-    title : {
-      type : 'over'
-    }
-  }
-});
-</script>
+    $("#fancyBox").fancybox({
+      openEffect	: 'elastic',
+      closeEffect	: 'elastic',
+    });
+    </script>
 
     {% include custom/duoshuo %}
     {% include custom/sharing %}

@@ -18,4 +18,4 @@ tags: [Gentoo, Kernel, Patch]
 
 不太清楚下次 gentoo-sources 的更新是否还有问题，因为从 kernel.org 上 clone 了 3.4.2 的源码，打上原来的patch是没有问题的。为防止意外 diff 了一个新的 patch 放置于 github 上，也算减少自己折腾量，呵呵。我估计这次受影响的应该也仅 gentoo-sources-3.4.2-r1，因为我没有使用其他的 sources，不太清楚其他的 sources 是否受到影响。
 
-patch 地址：[https://github.com/Ihavanna/dotfiles/tree/master/gentoo/etc/portage/patches/sys-kernel/gentoo-sources](https://github.com/Ihavanna/dotfiles/tree/master/gentoo/etc/portage/patches/sys-kernel/gentoo-sources)
+patch 地址：[https://github.com/Ihavee/dotfiles/tree/master/gentoo/etc/portage/patches/sys-kernel/gentoo-sources](https://github.com/Ihavee/dotfiles/tree/master/gentoo/etc/portage/patches/sys-kernel/gentoo-sources)

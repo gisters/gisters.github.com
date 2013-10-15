@@ -28,24 +28,10 @@ title: Blogging Like a Hacker
 
 ### 预定义的全局变量
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>变量</th>
-      <th>描述</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>layout</td>
-      <td>这个变量是用来设置选用的模板文件。使用模板文件的文件名，但不包括扩展名，模板文件必须存在于 _layout目录中。</td>
-    </tr>
-    <tr>
-      <td>permalink</td>
-      <td>如果你需要你的Url地址和默认的/年份/月份/日期/标题.html不同，那你就需要设置这个选项，它将会当做最终的URL地址。</td>
-    </tr>
-  </tbody>
-</table>
+|变量|描述
+|:---|:---
+|layout|这个变量是用来设置选用的模板文件。使用模板文件的文件名，但不包括扩展名，模板文件必须存在于 `_layout` 目录中。
+|permalink|如果你需要你的 URL 地址和默认的 `/年份/月份/日期/标题.html` 不同，那你就需要设置这个选项，它将会当做最终的 URL 地址。
 
 ### 自定义数据
 
@@ -61,19 +47,8 @@ title: Blogging Like a Hacker
 
 下面是文章可用的前置数据变量：
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>变量</th>
-      <th>描述</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>date</td>
-      <td>这个日期变量将会覆盖文件名中的日期，这个变量能够用来确保文章的正确排序</td>
-    </tr>
-  </tbody>
-</table>
+|变量|描述
+|:---|:---
+|date|这个日期变量将会覆盖文件名中的日期，这个变量能够用来确保文章的正确排序
 
 转自：[Jekyll的YAML前置数据](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/2012/11/30/Jekyll-Wiki-YAML-Front-Matter.html)

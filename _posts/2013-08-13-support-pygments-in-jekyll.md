@@ -28,11 +28,11 @@ tags: [Jekyll, pygments, python]
 在 Jekyll 的配置文件 **_config.yml** 中设置打开 Pygments
 
     pygments: true
-    mardown: redcloth
+    mardown: redcarpet
 
 进到我们的网站目录，运行
 
-    pygmentize -S default -f html > your/path/pygments.css
+    $ pygmentize -S default -f html > your/path/pygments.css
 
 生成的样式文件加到我们的网页中
 
@@ -76,7 +76,7 @@ int main(int argc, char **argv)
 
 生成的 html 高亮结果
 
-{% highlight c %}
+```c
 /* hello world demo */
 #include <stdio.h>
 int main(int argc, char **argv)
@@ -84,7 +84,7 @@ int main(int argc, char **argv)
     printf("Hello, World!\n");
     return 0;
 }
-{% endhighlight %}
+```
 
 参考：
 

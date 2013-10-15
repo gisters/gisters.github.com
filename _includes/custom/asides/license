@@ -1,6 +1,8 @@
       <section>
         <h4>License</h4>
-        <span>
-          <a href="http://www.creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank"><img alt="License" src="{{ site.production_url }}/assets/images/CC.png" style="margin: 10px;" title="署名-非商业性使用-相同方式共享 3.0 中国大陆"></a>
-        </span>
+        <ul>
+          <li>
+            <a href="http://www.creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank"><img alt="License" src="{{ site.production_url }}/assets/images/CC.png" title="署名-非商业性使用-相同方式共享 3.0 中国大陆"></a>
+          </li>
+        </ul>
       </section>

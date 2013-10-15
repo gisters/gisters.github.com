@@ -30,7 +30,9 @@ tags: [Jekyll, duoshuo]
 {% raw %}
 ```html
 <!-- Duoshuo Comment BEGIN -->
-    <div id="comments" class="ds-thread" data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
+    <div id="comments">
+        <div class="ds-thread" data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
+    </div>
 <!-- Duoshuo Comment END -->
 ```
 {% endraw %}

@@ -17,99 +17,34 @@ tags: [Jekyll, Usage]
 <!-- more -->
 ### 模板变量
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>变量</th>
-      <th>描述</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>year</td>
-      <td>从文件名中获取的年份</td>
-    </tr>
-    <tr>
-      <td>month</td>
-      <td>从文件名中获取的月份</td>
-    </tr>
-    <tr>
-      <td>day</td>
-      <td>从文件名中获取的日期</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>从文件名中获取的标题</td>
-    </tr>
-    <tr>
-      <td>categories</td>
-      <td>当前文章指定的分类。Jekyll自动将它解析到URL的双斜杠之间。如果没有分类，那将会被忽略。</td>
-    </tr>
-    <tr>
-      <td>i_month</td>
-      <td>从文件名中获取没有前导零的月份</td>
-    </tr>
-    <tr>
-      <td>i_day</td>
-      <td>从文件名中获取没有前导零的日期</td>
-    </tr>
-  </tbody>
-</table>
+|变量|描述|
+:---|:---
+|year|从文件名中获取的年份|
+|month|从文件名中获取的月份|
+|day|从文件名中获取的日期|
+|title|从文件名中获取的标题|
+|categories|当前文章指定的分类。Jekyll 自动将它解析到 URL 的双斜杠之间。如果没有分类，那将会被忽略。|
+|i_month|从文件名中获取没有前导零的月份|
+|i_day|从文件名中获取没有前导零的日期|
+
 
 ### 内建风格
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>变量</th>
-      <th>描述</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>date</td>
-      <td>/:categories/:year/:month/:day/:title.html</td>
-    </tr>
-    <tr>
-      <td>pretty</td>
-      <td>/:categories/:year/:month/:day/:title/</td>
-    </tr>
-    <tr>
-      <td>none</td>
-      <td>/:categories/:title.html</td>
-    </tr>
-  </tbody>
-</table>
+|变量|描述|
+|:---|:---
+|date|/:categories/:year/:month/:day/:title.html|
+|pretty|/:categories/:year/:month/:day/:title/|
+|none|/:categories/:title.html|
 
 ### 例子
 
 假设文章的名字是：`/2009-4-29-slap-chop.textile`
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>变量</th>
-      <th>描述</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>none</td>
-      <td>2009/04/29/slap-chop.html</td>
-    </tr>
-    <tr>
-      <td>permalink: pretty</td>
-      <td>2009/04/29/slap-chop/index.html</td>
-    </tr>
-    <tr>
-      <td>permalink: /:month-:day-:year/:title.html</td>
-      <td>04-29-2009/slap-chop.html</td>
-    </tr>
-    <tr>
-      <td>permalink: /blog/:year/:month/:day/:title</td>
-      <td>/blog/2009/04/29/slap-chop/index.html</td>
-    </tr>
-  </tbody>
-</table>
+|变量|描述|
+|:---|:---
+|none|/2009/04/29/slap-chop.html|
+|permalink: pretty|/2009/04/29/slap-chop/index.html|
+|permalink: /:month-:day-:year/:title.html|/04-29-2009/slap-chop.html|
+|permalink: /blog/:year/:month/:day/:title|/blog/2009/04/29/slap-chop/index.html|
 
 转自：[【译文】Jekyll固定链接](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/2012/12/05/Jekyll-Wiki-Permalinks.html)

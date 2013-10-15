@@ -75,4 +75,4 @@ emake failed
   * SENDSEQ - 0 => don't send packets with sequence numbers
 ```
 
-修改的时候别忘记ebuild中的相关部分插入 `epatch “${FILESDIR}/eaptls-mppe-0.99.patch”`，我已经将之放入github上：[https://github.com/Ihavanna/overlay/blob/master/net-dialup/ppp/files/eaptls-mppe-0.99.patch](https://github.com/Ihavanna/overlay/blob/master/net-dialup/ppp/files/eaptls-mppe-0.99.patch)
+修改的时候别忘记ebuild中的相关部分插入 `epatch “${FILESDIR}/eaptls-mppe-0.99.patch”`，我已经将之放入github上：[https://github.com/Ihavee/overlay/blob/master/net-dialup/ppp/files/eaptls-mppe-0.99.patch](https://github.com/Ihavee/overlay/blob/master/net-dialup/ppp/files/eaptls-mppe-0.99.patch)
