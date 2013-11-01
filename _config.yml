@@ -8,7 +8,7 @@ paginate: 5
 
 markdown: redcarpet
 redcarpet:
-    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough", "underline"]
+    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
 #    extensions: ["fenced_code_blocks", "tables", "highlight", "with_toc_data", "strikethrough", "underline"]
 
 # Themes are encouraged to use these universal variables
@@ -150,3 +150,15 @@ JB :
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
 
+  blogroll : true
+  brlist :
+    - text : 清风的网络空间
+      url : //phpcj.org/
+    - text : JoveSky
+      url : //www.jovesky.com/
+    - text : 刘静的博客
+      url : //upliu.net/
+    - text : 小天地，大世界
+      url : //www.lyblog.net/
+    - text : 巨二·博客
+      url : //www.juerblog.com/

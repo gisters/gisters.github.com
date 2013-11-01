@@ -12,8 +12,8 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css " rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link href="{{ ASSET_PATH }}/css/pygments.css" rel="stylesheet" type="text/css" media="all">
     <link href="{{ ASSET_PATH }}/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" media="all" />
@@ -65,21 +65,21 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="{{ site.production_url }}/rss.xml" target="_blank" title="RSS"><span class="icon-rss icon-large"></span></a></li>
+          <li><a href="{{ HOME_PATH }}rss.xml" target="_blank" title="RSS"><i class="fa fa-rss fa-lg"></i></a></li>
           {% if site.author.github %}
-            <li><a href="https://github.com/{{ site.author.github }}" target="_blank" title="Github"><span class="icon-github icon-large"></span></a></li>
+            <li><a href="https://github.com/{{ site.author.github }}" target="_blank" title="Github"><i class="fa fa-github fa-lg"></i></a></li>
           {% endif %}
           {% if site.author.googleplus %}
-            <li><a href="https://plus.google.com/{{ site.author.googleplus }}" target="_blank" title="Google+"><span class="icon-google-plus icon-large"></span></a></li>
+            <li><a href="https://plus.google.com/{{ site.author.googleplus }}" target="_blank" title="Google+"><i class="fa fa-google-plus fa-lg"></i></a></li>
           {% endif %}
           {% if site.author.twitter %}
-            <li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter"><span class="icon-twitter icon-large"></span></a></li>
+            <li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter"><i class="fa fa-twitter fa-lg"></i></span></a></li>
           {% endif %}
           {% if site.author.facebook %}
-            <li><a href="http://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook"><span class="icon-facebook icon-large"></span></a></li>
+            <li><a href="http://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook"><i class="fa fa-facebook fa-lg"></i></a></li>
           {% endif %}
           {% if site.author.weibo %}
-            <li><a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="Weibo"><span class="icon-weibo icon-large"></span></a></li>
+            <li><a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="Weibo"><i class="fa fa-weibo fa-lg"></i></a></li>
           {% endif %}
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -97,25 +97,12 @@
       </footer>
     </div> <!-- /container -->
 
-    {% include custom/search_script %}
-    <script src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/jquery.min.js"><\/script>')</script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/bootstrap.min.js"><\/script>')</script>
     <script type="text/javascript" src="{{ ASSET_PATH }}/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-    <script>
-    $(document).ready(function() {
-      $("p img").each(function() {
-        var strA = "<a id='fancyBox' href='" + this.src + "'></a>";
-        $(this).wrapAll(strA);
-      });
-    });
-
-    $("#fancyBox").fancybox({
-      openEffect	: 'elastic',
-      closeEffect	: 'elastic',
-    });
-    </script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/webcore.js"></script>
 
     {% include custom/duoshuo %}
     {% include custom/sharing %}

@@ -1,12 +1,12 @@
+      {% if site.JB.blogroll != false %}
       <section>
         <h4>Blogroll</h4>
         <div class="category">
           <ul>
-            <li><a href="http://phpcj.org" target="_blank">清风的网络空间</a></li>
-            <li><a href="http://www.jovesky.com" target="_blank">JoveSky</a></li>
-            <li><a href="http://upliu.net" target="_blank">刘静的博客</a></li>
-            <li><a href="http://www.lyblog.net" target="_blank">小天地，大世界</a></li>
-            <li><a href="http://www.juerblog.com" target="_blank">巨二·博客</a></li>
+            {% for link in site.JB.brlist %}
+              <li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
+            {% endfor %}
           </ul>
         </div>
       </section>
+      {% endif %}

@@ -127,5 +127,5 @@ LABEL windows
 
 #### 参考：
 
-- [http://www.syslinux.org/wiki/index.php/The_Syslinux_Project](http://www.syslinux.org/wiki/index.php/The_Syslinux_Project)
+- [http://www.syslinux.org/wiki/index.php/The\_Syslinux\_Project](http://www.syslinux.org/wiki/index.php/The_Syslinux_Project)
 - [https://wiki.gentoo.org/wiki/Syslinux](https://wiki.gentoo.org/wiki/Syslinux)
