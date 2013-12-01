@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Gentoo 中用 mariadb 替换 mysql"
-description: "Gentoo 中用 mariadb 替换 mysql"
+title: "Gentoo 中用 MariaDB 替换 MySQL"
+description: "Gentoo 中用 MariaDB 替换 MySQL"
 keywords: Gentoo,mariadb,mysql,替换
 category: SQL
 tags: [SQL, Gentoo]

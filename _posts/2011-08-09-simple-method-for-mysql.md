@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Mysql 简单操作 (笔记)"
-description: "Mysql 简单操作 (笔记)"
+title: "MySQL 简单操作 (笔记)"
+description: "MySQL 简单操作 (笔记)"
 keywords: mysql, root, mysqladmin, 操作
 category: SQL
 tags: [SQL, CLI]
