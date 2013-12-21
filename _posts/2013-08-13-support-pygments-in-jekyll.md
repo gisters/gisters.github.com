@@ -14,14 +14,14 @@ tags: [Jekyll, pygments, python]
 
 假设你已经能正常运行 Jekyll ([安装方法](/internet/2013-07/jekyll-install.html))。
 
-下面安装pygments
+下面安装pygments ( 如果你同样使用archlinux的话 )
 
     $ sudo pacman -S python2-pygments
 
 <!-- more -->
 安装pygments.rb
 
-    $ gem install pygments
+    $ gem install pygments.rb
 
 #### 配置
 
