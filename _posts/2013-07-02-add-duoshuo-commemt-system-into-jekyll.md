@@ -16,7 +16,7 @@ tags: [Jekyll, duoshuo]
   comments :
     provider : duoshuo
     duoshuo : 
-      short_name : havanna
+      short_name : havee
 ```
 
 <!-- more -->
@@ -37,7 +37,7 @@ tags: [Jekyll, duoshuo]
 ```
 {% endraw %}
 
-由于同一页面调用多个多说系统的数据，其 js 只需加载一次即可。所以相关的 javascript 我们放到默认的 default 中，编辑 `_includes/themes/havanna/default` 文件，在
+由于同一页面调用多个多说系统的数据，其 js 只需加载一次即可。所以相关的 javascript 我们放到默认的 default 中，编辑 `_includes/themes/havee/default.html` 文件，在
 
 {% raw %}
 ```
