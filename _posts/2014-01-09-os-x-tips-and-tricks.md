@@ -1,0 +1,102 @@
+---
+layout: post
+title: "OS X 的一些技巧汇总"
+description: "刚上手 OS X，习惯正在慢慢培养中，下面记录一些使用过程中的小技巧"
+keywords: "os x, 技巧"
+category: "Mac"
+tags: [Tips]
+---
+{% include JB/setup %}
+
+刚上手 OS X，习惯正在慢慢培养中，下面记录一些使用过程中的小技巧，不断补充
+
+#### 一. 显示和隐藏
+
+##### 1. 显示和隐藏系统文件
+
+10.8 版本 OS X
+
+    $ defaults write com.apple.finder AppleShowAllFiles YES/NO
+
+10.9 版本 OS X
+
+    $ defaults write ~/Library/Preferences/com.apple.finder.plist AppleShowAllFiles -bool true/false
+
+<!-- more -->
+##### 2. 显示和隐藏普通文件
+
+    $ chflags hidden/nohidden file or directory
+
+#### 二. 文件和目录的扩展属性问题
+
+在 Mac OS X 下，文件经常会被附加上 OS X 特有的扩展属性 ( extend attributes )，具体表现是用 `ls -l` 查看时会有 `@` 的标记，譬如
+
+    $ ls -l os.pdf
+    -rw-r--r--@  1 cnhavee  staff  1518  1 9 14:13 os.pdf
+
+这个 `@` 属性是用户在 Finder 中对文件进行任意操作后就会被附带上，特别讨厌这个属性，这直接导致在 OS X 下打包后放到 Linux 系统分享文件的时候，会出现莫名其妙的错误，兼因 tar 命令本身并不能区分 **extend attributes**
+
+还好，Mac OS X 下的 cp 有个选项 `-X` 能忽略这个扩展属性
+
+    cp: -X      do not copy extended attributes (eas) or resource forks.
+
+属于处理这个问题，譬如打包，在打包前，请用 `cp -Xr` 拷贝出一份没有扩展属性的文件或目录，然后再 tar 打包处理。
+
+另有个命令 `xattr` 也能做到
+
+    $ xattr -l filename
+    com.apple.ResourceFork:
+    00000000  00 00 01 00 00 00 05 08 00 00 04 08 00 00 00 32  |...............2|
+    ……
+
+    $ xattr -d com.apple.ResourceFork filename
+
+你可以一次性清除一个文件的所有 extend attributes
+
+    $ xattr -c filename
+
+你也可以对一个目录及其下的所有文件做清除操作
+
+    $ xattr -rc directory
+
+#### 三. 鼠标移动加速
+
+默认的 Mac OS X 下鼠标的加速，实在是不习惯，俺用 OS X 不是来作图的，纯粹是图它的稳定。所以，还是想办法关闭鼠标的移动加速吧。
+
+下载一个 app，[CursorSense](http://plentycom.jp/en/cursorsense/download.php "CursorSense")
+
+![CursorSense](/assets/images/2014/01/CursorSense.png)
+
+#### 三. GoAgent
+
+关于 Proxy，有很多开源的解决方案，譬如 Goagent
+
+[OS X 上使用 GoAgent](/mac/2013-12/use-goagent-on-os-x.html)
+
+#### 四. 开源软件
+
+可以通过 [MacPorts](http://www.macports.org)、[HomeBrew](/mac/2013-12/how-to-install-and-use-homebrew.html) 等包管理工具来使用开源软件。
+
+譬如[《OS X 上安装 Nginx + PHP-FPM + MariaDB》](/mac/2014-01/install-nginx-php-fpm-mysql-on-os-x.html)
+
+#### 五. 重启 Finder
+
+    $ killall Finder
+
+或者可以按下 Option 键的同事，右键 Dock 栏上的 Finder 选择重启即可。
+
+Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，点击无线图标，则可以显示具体的无线网络状况。
+
+#### 六. 关掉调节音量时的提示声
+
+按住 Shift 键再调节音量，即可临时静音调节
+
+#### 七. 刷新 DNS 缓存
+
+针对 OS X 10.6 以及之前
+
+    sudo dscacheutil -flushcache
+
+针对 OS X 10.6 以后
+
+    sudo killall -HUP mDNSResponder

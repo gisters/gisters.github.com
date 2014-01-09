@@ -26,9 +26,11 @@ tags: [Nginx, PHP-FPM, SQL,]
 
 如果你用的到 PHP cli，你需要更新下你的环境变量 `~/.bash_profile`
 
+```bash
     if [ -d $(brew --prefix josegonzalez/php/php54) ]; then
         export PATH=$(brew --prefix josegonzalez/php/php54)/bin:$PATH
     fi
+```
 
 自启动，检查有无目录 `~/Library/LaunchAgents`，没有的话新建个目录
 
@@ -88,12 +90,13 @@ Accept-Ranges: bytes
 
 ##### 1. Nginx 配置
 
-    mkdir /usr/local/etc/nignx/conf.d
-    touch /usr/local/etc/nignx/conf.d/localhost.conf
+    $ mkdir /usr/local/etc/nignx/conf.d
+    $ touch /usr/local/etc/nignx/conf.d/localhost.conf
 
 编辑 `/usr/local/etc/nginx/nginx.conf`
 
-```
+```nginx
+user yourname admin
 worker_processes  1;
 
 error_log   /usr/local/var/log/nginx/error.log debug;
@@ -107,7 +110,6 @@ events {
 http {
     include mime.types;
     default_type application/octet-stream;
-    include vhosts/*.conf;
 
     log_format main
         '$remote_addr - $remote_user [$time_local] '
@@ -137,7 +139,7 @@ http {
     gzip_http_version 1.1;
     gzip_comp_level 5;
     gzip_proxied any;
-    gzip_types       text/plain application/x-javascript text/css application/xml;
+    gzip_types       text/html text/plain application/x-javascript text/css application/xml;
     gzip_vary on;
     gzip_disable     "MSIE [1-6]\.";
 
@@ -160,7 +162,7 @@ http {
 
 编辑 `/usr/local/etc/nignx/conf.d/localhost.conf`
 
-```
+```nginx
 server {
     listen          8080;
     server_name     localhost;
@@ -200,6 +202,9 @@ server {
     ;listen = 127.0.0.1:9000
     listen = /usr/local/var/run/php-fpm.sock
 
+    user = yourname
+    group = admin
+
 编辑 `/usr/local/etc/php/5.4/php.ini`
 
     date.timezone = Asia/Shanghai
@@ -209,7 +214,7 @@ server {
 第一次运行设置 root 密码
 
 ```
-$ sudo mysql_secure_installation 
+$ sudo mysql_secure_installation
 /usr/local/bin/mysql_secure_installation: line 379: find_mysql_client: command not found
 
 NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
@@ -220,15 +225,15 @@ password for the root user.  If you've just installed MariaDB, and
 you haven't set the root password yet, the password will be blank,
 so you should just press enter here.
 
-Enter current password for root (enter for none): 
+Enter current password for root (enter for none):
 OK, successfully used password, moving on...
 
 Setting the root password ensures that nobody can log into the MariaDB
 root user without the proper authorisation.
 
 Set root password? [Y/n] y
-New password: 
-Re-enter new password: 
+New password:
+Re-enter new password:
 Password updated successfully!
 Reloading privilege tables..
  ... Success!
@@ -275,9 +280,9 @@ Thanks for using MariaDB!
 
 ##### 3. aliases
 
-为了后面管理方便，将命令 alias 下
+为了后面管理方便，将命令 alias 下，`vim ~/.bash_aliases`
 
-```
+```bash
 alias nginx.start='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 alias nginx.stop='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 alias nginx.restart='nginx.stop && nginx.start'
@@ -296,26 +301,30 @@ alias mysql.restart='mysql.stop && mysql.start'
 
 最后打开终端，更新下
 
-    source .bash_profile
+    $ source .bash_profile
 
 然后启动方法
 
-    nginx.start
-    php-fpm.start
-    mysql.start
+    $ nginx.start
+    $ php-fpm.start
+    $ mysql.start
 
 关闭方法
 
-    nginx.stop
-    php-fpm.stop
-    mysql.stop
+    $ nginx.stop
+    $ php-fpm.stop
+    $ mysql.stop
 
 重启方法
 
-    nginx.restart
-    php-fpm.restart
-    mysql.restart
+    $ nginx.restart
+    $ php-fpm.restart
+    $ mysql.restart
 
 搞定，收工！
+
+![nginx localhost](/assets/images/2014/01/localhost.jpg)
+
+![php info](/assets/images/2014/01/phpinfo.jpg)
 
 参考: [http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/](http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/)
