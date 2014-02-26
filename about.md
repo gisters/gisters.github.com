@@ -12,6 +12,8 @@ group: navigation
 
 #### ChangeLog
 
+- 2014年3月，托管方由 GitHub 转向 GitCafe
+- 2014年2月，放弃支持低于 IE 9 的版本
 - 2013年9月，域名切换到 Havee.me
 - 2013年7月，由 Octopress + github 转为 Jekyll Bootstrap + github
 - 2013年1月，由 Wordpress 转为 Octopress + github

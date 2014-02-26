@@ -2,9 +2,9 @@
 layout: post
 title: "OS X 的 rubygems 用户目录"
 description: "新订了本 macbook pro，一切的东东都陆续搬到 OS X 系统中，xcode 安装完后，兴匆匆的准备 `gem install jekyll`，果然出了问题了。"
-keywords: "rubygems, osx"
+keywords: "rubygems, OS X"
 category: "MAC"
-tags: [ruby]
+tags: [Ruby, Gem]
 ---
 {% include JB/setup %}
 

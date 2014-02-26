@@ -1,4 +1,4 @@
 
 <div id="comments">
-  <div class="ds-thread" data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
+  <div class="ds-thread" data-thread-key="{{ page.id }}"  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
 </div>

@@ -4,7 +4,7 @@ title: "Jekyll 中的语法高亮：Pygments"
 description: "在 Jekyll 中的语法高亮：pygments"
 keywords: "jekyll, pygments, 高亮"
 category: Internet
-tags: [Jekyll, pygments, python]
+tags: [Jekyll, Pygments, Python]
 ---
 {% include JB/setup %}
 

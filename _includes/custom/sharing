@@ -1,18 +1,18 @@
 {% if page.path contains '_posts' %}
-    <!-- Baidu Button BEGIN -->
-    <script type="text/javascript" id="bdshell_js"></script>
-    <script>document.write(unescape('%3Cscript%20type%3D%22text/javascript%22%20id%3D%22bdshare_js%22%20data%3D%22type%3Dtools%26amp%3Buid%3D1539895%22%3E%3C/script%3E'));</script>
-    <script type="text/javascript">
-      var bds_config = {
-        'wbUid':2074421551,
-        'review':'normal',
-        'snsKey':{
-          'tsina':'722958853',
-          'tqq':'801412850',
-          't163':'CqC03sHkQ0Yoajki'
-        }
-      };
-      document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
-    </script>
-    <!-- Baidu Button END -->
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshell_js"></script>
+<script>document.write(unescape('%3Cscript%20type%3D%22text/javascript%22%20id%3D%22bdshare_js%22%20data%3D%22type%3Dtools%26amp%3Buid%3D1539895%22%3E%3C/script%3E'));</script>
+<script type="text/javascript">
+var bds_config = {
+  'wbUid':2074421551,
+  'review':'normal',
+  'snsKey':{
+    'tsina':'722958853',
+    'tqq':'801412850',
+    't163':'CqC03sHkQ0Yoajki'
+  }
+};
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
 {% endif %}

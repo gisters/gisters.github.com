@@ -22,6 +22,7 @@ author :
   name : Havee
   email :
   github : Ihavee
+  gitcafe : Havee
   twitter :
   facebook :
   feedburner :
@@ -124,12 +125,15 @@ JB :
     google :
         tracking_id : 'UA-123-12'
     getclicky :
-      site_id :
+        site_id :
     mixpanel :
         token : '_MIXPANEL_TOKEN_'
     piwik :
         baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
         idsite : '1'                   # the id of the site on Piwik
+    baidu :
+        siteid: 707c49682d45342c4abaa7f2fbdd23dd
+        
 
   # Settings for sharing helper.
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
@@ -149,6 +153,20 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
+
+  cdn :
+    jquery :
+      js : //cdn.bootcss.com/jquery/2.1.0/jquery.min.js
+    webfont :
+      js : //cdn.bootcss.com/webfont/1.3.0/webfont.min.js
+    font-awesome :
+      css : //cdn.bootcss.com/font-awesome/4.0.3/css/font-awesome.min.css
+    bootstrap :
+      js : //cdn.bootcss.com/twitter-bootstrap/3.1.1/js/bootstrap.min.js
+      css : //cdn.bootcss.com/twitter-bootstrap/3.1.1/css/bootstrap.min.css
+    fancybox :
+      js : //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
+      css : //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
 
   blogroll : true
   brlist :
