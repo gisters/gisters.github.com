@@ -28,6 +28,7 @@ tags: [Gentoo, Packager]
 #
 # Distributed under terms of the GPLv3 license.
 #
+# Depends on app-portage/pfl
 
 exefile=$1
 
