@@ -29,18 +29,24 @@ tags: [Gentoo, Packager]
 # Distributed under terms of the GPLv3 license.
 #
 # Depends on app-portage/pfl
+#
+# use it on Gentoo
 
 exefile=$1
+tmpfile="/tmp/${exefile}.so.show"
+
+[[ -f ${tmpfile} ]] && rm -rf ${tmpfile}
 
 for so in $(ldd ${exefile} | awk '{print $1}' | sort | uniq ); do
-    [[ ! -f $so ]] && echo $so >> /tmp/${exefile}.so;
+    [[ ! -f $so ]] && echo $so >> /tmp/${exefile}.so
 done
 
 for so in $(cat /tmp/${exefile}.so); do
-    echo "$so need:"; equery b $so >> /tmp/${exefile}.so.result;
-done
+    echo  "$so need:"
+    equery b $so
+    echo ""
+done >> ${tmpfile}
 
 rm /tmp/${exefile}.so
+cat ${tmpfile}
 ```
-
-临时写的，上班后修正

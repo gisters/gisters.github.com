@@ -1,4 +1,4 @@
       <section>
         <h4>Recently Visitors</h4>
-          <ul class="ds-recent-visitors" data-num-items="{{ site.JB.comments.duoshuo.visitors.num }}" data-avatar-size="{{ site.JB.comments.duoshuo.visitors.size }}" style="margin-top:10px;"></ul>
+          <ul class="ds-recent-visitors" data-num-items="{{ site.JB.comments.duoshuo.visitors.num }}" data-avatar-size="{{ site.JB.comments.duoshuo.visitors.size }}"></ul>
       </section>
