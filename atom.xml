@@ -16,7 +16,7 @@ title : {{ page.title | xml_escape }}
 
   {% for post in site.posts %}
   <entry>
-    <title>{{ post.title | xml_escape }}></title>
+    <title>{{ post.title | xml_escape }}</title>
     <link href="{{ site.production_url }}{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>{{ site.production_url }}{{ post.id }}</id>
