@@ -10,7 +10,7 @@ tags: [Git, Usage]
 
 >Git has something called submodule support. This allows you to specify one or more other git repositories within another – a bit like svn:externals (except trickier, but more powerful of course :).
 
-**Git Submodule** 对于大型团队项目来说，是个很好的写作工具功能，它允许你的项目模块化成为每一个 Repository，最终汇聚成一个完整的项目。换句话说，**Git Submodule** 可以别人的 Repo 挂到你自己的 Repo 中的任何位置，成为的 Repo 的一部分。
+**Git Submodule** 对于大型团队项目来说，是个很好的团队协作工具，它允许你的项目模块化成为每一个 Repository，最终汇聚成一个完整的项目。换句话说，**Git Submodule** 可以别人的 Repo 挂到你自己的 Repo 中的任何位置，成为的 Repo 的一部分。
 
 下面说说一些基本的操作
 

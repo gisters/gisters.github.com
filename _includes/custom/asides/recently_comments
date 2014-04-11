@@ -1,6 +1,4 @@
       <section>
         <h4>Recently Comments</h4>
-        <div class="category">
           <ul class="ds-recent-comments" data-num-items="{{ site.JB.comments.duoshuo.comments.num }}" data-show-avatars="{{ site.JB.comments.duoshuo.comments.avatar }}" data-show-time="{{ site.JB.comments.duoshuo.comments.time }}" data-show-title="{{ site.JB.comments.duoshuo.comments.title }}" data-show-admin="{{ site.JB.comments.duoshuo.comments.admin }}" data-excerpt-length="{{ site.JB.comments.duoshuo.comments.length }}"></ul>
-        </div>
       </section>

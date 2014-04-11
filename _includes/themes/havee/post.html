@@ -18,15 +18,15 @@
       <div class="col-md-6">
         <div class="btn-group">
           {% if page.previous %}
-          <a class="btn btn-default btn-sm" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Prev</a>
+          <a class="btn btn-primary btn-sm" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Prev</a>
           {% else %}
-          <a class="btn btn-default btn-sm disabled">&laquo; Prev</a>
+          <a class="btn btn-primary btn-sm disabled">&laquo; Prev</a>
           {% endif %}
-          <a class="btn btn-default btn-sm" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
+          <a class="btn btn-primary btn-sm" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
           {% if page.next %}
-          <a class="btn btn-default btn-sm" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a>
+          <a class="btn btn-primary btn-sm" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a>
           {% else %}
-          <a class="btn btn-default btn-sm disabled">Next &raquo;</a>
+          <a class="btn btn-primary btn-sm disabled">Next &raquo;</a>
           {% endif %}
         </div>
       </div>

@@ -15,32 +15,32 @@ tags: [Nginx, PHP-FPM, SQL,]
 好吧， Homebrew 默认没有 PHP-FPM，我们首先需要使用 brew tap 来添加其他的 repo 到我们的 Homebrew 中去。
 
     $ brew tap homebrew/dupes
-    $ brew tap josegonzalez/homebrew-php
+    $ brew tap homebrew/php
 
 <!-- more -->
 现在我们可以开始安装了
 
-    $ brew install --without-apache --with-fpm --with-mysql php54
+    $ brew install --without-apache --with-fpm php54
 
 下面等待几分钟，Homebrew 开始下载 php 源码并开始编译。
 
 如果你用的到 PHP cli，你需要更新下你的环境变量 `~/.bash_profile`
 
 ```bash
-    if [ -d $(brew --prefix josegonzalez/php/php54) ]; then
-        export PATH=$(brew --prefix josegonzalez/php/php54)/bin:$PATH
+    if [ -d $(brew --prefix Cellar/php54) ]; then
+        export PATH=$(brew --prefix opt/php54)/bin:$PATH
     fi
 ```
 
 自启动，检查有无目录 `~/Library/LaunchAgents`，没有的话新建个目录
 
     $ mkdir -p ~/Library/LaunchAgents
-    $ ln -sfv /usr/local/opt/php54/homebrew-php.josegonzalez.php54.plist ~/Library/LaunchAgents
+    $ ln -sfv /usr/local/opt/php54/homebrew.mxcl.php54.plist ~/Library/LaunchAgents
 
 启动与停止命令
 
-    $ launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
-    $ launchctl unload -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
+    $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php54.plist
+    $ launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php54.plist
 
 #### 二. 安装 MariaDB
 
@@ -286,8 +286,8 @@ Thanks for using MariaDB!
 alias nginx.start='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 alias nginx.stop='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 alias nginx.restart='nginx.stop && nginx.start'
-alias php-fpm.start="launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist"
-alias php-fpm.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist"
+alias php-fpm.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php54.plist"
+alias php-fpm.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php54.plist"
 alias php-fpm.restart='php-fpm.stop && php-fpm.start'
 alias mysql.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mariadb.plist"
 alias mysql.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mariadb.plist"
@@ -328,3 +328,5 @@ alias mysql.restart='mysql.stop && mysql.start'
 ![php info](/assets/images/2014/01/phpinfo.jpg)
 
 参考: [http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/](http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/)
+
+**Update: change josegonzalez/homebrew-php to homebrew/php, 2014.04.12**
