@@ -100,3 +100,31 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 针对 OS X 10.6 以后
 
     sudo killall -HUP mDNSResponder
+
+#### 八. 视频播放
+
+尝试过 N 个播放器，包括收费的射手播放器在内都不太好用，最后定位在 [MPlayer OSX Extended](http://mplayerosx.ch)。终于找到了点 Mplayer 的感觉了。
+
+![MPlayer OSX Extended](/assets/images/2014/01/mplayer-osx.png)
+
+![MPlayer OSX Preferences](/assets/images/2014/01/mplayer-osx-preferences.png)
+
+遗憾的是，播放蓝光 ISO 就不那么直观了。
+
+于是再推荐个收费的 [Mac Blu-ray Player](http://www.macblurayplayer.com)，这个在 Mac OS X 下，我个人觉得是最强的蓝光播放器了，没有之一。
+
+![Mac Blu-ray Player](/assets/images/2014/01/mac-blu-ray-player.png)
+
+#### 九. 生僻的快捷键
+
+- Ctrl + a/e：移动至行首/尾
+- Option + right/left：向右/左移动一个单词
+- Fn + up/down：相当于 Page up/down
+- Ctrl + Command + F：全屏，仅支持右上角双箭头的窗口
+
+#### 十.  特殊符号
+
+- 版权符号：Option + G = ©
+- 人名币符号：Option + Y = ￥
+- 商标符号：Option + 2 = ™
+- 已注册的商标：Option + R = ®

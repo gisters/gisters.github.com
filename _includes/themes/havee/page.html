@@ -1,6 +1,6 @@
         <div class="row">
 
-          <div class="col-md-9 main-contenter">
+          <article class="col-md-9 main-contenter">
             <div id="search-loader" style="display:none;text-align:center">
               <img src="/assets/themes/havee/images/loading.gif">
             </div>
@@ -9,11 +9,11 @@
                 <h2>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h2>
               </div>
             </div>
-            <article>{{ content }}</article>
-          </div>
+            {{ content }}
+          </article>
 
-          <div class="col-md-3 visible-lg visible-md">
+          <aside class="col-md-3 visible-lg visible-md">
             {% include custom/aside %}
-          </div>
+          </aside>
 
         </div>

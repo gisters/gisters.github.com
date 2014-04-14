@@ -1,5 +1,0 @@
-      <section>
-        <span class="logo">
-          <a href="{{ HOME_PATH }}" title="{{ site.title }}" alt="{{ site.title }}"><img src="/assets/images/logo.png" title="{{ site.title }}"></a>
-        </span>
-      </section> 

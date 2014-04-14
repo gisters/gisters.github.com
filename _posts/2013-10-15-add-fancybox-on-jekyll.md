@@ -10,7 +10,7 @@ tags: [Jekyll, FancyBox, jQuery]
 
 这是一篇介绍无 jekyll 插件的形式来使用 [**FancyBox**][3]。
 
-因为既然是博客是以 [**Jekyll**][1] 来驱动的，那么就尽量不要在本地生成静态页面再推送到服务端，也就是说，尽量不用插件。否则，大可以用 Octopress即可。在这个前提下如何给图片一些特殊的效果呢？这里我们使用 [**jequery**][2] 来实现， 譬如 **FancyBox**、[**Lightbox2**][4]。
+因为既然是博客是以 [**Jekyll**][1] 来驱动的，那么就尽量不要在本地生成静态页面再推送到服务端，也就是说，尽量不用插件。否则，大可以用 Octopress即可。在这个前提下如何给图片一些特殊的效果呢？这里我们使用 [**jQuery**][2] 来实现， 譬如 **FancyBox**、[**Lightbox2**][4]。
 
 ![FancyBox](/assets/images/2013/10/fancybox.png "FancyBox")
 

@@ -1,5 +1,0 @@
-    <form class="form-inline" role="form" onsubmit="tmtxt_search_google()">
-      <div class="col-lg-12 form-group">
-        <input type="text" class="form-control input-sm" placeholder="Google Search" id="my-google-search">
-      </div>
-    </form>
