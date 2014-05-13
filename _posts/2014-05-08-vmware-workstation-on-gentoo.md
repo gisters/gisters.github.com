@@ -1,20 +1,20 @@
 ---
 layout: post
-title: "Gentoo 上安装 VMware Workstation"
-description: "Gentoo 上安装 VMware Workstation的一些记录"
+title: "Gentoo 上安装 VMware Player"
+description: "Gentoo 上安装 VMware Player 的一些记录"
 keywords: "gentoo,vmware"
 category: Linux
 tags: [Gentoo, VMware]
 ---
 {% include JB/setup %}
 
-在 Mac OS X 上分别体验了 VirtualBox 与 VMware Fusion，结果 VMware Fusion 的显卡性能确实是高于 VirtualBox，今晚决定在台式机 Gentoo 上也准备体验下 VMware Workstation。
+在 Mac OS X 上分别体验了 VirtualBox 与 VMware Fusion，结果 VMware Fusion 的显卡性能确实是高于 VirtualBox，今晚决定在台式机 Gentoo 上也准备体验下 VMware Player。
 
     echo "app-emulation/vmware-tools vmware_guest_linux vmware_guest_windows" >> /etc/portage/package.use
-    echo "app-emulation/vmware-workstation server vmware-tools" >> /etc/portage.use
-    emerge -av app-emulation/vmware-workstation
+    emerge -av app-emulation/vmware-player
+    emerge --config vmware-player
 
-Gentoo 的 Portage 系统本身就有 VMware Workstation 的 ebuild，安装很简单。期间可能会出现一些错误。譬如我就出现了 `app-emulation/vmware-tools` 安装失败的情况
+Gentoo 的 Portage 系统本身就有 VMware Player 的 ebuild，安装很简单。期间可能会出现一些错误。譬如我就出现了 `app-emulation/vmware-tools` 安装失败的情况
 
 <!-- more -->
 ```
@@ -59,7 +59,7 @@ Device Drivers  --->
 /lib/firmware/radeon/TAHITI_uvd.bin
 ```
 
-之前编译内核时，由于 `x11-drivers/radeon-ucode` 早期版本，缺了 `PITCAIRN_mc2.bin`，补上，最后 VMware Workstation 非常顺利，没遇到其他问题。
+之前编译内核时，由于 `x11-drivers/radeon-ucode` 早期版本，缺了 `PITCAIRN_mc2.bin`，补上，最后 VMware Player 非常顺利，没遇到其他问题。
 
 记录完毕！
 
