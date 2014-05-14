@@ -26,7 +26,6 @@ tags: [pip,Python]
 当然，这样安装的包，不在用户路径变量中，需要 export 下 PATH。编辑 `~/.bash_profile`，最后加入
 
 ```bash
-export PYTHONUSERBASE=$HOME/Library/Python/2.7
 if [ -d $HOME/Library/Python/2.7/bin ]; then
     export PATH=$HOME/Library/Python/2.7/bin:$PATH
 fi
@@ -51,13 +50,13 @@ log-file = ~/.pip/pip.log
 index-url = http://pypi.douban.com/simple
 ```
 
-最后，将系统的 `site-packages` 路径加进去
+如果你通过 homebrew 安装的 python，记得将 homebrew 下的 `site-packages` 路径加进去
 
     $ echo '/usr/local/lib/python2.7/site-packages' > ~/Library/Python/2.7/lib/python/site-packages/homebrew.pth
 
 安装 `pip`
 
-    $ curl -o https://bootstrap.pypa.io/get-pip.py
+    $ curl -O https://bootstrap.pypa.io/get-pip.py
     $ python get-pip.py --user
 
 随后你就可以随意的通过 pip 来安装了
@@ -65,6 +64,15 @@ index-url = http://pypi.douban.com/simple
     $ pip install --user Django
     $ pip install --user virtualenv
     ......
+
+当然，每次输入 `--user` 都比较麻烦，可以创建文件 `~/.pydistutils.cfg`
+
+    $ touch ~/.pydistutils.cfg
+
+填入如下
+
+    [install]
+    install_lib = ~/Library/Python/$py_version_short/lib/python/site-packages
 
 完工。
 

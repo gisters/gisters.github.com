@@ -14,7 +14,7 @@ redcarpet:
 title : Havee's Space
 tagline: Site Tagline
 keywords : linux, gentoo, internet, sql, jekyll, BSD, MAC, havee
-description: Havee Hobbies, Linux Tips Record。
+description: Havee Hobbies, Knowledge Records。
 author :
   name : Havee
   email :
@@ -108,7 +108,7 @@ JB :
   blogroll : true                   # true 开启，留空或 false 关闭
   brlist :
     - text : JoveSky
-      url : //www.jovesky.com/
+      url : //jovesky.com/
     - text : 巨二·博客
       url : //www.juerblog.com/
     - text : 刘静的博客

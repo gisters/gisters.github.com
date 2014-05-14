@@ -52,12 +52,10 @@ $ git commit another_project -m "Updated another_project Submodule to latest HEA
 $ git push
 ```
 
-一次性更新你repo下所有的submodules
+更新 repo 下所有的 submodules
 
 ```sh
 $ git submodule foreach git pull
-$ git add .
-$ git commit -m "Update all Submodules to latest HEAD"
 ```
 
 #### 3. 修改你项目中的 Submodule
@@ -92,3 +90,13 @@ $ git commit -a -m 'Remove another_project submodule'
 
 **Git Submodule** 虽然是个强大的团队合作开发功能，但请务必不要混乱，否则一些版本错乱是难免的
 
+#### 5. 示例
+
+clone 一个含 submodule 的分支，其 submodule 下再含 submodule，可以采用递归参数 `--recursive`
+
+```sh
+$ git clone git@github.com:Ihavee/dotfiles.git
+$ cd dotfiles
+$ git submodule foreach --recursive git submodule init
+$ git submodule foreach --recursive git submodule update
+```

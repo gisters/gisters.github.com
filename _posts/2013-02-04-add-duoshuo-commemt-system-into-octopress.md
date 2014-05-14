@@ -131,7 +131,7 @@ duoshuo_asides_length: 18   # 侧边栏评论截取的长度
 ```
 {% endraw %}
 
-最后，`_confit.yml` 中的 `blog_index_asides` 行或 `page_asides` 行或 `post_asides` 添加
+最后，`_config.yml` 中的 `blog_index_asides` 行或 `page_asides` 行或 `post_asides` 添加
 
     custom/asides/recent_comments.html
 
