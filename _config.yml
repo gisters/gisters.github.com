@@ -26,7 +26,7 @@ author :
   weibo : Havanna
 
 # 域名连接
-#production_url : //ihavee.github.io
+production_url : http://havee.me
 
 # Jekyll Bootstrap
 JB :
