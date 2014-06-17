@@ -42,7 +42,7 @@ menuentry "Microsoft Windows 8.1" {
 
 实在是没辙了，只能使用笨办法：
 
-    sudo cfdisk /dev/sda
+    # cfdisk /dev/sda
 
 将 windows 所在分区设为 bootable，重启，装补丁 KB2965065，顺利安装完成。
 
