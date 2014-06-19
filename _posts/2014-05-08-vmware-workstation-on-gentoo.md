@@ -10,9 +10,9 @@ tags: [Gentoo, VMware]
 
 在 Mac OS X 上分别体验了 VirtualBox 与 VMware Fusion，结果 VMware Fusion 的显卡性能确实是高于 VirtualBox，今晚决定在台式机 Gentoo 上也准备体验下 VMware Player。
 
-    echo "app-emulation/vmware-tools vmware_guest_linux vmware_guest_windows" >> /etc/portage/package.use
-    emerge -av app-emulation/vmware-player
-    emerge --config vmware-player
+    # echo "app-emulation/vmware-tools vmware_guest_linux vmware_guest_windows" >> /etc/portage/package.use
+    # emerge -av app-emulation/vmware-player
+    # emerge --config vmware-player
 
 Gentoo 的 Portage 系统本身就有 VMware Player 的 ebuild，安装很简单。期间可能会出现一些错误。譬如我就出现了 `app-emulation/vmware-tools` 安装失败的情况
 

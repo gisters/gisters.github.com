@@ -33,10 +33,6 @@ tags: [Homebrew]
 <!-- more -->
 具体的用法可以 `man brew`。
 
-譬如下面简单的示例，安装中文农历 `ccal`：
-
-<iframe border='0' height='502' id='shelr_record_53a0fc6496608067420000da' scrolling='no' src='http://shelr.tv/records/53a0fc6496608067420000da/embed' style='border: 0' width='850'></iframe>
-
 #### brew search formula
 
 这里主要说下，brew search formula 时有时会出现

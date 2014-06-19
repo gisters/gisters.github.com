@@ -28,16 +28,16 @@ Slackware 官方源的软件包数量实在是太少了点，作为中文用户�
 
 编辑 `/etc/sbopkg/sbopkg.conf`，添加如下
 
-    REPO_BRANCH=${REPO_BRANCH:-current}
-    REPO_NAME=${REPO_NAME:-SBo-git}
+    REPO_BRANCH=${REPO_BRANCH:-14.0}
+    REPO_NAME=${REPO_NAME:-SBo}
 
 再同步下
 
-    $ su -l -c "sbopkg -V SBo-git/current -r"
+    $ su -l -c "sbopkg -r"
 
 随后安装软件，譬如 Fcitx
 
-    $ su -l -c "sbopkg -v SBo-git/current -i fcitx"
+    $ su -l -c "sbopkg -i fcitx"
 
 当然，之前说过，sbopkg 无法自动解决依赖问题，所以安装 Fcitx 之前确保你已安装 `cmake`
 
@@ -52,43 +52,52 @@ locale
 edit `/etc/profile.d/lang.sh`
 
     LANG=en_US.UTF-8
+    LC_CTYPE=zh_CN.UTF-8    # fcitx 在英文locale下需要
 
 edit `/etc/slackpkg/slackpkg.conf`
 
     http://mirrors.ustc.edu.cn/slackware/slackware-14.0/
 
-附：
+#### slackpkg 常用命令
 
-`slackpkg` 常用命令
+    slackpkg update             #更新软件包数据库
+    slackpkg check-update       #检查是否有更新
+    slackpkg upgrade package    #升级package软件包
+    slackpkg upgrade-all        #升级所有软件包
+    slackpkg install package    #安装单个包
+    slackpkg reinstall package  #重新安装
+    slackpkg remove package     #移除
+    slackpkg clean-system       #清理非官方正式的tgz包，慎用
+    slackpkg install-new        #安装新包，版本升级
+    slackpkg blacklist
+    slackpkg download
+    slackpkg info package
+    slackpkg search file
+    slackpkg new-config
 
-```
-slackpkg update             #更新软件包数据库
-slackpkg check-update       #检查是否有更新
-slackpkg upgrade package    #升级package软件包
-slackpkg upgrade-all        #升级所有软件包
-slackpkg install package    #安装单个包
-slackpkg reinstall package  #重新安装
-slackpkg remove package     #移除
-slackpkg clean-system       #清理非官方正式的tgz包，慎用
-slackpkg install-new        #安装新包，版本升级
-slackpkg blacklist
-slackpkg download
-slackpkg info package
-slackpkg search file
-slackpkg new-config
-```
+#### sbopkg 常用命令
 
-`sbopkg` 常用命令
+    sbopkg -r                   #更新repo
+    sbopkg -i package           #安装package
+    sbopkg -g name              #搜索是否包含name的包
+    sbopkg -c                   #检查已安装包是否有更新
+    sbopkg -d package           #只下载package的源码
+    sbopkg -V repo/branch
+    sbopkg -l                   #显示repo的更新日志
 
-```
-sbopkg -r                   #更新repo
-sbopkg -i package           #安装package
-sbopkg -g name              #搜索是否包含name的包
-sbopkg -c                   #检查已安装包是否有更新
-sbopkg -d package           #只下载package的源码
-sbopkg -V repo/branch
-sbopkg -l                   #显示repo的更新日志
-```
+#### prompt:
+
+配置自己常用的 prompt，单独拿出来说，主要是 Slackware 默认的 git 居然不包含 git-promt.sh。需要单独下载并 source 它
+
+    wget https://raw.github.com/git/git/master/conrtib/completion/git-promt.sh -O .bash_git
+    echo ". ~/.bash_git" >> ~/.bashrc
+
+edit `~/.bashrc`
+
+    export GIT_PS_SHOWDIRTYSTATE=1
+    export PS1='\[\e[1;36m\]→\[\e[m\] \[\e[0;32m\]\w\[\e[0;35m\]$(__git_ps1)\[\e[1;32m\] \$\[\e[m\] '
+
+最后 `source ~/.bashrc` 即可
 
 PS：最近弃用海外邮箱，转用163、qq邮箱，再也受不了那鸟速度，放着现成的资源不用，非要去折腾去彰显自己的自由意识？哥过了那年纪了。至于安全问题，这是社会化工程问题，有安全意识更重要。
 

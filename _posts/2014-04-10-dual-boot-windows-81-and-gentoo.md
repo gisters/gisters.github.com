@@ -77,4 +77,4 @@ tags: [Windows, Gentoo]
     # chroot /mnt/gentoo /bin/bash
     # env-udate && source /etc/profile
 
-随后按照文章[《使用 Syslinux 替换掉 Grub》](/linux/2013-09/syslinux-instead-of-grub.html)重装下 Syslinux 就完工。
+随后按照文章[《使用 Syslinux 替换掉 Grub》]({% post_url 2013-09-08-syslinux-instead-of-grub %})重装下 Syslinux 就完工。

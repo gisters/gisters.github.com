@@ -20,7 +20,7 @@ tags: [Gentoo, Packager]
 <!-- more -->
 很简单，当然 `equery b name.so` 是在线查询，有时网络环境不好的时候，需要耗费些时间很长，甚至返回空的查询结果。
 
-```bash
+```sh
 #! /usr/bin/env sh
 #
 # depend.sh

@@ -86,7 +86,7 @@ ajaxget(’r_checkmail.php?mail=’+mail+’&time=’+new Date().getTime()+’&a
 
 在里面找到下面这句代码
 
-```php
+```js+php
 //检查邮件
  if($_SCONFIG['checkemail']) {
  if($count = getcount(’spacefield’, array(’email’=>$email))) {
@@ -97,7 +97,7 @@ ajaxget(’r_checkmail.php?mail=’+mail+’&time=’+new Date().getTime()+’&a
 
 在这段代码下面加上
 
-```php
+```js+php
 $query = $_SGLOBAL['db']->query(”SELECT * FROM “.tname(’checkusermail’).” where mail=’”.$email.”‘ and checknum=’”.$_POST['mailcode'].”‘ and statu=0″);
  if(!$value = $_SGLOBAL['db']->fetch_array($query,1)) {
  showmessage(’邮箱验证码错误’);
@@ -106,7 +106,7 @@ $query = $_SGLOBAL['db']->query(”SELECT * FROM “.tname(’checkusermail’).
 
 #### 再在上面那个文件里找到
 
-```php
+```js+php
 //开通空间
  include_once(S_ROOT.’./source/function_space.php’);
  $space = space_open($newuid, $username, 0, $email);
@@ -114,7 +114,7 @@ $query = $_SGLOBAL['db']->query(”SELECT * FROM “.tname(’checkusermail’).
 
 在这段代码下面加上
 
-```php
+```js+php
 //更新邮箱状态
  $_SGLOBAL['db']->query(”update “.tname(’spacefield’).” set emailcheck=1 where uid=’”.$newuid.”‘”);
 ```
@@ -123,7 +123,7 @@ $query = $_SGLOBAL['db']->query(”SELECT * FROM “.tname(’checkusermail’).
 
 找到如下代码
 
-```php5
+```js+php
 $mail->Host = “smtp.qq.com”; //邮件服务器
 $mail->Port = “25″; //邮件服务器端口
 $mail->SMTPAuth = true;

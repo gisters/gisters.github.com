@@ -71,15 +71,15 @@ tags: [Tips]
 
 关于 Proxy，有很多开源的解决方案，譬如 Goagent
 
-- [Homebrew 脚本 GoAgent ](/mac/2014-05/homebrew-formula-for-goagent.html)
+- [Homebrew 脚本 GoAgent ]({% post_url 2014-05-23-homebrew-formula-for-goagent %})
 
-- [OS X 上使用 GoAgent](/mac/2013-12/use-goagent-on-os-x.html)
+- [OS X 上使用 GoAgent]({% post_url 2013-12-20-use-goagent-on-os-x %})
 
 #### 四. 开源软件
 
-可以通过 [MacPorts](http://www.macports.org)、[HomeBrew](/mac/2013-12/how-to-install-and-use-homebrew.html) 等包管理工具来使用开源软件。
+可以通过 [MacPorts](http://www.macports.org)、[HomeBrew]({% post_url 2013-12-21-how-to-install-and-use-homebrew %}) 等包管理工具来使用开源软件。
 
-譬如[《OS X 上安装 Nginx + PHP-FPM + MariaDB》](/mac/2014-01/install-nginx-php-fpm-mysql-on-os-x.html)
+譬如[《OS X 上安装 Nginx + PHP-FPM + MariaDB》]({% post_url 2014-01-06-install-nginx-php-fpm-mysql-on-os-x %})
 
 #### 五. 重启 Finder
 

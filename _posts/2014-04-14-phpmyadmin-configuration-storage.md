@@ -25,7 +25,7 @@ tags: [phpMyAdmin]
 
 2. 编辑./config.inc.php
 
-```php
+```js+php
 /*
 * phpMyAdmin configuration storage settings.
 */

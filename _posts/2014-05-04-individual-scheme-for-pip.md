@@ -25,7 +25,7 @@ tags: [pip,Python]
 
 当然，这样安装的包，不在用户路径变量中，需要 export 下 PATH。编辑 `~/.bash_profile`，最后加入
 
-```bash
+```sh
 if [ -d $HOME/Library/Python/2.7/bin ]; then
     export PATH=$HOME/Library/Python/2.7/bin:$PATH
 fi
@@ -40,7 +40,7 @@ fi
 
 编辑 `~/.pip/pip.conf`
 
-```
+```cfg
 [global]
 default-timeout = 60
 download-cache = ~/.pip/cache
@@ -71,8 +71,10 @@ index-url = http://pypi.douban.com/simple
 
 填入如下
 
-    [install]
-    install_lib = ~/Library/Python/$py_version_short/lib/python/site-packages
+```cfg
+[install]
+install_lib = ~/Library/Python/$py_version_short/lib/python/site-packages
+```
 
 完工。
 
