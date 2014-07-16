@@ -151,4 +151,4 @@ $ pip install html2text
 $ ruby -rubygems -e 'require "jekyll/migrators/tumblr"; Jekyll::Tumblr.process("http://www.your_blog_url.com", format="md")'
 ```
 
-转自：[【译文】Jekyll博客迁移](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/2012/11/28/Jekyll-Wiki-Blog-Migrations.html)
+转自：[【译文】Jekyll博客迁移](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/Jekyll-Wiki-Blog-Migrations.html)

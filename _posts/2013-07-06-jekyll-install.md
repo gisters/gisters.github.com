@@ -141,4 +141,4 @@ sudo yum install python-pygments
 sudo emerge -av dev-python/pygments
 ```
 
-转自：[【译文】Jekyll的安装](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/2012/11/26/Jekyll-Wiki-Install.html)
+转自：[【译文】Jekyll的安装](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/Jekyll-Wiki-Install.html)

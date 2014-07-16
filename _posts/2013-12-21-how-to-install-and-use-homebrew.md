@@ -41,9 +41,9 @@ tags: [Homebrew]
 
 提示已经很明确了，按照说明照做，注册个 github 账号，打开页面 http://github.com/settings/applications. 点击 `Create new token`，填入 Token descrption 后，点击 Create Token
 
-![Create new token](/assets/images/2013/12/create-new-token.png)
+![Create new token]({{ site.qiniudn }}/images/2013/12/create-new-token.png)
 
-![Personal Access Tokens](/assets/images/2013/12/personal-access-tokens.png)
+![Personal Access Tokens]({{ site.qiniudn }}/images/2013/12/personal-access-tokens.png)
 
 在家目录的 `~/.bash_profile` 中添加如下你申请到的 token
 
@@ -115,3 +115,24 @@ Uninstalling /usr/local/Cellar/htop-osx/0.8.2.1...
 
     $ brew remove formula
     $ brew rm $(join <(brew leaves) <(brew deps formula))
+
+#### Homebrew Cask
+
+通过 homebrew cask 来安装 app，首先是安装
+
+    $ brew tap caskroom/cask
+
+默认 homebrew cask 安装 app 至 `/opt/homebrew-cask/Caskroom` 下，并链接到 `~/Applications` 目录。
+
+配置下，让 app 链接至 `~/My Applications` 下
+
+    $ mkdir ~/My\ Applications
+    $ touch ~/My\ Applications/.localized
+    $ echo 'export HOMEBREW_CASK_OPTS="--appdir=~/My\ Applications"' >> ~/.bash_profile
+    $ source ~/.bash_profile
+
+然后随便安装了
+
+    $ brew cask search firefox
+    $ brew cask install firefox-esr-cn
+

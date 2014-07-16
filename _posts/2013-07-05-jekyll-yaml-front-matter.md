@@ -51,4 +51,4 @@ title: Blogging Like a Hacker
 |:---|:---
 |date|这个日期变量将会覆盖文件名中的日期，这个变量能够用来确保文章的正确排序
 
-转自：[Jekyll的YAML前置数据](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/2012/11/30/Jekyll-Wiki-YAML-Front-Matter.html)
+转自：[Jekyll的YAML前置数据](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/Jekyll-Wiki-YAML-Front-Matter.html)

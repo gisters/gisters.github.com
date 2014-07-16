@@ -87,4 +87,4 @@ coderat:
 	caderay_css:style
 ```
 
-转自：[【译文】Jekyll的配置](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/2012/11/28/Jekyll-Wiki-Configuration.html)
+转自：[【译文】Jekyll的配置](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/Jekyll-Wiki-Configuration.html)

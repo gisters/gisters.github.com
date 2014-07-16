@@ -18,7 +18,7 @@ GNU 的 screen 是一个很好的工具。如果需要经常或者大量的登�
 
 <!-- more -->
 
-![Screen](/assets/images/2011/08/screen.png "screen")
+![Screen]({{ site.qiniudn }}/images/2011/08/screen.png "screen")
 
 如果我们在 screen 下工作的时候,有一个地方提醒一下“你现在是在screen下”，那改多好呢？这就是我研究 hardstatus 栏的写法的目的，或者说是出发点也行。到底怎么写呢？主要是原来我自己也不是很清楚应该怎么弄，然后中文的各种介绍就是估计只是复制粘贴了一些现成的示例，所以导致认为设置 `hardstatus` 栏很难。
 

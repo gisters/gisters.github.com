@@ -64,4 +64,4 @@ Jekyll 会遍历你的站点，来寻找需要处理的文件。任何具有 [YA
 |paginator.previous_page|前面的页面的数量
 |paginator.next_page|后面的页面的数量
 
-转自：[【译文】Jekyll模板数据](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/2012/12/05/Jekyll-Wiki-Template-Data.html)
+转自：[【译文】Jekyll模板数据](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/Jekyll-Wiki-Template-Data.html)

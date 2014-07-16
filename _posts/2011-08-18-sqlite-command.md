@@ -8,7 +8,7 @@ tags: [SQL, CLI, Usage]
 ---
 {% include JB/setup %}
 
-![Sqlite3](/assets/images/2011/08/sqlite3.png  "sqlite3")
+![Sqlite3]({{ site.qiniudn }}/images/2011/08/sqlite3.png  "sqlite3")
 
 最近使用 sqlite 较多，这东西现在是越用越着迷，不管是工作或者个人自娱自乐写东西，只要有数据存储首先就想到了 sqlite
 

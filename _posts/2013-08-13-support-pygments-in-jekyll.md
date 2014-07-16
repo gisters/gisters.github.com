@@ -30,7 +30,9 @@ tags: [Jekyll, Pygments, Python]
     pygments: true
     mardown: redcarpet
 
-进到我们的网站目录，运行
+> 注意：新版本 Jekyll 中，`pygments: true` 替换为 `highlighter: pygments`。
+
+进到我们的网站目录，运行下面代码生成 [pygments 样式](#pygments)
 
     $ pygmentize -S default -f html > your/path/pygments.css
 
@@ -86,6 +88,90 @@ int main(int argc, char **argv)
 }
 ```
 
+#### pygments 样式
+
+<span id=pygments>pygments 样式</span> 默认提供了 monokai、manni、rrt、perldoc、borland、colorful、default、murphy、vs、trac、tango、fruity、autumn、bw、emacs、vim、pastie、friendly、native 等多重的样式。通过 `-S` 来选择，譬如要生成 monokai 的样式：
+
+    $ pygmentize -S monokai -f html > your/path/pygments.css
+
+下面是 pygments 个各样式 show：
+
+- monokai
+
+![monokai]({{ site.qiniudn }}/images/2013/08/pygments-monokai.png)
+
+- manni
+
+![manni]({{ site.qiniudn }}/images/2013/08/pygments-manni.png)
+
+- rrt
+
+![rrt]({{ site.qiniudn }}/images/2013/08/pygments-rrt.png)
+
+- perldoc
+
+![perldoc]({{ site.qiniudn }}/images/2013/08/pygments-perldoc.png)
+
+- borland
+
+![borland]({{ site.qiniudn }}/images/2013/08/pygments-borland.png)
+
+- colorful
+
+![colorful]({{ site.qiniudn }}/images/2013/08/pygments-colorful.png)
+
+- default
+
+![default]({{ site.qiniudn }}/images/2013/08/pygments-default.png)
+
+- murphy
+
+![murphy]({{ site.qiniudn }}/images/2013/08/pygments-murphy.png)
+
+- vs
+
+![vs]({{ site.qiniudn }}/images/2013/08/pygments-vs.png)
+
+- trac
+
+![trac]({{ site.qiniudn }}/images/2013/08/pygments-trac.png)
+
+- tango
+
+![tango]({{ site.qiniudn }}/images/2013/08/pygments-tango.png)
+
+- fruity
+
+![fruity]({{ site.qiniudn }}/images/2013/08/pygments-fruity.png)
+
+- autumn
+
+![autumn]({{ site.qiniudn }}/images/2013/08/pygments-autumn.png)
+
+- bw
+
+![bw]({{ site.qiniudn }}/images/2013/08/pygments-bw.png)
+
+- emacs
+
+![emacs]({{ site.qiniudn }}/images/2013/08/pygments-emacs.png)
+
+- vim
+
+![vim]({{ site.qiniudn }}/images/2013/08/pygments-vim.png)
+
+- pastie
+
+![pastie]({{ site.qiniudn }}/images/2013/08/pygments-pastie.png)
+
+- friendly
+
+![friendly]({{ site.qiniudn }}/images/2013/08/pygments-friendly.png)
+
+- native
+
+![native]({{ site.qiniudn }}/images/2013/08/pygments-native.png)
+
 参考：
 
-* [http://truongtx.me/2012/12/28/jekyll-bootstrap-syntax-highlighting/](http://truongtx.me/2012/12/28/jekyll-bootstrap-syntax-highlighting/)
+* [http://pygments.org/docs/cmdline/](http://pygments.org/docs/cmdline/)

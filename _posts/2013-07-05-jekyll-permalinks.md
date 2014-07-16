@@ -47,4 +47,4 @@ tags: [Jekyll, Usage]
 |permalink: /:month-:day-:year/:title.html|/04-29-2009/slap-chop.html|
 |permalink: /blog/:year/:month/:day/:title|/blog/2009/04/29/slap-chop/index.html|
 
-转自：[【译文】Jekyll固定链接](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/2012/12/05/Jekyll-Wiki-Permalinks.html)
+转自：[【译文】Jekyll固定链接](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/Jekyll-Wiki-Permalinks.html)

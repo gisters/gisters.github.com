@@ -8,7 +8,7 @@ tags: [UChome, RI, Usage]
 ---
 {% include JB/setup %}
 
-![uchome](/assets/images/2010/09/uchome.png "uchome")
+![uchome]({{ site.qiniudn }}/images/2010/09/uchome.png "uchome")
 
 被注册机盯上了怎么办，特别是像 uchome 这样的 SNS 网站，批量注册一大堆用户，全部发些垃圾内容，整个网站一会就被弄的不成样。
 
@@ -136,6 +136,6 @@ $mail->From = “111111@qq.com“; //发送邮件帐号
 
 #### 修改完以上步骤后，把压缩包的 `r_checkmail.php` 和 `phpmailer` 全都放到你的 `uchome` 根目录下
 
-下载：[codefile](/assets/images/2010/09/codefile.zip)
+下载：[codefile]({{ site.qiniudn }}/images/2010/09/codefile.zip)
 
 转自：[被注册机困扰的问题 - uchome吧](http://www.uchome8.com/127)

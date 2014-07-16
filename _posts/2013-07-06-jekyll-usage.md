@@ -109,4 +109,4 @@ jekyll --server --base-url '/blog'
 
 因为 **Jekyll** 只是生成包含 HTML 的目录，所以它能够在任何已知的网络服务器上运行。针对一些特殊的应用场景的部署说明，请查看 [部署](https://github.com/mojombo/jekyll/wiki/Deployment)页面。
 
-转自：[【译文】Jekyll的使用](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/2012/11/26/Jekyll-Wiki-Usage.html)
+转自：[【译文】Jekyll的使用](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/Jekyll-Wiki-Usage.html)

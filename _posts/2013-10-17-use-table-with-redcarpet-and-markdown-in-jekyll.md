@@ -10,7 +10,7 @@ tags: [Markdown, Jekyll, Redcarpet]
 
 看到人家在 [Markdown][markdown] 文件中随意的书写表格，但在我自己的博客中却怎么也无法输出表格样式，最后还是通过 Google 才找到答案，需要语法解释引擎 [Redcarpet][redcarpet]，且开启 **tables** 选项。
 
-![e.g. tables](/assets/images/2013/10/table.png)
+![e.g. tables]({{ site.qiniudn }}/images/2013/10/table.png)
 
 在 [Jekyll][jekyll] 中使用，请修改 `_config.yml`
 

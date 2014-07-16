@@ -55,7 +55,7 @@ duoshuo_short_name: yourname
 {% raw %}
 ```html
 <!-- Duoshuo Comment BEGIN -->
-<div class="ds-thread" data-title="{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}"></div>
+<div class="ds-thread" data-title="{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}"></div>
 <script type="text/javascript">
   var duoshuoQuery = {short_name:"{{ site.duoshuo_short_name }}"};
   (function() {

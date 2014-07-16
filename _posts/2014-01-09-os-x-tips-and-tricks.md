@@ -65,7 +65,7 @@ tags: [Tips]
 
 下载一个 app，[CursorSense](http://plentycom.jp/en/cursorsense/download.php "CursorSense")
 
-![CursorSense](/assets/images/2014/01/CursorSense.png)
+![CursorSense]({{ site.qiniudn }}/images/2014/01/CursorSense.png)
 
 #### 四. GoAgent
 
@@ -107,15 +107,15 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
 尝试过 N 个播放器，包括收费的射手播放器在内都不太好用，最后定位在 [MPlayer OSX Extended](http://mplayerosx.ch)。终于找到了点 Mplayer 的感觉了。
 
-![MPlayer OSX Extended](/assets/images/2014/01/mplayer-osx.png)
+![MPlayer OSX Extended]({{ site.qiniudn }}/images/2014/01/mplayer-osx.png)
 
-![MPlayer OSX Preferences](/assets/images/2014/01/mplayer-osx-preferences.png)
+![MPlayer OSX Preferences]({{ site.qiniudn }}/images/2014/01/mplayer-osx-preferences.png)
 
 遗憾的是，播放蓝光 ISO 就不那么直观了。
 
 于是再推荐个收费的 [Mac Blu-ray Player](http://www.macblurayplayer.com)，这个在 Mac OS X 下，我个人觉得是最强的蓝光播放器了，没有之一。
 
-![Mac Blu-ray Player](/assets/images/2014/01/mac-blu-ray-player.png)
+![Mac Blu-ray Player]({{ site.qiniudn }}/images/2014/01/mac-blu-ray-player.png)
 
 #### 九. 生僻的快捷键
 

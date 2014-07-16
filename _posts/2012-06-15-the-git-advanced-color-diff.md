@@ -8,7 +8,7 @@ tags: [Git, Usage]
 ---
 {% include JB/setup %}
 
-![git diff](/assets/images/2012/06/git-diff.png "git diff")
+![git diff]({{ site.qiniudn }}/images/2012/06/git-diff.png "git diff")
 
 Gentoo 默认的 git 真的很朴素，默认配置实在是太简单了。
 

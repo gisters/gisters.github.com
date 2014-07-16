@@ -171,4 +171,4 @@ end
 ```
 {% endraw %}
 
-转自：[【译文】Jekyll扩展的Liquid模板](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/2012/12/05/Jekyll-Liquid-Extensions.html)
+转自：[【译文】Jekyll扩展的Liquid模板](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/Jekyll-Liquid-Extensions.html)

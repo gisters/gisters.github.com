@@ -51,13 +51,13 @@ endif
 
 以下是我 **vim & gvim** 的一些截图：
 
-![VIM](/assets/images/2013/10/vim.png "VIM")
+![VIM]({{ site.qiniudn }}/images/2013/10/vim.png "VIM")
 
-![GVIM](/assets/images/2013/10/gvim.png "GVIM")
+![GVIM]({{ site.qiniudn }}/images/2013/10/gvim.png "GVIM")
 
-![VIM with NerdTree](/assets/images/2013/10/vim-nerdtree.png "VIM with NerdTree")
+![VIM with NerdTree]({{ site.qiniudn }}/images/2013/10/vim-nerdtree.png "VIM with NerdTree")
 
-![GVIM with NerdTree](/assets/images/2013/10/gvim-nerdtree.png "GVIM with NerdTree")
+![GVIM with NerdTree]({{ site.qiniudn }}/images/2013/10/gvim-nerdtree.png "GVIM with NerdTree")
 
 你也可以直接 clone 我的配置[https://github.com/Ihavee/.vim](https://github.com/Ihavee/.vim)
 

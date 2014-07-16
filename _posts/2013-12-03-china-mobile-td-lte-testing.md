@@ -10,16 +10,16 @@ tags: [LTE]
 
 今天中午到手了一张中国移动（上海）的 TD-LTE 测试卡。这与我当初申请的时候有些出入，依稀记得当初是申请 MI-FI 设备的。
 
-![LTE 1](/assets/images/2013/12/lte1.jpg)
+![LTE 1]({{ site.qiniudn }}/images/2013/12/lte1.jpg)
 
 <!-- more -->
-![LTE 2](/assets/images/2013/12/lte2.jpg)
+![LTE 2]({{ site.qiniudn }}/images/2013/12/lte2.jpg)
 
-![LTE 3](/assets/images/2013/12/lte3.jpg)
+![LTE 3]({{ site.qiniudn }}/images/2013/12/lte3.jpg)
 
 立马重启到windows下，同时将赠送的usim卡插入上网卡中，接入电脑USB口，安装驱动，启动程序，连接4G网络，打开迅雷找个大包点击下载。于是乎网络上炒得火热的移动TD-LTE速率新鲜出炉。60KB/s左右.....
 
-![LTE rate](/assets/images/2013/12/lte-rate.jpg)
+![LTE rate]({{ site.qiniudn }}/images/2013/12/lte-rate.jpg)
 
 当然随后就了解到这应该不是速率问题，这个速度等同于TDS-CDMA了，查证后，原来是我所在地区还没有覆盖4G信号，现在走的是3G通道，以下是目前上海本地的LTE信号覆盖范围：
 
