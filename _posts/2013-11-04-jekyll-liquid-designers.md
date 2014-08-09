@@ -6,7 +6,6 @@ keywords: "liquid,jekyll"
 category: "Internet"
 tags: [Liquid,Jekyll]
 ---
-{% include JB/setup %}
 
 > 原文地址：https://github.com/shopify/liquid/wiki/liquid-for-designers
 
@@ -68,7 +67,7 @@ Hello {{ '1984-02-01' | date: "%Y" }}
 #### 标准过滤器
 
 {% raw %}
-* `date` - 格式化日期 [语法参考](http://liquid.rubyforge.org/classes/Liquid/StandardFilters.html#M000012)
+* `date` - 格式化日期
 * `capitalize` - 将输入语句的首字母大写
 * `downcase` - 将输入字符串转为小写
 * `upcase` - 将输入字符串转为大写

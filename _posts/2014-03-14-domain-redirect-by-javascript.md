@@ -6,7 +6,6 @@ keywords: "javascript,重定向"
 category: Internet
 tags: [JavaScript]
 ---
-{% include JB/setup %}
 
 偶尔发送个博客链接给朋友时，得到的回复基本都是，网页打不开，或者网页打开很慢。由于本博客是托管在 GitHub 上的，内地访问速度一直是问题。之前尝试过在内地配台 vps 用来反向代理。但是成本太高，用了段时间后放弃，重拾去年的 GitCafe，决定把博客迁移到 GitCafe 上。
 

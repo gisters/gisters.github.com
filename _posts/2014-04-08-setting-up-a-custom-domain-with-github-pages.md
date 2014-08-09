@@ -6,7 +6,6 @@ keywords: "github, user pages, project pages, domain, 域名"
 category: Internet
 tags: [GitHub, Domain]
 ---
-{% include JB/setup %}
 
 最近为 [zhlist](http://github.com/zhlist/zhlist) 的 `gh-pages`  分支配置了个域名。仔细的阅读了[这篇文章](https://help.github.com/articles/setting-up-a-custom-domain-with-pages)，终于搞清了 **User Pages** 与 **Project Pages** 的区别。
 

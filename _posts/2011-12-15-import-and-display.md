@@ -6,7 +6,6 @@ keywords: import, display, imagemagick
 category: Linux
 tags: [Import, Display, Usage, Media]
 ---
-{% include JB/setup %}
 
 Import & Display 也是 Imagemagick 中的两个常用的组件。
 

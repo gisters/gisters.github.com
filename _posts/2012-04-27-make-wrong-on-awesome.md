@@ -6,7 +6,6 @@ keywords: awesome, glib.h, wps, office
 category: Linux
 tags: [Awesome, WM]
 ---
-{% include JB/setup %}
 
 好久没升级了，不过为了 wps office，硬是将 profile 从 no-mutilib 切换到了 mutilib，顺便升级了下系统。发现 awesome 怎么也编译不过去….
 

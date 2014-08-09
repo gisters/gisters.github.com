@@ -6,7 +6,6 @@ keywords: gentoo, utf8, kernel, 中文补丁
 category: Linux
 tags: [Gentoo, Kernel, Patch]
 ---
-{% include JB/setup %}
 
 之前一直使用孙海勇的 kernel utf8 中文 [patch](http://blog.chinaunix.net/space.php?uid=436750&do=blog&id=2123586)，去年年底以后，不知为什么，patch 不在更新，放狗搜了一圈，没人提供 patch 的更新。
 

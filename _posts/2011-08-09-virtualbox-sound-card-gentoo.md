@@ -6,7 +6,6 @@ keywords: gentoo, virtualbox, 声卡
 category: Linux
 tags: [Gentoo, VirtualBox, Alsa, Virtual]
 ---
-{% include JB/setup %}
 
 不知道为什么，去年 2 月份以来这个问题就一直存在，解决方案也早已提供，但 Gentoo 官方为什么一直不修复
 

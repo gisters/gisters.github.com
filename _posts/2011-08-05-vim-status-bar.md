@@ -6,7 +6,6 @@ keywords: vim, 状态栏, bom
 category: Linux
 tags: [Vim, Usage, Configuration]
 ---
-{% include JB/setup %}
 
 ![utf8-bomb]({{ site.qiniudn }}/images/2011/08/utf8-bomb.png "utf8-bomb")
 

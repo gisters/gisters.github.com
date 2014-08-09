@@ -6,7 +6,6 @@ keywords: 经济, 中国, 发展, 贸易, 通涨
 category: Other
 tags: [Essay]
 ---
-{% include JB/setup %}
 
 ——此为转载，特此批注。
 

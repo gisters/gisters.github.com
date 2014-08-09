@@ -6,7 +6,6 @@ keywords: "Gentoo, 依赖"
 category: Linux
 tags: [Gentoo, Packager]
 ---
-{% include JB/setup %}
 
 看到 Maxthon 发布了 Linux 版本，Gentoo 同学速度很快，ebuild 已经提交到 Gentoo-zh 中，不过为了验证依赖是否全部满足，临时写了个脚本去验证。
 

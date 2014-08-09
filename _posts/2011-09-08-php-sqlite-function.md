@@ -6,7 +6,6 @@ keywords: php, sqlite, 函数
 category: SQL
 tags: [PHP, SQL, Function]
 ---
-{% include JB/setup %}
 
 PHP SQlite 数据库对于拥有相当经验的 PHP 程序员来说是不会陌生的，但是要想完全掌握 PHP SQlite 数据库的相关函数的应用也不是一件易事。下面为大家总结一些 PHP SQlite 数据库的相关函数。
 

@@ -6,7 +6,6 @@ keywords: "mozplugger, linux, browser"
 category: Linux
 tags: [Mozplugger, Browser, Usage]
 ---
-{% include JB/setup %}
 
 首先 mozplugger 是一款 linux 下的 browser 插件，可以在浏览器中欣赏媒体流，优势就是小巧以及高度的可定制性。安装是很简单，直接下源码包编译即可
 

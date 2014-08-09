@@ -6,7 +6,6 @@ keywords: grub2, gentoo
 category: Linux
 tags: [Grub, Gentoo, Configuration]
 ---
-{% include JB/setup %}
 
 老实说之前一直用的 Grub 0.97，就一个启动界面嘛，何必搞的那么复杂。今天 Gentoo 中 `eix-sync` 后，grub 自动升级到了 2.00，为了防止后面意外发生，遂今天努力读了下 grub2 的文档，也顺便 install 到了 `/dev/sda`。
 

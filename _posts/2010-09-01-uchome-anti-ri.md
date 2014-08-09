@@ -6,7 +6,6 @@ keywords: "uchome, 注册机"
 category: Internet
 tags: [UChome, RI, Usage]
 ---
-{% include JB/setup %}
 
 ![uchome]({{ site.qiniudn }}/images/2010/09/uchome.png "uchome")
 

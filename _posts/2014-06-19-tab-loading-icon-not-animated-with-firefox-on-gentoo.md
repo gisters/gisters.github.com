@@ -6,7 +6,6 @@ keywords: "gentoo, firefox, tab, loading.png"
 category: Linux
 tags: [Firefox]
 ---
-{% include JB/setup %}
 
 由于上次的误操作，导致多年的 Gentoo 数据毁于一旦。辛辛苦苦到现在，终于有些恢复原样了，只是 Firefox 的tab 上的圈圈在载入网页时一动不动，Mozilla Firefox 社区一直没有解决方案，不过记得上次在哪里看到过解决方案的。
 

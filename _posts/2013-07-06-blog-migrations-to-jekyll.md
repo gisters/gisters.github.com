@@ -6,7 +6,6 @@ keywords: "blog, 博客, 迁移, jekyll"
 category: Internet
 tags: [Jekyll, Usage]
 ---
-{% include JB/setup %}
 
 > 原文地址：[https://github.com/mojombo/jekyll/wiki/Blog-Migrations](https://github.com/mojombo/jekyll/wiki/Blog-Migrations)
 

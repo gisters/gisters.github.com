@@ -6,7 +6,6 @@ keywords: git, color, diff, gentoo
 category: Linux
 tags: [Git, Usage]
 ---
-{% include JB/setup %}
 
 ![git diff]({{ site.qiniudn }}/images/2012/06/git-diff.png "git diff")
 

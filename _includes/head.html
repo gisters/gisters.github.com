@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+  <meta name="author" content="{% if site.author.name %}{{ site.author.name }}{% endif %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{{ BASE_PATH }}/favicon.png">
+  <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html,'' }}">
+
+  <link rel="stylesheet" href="{{ BASE_PATH }}/style/css/bootstrap.min.css" media="all">
+  <link rel="stylesheet" href="{{ BASE_PATH }}/style/css/style.css" media="all">
+  <link rel="stylesheet" href="{{ BASE_PATH }}/style/css/pygments.css" media="all">
+  <link rel="stylesheet" href="{{ BASE_PATH }}/style/css/font-awesome.css" media="all">
+
+  <!-- atom & rss feed -->
+  <link href="{{ site.rss_path }}" type="application/rss+xml" rel="alternate" title="{{ site.title }} RSS Feed">
+  <link href="{{ site.atom_path }}" type="application/atom+xml" rel="alternate" title="{{ site.title }} ATOM Feed">
+</head>

@@ -6,7 +6,6 @@ keywords: convert, imagemagick
 category: Linux
 tags: [Convert, Media, Usage]
 ---
-{% include JB/setup %}
 
 Convert 是 ImageMagick 中的一个常用组件。
 

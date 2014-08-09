@@ -6,7 +6,6 @@ keywords: 阿里云, 主机, 挂载, 数据盘
 category: Linux
 tags: [aliyun, Server]
 ---
-{% include JB/setup %}
 
 取得了一台阿里云主机用于放置 `gentoo.org.cn` 的信息，之前试用过，效果不错，不过之前没有申请数据盘的经验。这次发现，阿里云主机默认是不会帮你挂载数据盘的，数据盘命名也与传统不太一样。具体的可以用 `fdisk -l` 来查看：
 

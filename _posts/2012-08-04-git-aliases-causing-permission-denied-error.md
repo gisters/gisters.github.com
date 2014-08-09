@@ -6,7 +6,6 @@ keywords: git alias 权限
 category: Linux
 tags: [Git]
 ---
-{% include JB/setup %}
 
 ```
 ^_^ ~/Documents/git/overlay $ git ll

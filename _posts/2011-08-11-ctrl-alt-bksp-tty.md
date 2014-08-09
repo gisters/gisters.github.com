@@ -6,7 +6,6 @@ keywords: "ctrl_alt_bksp, tty"
 category: Linux
 tags: [TTY]
 ---
-{% include JB/setup %}
 
 两个方法：
 

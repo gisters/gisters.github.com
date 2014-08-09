@@ -6,7 +6,6 @@ keywords: mysql, root, mysqladmin, 操作
 category: SQL
 tags: [SQL, CLI]
 ---
-{% include JB/setup %}
 
 #### 一、安装后
 
@@ -334,7 +333,7 @@ grant all on molyx.* to 'molyxuser'@'%' identified by '123456';
 
 备份molyx到文件molyx.sql
 
-    mysqldump -uroot -p --database molyx > /your/path/molyx.sql
+    mysqldump -uroot -p  molyx > /your/path/molyx.sql
 
 备份全部数据
 
@@ -342,7 +341,7 @@ grant all on molyx.* to 'molyxuser'@'%' identified by '123456';
 
 备份molyx并压缩
 
-    mysqldump -u root -p --database molyx | gzip > /your/path/molyx.sql.gz
+    mysqldump -u root -p  molyx | gzip > /your/path/molyx.sql.gz
 
 将molyx.sql导入到数据库
 

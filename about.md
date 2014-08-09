@@ -2,16 +2,15 @@
 layout: page
 title: "About"
 description: "业余爱好的点滴记录，同时作为配置备份的存储地，好记性不如滥笔头。"
-group: navigation
 ---
-{% include JB/setup %}
 
 #### Blog QR Code:
 
-![Blog QR Code](/assets/images/url.png "Blog QR Code")
+![Blog QR Code](/style/img/url.png "Blog QR Code")
 
 #### ChangeLog
 
+- 2014年8月:    放弃 JB，转为 Jekyll，重新制作了模板
 - 2014年8月:    为了速度，砍掉华而不实的功能
 - 2014年3月:    托管方由 GitHub 转向 GitCafe
 - 2014年2月:    放弃支持低于 IE 9 的版本
@@ -35,5 +34,4 @@ Havanna，借用03年左右混迹海外论坛时， 看到的一个ID，”Havan
 
 <strong><span style="color:red;">注意：</span>如果你喜欢本站样式，欢迎 clone，但是请务必将 `_config.yml` 下的一些参数调整为你自己的。譬如我实在不希望侧边栏出现不是本站的评论 -\_-!! 当然，`_post` 下的文件也请清空，谢谢合作！</strong>
 
-<hr>
-{% include custom/comments %}
+{% include comments.html %}

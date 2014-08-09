@@ -6,7 +6,6 @@ keywords: "syslinux, grub"
 category: Linux
 tags: [Grub, Syslinux]
 ---
-{% include JB/setup %}
 
 自从几个月前的工作机的 Grub2 用 Syslinux 替换掉后，今天家用台式机的 Grub2 也替换成 Syslinux 了。主要是因为现在的 Syslinux 配置简单，功能强大，可以引导基于 DOS 的各种工具。
 

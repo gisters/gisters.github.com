@@ -6,7 +6,6 @@ keywords: sqlite, 命令, xml
 category: SQL
 tags: [SQL, CLI, Usage]
 ---
-{% include JB/setup %}
 
 ![Sqlite3]({{ site.qiniudn }}/images/2011/08/sqlite3.png  "sqlite3")
 

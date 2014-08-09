@@ -6,7 +6,6 @@ keywords: 道德追踪, ccav
 category: Other
 tags: [Essay]
 ---
-{% include JB/setup %}
 
 看2008年6月15号晚ccav《道德追踪》有感，本文章记录于其他博客平台，如今准备逐一转回。
 

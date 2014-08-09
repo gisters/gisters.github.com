@@ -6,16 +6,15 @@ keywords: "Jekyll, fancybox, jquery, plugins"
 category: Internet 
 tags: [Jekyll, FancyBox, jQuery]
 ---
-{% include JB/setup %}
 
-这是一篇介绍无 jekyll 插件的形式来使用 [**FancyBox**][3]。
+这是一篇介绍无 jekyll 插件的形式来使用 **FancyBox**。
 
-因为既然是博客是以 [**Jekyll**][1] 来驱动的，那么就尽量不要在本地生成静态页面再推送到服务端，也就是说，尽量不用插件。否则，大可以用 Octopress即可。在这个前提下如何给图片一些特殊的效果呢？这里我们使用 [**jQuery**][2] 来实现， 譬如 **FancyBox**、[**Lightbox2**][4]。
+因为既然是博客是以 [**Jekyll**]({% post_url 2013-07-06-jekyll-install %}) 来驱动的，那么就尽量不要在本地生成静态页面再推送到服务端，也就是说，尽量不用插件。否则，大可以用 Octopress即可。在这个前提下如何给图片一些特殊的效果呢？这里我们使用 [**jQuery**](http://jquery.com/) 来实现， 譬如 **FancyBox**、[**Lightbox2**](http://lokeshdhakar.com/projects/lightbox2/)。
 
 ![FancyBox]({{ site.qiniudn }}/images/2013/10/fancybox.png "FancyBox")
 
 <!-- more -->
-其中有个问题，[**Markdown**][5] 语法中的图片我们一般是如此写法
+其中有个问题，[**Markdown**]({% post_url 2013-07-02-markdown-syntax %}) 语法中的图片我们一般是如此写法
 
 ```
 ![tag](url "name")
@@ -37,7 +36,7 @@ tags: [Jekyll, FancyBox, jQuery]
 
 我们当然可以直接在 markdown 文本写 html，但是实在不想这么做（当时从 Wordpress 转到 markdown 时吃尽苦头），还是用 jquery 来替换的好。既然目的明确，那么动手
 
-首先[**下载**][6] fancybox，解压到你的主题文件夹，譬如我的是 `assets/themes/havee` 下，编辑模板，在 head 区域添加
+首先[**下载**](https://github.com/fancyapps/fancyBox/zipball/v2.1.5) fancybox，解压到你的主题文件夹，譬如我的是 `assets/themes/havee` 下，编辑模板，在 head 区域添加
 
 {% raw %}
 ```html
@@ -79,9 +78,3 @@ FancyBox 具体用法：
 
 - [http://fancyapps.com/fancybox](http://fancyapps.com/fancybox)
 
-[1]: http://jekyllrb.com/
-[2]: http://jquery.com/
-[3]: http://fancybox.net/
-[4]: http://lokeshdhakar.com/projects/lightbox2/
-[5]: /internet/2013-07/markdown-syntax.html#img
-[6]: https://github.com/fancyapps/fancyBox/zipball/v2.1.5

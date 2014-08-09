@@ -6,7 +6,6 @@ keywords: "git, submodule"
 category: Linux
 tags: [Git, Usage]
 ---
-{% include JB/setup %}
 
 在 git 版本 1.7.9.4 中，引入了 git-subtree，基本是 用于替换 git-submodule。因为在 git-submodule 中，你只能引用别人的仓库，对于修改 git-submodule 下的子项目的代码非常麻烦，git-subtree 因此应运而生。git 官方也推荐尽量采用 git-subtree。
 

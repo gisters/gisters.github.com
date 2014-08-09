@@ -6,7 +6,6 @@ keywords: "gnupg, pgp, 密钥, 公钥"
 category: Linux
 tags: [GnuPG, Keys, Public]
 ---
-{% include JB/setup %}
 
 #### 一、介绍
 

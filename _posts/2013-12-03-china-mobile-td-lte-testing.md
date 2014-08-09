@@ -6,7 +6,6 @@ keywords: "移动,td,lte"
 category: "Other"
 tags: [LTE]
 ---
-{% include JB/setup %}
 
 今天中午到手了一张中国移动（上海）的 TD-LTE 测试卡。这与我当初申请的时候有些出入，依稀记得当初是申请 MI-FI 设备的。
 

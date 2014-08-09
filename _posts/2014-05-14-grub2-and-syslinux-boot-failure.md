@@ -6,7 +6,6 @@ keywords: "grub2, syslinux, 失败"
 category: Linux
 tags: [Grub, Syslinux]
 ---
-{% include JB/setup %}
 
 经常升级内核的情况下，偶尔还是会出现一些问题的。
 

@@ -6,7 +6,6 @@ keywords: linux, rtorrent, rutorrent, pt, 盒子
 category: Linux
 tags: [Rtorrent, Rutorrent, PT]
 ---
-{% include JB/setup %}
 
 因为是 PT 爱好者，除了自家 NAS 运行外，偶尔购买海外的盒子用来分享视频资源。
 

@@ -6,7 +6,6 @@ keywords: "jekyll, yml, 数据"
 category: Internet
 tags: [Jekyll, Usage]
 ---
-{% include JB/setup %}
 
 > 原文地址：[https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter)
 

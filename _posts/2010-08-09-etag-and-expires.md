@@ -6,7 +6,6 @@ keywords: "etag, expires, cache, http, client, header, server"
 category: Internet
 tags: [Etag, Expires, Cache, Client, Server, Nginx, Lighttpd, Apache, Usage]
 ---
-{% include JB/setup %}
 
 题记：本文对页面中 `Etag` 和 `Expires` 标识处理，使得页面更加有效被 Cache。
 

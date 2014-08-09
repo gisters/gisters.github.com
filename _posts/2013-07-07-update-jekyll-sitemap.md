@@ -6,7 +6,6 @@ keywords: "jekyll, sitemap"
 category: Internet
 tags: [Jekyll]
 ---
-{% include JB/setup %}
 
 Jekyll 默认的 sitemap.txt 功能有些羸弱，在我开启 _config.yml 中的 paginate 参数后，sitemap.txt 中多出了很多的 page2 page3 page4 page5，显然这些在sitemap中都是不必要的。
 

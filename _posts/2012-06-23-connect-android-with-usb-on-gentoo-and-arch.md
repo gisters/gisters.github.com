@@ -6,7 +6,6 @@ keywords: gentoo, arch, android, usb
 category: Linux
 tags: [Gentoo, Arch, Android]
 ---
-{% include JB/setup %}
 
 作为叼丝的一员，手机当然用的 Android 系统了，Gentoo Portage 中已经提供了 Android 的开发工具
 

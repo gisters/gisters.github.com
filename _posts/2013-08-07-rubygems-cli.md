@@ -6,7 +6,6 @@ keywords: "ruby, gem, 命令"
 category: Linux
 tags: [Usage, Ruby, Gem]
 ---
-{% include JB/setup %}
 
 **查看 ruby 版本**
 

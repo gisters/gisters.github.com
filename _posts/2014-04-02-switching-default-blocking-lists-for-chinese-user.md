@@ -6,7 +6,6 @@ keywords: "adblock, chinalist"
 category: Internet
 tags: [Adblock, ChinaList]
 ---
-{% include JB/setup %}
 
 今天整理 Firefox 浏览器扩展的时候，意外发现，[Adblock Plus](https://adblockplus.org) 的[ChinaList](https://github.com/chinalist/chinalist) 列表无法更新，过滤规则列表 404 错误。
 

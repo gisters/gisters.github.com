@@ -6,7 +6,6 @@ keywords: wordpress, widget
 category: Internet
 tags: [Wordpress, Widget]
 ---
-{% include JB/setup %}
 
 #### 插件简介
 

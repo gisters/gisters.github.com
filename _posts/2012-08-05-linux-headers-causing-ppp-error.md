@@ -6,7 +6,6 @@ keywords: linux, ppp, patch, 补丁
 category: Linux
 tags: [Patch]
 ---
-{% include JB/setup %}
 
 **ppp-2.4.5-r3已经解决该情况**
 

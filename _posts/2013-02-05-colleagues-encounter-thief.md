@@ -6,7 +6,6 @@ keywords: 小偷, 同事, 警察
 category: Other
 tags: [小偷]
 ---
-{% include JB/setup %}
 
 
 今天刚到公司，就听到 Amy 大声的说，我今天遇到小偷了，2个新疆人。...

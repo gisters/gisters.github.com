@@ -6,7 +6,6 @@ keywords: 美元, 强势
 category: Other
 tags: [Essay]
 ---
-{% include JB/setup %}
 
 本文原来在08年发表与其他博客平台，遂转回。
 

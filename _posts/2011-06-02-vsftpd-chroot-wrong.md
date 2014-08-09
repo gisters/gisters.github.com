@@ -6,7 +6,6 @@ keywords: vsftpd, chroot, 错误
 category: Linux
 tags: [Vsftpd, Chroot,]
 ---
-{% include JB/setup %}
 
 其实早已解决，只是记录下，让更多人知道如何处理吧。
 

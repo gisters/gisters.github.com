@@ -6,7 +6,6 @@ keywords: "slackware, sbopkg"
 category: "Linux"
 tags: [Slackware]
 ---
-{% include JB/setup %}
 
 又是周五了，享受没有饭局的时光，不过也着实无聊了点，遂拿起 [Slackware](http://www.slackware.com/) 尝试了下，做下记录。
 

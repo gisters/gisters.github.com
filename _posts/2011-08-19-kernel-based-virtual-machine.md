@@ -6,7 +6,6 @@ keywords: kvm, 内核, 虚拟化
 category: Linux
 tags: [KVM, Kernel, Virtual]
 ---
-{% include JB/setup %}
 
 ![kvm-xp]({{ site.qiniudn }}/images/2011/08/kvm-xp.png "kvm-xp")
 

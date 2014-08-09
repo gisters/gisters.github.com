@@ -6,7 +6,6 @@ keywords: nginx, rewrite, wordpress, joomla, uchome, 伪静态
 category: Internet
 tags: [Nginx, Rewrite, Wordpress, Joomla, UChome]
 ---
-{% include JB/setup %}
 
 ### wordpress
 

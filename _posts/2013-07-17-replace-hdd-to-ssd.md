@@ -6,7 +6,6 @@ keywords: "SSD, 替换"
 category: Linux
 tags: [SSD]
 ---
-{% include JB/setup %}
 
 又给机子加了 16G DDR3 2133 内存，同时购置了款 120GB 的三星 840 pro SSD。网上搜了一大圈，明确操作步骤后进行。
 

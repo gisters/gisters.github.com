@@ -6,7 +6,6 @@ keywords: "screen, linux,状态栏, 配置"
 category: Linux
 tags: [Screen, Configuration]
 ---
-{% include JB/setup %}
 
 GNU 的 screen 是一个很好的工具。如果需要经常或者大量的登录 linux 服务器进行操作，screen 或许还是一个不可或缺的好工具。
 

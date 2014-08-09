@@ -6,7 +6,6 @@ keywords: git, alias, linux, shell, config
 category: Linux
 tags: [Git, Usage]
 ---
-{% include JB/setup %}
 
 现在的 Linux 发行版的 shell 环境，一般都可以使用 alias，好处是显而意见的，用简单的几个字母代大量的命令。没错，git 也提供了alias 的使用，让大家在使用中可以自定义简单的命令。
 

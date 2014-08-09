@@ -6,7 +6,6 @@ keywords: "gentoo, windows, diskpart, syslinux"
 category: Linux
 tags: [Windows, Gentoo]
 ---
-{% include JB/setup %}
 
 昨晚折腾了下 Windows 8.1 与 Gentoo 的双系统启动，采用的是 Syslinux，过程中出现一些问题，主要是记录下 Diskpart 的一些用法。
 

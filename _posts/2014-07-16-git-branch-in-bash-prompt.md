@@ -6,7 +6,6 @@ keywords: "bash, prompt, git, branch"
 category: Linux
 tags: [Git, CLI]
 ---
-{% include JB/setup %}
 
 ![Git Branch Name]({{ site.qiniudn }}/images/2014/07/git-branch.png)
 

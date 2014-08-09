@@ -6,7 +6,6 @@ keywords: "freebsd"
 category: "BSD"
 tags: [freebsd]
 ---
-{% include JB/setup %}
 
 自从 06 年初试 [FreeBSD](http://www.freebsd.org) 后，随即转向 Gentoo 阵营。对 FreeBSD 只有一点点的印象，只知道 Gentoo 的 portage 系统是由 BSD 家族的 port 演变来的，最近升级了家用台式机，遂拿起 FreeBSD 出来折腾折腾。
 

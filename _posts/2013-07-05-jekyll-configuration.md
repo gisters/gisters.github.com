@@ -6,7 +6,6 @@ keywords: "jekyll, 配置"
 category: Internet
 tags: [Jekyll, Configuration, Usage]
 ---
-{% include JB/setup %}
 
 > 原文地址：[https://github.com/mojombo/jekyll/wiki/configuration](https://github.com/mojombo/jekyll/wiki/configuration)
 

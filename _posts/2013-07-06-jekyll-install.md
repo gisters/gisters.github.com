@@ -6,7 +6,6 @@ keywords: "jekyll, 安装, 方法"
 category: Internet
 tags: [Jekyll, Installation]
 ---
-{% include JB/setup %}
 
 > 原文地址：[https://github.com/mojombo/jekyll/wiki/Install](https://github.com/mojombo/jekyll/wiki/Install "Install")
 
@@ -81,7 +80,7 @@ markdown: rdiscount
 
 ### Pygments
 
-如果你希望在你的文章中通过 `highlight` 标签实现代码高亮，你需要安装 [Pygments](http://pygments.org/)。
+如果你希望在你的文章中通过 `highlight` 标签实现代码高亮，你需要安装 [Pygments]({% post_url 2013-08-13-support-pygments-in-jekyll %})。
 
 **在 OS X Leopard 和 Snow Leopard上 :**
 

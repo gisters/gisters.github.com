@@ -6,7 +6,6 @@ keywords: jekyll, 添加, 多说, 评论, duoshuo
 category: Internet
 tags: [Jekyll, duoshuo]
 ---
-{% include JB/setup %}
 
 在做以下步骤之前，先去 [duoshuo.com](http://duoshuo.com) 上注册一个帐号，获取 `short_name`
 

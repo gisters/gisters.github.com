@@ -6,7 +6,6 @@ keywords: octopress, jekyll, wordpress, 迁移
 category: Internet
 tags: [Wordpress, Octopress, Jekyll]
 ---
-{% include JB/setup %}
 
 ### 前言
 

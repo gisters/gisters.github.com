@@ -6,7 +6,6 @@ keywords: arch, filesystem, linux, initscripts
 category: Linux
 tags: [Arch, Filesystem]
 ---
-{% include JB/setup %}
 
 首先，昨晚已经注意到 Arch 官方的新闻，升级 filesystem-2012-6-2 将要面对的一些问题。
 

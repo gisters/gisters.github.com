@@ -6,7 +6,6 @@ keywords: "最近遇到域名转移过程中的一些龌龊事，记录一二。
 category: Internet
 tags: [Domain]
 ---
-{% include JB/setup %}
 
 最近遇到域名转移过程中的一些龌龊事，记录一二。
 

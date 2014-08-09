@@ -6,7 +6,6 @@ keywords: "gentoo,vmware"
 category: Linux
 tags: [Gentoo, VMware]
 ---
-{% include JB/setup %}
 
 在 Mac OS X 上分别体验了 VirtualBox 与 VMware Fusion，结果 VMware Fusion 的显卡性能确实是高于 VirtualBox，今晚决定在台式机 Gentoo 上也准备体验下 VMware Player。
 

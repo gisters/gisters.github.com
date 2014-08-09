@@ -6,7 +6,6 @@ keywords: "windows, kb2965065， linux"
 category: Linux
 tags: [Grub, Syslinux, Windows]
 ---
-{% include JB/setup %}
 
 问题拖了将近一个月，一直无解，每次安装微软补丁 KB2965065 都是失败，查看 Windows 8.1 的日志，说是启动分区错误导致补丁安装失败，该补丁貌似就是针对 boot 的更新，这让干掉了 Windows 隐藏分区的 Linux & Windows 双系统的用户咋搞？况且我还是三系统。
 
@@ -62,3 +61,5 @@ LABLE macosx
 ```
 
 很熟悉是不是，Syslinux 通过 BIOS 引导黑苹果所在硬盘的 mbr，从而启动 clover 来引导黑苹果。UEFI 则没尝试，有谁成功引导 win & mac 的可以告知下。
+
+Update: 2014年8月13号的 KB2975719 可选补丁，也可以采用上面方式解决。

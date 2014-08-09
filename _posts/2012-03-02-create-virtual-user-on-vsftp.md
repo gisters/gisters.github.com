@@ -6,7 +6,6 @@ keywords: vsftpd, virtual, 虚拟, 用户
 category: Linux
 tags: [Vsftpd, Virtual]
 ---
-{% include JB/setup %}
 
 centos 需要安装一下两个软件包
 

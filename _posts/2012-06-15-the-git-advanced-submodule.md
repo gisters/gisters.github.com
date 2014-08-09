@@ -6,7 +6,6 @@ keywords: "git, submodule, 方法"
 category: Linux
 tags: [Git, Usage]
 ---
-{% include JB/setup %}
 
 >Git has something called submodule support. This allows you to specify one or more other git repositories within another – a bit like svn:externals (except trickier, but more powerful of course :).
 

@@ -6,7 +6,6 @@ keywords: 次贷, 危机, 贷款
 category: Other
 tags: [Essay]
 ---
-{% include JB/setup %}
 
 本文原来在08年发表于其他博客平台，遂转回。
 

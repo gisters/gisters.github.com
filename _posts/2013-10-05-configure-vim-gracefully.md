@@ -6,7 +6,6 @@ keywords: "vim, 配置"
 category: Linux
 tags: [Vim]
 ---
-{% include JB/setup %}
 
 如果你是个 [Vim](http://www.vim.org/) 爱好者，且如果你在各种不同的计算机，不同的操作系统 ( Windows, Linux,  Macos X 以及 BSD 等 )下，不同的 **Vim 版本** 下，以及不同的 Vim 打包下（最小安装或自定义安装），你的 vimrc 可能无法通用，启动 vim 时出现很多错误。当然你也可以保存一个最精简的 vimrc，阉割掉很多实用的功能来忽略这些可能出现的错误。
 

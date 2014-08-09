@@ -6,7 +6,6 @@ keywords: 上层, 智慧
 category: Other
 tags: [Essay]
 ---
-{% include JB/setup %}
 
 本文于10年7月发表于live space，后转至wordpress，现转回自己博客
 

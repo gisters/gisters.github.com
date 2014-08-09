@@ -6,7 +6,6 @@ keywords: "rubygems, OS X"
 category: "MAC"
 tags: [Ruby, Gem]
 ---
-{% include JB/setup %}
 
 新订了本 macbook pro，一切的东东都陆续搬到 OS X 系统中，xcode 安装完后，兴匆匆的准备 `gem install jekyll`，果然出了问题了。
 

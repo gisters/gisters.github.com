@@ -6,7 +6,6 @@ keywords: "笔记本,工作机,浏览器,台式机"
 category: "Other"
 tags: [Laptop]
 ---
-{% include JB/setup %}
 
 不知何时起，对自己的工作机越来越不满，屏幕太小，有时几个终端一开，就开始不停 ctrl_tab 切换中度过，i3 处理器落后，一个自定义的 F5 编译键就干等，4GB 内存，开个 chromium 浏览器因为内存耗尽而在一下午重启两次，不知道能干啥。
 

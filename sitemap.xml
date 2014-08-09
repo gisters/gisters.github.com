@@ -1,5 +1,4 @@
 ---
-# Remember to set production_url in your _config.yml file!
 title : Sitemap
 ---
 
@@ -10,7 +9,7 @@ title : Sitemap
 
   {% for post in site.posts %}
   <url>
-    <loc>{{ site.production_url }}{{ post.url }}</loc>
+    <loc>{{ site.url }}{{ post.url }}</loc>
     <changefreq>daily</changefreq>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     <priority>0.8</priority>
@@ -22,7 +21,7 @@ title : Sitemap
   {% if page.layout != 'feed' %}
   {% if page.group == 'navigation' %}
   <url>
-    <loc>{{ site.production_url }}{{ page.url | remove: 'index.html' }}</loc>
+    <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -32,7 +31,7 @@ title : Sitemap
   {% endfor %}
 
   <url>
-    <loc>{{ site.production_url }}</loc>
+    <loc>{{ site.url }}</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

@@ -6,7 +6,6 @@ keywords: gentoo, php-fpm, fastcgi, lighttpd, nginx, apache2
 category: Internet
 tags: [Gentoo, PHP-FPM, FastCGI, Lighttpd, Nginx, Apache]
 ---
-{% include JB/setup %}
 
 PHP 的 FastCGI 使你的所有 php 应用软件通过 mod_fastci 运行，而不是 mod_phpsusexec 。FastCGI 应用速度很快是因为他们持久稳定。不必对每一个请求都启动和初始化。好处是 PHP 脚本运行速度提升 3-30 倍；并不需要对现有的PHP代码做任何的更改；PHP 解释程序被载入内存而不用每次需要时从存储器读取，极大的提升了依靠脚本运行的站点的性能；同时速度的提升并不会增加 CPU 的负担。
 

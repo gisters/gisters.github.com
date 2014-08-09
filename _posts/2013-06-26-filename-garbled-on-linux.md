@@ -6,7 +6,6 @@ keywords: Linux, 乱码, 文件名
 category: Linux
 tags: [Garbled]
 ---
-{% include JB/setup %}
 
 
 在 Linux 下学习工作，不可避免的遭遇到文件名乱码（不是内容乱码）的问题以下有几个解决方案

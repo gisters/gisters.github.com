@@ -6,7 +6,6 @@ keywords: "Python, 笔记"
 category: Other
 tags: [learning, Python]
 ---
-{% include JB/setup %}
 
 终于静下心来，花了一天的时间来阅读 [Python](http://www.python.org) 相关的知识。Python 是一种语法简洁有没，面向对象的，内置高级数据结构，支持模块和包，支持多种平台，可扩展的解释性通用编程语言。
 

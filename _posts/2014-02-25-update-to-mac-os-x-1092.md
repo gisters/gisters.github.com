@@ -6,7 +6,6 @@ keywords: "os x, 10.9.2, ssl, 漏洞"
 category: Mac
 tags: [SSL]
 ---
-{% include JB/setup %}
 
 ![00]({{ site.qiniudn }}/images/2014/02/update0.png)
 

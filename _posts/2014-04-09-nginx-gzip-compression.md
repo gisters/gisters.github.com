@@ -6,7 +6,6 @@ keywords: "nginx, gzip, 压缩"
 category: Internet
 tags: [Nginx]
 ---
-{% include JB/setup %}
 
 折腾无止境，最近重新看了下之前对 [Nginx](http://nginx.org) 中的 Gzip 模块的配置，很多参数都是不求甚解。今天整理下，作为笔记来记录。
 

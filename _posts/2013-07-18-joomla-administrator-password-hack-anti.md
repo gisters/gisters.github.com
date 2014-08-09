@@ -6,7 +6,6 @@ keywords: "joomla, 后台, 猜解, 暴力破解"
 category: Internet
 tags: [Joomla]
 ---
-{% include JB/setup %}
 
 今天朋友吐糟，最近他的 **Joomla** 后台老被境外的 IP **暴力破解**密码，烦不胜烦，特别是他们并非一秒钟几十次猜解，而是几秒钟猜解一次，结果就是 **logs/error.php** 日志大小成上升态势。
 
