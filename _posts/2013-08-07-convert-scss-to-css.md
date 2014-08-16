@@ -40,10 +40,10 @@ $ compass create .
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "assets/themes/havee/css"
-sass_dir = "assets/themes/havee/_sass"
-images_dir = "assets/themes/havee/images"
-javascripts_dir = "assets/themes/havee/js"
+css_dir = "style/css"
+sass_dir = "style/_sass"
+images_dir = "style/images"
+javascripts_dir = "style/js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
@@ -79,21 +79,35 @@ Thumbs.db
 以下是我的目录结构
 
 ```
-.
-└── assets
-    └── themes
-        └── havee
-            ├── _sass
-            │   ├── _custom.scss
-            │   └── style.scss
-            ├── css
-            │   ├── bootstrap-responsive.css
-            │   ├── pygments.css
-            │   └── style.css
-            └── js
-                └── jquery.min.js
+style
+├── _sass
+│   ├── _base.scss
+│   ├── _custom.scss
+│   └── style.scss
+├── css
+│   ├── bootstrap.min.css
+│   ├── font-awesome.css
+│   ├── pygments.css
+│   └── style.css
+├── fonts
+│   ├── FontAwesome.otf
+│   ├── fontawesome-webfont.eot
+│   ├── fontawesome-webfont.svg
+│   ├── fontawesome-webfont.ttf
+│   ├── fontawesome-webfont.woff
+│   ├── glyphicons-halflings-regular.eot
+│   ├── glyphicons-halflings-regular.svg
+│   ├── glyphicons-halflings-regular.ttf
+│   └── glyphicons-halflings-regular.woff
+├── img
+│   ├── loading.gif
+│   └── url.png
+└── js
+    ├── bootstrap.min.js
+    ├── jquery.min.js
+    └── webcore.js
 ```
-这里是本人博客的 scss：[https://github.com/Ihavee/ihavee.github.io/tree/master/assets/themes/havee/_sass](https://github.com/Ihavee/ihavee.github.io/tree/master/assets/themes/havee/_sass)
+这里是本人博客的 scss：[style/_sass](https://github.com/Ihavee/ihavee.github.io/tree/master/style/_sass)
 
 以下是关于 SASS 的具体用法，转自：[SASS用法指南 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/06/sass.html)
 

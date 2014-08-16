@@ -91,13 +91,18 @@ $ git commit -a -m 'Remove another_project submodule'
 
 #### 5. 示例
 
+clone 一个含 submdule 的分支
+
+```sh
+$ git clone git@github.com:Ihavee/vimrc.git ~/.vim
+$ cd ~/.vim
+$ git submodule update --init
+```
+
 clone 一个含 submodule 的分支，其 submodule 下再含 submodule，可以采用递归参数 `--recursive`
 
 ```sh
 $ git clone git@github.com:Ihavee/dotfiles.git
 $ cd dotfiles
-$ git submodule init
-$ git submodule update
-$ git submodule foreach --recursive git submodule init
-$ git submodule foreach --recursive git submodule update
+$ git submodule update --recursive --init
 ```

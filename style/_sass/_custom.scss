@@ -3,6 +3,7 @@ body {
   line-height: 1.6;
   color: rgba(51, 51, 51, .9);
   background-color: rgba(204, 204, 204, .3);
+  word-break: break-all;
   @include sans-serif;
 }
 
@@ -17,7 +18,7 @@ a {
 }
 
 h1 {
-  font-size: 34px;
+  font-size: 32px;
   color: rgba(255, 051, 051, .8);
   &:hover, &:focus {
     color: rgba(153, 051, 051, .8);
@@ -25,7 +26,7 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 28px;
   color: rgba(255, 000, 255, .8);
   border-bottom: 2px solid rgba(255, 000, 255, .375);
   &:hover, &:focus {
@@ -34,7 +35,7 @@ h2 {
 }
 
 h3 {
-  font-size: 26px;
+  font-size: 24px;
   color: rgba(000, 153, 051, .8);
   //max-width: 50%;
   border-bottom: 2px dashed rgba(000, 153, 051, .375);
@@ -46,24 +47,30 @@ h3 {
 h4 {
   font-size: 22px;
   color: rgba(153, 000, 000, .8);
-  border-bottom: 2px dashed rgba(153, 000, 000, .375);
   &:hover, &:focus {
     color: rgba(102, 000, 000, .8);
   }
 }
 
 h1, h2, h3, h4, h5, h6, strong {
-  line-height: 150%;
+  line-height: 1.8;
   @include text-shadow;
 }
 
-h5, h6 {
+h5 {
   font-size: 18px;
-  color: rgba(000, 000, 000, .9);
+  color: rgba(102, 102, 051, .8);
+  &:hover, &:focus {
+    color: rgba(051, 051, 000, .8)
+  }
+}
+
+h6 {
+  font-size: 16px;
+  color: rgba(000, 000, 000, .8);
 }
 
 .header {
-  padding: 10px 10px 0 10px;
   display: inline;
   .title {
     font-size: 36px;
@@ -77,17 +84,19 @@ h5, h6 {
     }
   }
   ul {
-    li > a {
-      color: rgba(000, 153, 153, .8);
-      @include text-shadow;
-      &:hover, &:focus {
-        color: rgba(000, 102, 102, .8);
-        background: transparent;
+    li {
+      margin: 4px 0;
+      a {
+        color: rgba(000, 153, 153, .8);
+        @include text-shadow;
+        &:hover, &:focus {
+          color: rgba(000, 102, 102, .8);
+          background: transparent;
+        }
       }
-    }
-    li > form {
-      position: relative;
-      padding: 15px;
+      form {
+        margin-top: 15px;
+      }
     }
   }
 }
@@ -106,6 +115,9 @@ h5, h6 {
     color: rgba(119, 119, 119, .8);
   }
   p, ol, ul, table {
+    li {
+      margin: 5px 0;
+    }
     img {
       @include img;
     }
@@ -120,6 +132,8 @@ h5, h6 {
     background-color: rgba(255, 204, 204, .3);
     box-shadow: 0 0 3px rgba(0, 0, 0, .267);
     border: 1px solid rgba(102, 102, 102, .35);
+    max-width: 95%;
+    margin: 10px auto;
     code {
       @include monospace;
     }
@@ -131,8 +145,9 @@ h5, h6 {
     display: table;
     list-style: none outside none;
     li {
-      line-height: 200%;
+      line-height: 1.8;
       display: inline-block;
+      margin: 0 3px;
       a {
         padding: 2px 4px;
         background-color: rgba(255,204,204,.3);
@@ -191,7 +206,6 @@ table {
 .footer {
   padding: 0 15px;
   p {
-    line-height: 150%;
     color: rgba(119, 119, 119, .8);
     a {
       color: rgba(119, 119, 119, .8);

@@ -46,6 +46,11 @@ tags: [Fedora, KVM, LVM]
 
     # yum remove $(package-cleanup --leaves)
 
+清理一些缓存
+
+    # yum clean packages
+    # yum clean headers
+
 #### LVM 分区调整
 
 Fedora 默认分区是采用 [LVM][4](Logical Volume Mnager) 的，由于我给 kvm guest 2GB 的内存，于是系统给我分配了 4GB 的 swap，有必要调整下，虚拟机嘛，测试用用的。

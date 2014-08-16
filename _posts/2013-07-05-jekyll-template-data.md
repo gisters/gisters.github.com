@@ -9,7 +9,7 @@ tags: [Jekyll, Usage]
 
 > 原文地址：[https://github.com/mojombo/jekyll/wiki/Template-Data](https://github.com/mojombo/jekyll/wiki/Template-Data)
 
-Jekyll 会遍历你的站点，来寻找需要处理的文件。任何具有 [YAML前置数据]({% post_url 2013-07-05-jekyll-yaml-front-matter %}) 的文件都将会被处理，每一个这样的文件，**Jekyll** 都会通过 [Liquid模板系统](http://wiki.github.com/shopify/liquid/liquid-for-designers) 使用许多可用的页面变量。下面是一个可用变量的列表。
+Jekyll 会遍历你的站点，来寻找需要处理的文件。任何具有 [YAML 前置数据]({% post_url 2013-07-05-jekyll-yaml-front-matter %}) 的文件都将会被处理，每一个这样的文件，**Jekyll** 都会通过 [Liquid 模板系统]({% post_url 2013-11-04-jekyll-liquid-designers %}) 使用许多可用的页面变量。下面是一个可用变量的列表。
 
 ### 全局变量
 

@@ -27,7 +27,6 @@ permalink: /:categories/:year-:month/:title.html
 
 # comment
 comments:
-    provider: duoshuo
     duoshuo:
         name: havanna
         rcomments:

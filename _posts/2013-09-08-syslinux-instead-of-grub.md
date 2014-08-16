@@ -112,17 +112,17 @@ LABEL windows
 
 1. 无法删除 **ldlinux.sys**
 
-  `chattr -i /boot/syslinux/ldlinux.sys; rm /boot/syslinux/ldlinux.sys`
+    `chattr -i /boot/syslinux/ldlinux.sys; rm /boot/syslinux/ldlinux.sys`
 
 2. 启动 Syslinux 出错
 
-  别急，可以按 `tab` 来编辑你的启动命令，按 `ESC` 再回车来启动。
+    别急，可以按 `tab` 来编辑你的启动命令，按 `ESC` 再回车来启动。
 
 3. 测试新内核
 
-  启动到 Syslinux菜单后，按 `tab`，输入：
+    启动到 Syslinux菜单后，按 `tab`，输入：
 
-  `boot: LINUX /boot/3.11.0-gentoo root=/dev/sda3`
+    `boot: LINUX /boot/3.11.0-gentoo root=/dev/sda3`
 
 #### 参考：
 

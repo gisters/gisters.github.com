@@ -24,20 +24,20 @@
     <script src="{{ ASSET_PATH }}/style/js/webcore.js"></script>
 
     {% include baidu-analytics.html %}
-    {% if site.comments.provider == "duoshuo" %}
+    {% if site.comments.duoshuo.name %}
     <!-- duoshuo Begin -->
     <script type="text/javascript">
       var duoshuoQuery = {short_name:"{{ site.comments.duoshuo.name }}"};
-(function() {
- var ds = document.createElement('script');
- ds.type = 'text/javascript';ds.async = true;
- ds.src = 'http://static.duoshuo.com/embed.js';
- ds.charset = 'UTF-8';
- (document.getElementsByTagName('head')[0] ||
-  document.getElementsByTagName('body')[0]).appendChild(ds);
- })();
-</script>
-<!-- duoshuo End -->
-{% endif %}
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script>
+    <!-- duoshuo End -->
+    {% endif %}
   </body>
 </html>

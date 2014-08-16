@@ -11,9 +11,21 @@ tags: [Slackware]
 
 安装就略过了，安装完毕后遇到的一些问题。
 
-Slackware 官方源的软件包数量实在是太少了点，作为中文用户，最基本的 [Fcitx](http://fcitx-im.org/) 也没有，放 [G](https://www.google.com) 搜索了下，都是自己下源码编译安装教程（这也要教程？！），难道古老的 Slackware 到现在都没有一个完善的管理器？再搜，得知，[sbopkg](http://www.sbopkg.org/)，解决了自动下载源码并编译安装的问题，不过弊端是无法自动解决依赖问题，- -!
+选错了桌面环境咋办，所以切换
+
+    $ xwmconfig
+
+lilo 默认等待 2 分钟，够夸张的，编辑 `/etc/lilo.conf`
+
+    timeout = 30            # 3 秒钟
 
 <!-- more -->
+随后运行以下命令使之生效
+
+    $ su -l -c "/sbin/lilo -v"
+
+Slackware 官方源的软件包数量实在是太少了点，作为中文用户，最基本的 [Fcitx](http://fcitx-im.org/) 也没有，放 [G](https://www.google.com) 搜索了下，都是自己下源码编译安装教程（这也要教程？！），难道古老的 Slackware 到现在都没有一个完善的管理器？再搜，得知，[sbopkg](http://www.sbopkg.org/)，解决了自动下载源码并编译安装的问题，不过弊端是无法自动解决依赖问题，- -!
+
 方法：
 
     $ wget http://sbopkg.googlecode.com/files/sbopkg-0.36.0-noarch-1_cng.tgz
@@ -29,6 +41,11 @@ Slackware 官方源的软件包数量实在是太少了点，作为中文用户�
 
     REPO_BRANCH=${REPO_BRANCH:-14.0}
     REPO_NAME=${REPO_NAME:-SBo}
+
+当然，也可以如此
+
+    REPO_BRANCH=${REPO_BRANCH:-current}
+    REPO_NAME=${REPO_NAME:-SBo-git}
 
 再同步下
 
@@ -98,6 +115,8 @@ edit `~/.bashrc`
 
 最后 `source ~/.bashrc` 即可
 
-PS：最近弃用海外邮箱，转用163、qq邮箱，再也受不了那鸟速度，放着现成的资源不用，非要去折腾去彰显自己的自由意识？哥过了那年纪了。至于安全问题，这是社会化工程问题，有安全意识更重要。
+PS：由于 Slackware 不能很好的处理依赖，对一些选择安装的同学，经常出现某某包不存在的情况，给个连接，缺少的包去哪里找包名：[ftp://slackbuilds.org/14.1/TAGS.txt](ftp://slackbuilds.org/14.1/TAGS.txt)
+
+PS1：最近弃用海外邮箱，转用163、qq邮箱，再也受不了那鸟速度，放着现成的资源不用，非要去折腾去彰显自己的自由意识？哥过了那年纪了。至于安全问题，这是社会化工程问题，有安全意识更重要。
 
 PS2：什么时候才能将自己的台机转成UEFI + LVM ( Windows8 + Gentoo ) 方案呢，最近在考虑方案中。主要是当前 Gentoo 的N年的数据问题。

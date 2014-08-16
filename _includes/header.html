@@ -1,4 +1,9 @@
-
+<!--[if lte IE 9]>
+<div class="alert alert-warning">
+  <p>Your Internet Explorer is not supported. Please upgrade your Internet Explorer to version 9+, or use latest <a href="http://www.google.com/chrome/" target="_blank" class="alert-link">Google chrome</a>、<a href="http://www.mozilla.org/firefox/" target="_blank" class="alert-link">Mozilla Firefox</a>.</p>
+  <p>If you are using IE 9 or later, make sure you <a href="http://windows.microsoft.com/en-us/internet-explorer/use-compatibility-view#ie=ie-8" target="_blank" class="alert-link">turn off "Compatibility view"</a>.</p>
+</div>
+<![endif]-->
 <header class="header">
   <div class="title"><a title="{{ site.title }}" href="/">{{ site.title }}</a></div>
   <ul class="nav navbar-nav navbar-right visible-lg visible-md">
@@ -7,7 +12,7 @@
       <input type="text" class="form-control input-sm" placeholder="Search" id="query">
     </form>
     </li>
-    <li><a href="{{ '/archive.html' }}" title="Categories"><span class='fa fa-archive fa-2x'></span></a></li>
+    <li><a href="{{ '/archive.html' }}" title="Archive"><span class='fa fa-archive fa-2x'></span></a></li>
     <li><a href="{{ '/categories.html' }}" title="Categories"><span class='fa fa-navicon fa-2x'></span></a></li>
     <li><a href="{{ '/tags.html' }}" title="Tags"><span class='fa fa-tags fa-2x'></span></a></li>
     <li><a href="{{ '/about.html' }}" title="About"><span class='fa fa-user fa-2x'></span></a></li>
