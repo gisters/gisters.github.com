@@ -1,5 +1,6 @@
 body {
   font-size: 16px;
+  line-height: 1.6;
   color: rgba(51, 51, 51, .9);
   background-color: rgba(204, 204, 204, .3);
   @include sans-serif;
@@ -7,12 +8,12 @@ body {
 
 :hover, :focus {
   @include transition;
-}
+  }
 
 a {
   &:hover, &:focus {
     text-decoration: none;
-}
+  }
 }
 
 h1 {
@@ -20,7 +21,7 @@ h1 {
   color: rgba(255, 051, 051, .8);
   &:hover, &:focus {
     color: rgba(153, 051, 051, .8);
-}
+  }
 }
 
 h2 {
@@ -29,7 +30,7 @@ h2 {
   border-bottom: 2px solid rgba(255, 000, 255, .375);
   &:hover, &:focus {
     color: rgba(153, 000, 153, .8);
-}
+  }
 }
 
 h3 {
@@ -39,7 +40,7 @@ h3 {
   border-bottom: 2px dashed rgba(000, 153, 051, .375);
   &:hover, &:focus {
     color: rgba(000, 102, 051, .8);
-}
+  }
 }
 
 h4 {
@@ -48,7 +49,7 @@ h4 {
   border-bottom: 2px dashed rgba(153, 000, 000, .375);
   &:hover, &:focus {
     color: rgba(102, 000, 000, .8);
-}
+  }
 }
 
 h1, h2, h3, h4, h5, h6, strong {
@@ -63,6 +64,7 @@ h5, h6 {
 
 .header {
   padding: 10px 10px 0 10px;
+  display: inline;
   .title {
     font-size: 36px;
     display: inline;
@@ -71,23 +73,23 @@ h5, h6 {
       color: rgba(000, 153, 153, .8);
       &:hover, &:focus {
         color: rgba(000, 102, 102, .8);
+      }
+    }
   }
-}
-}
-ul {
-  li > a {
-    color: rgba(000, 153, 153, .8);
-    @include text-shadow;
-    &:hover, &:focus {
-      color: rgba(000, 102, 102, .8);
-      background: transparent;
+  ul {
+    li > a {
+      color: rgba(000, 153, 153, .8);
+      @include text-shadow;
+      &:hover, &:focus {
+        color: rgba(000, 102, 102, .8);
+        background: transparent;
+      }
+    }
+    li > form {
+      position: relative;
+      padding: 15px;
+    }
   }
-}
-li > form {
-  position: relative;
-  padding: 15px;
-}
-}
 }
 
 .container {
@@ -96,57 +98,57 @@ li > form {
 
 .wrapper {
   border: 1px solid rgba(0, 0, 0, .17);
-  box-shadow: 0 1px 10px rgba(0, 0, 0, .37);
+  box-shadow: 0 1px 10px rgba(170, 170, 170, .8);
   background: rgba(253, 253, 253, .9);
   padding: 10px 10px 20px 10px;
   margin: 20px 0;
   .small {
     color: rgba(119, 119, 119, .8);
-}
-p, ol, ul, table {
-  img {
-    @include img;
-}
-code {
-  background-color: rgba(255, 204, 204, .3);
-  box-shadow: 0 0 1px rgba(0, 0, 0, .167);
-  border: 1px solid rgba(102, 102, 102, .167);
-  @include monospace;
-}
-}
-.highlight pre {
-  background-color: rgba(255, 204, 204, .3);
-  box-shadow: 0 0 3px rgba(0, 0, 0, .267);
-  border: 1px solid rgba(102, 102, 102, .35);
-  code {
-    @include monospace;
-}
-}
-hr {
-  border-color: rgba(102, 102, 102, .8);
-}
-.tag-box {
-  display: table;
-  list-style: none outside none;
-  li {
-    line-height: 200%;
-    display: inline-block;
-    a {
-      padding: 2px 4px;
-      background-color: rgba(255,204,204,.3);
-      border-radius: 4px;
   }
-}
-}
+  p, ol, ul, table {
+    img {
+      @include img;
+    }
+    code {
+      background-color: rgba(255, 204, 204, .3);
+      box-shadow: 0 0 1px rgba(0, 0, 0, .167);
+      border: 1px solid rgba(102, 102, 102, .167);
+      @include monospace;
+    }
+  }
+  .highlight pre {
+    background-color: rgba(255, 204, 204, .3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .267);
+    border: 1px solid rgba(102, 102, 102, .35);
+    code {
+      @include monospace;
+    }
+  }
+  hr {
+    border-color: rgba(102, 102, 102, .8);
+  }
+  .tag-box {
+    display: table;
+    list-style: none outside none;
+    li {
+      line-height: 200%;
+      display: inline-block;
+      a {
+        padding: 2px 4px;
+        background-color: rgba(255,204,204,.3);
+        border-radius: 4px;
+      }
+    }
+  }
 }
 
 .raw {
   .col-md-9 {
     padding-left: 0;
-}
-.col-md-3 {
-  padding-right: 0;
-}
+  }
+  .col-md-3 {
+    padding-right: 0;
+  }
 }
 
 table {
@@ -159,31 +161,31 @@ table {
     border: 1px solid rgba(50, 118, 177, .35);
     box-shadow: 0 0 3 rgba(50, 118, 177, .267);
     @include transition;
-}
-thead tr th {
-  border: 1px solid rgba(50, 118, 177, .167);
-  border-top: 0 none;
-  border-bottom-width: 2px;
-  vertical-align: bottom;
-  padding: 8px;
-}
-tbody tr td {
-  border: 1px solid rgba(50, 118, 177, .167);
-  vertical-align: middle;
-  padding: 8px;
-}
-thead > tr {
-  background-color: rgba(249, 249, 249, .9);
-}
-tbody > tr:nth-child(2n+1) {
-  background-color: rgba(249, 249, 249, .5);
-}
-tbody tr {
-  &:hover {
-    background-color: rgba(235, 235, 235, .7);
-    @include transition;
-}
-}
+  }
+  thead tr th {
+    border: 1px solid rgba(50, 118, 177, .167);
+    border-top: 0 none;
+    border-bottom-width: 2px;
+    vertical-align: bottom;
+    padding: 8px;
+  }
+  tbody tr td {
+    border: 1px solid rgba(50, 118, 177, .167);
+    vertical-align: middle;
+    padding: 8px;
+  }
+  thead > tr {
+    background-color: rgba(249, 249, 249, .9);
+  }
+  tbody > tr:nth-child(2n+1) {
+    background-color: rgba(249, 249, 249, .5);
+  }
+  tbody tr {
+    &:hover {
+      background-color: rgba(235, 235, 235, .7);
+      @include transition;
+    }
+  }
 }
 
 .footer {
@@ -195,9 +197,9 @@ tbody tr {
       color: rgba(119, 119, 119, .8);
       &:hover, &:focus {
         color: rgb(51, 51, 51)
+      }
+    }
   }
-}
-}
 }
 
 #search-loader {

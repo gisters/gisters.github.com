@@ -16,23 +16,10 @@ title : Sitemap
   </url>
   {% endfor %}
 
-  {% for page in site.pages %}
-  {% if page.layout != nil %}
-  {% if page.layout != 'feed' %}
-  {% if page.group == 'navigation' %}
   <url>
-    <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  {% endif %}
-  {% endif %}
-  {% endif %}
-  {% endfor %}
-
-  <url>
-    <loc>{{ site.url }}</loc>
+	<loc>{{ site.url }}</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
+
 </urlset>
