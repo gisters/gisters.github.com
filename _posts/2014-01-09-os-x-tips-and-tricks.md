@@ -39,7 +39,7 @@ tags: [Tips]
 
     cp: -X      do not copy extended attributes (eas) or resource forks.
 
-属于处理这个问题，譬如打包，在打包前，请用 `cp -Xr` 拷贝出一份没有扩展属性的文件或目录，然后再 tar 打包处理。
+处理这个问题，譬如打包，在打包前，请用 `cp -Xr` 拷贝出一份没有扩展属性的文件或目录，然后再 tar 打包处理。
 
 另有个命令 `xattr` 也能做到
 
@@ -71,8 +71,8 @@ tags: [Tips]
 关于 Proxy，有很多开源的解决方案，譬如 Goagent
 
 - [Homebrew 脚本 GoAgent ]({% post_url 2014-05-23-homebrew-formula-for-goagent %})
-
 - [OS X 上使用 GoAgent]({% post_url 2013-12-20-use-goagent-on-os-x %})
+- [CentOS 下打包 shadowsocks-libev]({% post_url 2014-08-20-package-shadowsocks-libev-on-centos %})
 
 #### 四. 开源软件
 
@@ -132,7 +132,7 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
 #### 十一. 清理右键菜单
 
-用了段时间后，邮件菜单就开始臃肿不堪，有时会冒出重复项，打开终端，输入
+用了段时间后，右键菜单就开始臃肿不堪，有时会冒出重复项，打开终端，输入
 
     /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user; killall Finder
 

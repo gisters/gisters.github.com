@@ -326,6 +326,40 @@ alias mysql.restart='mysql.stop && mysql.start'
 
 ![php info]({{ site.qiniudn }}/images/2014/01/phpinfo.jpg)
 
+#### 五. 其他
+
+##### 1. apache + mod_fastcgi
+
+    $ brew tap homebrew/apache
+    $ brew install httpd24
+    $ brew install mod_fastcgi --with-brewed-httpd24
+
+编辑 `/usr/local/etc/apache2/2.4/httpd.conf`
+
+按提示添加
+
+    LoadModule fastcgi_module /usr/local/opt/mod_fastcgi/libexec/mod_fastcgi.so
+
+再在 `httpd.conf` 适当地方加入
+
+    <IfModule fastcgi_module>
+    ProxyPassMatch ^/(.*\.php(/.*)?)$ unix:/usr/local/var/run/php-fpm.sock|fcgi://127.0.0.1:9000/usr/local/var/www/htdocs
+    </IfModule>
+
+当然一些路径配置成自己的，譬如 php-fpm 的 sock 路径，譬如 www 路径，随后启动 apache 与 php-fpm
+
+    $ curl -I localhost:8080
+    HTTP/1.1 200 OK
+    Date: Tue, 14 Oct 2014 01:30:21 GMT
+    Server: Apache/2.4.10 (Unix) mod_fastcgi/2.4.6
+    Last-Modified: Fri, 10 Jan 2014 16:40:21 GMT
+    ETag: "387-4efa061c5c740"
+    Accept-Ranges: bytes
+    Content-Length: 903
+    Content-Type: text/html
+
+apache 服务端以 mod_fastcgi 运行了。
+
 参考: [http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/](http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/)
 
 **Update: change josegonzalez/homebrew-php to homebrew/php, 2014.04.12**
