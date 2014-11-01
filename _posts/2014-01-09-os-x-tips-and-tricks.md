@@ -94,13 +94,22 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
 #### 七. 刷新 DNS 缓存
 
-针对 OS X 10.6 以及之前
+针对 OS X 10.4、10.5
+
+    sudo lookupd -flushcache
+
+
+针对 OS X 10.6
 
     sudo dscacheutil -flushcache
 
-针对 OS X 10.6 以后
+针对 OS X 10.7、10.8、10.9
 
     sudo killall -HUP mDNSResponder
+
+针对 OS X 10.10
+
+    sudo dscacheutil -flushcache
 
 #### 八. 视频播放
 
