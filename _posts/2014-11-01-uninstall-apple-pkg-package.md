@@ -102,7 +102,7 @@ lsbom 的具体用法可以参考 `lsbom --help`。
 
     $ sudo pkgutil --forget PKGID
 
-#### 三、App
+### 三、App
 
 上面的都是一些基础的介绍，当然如今已经有现成的 app 可以使用，譬如 <del>[PackageUninstaller](https://github.com/hewigovens/PackageUninstaller)</del>、[UninstallPKG](http://www.corecode.at/uninstallpkg/)，前者免费，后者收费。
 
