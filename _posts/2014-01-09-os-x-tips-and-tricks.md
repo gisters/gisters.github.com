@@ -96,20 +96,20 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
 针对 OS X 10.4、10.5
 
-    sudo lookupd -flushcache
+    $ sudo lookupd -flushcache
 
 
 针对 OS X 10.6
 
-    sudo dscacheutil -flushcache
+    $ sudo dscacheutil -flushcache
 
 针对 OS X 10.7、10.8、10.9
 
-    sudo killall -HUP mDNSResponder
+    $ sudo killall -HUP mDNSResponder
 
 针对 OS X 10.10
 
-    sudo dscacheutil -flushcache
+    $ sudo dscacheutil -flushcache
 
 #### 八. 视频播放
 
@@ -128,6 +128,11 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 #### 九. 生僻的快捷键
 
 - Ctrl + a/e：移动至行首/尾
+- Ctrl + l：清除屏幕
+- Ctrl + u：清除当前行
+- Ctrl + k：清除至当前行尾
+- Ctrl + w：向前删除一个单词
+- Ctrl + y：粘贴用 Ctrl + w/k/u 删除的单词
 - Option + right/left：向右/左移动一个单词
 - Fn + up/down：相当于 Page up/down
 - Ctrl + Command + F：全屏，仅支持右上角双箭头的窗口
@@ -143,7 +148,7 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
 用了段时间后，右键菜单就开始臃肿不堪，有时会冒出重复项，打开终端，输入
 
-    /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user; killall Finder
+    $ /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user; killall Finder
 
 #### 十二. app 归类
 
@@ -151,4 +156,12 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
 我的处理是这样的，app store的软件默认就在根目录下的 `/Applications`，自己下载的 app，我则是放到家目录 `~/Applications`，而不会随便放到 `/Applications` 而默认给于 root 权限。
 
-同样，能直接在 app store 安装的就直接安装，其次尽量找 app 放到 `~/Applications`目录，实在没有的，再使用 HomeBrew 去安装。
+同样，能直接在 app store 安装的就直接安装，其次使用 HomeBrew 去安装病自动 ln 到 `~/Applications` 目录。
+
+#### 十三. 截屏影音
+
+系统默认的快捷键 Shift + Command + 3/4 截屏会带上阴影，部分人觉得不爽，要去掉阴影。
+
+    $ defaults write com.apple.screencapture disable-shadow -bool true
+    $ killall SystemUIServer
+

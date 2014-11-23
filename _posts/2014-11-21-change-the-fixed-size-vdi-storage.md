@@ -2,7 +2,7 @@
 layout: post
 title: "修改固定大小的 VDI 虚拟磁盘"
 description: "记录修改 VirtualBox 固定大小的 VDI 虚拟磁盘"
-keywords: "virtualbox, VBoxManage, fixed, dynamic, 扩容"
+keywords: "virtualbox, VBoxManage, fixed, dynamic, 扩容, 虚拟, 磁盘"
 category: Other
 tags: [VirtialBox]
 ---
