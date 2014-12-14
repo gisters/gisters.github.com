@@ -14,7 +14,7 @@ tags: [VirtialBox]
 首先固定大小的虚拟磁盘是不能扩容的
 
 <!-- more -->
-```
+```console
 /Users/cnhavee/Documents/Virtual Machines.localized/Windows 8.1 $ VBoxManage modifyhd Windows\ 8.1.vdi --resize 31480
 0%...
 Progress state: VBOX_E_NOT_SUPPORTED
@@ -34,7 +34,7 @@ In use by VMs:  Windows 8.1 (UUID: 0e44d03f-7824-46f6-855d-81fbf9b31fc5)
 
 Format variant 为 fixed default，动手转化吧
 
-```
+```console
 /Users/cnhavee/Documents/Virtual Machines.localized/Windows 8.1 $ VBoxManage clonehd Windows\ 8.1.vdi ./Windows\ 8.1_clone.vdi
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 Clone hard disk created in format 'VDI'. UUID: 380da4bf-e8fd-40eb-884e-b6a3568739c6
@@ -52,7 +52,7 @@ Size on disk:   20075 MBytes
 
 好了，现在是 dynamic default，扩容
 
-```
+```console
 /Users/cnhavee/Documents/Virtual Machines.localized/Windows 8.1 $ VBoxManage modifyhd Windows\ 8.1_clone.vdi --resize 31480
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 /Users/cnhavee/Documents/Virtual Machines.localized/Windows 8.1 $ VBoxManage showhdinfo Windows\ 8.1_clone.vdi

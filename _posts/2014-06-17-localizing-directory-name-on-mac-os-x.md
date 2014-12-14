@@ -54,11 +54,9 @@ tags: [Localized]
 
 简单来说就是
 
-```bash
     $ mkdir -p Virtual\ Machines.localized/.localized
     $ cd Virtual\ Machines.localized/.localized
     $ touch zh-Hans.strings; vim zh-Hans.strings
-```
 
 添加如下行即可：
 

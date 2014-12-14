@@ -19,7 +19,7 @@ tags: [Pkgutil]
 <!-- more -->
 下面介绍的是一个命令工具：**pkgutil**。
 
-```
+```console
 $ pkgutil -h
 Usage: pkgutil [OPTIONS] [COMMANDS] ...
 
@@ -66,24 +66,32 @@ pkgutil 的帮助文件已经说明的很清楚了，步骤：
 
 #### 1. 查找下你需要卸载的软件包ID
 
-    $ pkgutil --pkgs
+```console
+$ pkgutil --pkgs
+```
 
 #### 2.列出该 pkg 包含的文件列表
 
-    $ pkgutil --files PKGID
+```console
+$ pkgutil --files PKGID
+```
 
 #### 3. 检查下软件包信息，路径
 
-    $ pkgutil --pkg-info PKGID
+```console
+$ pkgutil --pkg-info PKGID
+```
 
 譬如招行的插件信息
 
-    $ pkgutil --pkg-info com.cmbchina.CMBSecurityPlugin.pkg
-    package-id: com.cmbchina.CMBSecurityPlugin.pkg
-    version: 1.0
-    volume: /
-    location: Library/Internet Plug-Ins
-    install-time: 1401513557
+```console
+$ pkgutil --pkg-info com.cmbchina.CMBSecurityPlugin.pkg
+package-id: com.cmbchina.CMBSecurityPlugin.pkg
+version: 1.0
+volume: /
+location: Library/Internet Plug-Ins
+install-time: 1401513557
+```
 
 从以上我们要获取的信息是，PKGID 为 com.cmbchina.CMBSecurityPlugin.pkg，在根目录 `/` 下的 `Library/Internet Plug-Ins` 目录，也就是 `/Library/Internet Plug-Ins` 目录下，这个下面用得到。
 
@@ -91,8 +99,10 @@ pkgutil 的帮助文件已经说明的很清楚了，步骤：
 
 你当然可以通过 `pkgutil --files PKGID` 得到的文件列表，手动的去删除，我们还是读软件包的 bom 文件去删除，仍然以招行插件为例：
 
-    $ lsbom -fls  /private/var/db/receipts/com.cmbchina.CMBSecurityPlugin.pkg.bom | (cd /Library/Internet\ Plug-Ins; sudo xargs rm)
-    $ lsbom -dls  /private/var/db/receipts/com.cmbchina.CMBSecurityPlugin.pkg.bom | (cd /Library/Internet\ Plug-Ins; sudo xargs rm -r)
+```console
+$ lsbom -fls  /private/var/db/receipts/com.cmbchina.CMBSecurityPlugin.pkg.bom | (cd /Library/Internet\ Plug-Ins; sudo xargs rm)
+$ lsbom -dls  /private/var/db/receipts/com.cmbchina.CMBSecurityPlugin.pkg.bom | (cd /Library/Internet\ Plug-Ins; sudo xargs rm -r)
+```
 
 cd 路径，即第 3 步中的目录。
 
@@ -100,7 +110,9 @@ lsbom 的具体用法可以参考 `lsbom --help`。
 
 #### 4. 最后清除包管理数据库中的pkg包信息
 
-    $ sudo pkgutil --forget PKGID
+```console
+$ sudo pkgutil --forget PKGID
+```
 
 ### 三、App
 
