@@ -7,7 +7,7 @@ category: Internet
 tags: [Nginx, Rewrite, Wordpress, Joomla, UChome]
 ---
 
-### wordpress
+#### wordpress
 
 ```nginx
 location / {
@@ -15,7 +15,7 @@ location / {
 }
 ```
 
-### joomla
+#### joomla
 
 <!-- more -->
 
@@ -47,7 +47,7 @@ location / {
 }
 ```
 
-### uchome
+#### uchome
 
 ```nginx
 location / {

@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<time class="small">{{ page.date | date: "%Y.%m.%d" }}</time>
-<h2> {{ page.title }} </h2>
+<div class="col-md-12">
+<h2 class="title"> {{ page.title }} <time class="small">{{ page.date | date: "%Y.%m.%d" }}</time></h2>
 {{ content }}
 <ul class="pager">
   {% if page.previous %}
@@ -18,4 +18,4 @@ layout: default
 </ul>
 
 {% include comments.html %}
-
+</div>

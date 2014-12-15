@@ -9,7 +9,7 @@ tags: [Pkgutil]
 
 好久没写记录了，昨晚在 OS X 下卸载一堆 pkg 安装的软件包，特意放狗搜了下网络，遂做下记录，免得遗忘。以下所说的只适用于 OS X Yosemite 下，之前的版本不做考虑。
 
-### 一、准备
+#### 一、准备
 
 首先，安装的 pkg 软件包，都记录在以下
 
@@ -60,23 +60,23 @@ File Commands:
   --payload-files PATH   List the paths archived within the (m)pkg at PATH
 ```
 
-### 二、方法
+#### 二、方法
 
 pkgutil 的帮助文件已经说明的很清楚了，步骤：
 
-#### 1. 查找下你需要卸载的软件包ID
+##### 1. 查找下你需要卸载的软件包ID
 
 ```console
 $ pkgutil --pkgs
 ```
 
-#### 2.列出该 pkg 包含的文件列表
+##### 2.列出该 pkg 包含的文件列表
 
 ```console
 $ pkgutil --files PKGID
 ```
 
-#### 3. 检查下软件包信息，路径
+##### 3. 检查下软件包信息，路径
 
 ```console
 $ pkgutil --pkg-info PKGID
@@ -95,7 +95,7 @@ install-time: 1401513557
 
 从以上我们要获取的信息是，PKGID 为 com.cmbchina.CMBSecurityPlugin.pkg，在根目录 `/` 下的 `Library/Internet Plug-Ins` 目录，也就是 `/Library/Internet Plug-Ins` 目录下，这个下面用得到。
 
-#### 4. 执行删除操作
+##### 4. 执行删除操作
 
 你当然可以通过 `pkgutil --files PKGID` 得到的文件列表，手动的去删除，我们还是读软件包的 bom 文件去删除，仍然以招行插件为例：
 
@@ -108,13 +108,13 @@ cd 路径，即第 3 步中的目录。
 
 lsbom 的具体用法可以参考 `lsbom --help`。
 
-#### 4. 最后清除包管理数据库中的pkg包信息
+##### 5. 最后清除包管理数据库中的pkg包信息
 
 ```console
 $ sudo pkgutil --forget PKGID
 ```
 
-### 三、App
+#### 三、App
 
 上面的都是一些基础的介绍，当然如今已经有现成的 app 可以使用，譬如 <del>[PackageUninstaller](https://github.com/hewigovens/PackageUninstaller)</del>、[UninstallPKG](http://www.corecode.at/uninstallpkg/)，前者免费，后者收费。
 
