@@ -1,9 +1,0 @@
-{
-    "access_key": "MxHhMGTufZZuoG-cd5Y1Nk0zCdIuhAZnClst_K_A",
-    "secret_key": "ivWVrre0q1c_tXMU3_5h_kLoKWhkS7ULphGng-N4",
-    "bucket": "havee",
-    "sync_dir": "qiniu",
-    "async_ops": "",
-    "deletable": 1,
-    "debug_level": 1
-}
