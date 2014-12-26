@@ -109,6 +109,8 @@ style
 ```
 这里是本人博客的 scss：[style/_sass](https://github.com/Ihavee/ihavee.github.io/tree/master/style/_sass)
 
+**注意：jekyll 2.4.0 及以后的版本，已经内置 sass 编译器，详情访问：[使用 Jekyll 内置的 Sass 预处理器]({% post_url 2014-09-15-use-built-in-sass-with-jekyll  %})**
+
 以下是关于 SASS 的具体用法，转自：[SASS用法指南 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/06/sass.html)
 
 - - -

@@ -11,6 +11,7 @@ description: "业余爱好的点滴记录，同时作为配置备份的存储地
 #### ChangeLog
 
 - 2014 年 12 月:   因 GitCafe 某原因，及 name.gitcafe.io 跳转到 page 服务未完工，临时切换到 github pages
+- 2014 年 11 月:   样式 css 由 Jekyll 内置的 Scss 自动生成
 - 2014 年 8 月:    放弃 JB，转为 Jekyll，重新制作了模板 <https://github.com/Ihavee/ihavee.github.io>
 - 2014 年 8 月:    为了速度，砍掉华而不实的功能
 - 2014 年 3 月:    托管方由 GitHub 转向 [GitCafe](https://gitcafe.com/Havee/Havee)
