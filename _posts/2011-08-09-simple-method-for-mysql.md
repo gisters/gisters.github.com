@@ -4,7 +4,7 @@ title: "MySQL 简单操作 (笔记)"
 description: "MySQL 简单操作 (笔记)"
 keywords: mysql, root, mysqladmin, 操作
 category: SQL
-tags: [SQL, CLI]
+tags: [MySQL, CLI]
 ---
 
 #### 一、安装后

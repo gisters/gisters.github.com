@@ -4,7 +4,7 @@ title: "phpMyAdmin 扩展功能"
 description: "phpMyAdmin "
 keywords: "phpMyAdmin 的额外特性"
 category: SQL
-tags: [phpMyAdmin]
+tags: [phpMyAdmin, MySQL]
 ---
 
 一直没有使用过 phpMyAdmin，今天通过 `brew install phpmyadmin` 安装了下，发现 phpMyAdmin 多了些新特性，需要激活使用。

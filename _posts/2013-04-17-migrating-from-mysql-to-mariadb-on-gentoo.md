@@ -4,7 +4,7 @@ title: "Gentoo 中用 MariaDB 替换 MySQL"
 description: "Gentoo 中用 MariaDB 替换 MySQL"
 keywords: Gentoo,mariadb,mysql,替换
 category: SQL
-tags: [SQL, Gentoo]
+tags: [MySQL, MariaDB, Gentoo]
 ---
 
 - 编辑 `/var/lib/portage/world` 文件，用 `virtual/mysql` 替换 `dev-db/mysql`

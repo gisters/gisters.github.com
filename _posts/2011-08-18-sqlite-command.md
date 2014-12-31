@@ -4,7 +4,7 @@ title: "SQLite 命令"
 description: "不管是工作或者个人自娱自乐写东西，只要有数据存储首先就想到了sqlite"
 keywords: sqlite, 命令, xml
 category: SQL
-tags: [SQL, CLI, Usage]
+tags: [SQLite, CLI, Usage]
 ---
 
 ![Sqlite3]({{ site.qiniudn }}/images/2011/08/sqlite3.png  "sqlite3")

@@ -4,7 +4,7 @@ title: "OS X 上安装 Nginx + PHP-FPM + MariaDB"
 description: "介绍在 Mac OS X 下安装 Nginx + PHP-FPM + MariaDB"
 keywords: "mac, os x, nginx, php-fpm, mysql, mariadb, 安装"
 category: "Mac"
-tags: [Nginx, PHP-FPM, SQL,]
+tags: [Nginx, PHP-FPM, MariaDB]
 ---
 
 一些小测试需要用到 Nginx + PHP-FPM + MariaDB，在 App Store 内看了下 OS X Server 要 ￥128，咳咳，要我 10 天的饭钱，Linux 用户迁移过来的，怎么可能花这个钱呢，都是开源的东东，于是操起 [Homebrew]({% post_url 2013-12-21-how-to-install-and-use-homebrew %})，自己配置
