@@ -85,7 +85,7 @@ end
 
 第一次运行会创建 **qiniu.json**。编辑好 **qiniu.json** 后第二次运行，如果填写正确，则上传到远端。
 
-入过 **qiniu.json** 中配置的 `sync_dir` 为 `qiniu`
+如果 **qiniu.json** 中配置的 `sync_dir` 为 `qiniu`
 
 则丢在目录 **qiniu** 中的文件会被上传，需要说明的是，七牛没有目录的概念，不管你在目录 **qiniu**下分几层目录，远端都是单个文件。譬如本地目录类似于
 

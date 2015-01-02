@@ -4,7 +4,7 @@ title: "使用 Jekyll 内置的 Sass 预处理器"
 description: "介绍使用 Jekyll 内置的 Sass 预处理器。"
 keywords: "jekyll, sass"
 category: Internet
-tags: [Jekyll, Usage]
+tags: [Jekyll, Usage, Sass]
 ---
 
 之前有介绍过 [CSS 的预处理器 Sass]({% post_url 2013-08-07-convert-scss-to-css %})，今天翻阅 Jekyll 官网发现，Jekyll 本身就内置 Sass 的编译，一些小修改，就剔除了 compass 工具，完美的使用，顺便记录下，希望本文能帮到大家。

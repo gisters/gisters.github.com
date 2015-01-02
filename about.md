@@ -11,7 +11,7 @@ description: "业余爱好的点滴记录，同时作为配置备份的存储地
 #### ChangeLog
 
 - 2014 年 12 月:   因 GitCafe 某原因，及 name.gitcafe.io 跳转到 page 服务未完工，临时切换到 github pages
-- 2014 年 11 月:   样式 css 由 Jekyll 内置的 Scss 自动生成
+- 2014 年 11 月:   样式 css 由 Jekyll 内置的 SASS 预处理器自动生成
 - 2014 年 8 月:    放弃 JB，转为 Jekyll，重新制作了模板 <https://github.com/Ihavee/ihavee.github.io>
 - 2014 年 8 月:    为了速度，砍掉华而不实的功能
 - 2014 年 3 月:    托管方由 GitHub 转向 [GitCafe](https://gitcafe.com/Havee/Havee)
@@ -34,6 +34,6 @@ Havanna，借用03年左右混迹海外论坛时， 看到的一个ID，”Havan
 
 友情链接：linux + server + web 相关的博客，只需原创文章超过70%即可，无其他要求，欢迎留言，拒绝一切营销信息。
 
-<strong><span style="color:red;">注意：</span>如果你喜欢本站样式，欢迎 clone，但是请务必将 `_config.yml` 下的一些参数调整为你自己的。譬如我实在不希望侧边栏出现不是本站的评论 -\_-!! 当然，`_post` 下的文件也请清空，谢谢合作！</strong>
+<strong><span style="color:red;">注意：</span>如果你喜欢本站样式，欢迎 clone，但是请务必将 `_config.yml` 下的一些参数调整为你自己的。譬如我实在不希望侧边栏出现不是本站的评论 -\_-!! 当然，`_post` 下的文件也请清空，谢谢合作！同时，由于本博客的样式由 Jekyll 内置 SCSS 预处理器直接生成 css，所以，你可能需要阅读 [CSS 的预处理器 SASS]({% post_url 2013-08-07-convert-scss-to-css %}) 这篇文章。</strong>
 
 {% include comments.html %}

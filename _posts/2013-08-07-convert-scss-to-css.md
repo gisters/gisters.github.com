@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "CSS 的预处理器 SASS"
+title: "CSS 的预处理器 Sass"
 description: "sass 的一些介绍"
 keywords: "scss, css, compass"
 category: Internet
-tags: [style]
+tags: [Sass]
 ---
 
-最近经常接触 [Jekyll](http://jekyllrb.com/)，进而又认识到 [Sass](http://sass-lang.com/)（从 Sass 3 开始的新语法规则被称为 SCSS，之前的语法规则为 Syntaxes） 这个 CSS 的处理器，同时 [Compass](http://compass-style.org/) 又是一个高效的开发 SASS 的利器。
+最近经常接触 [Jekyll](http://jekyllrb.com/)，进而又认识到 [Sass](http://sass-lang.com/)（从 Sass 3 开始的新语法规则被称为 SCSS，即 Sassy CSS） 这个 CSS 的处理器，同时 [Compass](http://compass-style.org/) 又是一个高效的开发 Sass 的利器。
 
 闲话少说，[RubyGems](http://rubygems.org/) 下的安装
 
@@ -52,7 +52,7 @@ output_style = :compressed
 
 当然也可以不运行 `compass create .` 来创建目录，只需 `touch config.rb`，且填充以上内容即可
 
-实时监控 Sass 目录，使之修改保存后，即可编译成对应目录的 css 
+实时监控 Sass 目录，使之修改保存后，即可编译成对应目录的 CSS 
 
 ```sh
 $ compass watch .
@@ -76,19 +76,104 @@ Thumbs.db
 
 ```
 
+不过，Jekyll 2.4.0 开始内置 Sass 预处理器，可以直接生成页面需要的样式。GitHub Pages 服务已经支持 Jekyll 2.4.0 版本。详情访问：[使用 Jekyll 内置的 Sass 预处理器]({% post_url 2014-09-15-use-built-in-sass-with-jekyll  %})
+
 以下是我的目录结构
 
 ```
 style
 ├── _sass
-│   ├── _base.scss
+│   ├── _bootstrap.scss
 │   ├── _custom.scss
-│   └── style.scss
+│   ├── _font-awesome.scss
+│   ├── _havee.scss
+│   ├── _pygments.scss
+│   ├── bootstrap
+│   │   ├── _alerts.scss
+│   │   ├── _badges.scss
+│   │   ├── _breadcrumbs.scss
+│   │   ├── _button-groups.scss
+│   │   ├── _buttons.scss
+│   │   ├── _carousel.scss
+│   │   ├── _close.scss
+│   │   ├── _code.scss
+│   │   ├── _component-animations.scss
+│   │   ├── _dropdowns.scss
+│   │   ├── _forms.scss
+│   │   ├── _glyphicons.scss
+│   │   ├── _grid.scss
+│   │   ├── _input-groups.scss
+│   │   ├── _jumbotron.scss
+│   │   ├── _labels.scss
+│   │   ├── _list-group.scss
+│   │   ├── _media.scss
+│   │   ├── _mixins.scss
+│   │   ├── _modals.scss
+│   │   ├── _navbar.scss
+│   │   ├── _navs.scss
+│   │   ├── _normalize.scss
+│   │   ├── _pager.scss
+│   │   ├── _pagination.scss
+│   │   ├── _panels.scss
+│   │   ├── _popovers.scss
+│   │   ├── _print.scss
+│   │   ├── _progress-bars.scss
+│   │   ├── _responsive-embed.scss
+│   │   ├── _responsive-utilities.scss
+│   │   ├── _scaffolding.scss
+│   │   ├── _tables.scss
+│   │   ├── _theme.scss
+│   │   ├── _thumbnails.scss
+│   │   ├── _tooltip.scss
+│   │   ├── _type.scss
+│   │   ├── _utilities.scss
+│   │   ├── _variables.scss
+│   │   ├── _wells.scss
+│   │   └── mixins
+│   │       ├── _alerts.scss
+│   │       ├── _background-variant.scss
+│   │       ├── _border-radius.scss
+│   │       ├── _buttons.scss
+│   │       ├── _center-block.scss
+│   │       ├── _clearfix.scss
+│   │       ├── _forms.scss
+│   │       ├── _gradients.scss
+│   │       ├── _grid-framework.scss
+│   │       ├── _grid.scss
+│   │       ├── _hide-text.scss
+│   │       ├── _image.scss
+│   │       ├── _labels.scss
+│   │       ├── _list-group.scss
+│   │       ├── _nav-divider.scss
+│   │       ├── _nav-vertical-align.scss
+│   │       ├── _opacity.scss
+│   │       ├── _pagination.scss
+│   │       ├── _panels.scss
+│   │       ├── _progress-bar.scss
+│   │       ├── _reset-filter.scss
+│   │       ├── _resize.scss
+│   │       ├── _responsive-visibility.scss
+│   │       ├── _size.scss
+│   │       ├── _tab-focus.scss
+│   │       ├── _table-row.scss
+│   │       ├── _text-emphasis.scss
+│   │       ├── _text-overflow.scss
+│   │       └── _vendor-prefixes.scss
+│   └── font-awesome
+│       ├── _bordered-pulled.scss
+│       ├── _core.scss
+│       ├── _fixed-width.scss
+│       ├── _icons.scss
+│       ├── _larger.scss
+│       ├── _list.scss
+│       ├── _mixins.scss
+│       ├── _path.scss
+│       ├── _rotated-flipped.scss
+│       ├── _spinning.scss
+│       ├── _stacked.scss
+│       └── _variables.scss
 ├── css
-│   ├── bootstrap.min.css
-│   ├── font-awesome.css
-│   ├── pygments.css
-│   └── style.css
+│   └── style.scss
 ├── fonts
 │   ├── FontAwesome.otf
 │   ├── fontawesome-webfont.eot
@@ -107,39 +192,37 @@ style
     ├── jquery.min.js
     └── webcore.js
 ```
-这里是本人博客的 scss：[style/_sass](https://github.com/Ihavee/ihavee.github.io/tree/master/style/_sass)
+这里是本人博客的 SCSS：[style/_sass](https://github.com/Ihavee/ihavee.github.io/tree/master/style/_sass)
 
-**注意：jekyll 2.4.0 及以后的版本，已经内置 sass 编译器，详情访问：[使用 Jekyll 内置的 Sass 预处理器]({% post_url 2014-09-15-use-built-in-sass-with-jekyll  %})**
-
-以下是关于 SASS 的具体用法，转自：[SASS用法指南 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/06/sass.html)
+以下是关于 Sass 的具体用法，转自：[SASS用法指南 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/06/sass.html)
 
 - - -
 
-#### 一、什么是SASS
+#### 一、什么是Sass
 
-SASS 是一种 CSS 的开发工具，提供了许多便利的写法，大大节省了设计者的时间，使得 CSS 的开发，变得简单和可维护。
+Sass 是一种 CSS 的开发工具，提供了许多便利的写法，大大节省了设计者的时间，使得 CSS 的开发，变得简单和可维护。
 
-本文总结了 SASS 的主要用法。我的目标是，有了这篇文章，日常的一般使用就不需要去看[官方文档](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html)了。
+本文总结了 Sass 的主要用法。我的目标是，有了这篇文章，日常的一般使用就不需要去看[官方文档](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html)了。
 
 #### 二、安装和使用
 
 ##### 2.1 安装
 
-SASS 是 Ruby 语言写的，但是两者的语法没有关系。不懂 Ruby，照样使用。只是必须先[安装 Ruby](http://www.ruby-lang.org/zh_cn/downloads/)，然后再安装 SASS。
+Sass 是 Ruby 语言写的，但是两者的语法没有关系。不懂 Ruby，照样使用。只是必须先[安装 Ruby](http://www.ruby-lang.org/zh_cn/downloads/)，然后再安装 Sass。
 
 假定你已经安装好了Ruby，接着在命令行输入下面的命令：
 
 ```sh
-gem install sass
+gem install Sass
 ```
 
 然后，就可以使用了。
 
 ##### 2.2 使用
 
-SASS 文件就是普通的文本文件，里面可以直接使用 CSS 语法。文件后缀名是 `.scss`，意思为 **Sassy CSS**。
+Sass 文件就是普通的文本文件，里面可以直接使用 CSS 语法。文件后缀名是 `.scss`，意思为 **Sassy CSS**。
 
-下面的命令，可以在屏幕上显示 `.scss` 文件转化的 css 代码。（假设文件名为test。）
+下面的命令，可以在屏幕上显示 `.scss` 文件转化的 CSS 代码。（假设文件名为 test。）
 
 ```sh
 sass test.scss
@@ -151,7 +234,7 @@ sass test.scss
 sass test.scss test.css
 ```
 
-SASS 提供四个[编译风格](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#output_style)的选项：
+Sass 提供四个[编译风格](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#output_style)的选项：
 
     * nested：嵌套缩进的css代码，它是默认值。
     * expanded：没有缩进的、扩展的css代码。
@@ -164,7 +247,7 @@ SASS 提供四个[编译风格](http://sass-lang.com/docs/yardoc/file.SASS_REFER
 sass --style compressed test.sass test.css
 ```
 
-你也可以让 SASS 监听某个文件或目录，一旦源文件有变动，就自动生成编译后的版本。
+你也可以让 Sass 监听某个文件或目录，一旦源文件有变动，就自动生成编译后的版本。
 
 ```sh
 // watch a file
@@ -179,7 +262,7 @@ SASS 的官方网站，提供了一个[在线转换器](http://sass-lang.com/try
 
 ##### 3.1 变量
 
-SASS 允许使用变量，所有变量以 `$` 开头。
+Sass 允许使用变量，所有变量以 `$` 开头。
 
 ```scss
 $blue : #1875e7;
@@ -199,7 +282,7 @@ $side : left;
 
 ##### 3.2 计算功能
 
-SASS 允许在代码中使用算式：
+Sass 允许在代码中使用算式：
 
 ```scss
 body {
@@ -211,7 +294,7 @@ body {
 
 ##### 3.3 嵌套
 
-SASS 允许选择器嵌套。比如，下面的 CSS 代码：
+Sass 允许选择器嵌套。比如，下面的 CSS 代码：
 
 ```scss
 div h1 {
@@ -251,11 +334,11 @@ a {
 
 ##### 3.4 注释
 
-SASS 共有两种注释风格。
+Sass 共有两种注释风格。
 
 标准的 CSS 注释 `/* comment */` ，会保留到编译后的文件。
 
-单行注释 `// comment`，只保留在 SASS 源文件中，编译后被省略。
+单行注释 `// comment`，只保留在 Sass 源文件中，编译后被省略。
 
 在 `/*` 后面加一个感叹号，表示这是"重要注释"。即使是压缩模式编译，也会保留这行注释，通常可以用于声明版权信息。
 
@@ -269,7 +352,7 @@ SASS 共有两种注释风格。
 
 ##### 4.1 继承
 
-SASS 允许一个选择器，继承另一个选择器。比如，现有 class1：
+Sass 允许一个选择器，继承另一个选择器。比如，现有 class1：
 
 ```scss
 .class1 {
@@ -343,7 +426,7 @@ div {
 
 ##### 4.3 颜色函数
 
-SASS 提供了一些内置的颜色函数，以便生成系列颜色。
+Sass 提供了一些内置的颜色函数，以便生成系列颜色。
 
 ```scss
 lighten(#cc3, 10%) // #d6d65c
@@ -391,7 +474,7 @@ p {
 
 ##### 5.2 循环语句
 
-SASS 支持 for 循环：
+Sass 支持 for 循环：
 
 ```scss
 @for $i from 1 to 10 {
@@ -424,7 +507,7 @@ each 命令，作用与 for 类似：
 
 ##### 5.3 自定义函数
 
-SASS 允许用户编写自己的函数。
+Sass 允许用户编写自己的函数。
 
 ```scss
 @function double($n) {
