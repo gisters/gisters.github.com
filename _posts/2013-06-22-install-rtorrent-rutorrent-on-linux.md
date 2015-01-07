@@ -13,7 +13,7 @@ tags: [Rtorrent, Rutorrent, PT]
 
 <!-- more -->
 
-![rutorrent]({{ site.qiniudn }}/images/2013/06/rutorrent.png "rutorrent")
+![rutorrent]({{ site.cdn }}/images/2013/06/rutorrent.png "rutorrent")
 
 下面是以 root 权限来安装的步骤：
 
@@ -25,11 +25,11 @@ sh autodl-setup
 
 脚本运行期间会提示你输入安装的组件、用户、密码、rutorrent 运行用户等。整个安装过程非常的简单，除了在添加完一个用户后就 `Enter` 结束添加用户这一点需要注意外，否则就会无限制的循环添加用户。
 
-![Install 1]({{ site.qiniudn }}/images/2013/06/install1.png "Install 1")
+![Install 1]({{ site.cdn }}/images/2013/06/install1.png "Install 1")
 
 需要注意的是添加完用户后，脚本会循环问你是否添加用户，这里直接按回车键
 
-![Install 2]({{ site.qiniudn }}/images/2013/06/install2.png "Install 2")
+![Install 2]({{ site.cdn }}/images/2013/06/install2.png "Install 2")
 
 最后，按回车键开始安装
 
@@ -83,8 +83,8 @@ sh autodl-setup
 
 下图是本人安装后正常运行的一些截图
 
-![RSS 订阅]({{ site.qiniudn }}/images/2013/06/rss.png)
+![RSS 订阅]({{ site.cdn }}/images/2013/06/rss.png)
 ![Setting 1](/assets//images/2013/06/setting 1.png)
-![Setting 2]({{ site.qiniudn }}/images/2013/06/setting 2.png)
+![Setting 2]({{ site.cdn }}/images/2013/06/setting 2.png)
 
 参考：http://whattheserver.me/billing/knowledgebase.php?action=displayarticle&id=38

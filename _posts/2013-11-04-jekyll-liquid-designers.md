@@ -55,14 +55,12 @@ Hello {{ '1984-02-01' | date: "%Y" }}
 
 输出结果是：
 
-{% raw %}
 ```
 Hello {{ 'tobi' | upcase }}
 Hello tobi has {{ 'tobi' | size }} letters!
 Hello {{ 'tobi' | capitalize }}
 Hello {{ '1984-02-01' | date: "%Y" }}
 ```
-{% endraw %}
 
 #### 标准过滤器
 

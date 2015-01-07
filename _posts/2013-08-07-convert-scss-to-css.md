@@ -81,7 +81,7 @@ Thumbs.db
 以下是我的目录结构
 
 ```
-style
+assets
 ├── _sass
 │   ├── _bootstrap.scss
 │   ├── _custom.scss
@@ -192,7 +192,7 @@ style
     ├── jquery.min.js
     └── webcore.js
 ```
-这里是本人博客的 SCSS：[style/_sass](https://github.com/Ihavee/ihavee.github.io/tree/master/style/_sass)
+这里是本人博客的 SCSS：[assets/_sass](https://github.com/Ihavee/ihavee.github.io/tree/master/assets/_sass)
 
 以下是关于 Sass 的具体用法，转自：[SASS用法指南 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/06/sass.html)
 

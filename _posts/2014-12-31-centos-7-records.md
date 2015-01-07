@@ -67,7 +67,7 @@ tags: [Nginx, PHP, PHP-FPM, SQL, Tips]
     # systemctl start firewalld
     # systemctl enable firewalld
 
-具体的方法可以 `firewall-cmd --help` 查看，这里只添加基本的对外服务
+具体的方法可以阅读：[CentOS 7 下使用 Firewall]({% post_url 2015-01-02-using-firewalls-on-centos-7 %})，这里只添加基本的对外服务
 
     # firewall-cmd --permanent --zone=public --add-service=http
     # firewall-cmd --permanent --zone=public --add-service=https

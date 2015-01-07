@@ -9,7 +9,7 @@ tags: [Steam, Gentoo, Game]
 
 Vala 正式发布了其 Linux 版本的平台 Steam。悲催的我在其打折前一晚购买了几款游戏。
 
-![Steam for Linux]({{ site.qiniudn }}/images/2013/02/steam.png "Steam for Linux")
+![Steam for Linux]({{ site.cdn }}/images/2013/02/steam.png "Steam for Linux")
 
 Gentoo 用户可以通过添加 steam overlay 来安装
 

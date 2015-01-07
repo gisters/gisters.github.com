@@ -17,7 +17,14 @@ tags: [Jekyll, Usage]
 <!-- more -->
 好吧，作为一个个人博客来说，足够使用。再加上几个月前七牛工作人员联系上鄙人，希望能写篇有关 **Jekyll** 上使用七牛的文章，琢磨着过去好久了，于是今天就有了这篇文章。
 
-首先，鄙人使用的工具是七牛提供的：<http://developer.qiniu.com/docs/v6/tools/qrsync.html#download>。根据各自平台去下载响应的同步工具。
+首先，以下所有的前提是：
+
+1. 你有一个 Jekyll 搭建的博客
+2. 你有一个七牛的账户
+
+Jekyll 相关的介绍本博客里有，可以直接上方输入框输入 Jekyll 来搜索，七牛的话，可以通过以下注册：<https://portal.qiniu.com/signup?code=3ljaarok4jaz6>，如果对推广链接不爽的话，去掉结尾处的 `?code=3ljaarok4jaz6` 吧。
+
+其次，鄙人使用的工具是七牛提供的：<http://developer.qiniu.com/docs/v6/tools/qrsync.html#download>。根据各自平台去下载响应的同步工具。
 
 解压开，将 **qrsync** 两进制文件放入你的 **Jekyll** 根目录下，再在 **.gitignore** 文件中添加 `qrsync`，毕竟，你是不会希望一个 12 MB 大小的两进制包进入你的源代码中吧（嗯，我第一次就上传了 -_-!!）。如下
 
@@ -87,25 +94,25 @@ end
 
 如果 **qiniu.json** 中配置的 `sync_dir` 为 `qiniu`
 
-则丢在目录 **qiniu** 中的文件会被上传，需要说明的是，七牛没有目录的概念，不管你在目录 **qiniu**下分几层目录，远端都是单个文件。譬如本地目录类似于
+则丢在目录 **qiniu** 中的文件会被上传，需要说明的是，七牛没有目录的概念，不管你在目录 **qiniu**下分几层目录，远端都是单个文件。譬如本地目录类似于：
 
     qiniu/images/name1.png
     qiniu/images/name2.png
     qiniu/images/name3.png
 
-则同步到远端后的文件名则为
+则同步到远端后的文件名则为:
 
     images/name1.png
     images/name2.png
     images/name3.png
 
-链接为
+链接为：
 
     http://bucket.qiniudn.com/images/name1.png
     http://bucket.qiniudn.com/images/name2.png
     http://bucket.qiniudn.com/images/name3.png
 
-有同学想整个博客静态页面 `_site` 同步上去，那么文章中老老实实的写本地路径吧
+有同学想整个博客静态页面 `_site` 同步上去，那么文章中老老实实的写本地路径吧：
 
     ![image](/your/path/image)
 

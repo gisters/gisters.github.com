@@ -40,9 +40,9 @@ tags: [Homebrew]
 
 提示已经很明确了，按照说明照做，注册个 github 账号，打开页面 http://github.com/settings/applications. 点击 `Create new token`，填入 Token descrption 后，点击 Create Token
 
-![Create new token]({{ site.qiniudn }}/images/2013/12/create-new-token.png)
+![Create new token]({{ site.cdn }}/images/2013/12/create-new-token.png)
 
-![Personal Access Tokens]({{ site.qiniudn }}/images/2013/12/personal-access-tokens.png)
+![Personal Access Tokens]({{ site.cdn }}/images/2013/12/personal-access-tokens.png)
 
 在家目录的 `~/.bash_profile` 中添加如下你申请到的 token
 

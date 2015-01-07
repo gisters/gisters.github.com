@@ -113,79 +113,79 @@ int main(int argc, char **argv)
 
 - monokai
 
-![monokai]({{ site.qiniudn }}/images/2013/08/pygments-monokai.png)
+![monokai]({{ site.cdn }}/images/2013/08/pygments-monokai.png)
 
 - manni
 
-![manni]({{ site.qiniudn }}/images/2013/08/pygments-manni.png)
+![manni]({{ site.cdn }}/images/2013/08/pygments-manni.png)
 
 - rrt
 
-![rrt]({{ site.qiniudn }}/images/2013/08/pygments-rrt.png)
+![rrt]({{ site.cdn }}/images/2013/08/pygments-rrt.png)
 
 - perldoc
 
-![perldoc]({{ site.qiniudn }}/images/2013/08/pygments-perldoc.png)
+![perldoc]({{ site.cdn }}/images/2013/08/pygments-perldoc.png)
 
 - borland
 
-![borland]({{ site.qiniudn }}/images/2013/08/pygments-borland.png)
+![borland]({{ site.cdn }}/images/2013/08/pygments-borland.png)
 
 - colorful
 
-![colorful]({{ site.qiniudn }}/images/2013/08/pygments-colorful.png)
+![colorful]({{ site.cdn }}/images/2013/08/pygments-colorful.png)
 
 - default
 
-![default]({{ site.qiniudn }}/images/2013/08/pygments-default.png)
+![default]({{ site.cdn }}/images/2013/08/pygments-default.png)
 
 - murphy
 
-![murphy]({{ site.qiniudn }}/images/2013/08/pygments-murphy.png)
+![murphy]({{ site.cdn }}/images/2013/08/pygments-murphy.png)
 
 - vs
 
-![vs]({{ site.qiniudn }}/images/2013/08/pygments-vs.png)
+![vs]({{ site.cdn }}/images/2013/08/pygments-vs.png)
 
 - trac
 
-![trac]({{ site.qiniudn }}/images/2013/08/pygments-trac.png)
+![trac]({{ site.cdn }}/images/2013/08/pygments-trac.png)
 
 - tango
 
-![tango]({{ site.qiniudn }}/images/2013/08/pygments-tango.png)
+![tango]({{ site.cdn }}/images/2013/08/pygments-tango.png)
 
 - fruity
 
-![fruity]({{ site.qiniudn }}/images/2013/08/pygments-fruity.png)
+![fruity]({{ site.cdn }}/images/2013/08/pygments-fruity.png)
 
 - autumn
 
-![autumn]({{ site.qiniudn }}/images/2013/08/pygments-autumn.png)
+![autumn]({{ site.cdn }}/images/2013/08/pygments-autumn.png)
 
 - bw
 
-![bw]({{ site.qiniudn }}/images/2013/08/pygments-bw.png)
+![bw]({{ site.cdn }}/images/2013/08/pygments-bw.png)
 
 - emacs
 
-![emacs]({{ site.qiniudn }}/images/2013/08/pygments-emacs.png)
+![emacs]({{ site.cdn }}/images/2013/08/pygments-emacs.png)
 
 - vim
 
-![vim]({{ site.qiniudn }}/images/2013/08/pygments-vim.png)
+![vim]({{ site.cdn }}/images/2013/08/pygments-vim.png)
 
 - pastie
 
-![pastie]({{ site.qiniudn }}/images/2013/08/pygments-pastie.png)
+![pastie]({{ site.cdn }}/images/2013/08/pygments-pastie.png)
 
 - friendly
 
-![friendly]({{ site.qiniudn }}/images/2013/08/pygments-friendly.png)
+![friendly]({{ site.cdn }}/images/2013/08/pygments-friendly.png)
 
 - native
 
-![native]({{ site.qiniudn }}/images/2013/08/pygments-native.png)
+![native]({{ site.cdn }}/images/2013/08/pygments-native.png)
 
 参考：
 

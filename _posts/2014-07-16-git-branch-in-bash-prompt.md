@@ -7,7 +7,7 @@ category: Linux
 tags: [Git, CLI]
 ---
 
-![Git Branch Name]({{ site.qiniudn }}/images/2014/07/git-branch.png)
+![Git Branch Name]({{ site.cdn }}/images/2014/07/git-branch.png)
 
 看到他人的 terminal 中显示出 git branch 名，查阅了一些资料，需要 `__git_ps1`，下面记录下如何安装使用。
 
