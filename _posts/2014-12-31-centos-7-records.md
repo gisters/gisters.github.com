@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "CentOS 7 配置记录"
-description: "几个 vps 逐步的升级到 CentOS 7，老是忘记一些配置，于是动手纪录下。"
-keywords: "centos, config, nginx, php-fpm, mariadb, firewall, timezone, hostname, 配置"
 category: Linux
 tags: [Nginx, PHP, PHP-FPM, SQL, Tips]
 ---
@@ -20,12 +18,35 @@ tags: [Nginx, PHP, PHP-FPM, SQL, Tips]
     # hostnamectl set-hostname yourdomain
 
 <!-- more -->
+#### Timezone
+
+    # timedatectl set-timezone Asia/Shanghai
+
+查看时区
+
+    # timedatectl
+
 #### adduser
 
 不喜 root ssh，于是添加一个用户，因为用得到 sudo，故添加到 wheel 组
 
-    # useradd -m -G users,wheel -G havanna
+    # useradd -m -G users,wheel havanna
     # passwd havanna
+
+#### firewall
+
+    # systemctl start firewalld
+    # systemctl enable firewalld
+
+具体的方法可以阅读：[CentOS 7 下使用 Firewall]({% post_url 2015-01-02-using-firewalls-on-centos-7 %})，这里只添加基本的对外服务
+
+    # firewall-cmd --permanent --zone=public --add-service=http
+    # firewall-cmd --permanent --zone=public --add-service=https
+    # firewall-cmd --reload
+
+确认下
+
+    # firewall-cmd --permanent --zone=public --list-services
 
 #### ssh
 
@@ -50,37 +71,27 @@ tags: [Nginx, PHP, PHP-FPM, SQL, Tips]
     # chown havanna:havanna /home/havanna/authorized_keys
     # chmod 600 /home/havanna/authorized_keys
 
+因为更改了默认的 22 端口，安装一个 selinux 工具
+
+    # yum install policycoreutils-python
+    # semanage port -a -t ssh_port_t -p tcp yourport
+    # firewall-cmd --zone=public --permanent --add-port=yourport/tcp
+    # firewall-cmd --zone=public --permanent --remove-service=ssh
+    # firewall-cmd --reload
+
 然后重启下 sshd 服务
 
     # systemctl restart sshd
 
-#### Timezone
+确认下 sshd 服务
 
-    # timedatectl set-timezone Asia/Shanghai
-
-查看时区
-
-    # timedatectl
-
-#### firewall
-
-    # systemctl start firewalld
-    # systemctl enable firewalld
-
-具体的方法可以阅读：[CentOS 7 下使用 Firewall]({% post_url 2015-01-02-using-firewalls-on-centos-7 %})，这里只添加基本的对外服务
-
-    # firewall-cmd --permanent --zone=public --add-service=http
-    # firewall-cmd --permanent --zone=public --add-service=https
-    # firewall-cmd --reload
-
-确认下
-
-    # firewall-cmd --permanent --zone=public --list-services
+    # ss -tnlp | grep sshd
 
 #### Nginx
 
-    # rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+    # yum install epel-release
     # yum install nginx
+    # semanage permissive -a httpd_t
 
 编辑 **/etc/nginx/nginx.conf**
 

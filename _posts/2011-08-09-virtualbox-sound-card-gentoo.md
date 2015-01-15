@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Gentoo 下 VirtualBox 声卡独占"
-description: "Gentoo 下 VirtualBox 声卡独占"
-keywords: gentoo, virtualbox, 声卡
 category: Linux
 tags: [Gentoo, VirtualBox, Alsa, Virtual]
 ---

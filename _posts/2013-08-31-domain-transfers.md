@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "域名投诉获取转移码"
-description: "域名, 转移, 转移码, 投诉"
-keywords: "最近遇到域名转移过程中的一些龌龊事，记录一二。"
 category: Internet
 tags: [Domain]
 ---

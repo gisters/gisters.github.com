@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Jekyll 的安装"
-description: "Jekyll 安装方法的官方说明，学习的使用 Jekyll 的起点。这篇文章译自 Jekyll 的官方 Wiki，希望能对不熟悉英文的朋友们有所帮助。"
-keywords: "jekyll, 安装, 方法"
 category: Internet
 tags: [Jekyll, Installation]
 ---

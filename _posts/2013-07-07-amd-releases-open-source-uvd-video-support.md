@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "AMD 的开源 UVD 支持"
-description: "早在今年4月2号，Phoronix 就爆出了 AMD 开源 UVD 驱动支持的新闻，懒惰的我知道这个周末，才开始正式这次变动，顺便顺利的将自己的 **Radeon HD 7850** 加入了 UVD。"
-keywords: "radeon, ati, amd, uvd, linux"
 category: Linux
 tags: [Radeon, Kernel, Firmware]
 ---

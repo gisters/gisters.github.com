@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Jekyll 的使用"
-description: "Jekyll使用方法的官方Wiki文档。希望对大家有所帮助。"
-keywords: "jekyll, 方法"
 category: Internet
 tags: [Jekyll, Usage]
 ---

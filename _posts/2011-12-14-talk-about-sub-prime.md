@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "再谈次贷危机"
-description: "次贷从去年8月份以来就一直为网友热议。那么究竟什么是次贷呢？次贷是次级按揭贷款，是给信用状况较差，没有收入证明和还款能力证明，其他负债较重的个人的住房按揭贷款"
-keywords: 次贷, 危机, 贷款
 category: Other
 tags: [Essay]
 ---

@@ -1,13 +1,11 @@
 # Site settings
 title: "Havee's Space"
-keywords: "linux, gentoo, internet, sql, jekyll, BSD, MAC, havee"
-description: "Havee Hobbies, Knowledge Records。"
 url: "//havee.me"
 highlighter: pygments
 paginate: 5
 author:
     name: Havee
-    github: Ihavee
+    github: registe
     email:
     gitcafe: Havee
     twitter:
@@ -16,9 +14,6 @@ author:
     weibo: Havanna
 atom_path: /atom.xml
 rss_path: /rss.xml
-
-cdn: //cdn.09hd.com
-local: /cdn
 
 # Build settings
 markdown: redcarpet

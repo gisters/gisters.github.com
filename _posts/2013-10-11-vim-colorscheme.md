@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Vim 配色"
-description: "默认的 Xterm 只有 8 色，而一些 Vim 的漂亮的 colorscheme 基本都要 256 色"
-keywords: "vim, screen, xterm 配色, 主题"
 category: Linux
 tags: [Vim, Screen, Xterm]
 ---
@@ -50,13 +48,13 @@ endif
 
 以下是我 **vim & gvim** 的一些截图：
 
-![VIM]({{ site.cdn }}/images/2013/10/vim.png "VIM")
+![VIM](//cdn.09hd.com/images/2013/10/vim.png "VIM")
 
-![GVIM]({{ site.cdn }}/images/2013/10/gvim.png "GVIM")
+![GVIM](//cdn.09hd.com/images/2013/10/gvim.png "GVIM")
 
-![VIM with NerdTree]({{ site.cdn }}/images/2013/10/vim-nerdtree.png "VIM with NerdTree")
+![VIM with NerdTree](//cdn.09hd.com/images/2013/10/vim-nerdtree.png "VIM with NerdTree")
 
-![GVIM with NerdTree]({{ site.cdn }}/images/2013/10/gvim-nerdtree.png "GVIM with NerdTree")
+![GVIM with NerdTree](//cdn.09hd.com/images/2013/10/gvim-nerdtree.png "GVIM with NerdTree")
 
 你也可以直接 clone 我的配置[https://github.com/Ihavee/.vim](https://github.com/Ihavee/.vim)
 

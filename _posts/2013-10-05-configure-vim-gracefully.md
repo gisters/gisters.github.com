@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "优雅的配置 Vim"
-description: "如果你是个 Vim 爱好者，且如果你在各种不同的计算机，不同的操作系统 ( Windows, Linux,  Macos X 以及 BSD 等 )下"
-keywords: "vim, 配置"
 category: Linux
 tags: [Vim]
 ---

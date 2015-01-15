@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "迁移 Wordpress 至 Octopress"
-description: "迁移 Wordpress 至 Octopress"
-keywords: octopress, jekyll, wordpress, 迁移
 category: Internet
 tags: [Wordpress, Octopress, Jekyll]
 ---

@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Jekyll 的配置"
-description: "Jekyll配置方法的官方Wiki文档，希望对大家有帮助。"
-keywords: "jekyll, 配置"
 category: Internet
 tags: [Jekyll, Configuration, Usage]
 ---

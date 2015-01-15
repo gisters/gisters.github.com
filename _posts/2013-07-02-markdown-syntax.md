@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Markdown 语法说明"
-description: "Markdown 语法说明"
-keywords: markdown, 语法, 说明, 方法
 category: Internet
 tags: [Markdown, Syntax, Usage]
 ---

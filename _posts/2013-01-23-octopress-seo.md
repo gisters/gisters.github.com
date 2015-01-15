@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Octopress 的 SEO 优化"
-description: "Octopress 的 SEO 在默认情况下已经表现不错了，不过有个问题，`new_post` 不生成 meta description 和 keywords。"
-keywords: octopress, seo, keywords, description
 category: Internet
 tags: [Octopress, SEO, Usage]
 ---

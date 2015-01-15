@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "使用 Jekyll 内置的 Sass 预处理器"
-description: "介绍使用 Jekyll 内置的 Sass 预处理器。"
-keywords: "jekyll, sass"
 category: Internet
 tags: [Jekyll, Usage, Sass]
 ---

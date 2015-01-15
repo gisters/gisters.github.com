@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Gentoo 中以 FastCGI 方式运行 PHP"
-description: "PHP 的 FastCGI 使你的所有 php 应用软件通过 mod_fastci 运行，而不是 mod_phpsusexec 。FastCGI 应用速度很快是因为他们持久稳定。"
-keywords: gentoo, php-fpm, fastcgi, lighttpd, nginx, apache2
 category: Internet
 tags: [Gentoo, PHP-FPM, FastCGI, Lighttpd, Nginx, Apache]
 ---

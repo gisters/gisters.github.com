@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "OS X 的一些技巧汇总"
-description: "刚上手 OS X，习惯正在慢慢培养中，下面记录一些使用过程中的小技巧"
-keywords: "os x, 技巧"
 category: "Mac"
 tags: [Tips]
 ---
@@ -64,7 +62,7 @@ tags: [Tips]
 
 下载一个 app，[CursorSense](http://plentycom.jp/en/cursorsense/download.php "CursorSense")
 
-![CursorSense]({{ site.cdn }}/images/2014/01/CursorSense.png)
+![CursorSense](//cdn.09hd.com/images/2014/01/CursorSense.png)
 
 #### 四. GoAgent
 
@@ -113,23 +111,35 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
 #### 八. 视频播放
 
-尝试过 N 个播放器，包括收费的射手播放器在内都不太好用，最后定位在 [MPV](//mpv.io)，原汁原味的 Linux 下 Mplayer 的使用体验，强烈推荐，fork 自 mplayer2 与 Mplayer。
+尝试过 N 个播放器，包括收费的射手播放器在内都不太好用，最后确定以下几款视频播放器
 
-![MPV screenshot]({{ site.cdn }}/images/2014/01/mpv.png)
+##### 1. [MPV](//mpv.io)
 
-[MPlayer OSX Extended](http://mplayerosx.ch) 也是个非常不错的视频播放器，使用过一段时间。
+原汁原味的 Linux 下 Mplayer 的使用体验，强烈推荐，fork 自 mplayer2 与 Mplayer。
 
-![MPlayer OSX Extended]({{ site.cdn }}/images/2014/01/mplayer-osx.png)
+![MPV screenshot](//cdn.09hd.com/images/2014/01/mpv.png)
 
-![MPlayer OSX Preferences]({{ site.cdn }}/images/2014/01/mplayer-osx-preferences.png)
+##### 2. [MPlayer OSX Extended](//mplayerosx.ch) 
 
-当然，[MplayerX](//mplayerx.org) 也是另一个很好的选择。遗憾的是，播放蓝光 ISO 就不那么直观了。
+Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时间。
 
-于是再推荐个收费的 [Mac Blu-ray Player](//www.macblurayplayer.com)，与免费的 [XBMC](//kodi.tv/)。
+![MPlayer OSX Extended](//cdn.09hd.com/images/2014/01/mplayer-osx.png)
 
-![Mac Blu-ray Player]({{ site.cdn }}/images/2014/01/mac-blu-ray-player.png)
+![MPlayer OSX Preferences](//cdn.09hd.com/images/2014/01/mplayer-osx-preferences.png)
 
-![XBMC]({{ site.cdn }}/images/2014/01/xbmc.png)
+##### 3. [MplayerX](//mplayerx.org)
+
+另一个很好的选择。
+
+##### 4. 蓝光播放
+
+###### a. 收费的 [Mac Blu-ray Player](//www.macblurayplayer.com)
+
+![Mac Blu-ray Player](//cdn.09hd.com/images/2014/01/mac-blu-ray-player.png)
+
+###### b. 免费的 [XBMC](//kodi.tv/)
+
+![XBMC](//cdn.09hd.com/images/2014/01/xbmc.png)
 
 #### 九. 生僻的快捷键
 
@@ -182,5 +192,10 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
     $ defaults write com.apple.screencapture type gif
     $ defaults write com.apple.screencapture type png
     $ defaults write com.apple.screencapture type pdf
+
+#### 十四. Mail.app 撰写邮件附件显示
+
+    $ defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes/no
+    $ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true/false
 
 待更新……

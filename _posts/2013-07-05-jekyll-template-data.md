@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Jekyll 模板数据"
-description: "Jekyll模板数据的官方Wiki文档，希望对大家有帮助。"
-keywords: "jekyll, 模板"
 category: Internet
 tags: [Jekyll, Usage]
 ---

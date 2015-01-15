@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Git Alias 引起的权限问题"
-description: "Git Alias 引起的权限问题"
-keywords: git alias 权限
 category: Linux
 tags: [Git]
 ---

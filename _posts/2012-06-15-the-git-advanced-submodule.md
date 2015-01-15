@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Git 进阶：Submodule"
-description: "Git Submodule 对于大型团队项目来说，是个很好的协作工具"
-keywords: "git, submodule, 方法"
 category: Linux
 tags: [Git, Usage]
 ---

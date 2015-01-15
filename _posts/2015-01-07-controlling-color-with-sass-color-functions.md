@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Sass 色彩函数"
-description: "Sass 色彩函数介绍"
-keywords: "sass, color, function"
 category: Internet
 tags: [Sass]
 ---
@@ -32,7 +30,7 @@ darken($base, 10%);
 lighten($base, 10%);
 ```
 
-![Darken & lighten]({{ site.cdn }}/images/2015/01/darken-lighten.png)
+![Darken & lighten](//cdn.09hd.com/images/2015/01/darken-lighten.png)
 
 #### Saturate & Desaturate
 
@@ -43,7 +41,7 @@ saturate($base, 20%);
 desaturate($base, 20%);
 ```
 
-![Saturate & Desaturate]({{ site.cdn }}/images/2015/01/saturate-desaturate.png)
+![Saturate & Desaturate](//cdn.09hd.com/images/2015/01/saturate-desaturate.png)
 
 #### Adjust-hue
 
@@ -53,7 +51,7 @@ desaturate($base, 20%);
 adjust-hue($base, 20%);
 ```
 
-![adjust-hue]({{ site.cdn }}/images/2015/01/adjust-hue.png)
+![adjust-hue](//cdn.09hd.com/images/2015/01/adjust-hue.png)
 
 #### Other
 

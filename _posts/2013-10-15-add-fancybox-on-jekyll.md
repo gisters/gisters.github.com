@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "给 Jekyll 添加 FancyBox"
-description: "这是一篇介绍无 jekyll 插件的形式来使用 FancyBox。"
-keywords: "Jekyll, fancybox, jquery, plugins"
 category: Internet 
 tags: [Jekyll, FancyBox, jQuery]
 ---
@@ -11,7 +9,7 @@ tags: [Jekyll, FancyBox, jQuery]
 
 因为既然是博客是以 [**Jekyll**]({% post_url 2013-07-06-jekyll-install %}) 来驱动的，那么就尽量不要在本地生成静态页面再推送到服务端，也就是说，尽量不用插件。否则，大可以用 Octopress即可。在这个前提下如何给图片一些特殊的效果呢？这里我们使用 [**jQuery**](http://jquery.com/) 来实现， 譬如 **FancyBox**、[**Lightbox2**](http://lokeshdhakar.com/projects/lightbox2/)。
 
-![FancyBox]({{ site.cdn }}/images/2013/10/fancybox.png "FancyBox")
+![FancyBox](//cdn.09hd.com/images/2013/10/fancybox.png "FancyBox")
 
 <!-- more -->
 其中有个问题，[**Markdown**]({% post_url 2013-07-02-markdown-syntax %}) 语法中的图片我们一般是如此写法

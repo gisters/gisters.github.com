@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "阿里云主机挂载数据盘"
-description: "在阿里云主机中挂载数据盘"
-keywords: 阿里云, 主机, 挂载, 数据盘
 category: Linux
 tags: [aliyun, Server]
 ---

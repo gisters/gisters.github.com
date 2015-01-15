@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Wordpress 的 Widget Logic 插件"
-description: "Widget Logic 插件给每个 widget 一个扩展控制 Widget logic"
-keywords: wordpress, widget
 category: Internet
 tags: [Wordpress, Widget]
 ---

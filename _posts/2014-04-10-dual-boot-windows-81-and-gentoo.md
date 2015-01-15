@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Windows 8.1 和 Gentoo 双启动"
-description: "记录 Windows 8.1 和 Gentoo 双启动。"
-keywords: "gentoo, windows, diskpart, syslinux"
 category: Linux
 tags: [Windows, Gentoo]
 ---

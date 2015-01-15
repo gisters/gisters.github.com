@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "JavaScript 实现域名跳转"
-description: ""
-keywords: "javascript,重定向"
 category: Internet
 tags: [JavaScript]
 ---
@@ -41,13 +39,13 @@ JavaScript:
 
 测试 JavaScript 时，可以直接使用浏览器的控制台，譬如 Firefox 中 Web开发者中的 web控制台，就可以使用
 
-![Web Console]({{ site.cdn }}/images/2014/03/web-console.png)
+![Web Console](//cdn.09hd.com/images/2014/03/web-console.png)
 
-![Javascript]({{ site.cdn }}/images/2014/03/javascript.png)
+![Javascript](//cdn.09hd.com/images/2014/03/javascript.png)
 
 打开 Firefox 的web控制台，可以随心所欲的输入测试，更棒的是，还有自动补全，不怕打错
 
-![Completion]({{ site.cdn }}/images/2014/03/completion.png)
+![Completion](//cdn.09hd.com/images/2014/03/completion.png)
 
     print(window.location.host);
     "havee.me"

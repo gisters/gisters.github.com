@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Vsftpd 建立虚拟用户"
-description: "Vsftpd 建立虚拟用户"
-keywords: vsftpd, virtual, 虚拟, 用户
 category: Linux
 tags: [Vsftpd, Virtual]
 ---

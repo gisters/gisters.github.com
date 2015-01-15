@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "OS X 上安装 Nginx + PHP-FPM + MariaDB"
-description: "介绍在 Mac OS X 下安装 Nginx + PHP-FPM + MariaDB"
-keywords: "mac, os x, nginx, php-fpm, mysql, mariadb, 安装"
 category: "Mac"
 tags: [Nginx, PHP-FPM, MariaDB]
 ---
@@ -322,9 +320,9 @@ alias mysql.restart='mysql.stop && mysql.start'
 
 搞定，收工！
 
-![nginx localhost]({{ site.cdn }}/images/2014/01/localhost.jpg)
+![nginx localhost](//cdn.09hd.com/images/2014/01/localhost.jpg)
 
-![php info]({{ site.cdn }}/images/2014/01/phpinfo.jpg)
+![php info](//cdn.09hd.com/images/2014/01/phpinfo.jpg)
 
 #### 五. 其他
 

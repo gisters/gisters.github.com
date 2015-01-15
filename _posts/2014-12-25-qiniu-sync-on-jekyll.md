@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Jekyll 使用七牛同步工具"
-description: "在 Jekyll 中使用七牛镜像"
-keywords: "jekyll, qiniu, 七牛, 同步"
 category: Internet
 tags: [Jekyll, Usage]
 ---

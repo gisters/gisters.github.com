@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Nginx 打开 Gzip 压缩"
-description: "整理 Nginx 中 Gzip 模块的详细配置说明"
-keywords: "nginx, gzip, 压缩"
 category: Internet
 tags: [Nginx]
 ---

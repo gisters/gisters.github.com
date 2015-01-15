@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Linux 上的复制、备份与镜像"
-description: "在 ＊nix 下的复制、备份与镜像的常规操作"
-keywords: "cp, cpio, tar, dd"
 category: Linux
 tags: [CLI]
 ---

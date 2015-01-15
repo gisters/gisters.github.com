@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "GitHub Pages 配置域名"
-description: "User Pages 与 Project Pages 域名域名配置的区别"
-keywords: "github, user pages, project pages, domain, 域名"
 category: Internet
 tags: [GitHub, Domain]
 ---

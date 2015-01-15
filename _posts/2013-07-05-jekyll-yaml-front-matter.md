@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Jekyll 的 YAML 前置数据"
-description: "这是Jekyll官方Wiki上关于YAML前置数据的说明，希望对大家有所帮助。"
-keywords: "jekyll, yml, 数据"
 category: Internet
 tags: [Jekyll, Usage]
 ---

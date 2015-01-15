@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "公共 DNS 记录"
-description: "最近一直在频繁切换 DNS，遂不知不觉记录了一些公共 DNS，整理下，方便以后查阅。"
-keywords: "公共, dns"
 category: Internet
 tags: [DNS]
 ---

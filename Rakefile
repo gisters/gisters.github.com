@@ -35,8 +35,6 @@ task :post do
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts 'description: ""'
-    post.puts 'keywords: ""'
     post.puts "category: #{category}"
     post.puts "tags: #{tags}"
     post.puts "---"
@@ -62,8 +60,6 @@ task :page do
     post.puts "---"
     post.puts "layout: page"
     post.puts "title: \"#{title}\""
-    post.puts 'description: ""'
-    post.puts 'keywords: ""'
     post.puts "---"
   end
 end # task :page
@@ -76,7 +72,7 @@ end # task :preview
 desc "synchronize qiniu folder to remote server with qiniu sync tool"
 task :qrsync do
   bin = "qrsync"
-  json = "qiniu.json"
+  json = "_qiniu.json"
   ignore = ".gitignore"
   filebin = File.join(Dir.pwd, bin)
   filejson = File.join(Dir.pwd, json)

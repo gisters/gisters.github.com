@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "KVM 端口转发"
-description: "kvm 端口转发"
-keywords: kvm, 端口, 转发
 category: Linux
 tags: [KVM, Virtual]
 ---

@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "OS X 下本地化目录"
-description: "很多 Mac 中文用户应该有这样的感受，Finder 中很多中文目录，在 Terminal 下其实是英文名称。创建自己的目录时，不清楚究竟创建中文还是英文目录，导致在 Terminal 下 cd 进目录的时候总是在不听的切换输入法，非常繁琐。"
-keywords: "mac, osx, 目录,多语言"
 category: Mac
 tags: [Localized]
 ---

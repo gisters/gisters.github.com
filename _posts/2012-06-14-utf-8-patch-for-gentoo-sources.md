@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "gentoo-sources 的 utf8 中文补丁"
-description: "gentoo-sources 的 utf8 中文补丁"
-keywords: gentoo, utf8, kernel, 中文补丁
 category: Linux
 tags: [Gentoo, Kernel, Patch]
 ---

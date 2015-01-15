@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "使用 Syslinux 替换掉 Grub"
-description: "自从几个前的工作机中用 Syslinux 替换掉 Grub 后，今天也将家用台式机的 Grub 用 Syslinux 替换掉了。"
-keywords: "syslinux, grub"
 category: Linux
 tags: [Grub, Syslinux]
 ---

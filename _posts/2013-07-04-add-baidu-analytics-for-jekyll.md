@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "为 Jekyll 添加百度统计"
-description: "为 Jekyll 添加百度统计"
-keywords: "jekyll, baidu, analytics"
 category: Internet
 tags: [Jekyll, Baidu]
 ---

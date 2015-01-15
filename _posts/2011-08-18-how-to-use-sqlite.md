@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "SQLite 命令行程序说明"
-description: "SQLite 库包含一个名字叫做 sqlite3 的命令行,它可以让用户手工输入并执行面向 SQLite 数据库的 SQL 命令。本文档提供一个样使用sqlite3 的简要说明"
-keywords: sqlite, 命令, 说明, sql
 category: SQL
 tags: [SQLite, CLI, Usage]
 ---

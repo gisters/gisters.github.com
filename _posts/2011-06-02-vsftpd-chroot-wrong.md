@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Vsftpd Chroot 错误"
-description: "Vsftpd 2.3.5 Chroot 错误"
-keywords: vsftpd, chroot, 错误
 category: Linux
 tags: [Vsftpd, Chroot,]
 ---

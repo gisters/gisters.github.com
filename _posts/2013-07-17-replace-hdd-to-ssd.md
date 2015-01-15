@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "替换机械盘到固态盘"
-description: "Linux 系统替换硬盘"
-keywords: "SSD, 替换"
 category: Linux
 tags: [SSD]
 ---

@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "lftp 使用方法"
-description: "lftp 使用方法"
-keywords: "lftp, 使用, 方法"
 category: Linux
 tags: [Lftp, Usage, Configuration, CLI]
 ---

@@ -2,8 +2,6 @@
 layout: post
 title: "Gentoo学习笔记"
 description: "记录 Gentoo 安装过程"
-keywords: "gentoo, 安装, 记录"
-category: Linux
 tags: [Gentoo, CLI, Lerning]
 ---
 

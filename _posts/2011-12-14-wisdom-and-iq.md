@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "上层的智慧"
-description: "上层从来不缺乏智慧，各个专家团、各个领导人真的愚昧？不，绝对不是，他们在面对改革而来的金融潮流中迷失的是自己的良心"
-keywords: 上层, 智慧
 category: Other
 tags: [Essay]
 ---

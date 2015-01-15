@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Vagrant 简单使用"
-description: "Vagrant 本质上来说，是对 virtualbox，vmware，kvm 等镜像的管理操作，是一个中间层技术。使用它的前提是你本机必须有 virtualbox，vmware，kvm 等虚拟机。"
-keywords: "vagrant, 配置, 使用"
 category: Other
 tags: [Vagrant, Virtual]
 ---

@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "OS X 上的 pip 使用 User Installs"
-description: "pip 安装包到用户目录"
-keywords: "pip, user, 用户目录"
 category: Mac
 tags: [pip,Python]
 ---

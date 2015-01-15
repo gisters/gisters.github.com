@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "尝试 Fedora 19"
-description: "重做记录，因上月重做系统的时候，[zim][1] 记录的笔记忘记备份而全部遗失。"
-keywords: "fedora, 升级, 清理, LVM"
 category: Linux
 tags: [Fedora, KVM, LVM]
 ---

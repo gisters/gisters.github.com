@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "强势美元论"
-description: "早上睡不着，起来看早间新闻，看到美国财政部长保尔森的言论，'强势美元符合美国利益，但是目前美国经济陷入困难时期'，又提到'全球石油价格高涨是由石油国限量开采引起的'"
-keywords: 美元, 强势
 category: Other
 tags: [Essay]
 ---

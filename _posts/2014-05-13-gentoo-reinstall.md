@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "重装 Gentoo"
-description: "重装 Gentoo 的一些记录"
-keywords: "gentoo, 重装"
 category: Linux
 tags: [Gentoo]
 ---

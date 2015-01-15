@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Gentoo 上安装 VMware Player"
-description: "Gentoo 上安装 VMware Player 的一些记录"
-keywords: "gentoo,vmware"
 category: Linux
 tags: [Gentoo, VMware]
 ---
@@ -32,7 +30,7 @@ make[1]: *** [sub-make] Error 2
 
 安装说明，打 3 个补丁，再 patch 一下 ebuild，随后顺利安装。
 
-![Windows 8.1 on VMware]({{ site.cdn }}/images/2014/05/vmware-windows.png)
+![Windows 8.1 on VMware](//cdn.09hd.com/images/2014/05/vmware-windows.png)
 
 当然，期间因为 ati 闭源驱动更新，重新编译下 kernel。由于我的显卡是 radeon hd 7850，芯片代号为 **PITCAIRN**，于是
 

@@ -1,13 +1,11 @@
 ---
 layout: post
 title: "SQLite 命令"
-description: "不管是工作或者个人自娱自乐写东西，只要有数据存储首先就想到了sqlite"
-keywords: sqlite, 命令, xml
 category: SQL
 tags: [SQLite, CLI, Usage]
 ---
 
-![Sqlite3]({{ site.cdn }}/images/2011/08/sqlite3.png  "sqlite3")
+![Sqlite3](//cdn.09hd.com/images/2011/08/sqlite3.png  "sqlite3")
 
 最近使用 sqlite 较多，这东西现在是越用越着迷，不管是工作或者个人自娱自乐写东西，只要有数据存储首先就想到了 sqlite
 

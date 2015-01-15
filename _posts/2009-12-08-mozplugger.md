@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "MozPlugger 使用"
-description: "mozplugger 是一款 linux 下的 browser 插件"
-keywords: "mozplugger, linux, browser"
 category: Linux
 tags: [Mozplugger, Browser, Usage]
 ---

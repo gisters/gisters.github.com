@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Linux 解决文件名乱码"
-description: "在 Linux 下解决文件名乱码"
-keywords: Linux, 乱码, 文件名
 category: Linux
 tags: [Garbled]
 ---

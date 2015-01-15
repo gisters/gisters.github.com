@@ -1,13 +1,11 @@
 ---
 layout: post
 title: "Git 进阶：color/diff"
-description: "gentoo 默认的 git 真的很朴素，默认配置实在是太简单了。"
-keywords: git, color, diff, gentoo
 category: Linux
 tags: [Git, Usage]
 ---
 
-![git diff]({{ site.cdn }}/images/2012/06/git-diff.png "git diff")
+![git diff](//cdn.09hd.com/images/2012/06/git-diff.png "git diff")
 
 Gentoo 默认的 git 真的很朴素，默认配置实在是太简单了。
 

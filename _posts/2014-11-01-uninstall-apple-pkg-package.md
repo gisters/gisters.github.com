@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "OS X 下卸载 pkg 包"
-description: "介绍 OS X 下使用 pkgutil 来卸载 pkg 软件包"
-keywords: "OS X, Mac, pkg, 卸载"
 category: Mac
 tags: [Pkgutil]
 ---

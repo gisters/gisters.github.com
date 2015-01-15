@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Jekyll 扩展的 Liquid 模板"
-description: "Jekyll官方对扩展了的Liquid的说明，希望对大家有所帮助。"
-keywords: "jekyll, liquid, 模板"
 category: Internet
 tags: [Jekyll, Liquid, Usage]
 ---

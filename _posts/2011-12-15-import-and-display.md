@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Import and Display 常用方法"
-description: "Import and Display 常用方法"
-keywords: import, display, imagemagick
 category: Linux
 tags: [Import, Display, Usage, Media]
 ---

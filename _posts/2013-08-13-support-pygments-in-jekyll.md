@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Jekyll 中的语法高亮：Pygments"
-description: "在 Jekyll 中的语法高亮：pygments"
-keywords: "jekyll, pygments, 语法, 高亮"
 category: Internet
 tags: [Jekyll, Pygments, Python]
 ---
@@ -113,79 +111,79 @@ int main(int argc, char **argv)
 
 - monokai
 
-![monokai]({{ site.cdn }}/images/2013/08/pygments-monokai.png)
+![monokai](//cdn.09hd.com/images/2013/08/pygments-monokai.png)
 
 - manni
 
-![manni]({{ site.cdn }}/images/2013/08/pygments-manni.png)
+![manni](//cdn.09hd.com/images/2013/08/pygments-manni.png)
 
 - rrt
 
-![rrt]({{ site.cdn }}/images/2013/08/pygments-rrt.png)
+![rrt](//cdn.09hd.com/images/2013/08/pygments-rrt.png)
 
 - perldoc
 
-![perldoc]({{ site.cdn }}/images/2013/08/pygments-perldoc.png)
+![perldoc](//cdn.09hd.com/images/2013/08/pygments-perldoc.png)
 
 - borland
 
-![borland]({{ site.cdn }}/images/2013/08/pygments-borland.png)
+![borland](//cdn.09hd.com/images/2013/08/pygments-borland.png)
 
 - colorful
 
-![colorful]({{ site.cdn }}/images/2013/08/pygments-colorful.png)
+![colorful](//cdn.09hd.com/images/2013/08/pygments-colorful.png)
 
 - default
 
-![default]({{ site.cdn }}/images/2013/08/pygments-default.png)
+![default](//cdn.09hd.com/images/2013/08/pygments-default.png)
 
 - murphy
 
-![murphy]({{ site.cdn }}/images/2013/08/pygments-murphy.png)
+![murphy](//cdn.09hd.com/images/2013/08/pygments-murphy.png)
 
 - vs
 
-![vs]({{ site.cdn }}/images/2013/08/pygments-vs.png)
+![vs](//cdn.09hd.com/images/2013/08/pygments-vs.png)
 
 - trac
 
-![trac]({{ site.cdn }}/images/2013/08/pygments-trac.png)
+![trac](//cdn.09hd.com/images/2013/08/pygments-trac.png)
 
 - tango
 
-![tango]({{ site.cdn }}/images/2013/08/pygments-tango.png)
+![tango](//cdn.09hd.com/images/2013/08/pygments-tango.png)
 
 - fruity
 
-![fruity]({{ site.cdn }}/images/2013/08/pygments-fruity.png)
+![fruity](//cdn.09hd.com/images/2013/08/pygments-fruity.png)
 
 - autumn
 
-![autumn]({{ site.cdn }}/images/2013/08/pygments-autumn.png)
+![autumn](//cdn.09hd.com/images/2013/08/pygments-autumn.png)
 
 - bw
 
-![bw]({{ site.cdn }}/images/2013/08/pygments-bw.png)
+![bw](//cdn.09hd.com/images/2013/08/pygments-bw.png)
 
 - emacs
 
-![emacs]({{ site.cdn }}/images/2013/08/pygments-emacs.png)
+![emacs](//cdn.09hd.com/images/2013/08/pygments-emacs.png)
 
 - vim
 
-![vim]({{ site.cdn }}/images/2013/08/pygments-vim.png)
+![vim](//cdn.09hd.com/images/2013/08/pygments-vim.png)
 
 - pastie
 
-![pastie]({{ site.cdn }}/images/2013/08/pygments-pastie.png)
+![pastie](//cdn.09hd.com/images/2013/08/pygments-pastie.png)
 
 - friendly
 
-![friendly]({{ site.cdn }}/images/2013/08/pygments-friendly.png)
+![friendly](//cdn.09hd.com/images/2013/08/pygments-friendly.png)
 
 - native
 
-![native]({{ site.cdn }}/images/2013/08/pygments-native.png)
+![native](//cdn.09hd.com/images/2013/08/pygments-native.png)
 
 参考：
 

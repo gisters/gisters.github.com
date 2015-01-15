@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Gentoo 中打包确定依赖"
-description: "在 Gentoo 中打包时如何确定依赖"
-keywords: "Gentoo, 依赖"
 category: Linux
 tags: [Gentoo, Packager]
 ---

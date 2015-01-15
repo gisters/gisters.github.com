@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "玩味《道德追踪》"
-description: "看2008年6月15号晚ccav《道德追踪》有感"
-keywords: 道德追踪, ccav
 category: Other
 tags: [Essay]
 ---

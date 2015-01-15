@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "迁移博客至 Jekyll"
-description: "Jekyll迁移方法的官方Wiki文档，希望对大家有帮助。"
-keywords: "blog, 博客, 迁移, jekyll"
 category: Internet
 tags: [Jekyll, Usage]
 ---

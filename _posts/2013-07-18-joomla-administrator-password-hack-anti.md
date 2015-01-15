@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "防 Joomla 后台被暴力猜解"
-description: "今天朋友吐糟，最近他的 **Joomla** 后台老被境外的 IP **暴力猜解**密码，烦不胜烦"
-keywords: "joomla, 后台, 猜解, 暴力破解"
 category: Internet
 tags: [Joomla]
 ---
