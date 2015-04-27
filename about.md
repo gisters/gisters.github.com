@@ -4,12 +4,9 @@ title: "About"
 description: "业余爱好的点滴记录，同时作为配置备份的存储地，好记性不如滥笔头。"
 ---
 
-#### Blog QR Code
-
-![Blog QR Code](//cdn.09hd.com/images/2013/01/url.png "Blog QR Code")
-
 #### ChangeLog
 
+- 2015 年 04 月：   给每篇文章加了二维码显示
 - 2015 年 03 月：   快成游客的留言测试场所了，故关闭游客留言
 - 2015 年 01 月：   因某些同学克隆模版后，经常忘记删掉鄙人文章，故博客重新转移至 GitCafe 私有仓库，模版还是去 GitHub 获取
 - 2015 年 01 月：   博客移除 keyword、description
