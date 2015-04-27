@@ -165,7 +165,7 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
 
 用了段时间后，右键菜单就开始臃肿不堪，有时会冒出重复项，打开终端，输入
 
-    $ /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user; killall Finder
+    $ /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -seed -r -f -v -domain local -domain user -domain system; killall Finder
 
 #### 十二. app 归类
 

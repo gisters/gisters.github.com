@@ -22,6 +22,7 @@ redcarpet:
 permalink: /:categories/:year-:month/:title.html
 
 assets_path: /assets
+cdn: "//cdn.09hd.com"
 sass:
     sass_dir: assets/_sass
     style: :compressed

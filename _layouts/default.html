@@ -21,12 +21,12 @@
       {% include footer.html %}
     </div>
 
-    <script src="{{ site.assets_path }}/js/jquery.min.js"></script>
-    <script src="{{ site.assets_path }}/js/bootstrap.min.js"></script>
-    <script src="{{ site.assets_path }}/js/webcore.js"></script>
-    <script src="{{ site.assets_path }}/js/jquery.qrcode.min.js"></script>
+    <script src="{% if site.cdn %}{{ site.cdn }}{% else %}{{ site.assets_path }}{% endif %}/js/jquery.min.js"></script>
+    <script src="{% if site.cdn %}{{ site.cdn }}{% else %}{{ site.assets_path }}{% endif %}/js/bootstrap.min.js"></script>
+    <script src="{% if site.cdn %}{{ site.cdn }}{% else %}{{ site.assets_path }}{% endif %}/js/webcore.js"></script>
+    <script src="{% if site.cdn %}{{ site.cdn }}{% else %}{{ site.assets_path }}{% endif %}/js/jquery.qrcode.min.js"></script>
 
-    <script type="text/javascript">
+    <script>
       $("#code").qrcode({
         width: 150,
         height: 150,
@@ -37,7 +37,7 @@
     {% include baidu-analytics.html %}
     {% if site.comments.duoshuo.name %}
     <!-- duoshuo Begin -->
-    <script type="text/javascript">
+    <script>
       var duoshuoQuery = {short_name:"{{ site.comments.duoshuo.name }}"};
       (function() {
         var ds = document.createElement('script');

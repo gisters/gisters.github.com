@@ -4,6 +4,7 @@ title: "About"
 description: "业余爱好的点滴记录，同时作为配置备份的存储地，好记性不如滥笔头。"
 ---
 
+<div id="code" class="qrcode visible-lg"></div>
 #### ChangeLog
 
 - 2015 年 04 月：   给每篇文章加了二维码显示
