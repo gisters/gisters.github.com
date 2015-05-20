@@ -9,7 +9,7 @@ tags: [Jekyll, QRCode]
 
 想了下，Jekyll 生成的博客是纯静态的网页，如果要为每篇文章添加二维码的话，似乎也只有 JavaScript，或干脆为 Jekyll 写一个 plugin 了。
 
-找了下 jQuery，已经有现成的 [QR Code](https://github.com/jeromeetienne/jquery-qrcode) 了，按照说明，一步一步做下去。
+不过作为 Jekyll 用户，写 Plugin 推静态 html 上去不为我所喜。于是找了下 jQuery，已经有现成的 [QR Code](https://github.com/jeromeetienne/jquery-qrcode) 了，按照说明，一步一步做下去。
 
 <!-- more -->
 每个 Jekyll 的模板不太一样，所以做法也不太一样，主要的就是在模板的相关区域添加：

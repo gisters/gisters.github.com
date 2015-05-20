@@ -34,7 +34,7 @@ Havanna，借用03年左右混迹海外论坛时， 看到的一个ID，”Havan
 
 爱好：半桶水叮当响。
 
-友情链接：linux + server + web 相关的博客，只需原创文章超过70%即可，无其他要求，欢迎留言，拒绝一切营销信息。
+友情链接：只需原创文章超过 70% 即可，无其他要求，欢迎留言，拒绝一切营销信息。
 
 <span style="color:red;">**注意：**</span>如果你喜欢本站样式，欢迎 clone or fork，同时，由于本博客的样式由 Jekyll 内置 SCSS 预处理器直接生成 css，所以，你可能需要阅读 [CSS 的预处理器 SASS]({% post_url 2013-08-07-convert-scss-to-css %}) 这篇文章。
 
