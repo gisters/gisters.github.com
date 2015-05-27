@@ -11,11 +11,11 @@ Sass 色彩相关的函数非常强大，当你定下页面基调色彩变量后
 
 废话不多说，下面开始，定下一个基本色，譬如咖啡色，[更多色彩值](//github.com/sass/sass/blob/stable/lib/sass/script/value/color.rb#L28-L180)
 
-<!-- more -->
 ```scss
 $base: chocolate;
 ```
 
+<!-- more -->
 这样定义由两个好处：
 
 - 涉及色彩的部分，可以非常容易的修改

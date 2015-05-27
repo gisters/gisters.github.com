@@ -18,7 +18,7 @@ rss_path: /rss.xml
 # Build settings
 markdown: redcarpet
 redcarpet:
-    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
+    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough", "no_intra_emphasis"]
 permalink: /:categories/:year-:month/:title.html
 
 assets_path: /assets
