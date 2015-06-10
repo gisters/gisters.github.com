@@ -117,7 +117,7 @@ Uninstalling /usr/local/Cellar/htop-osx/0.8.2.1...
 
 通过 homebrew cask 来安装 app，首先是安装
 
-    $ brew tap caskroom/cask
+    $ brew tap caskroom/cask && brew install brew-cask
 
 默认 homebrew cask 安装 app 至 `/opt/homebrew-cask/Caskroom` 下，并链接到 `~/Applications` 目录。
 
@@ -131,5 +131,5 @@ Uninstalling /usr/local/Cellar/htop-osx/0.8.2.1...
 然后随便安装了
 
     $ brew cask search firefox
-    $ brew cask install firefox-esr-cn
+    $ brew cask install firefox
 

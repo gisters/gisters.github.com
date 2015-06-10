@@ -5,13 +5,13 @@ highlighter: pygments
 paginate: 5
 author:
     name: Havee
-    github: registe
+    github:
     email:
-    gitcafe: Havee
+    gitcafe:
     twitter:
     facebook:
     googleplus:
-    weibo: Havanna
+    weibo:
 atom_path: /atom.xml
 rss_path: /rss.xml
 
