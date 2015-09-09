@@ -5,11 +5,11 @@ category: Mac
 tags: [Pkgutil]
 ---
 
-刚用 OS X 的同学会发现，Mac OS X 的世界的 App 安装包，有两种形式，一种就是 .app，可以直接运行，类似于 Windows 下的绿色版；另一种是 .pkg 安装包，需要一路 next 安装好后才能使用。
+刚用 OS X 的同学会发现，Mac OS X 的 App 安装包，有两种形式，一种就是 .app，可以直接运行，类似于 Windows 下的绿色版；另一种是 .pkg 安装包，需要一路 next 安装好后才能使用。
 
 在 OS X 下，PKG 包的卸载非常不人性化，最讨厌的是，只要是个 pkg 安装包，基本都要请求 root 权限。
 
-于是，网上溜达一圈，找到方法直接解包 pkg 文件获取有用不分来使用。
+于是，网上溜达一圈，找到直接解包 pkg 文件的方法，获取有用部分来使用。
 
 我们以招商银行的网银插件为例，下载获取 dmg 镜像文档：**CMBSecurityPlugin.dmg**，双击打开，将 **CMB Security Plugin.pkg** 文件拖出来。
 
@@ -46,7 +46,7 @@ tags: [Pkgutil]
     $ file cmbsecurityplugin.pkg
     cmbsecurityplugin.pkg: directory
 
-是一个文件夹，进去
+是一个文件夹，进去：
 
     $ cd cmbsecurityplugin.pkg; ls -l
     total 304
@@ -54,16 +54,16 @@ tags: [Pkgutil]
     -rw-r--r--  1 havee  staff     216 12 25  2012 PackageInfo
     -rw-r--r--  1 havee  staff  114278 12 25  2012 Payload
 
-对三个文件分别查看下类型
+对三个文件分别查看下类型：
 
-    $ file Bom 
+    $ file Bom
     Bom: Mac OS X bill of materials (BOM) file
-    $ file PackageInfo 
+    $ file PackageInfo
     PackageInfo: ASCII text
-    $ file Payload 
+    $ file Payload
     Payload: gzip compressed data, from Unix
 
-可以看到，三个文件中 Payload 文件是一个 gzip 压缩包，解开看下
+可以看到，三个文件中 Payload 文件是一个 gzip 压缩包，解开看下：
 
     $ tar xvf Payload
     x .
@@ -90,7 +90,7 @@ tags: [Pkgutil]
 
 OK，至此，我们得到了招商银行大众版网银插件 **CMBSecurity.plugin**，直接复制到 **~/Library/Internet Plug-Ins/** 目录下即可。
 
-总结下，三步走
+总结下，三步走：
 
     $ pkgutil --expand "name.pkg" "name"
     $ cd name/package.pkg/

@@ -160,6 +160,10 @@ Firewall 能将不同的网络连接归类到不同的信任级别，Zone 提供
 
     # firewall-cmd --zone=external --add-forward-port=port=22:proto=tcp:toport=2055:toaddr=192.168.1.100
 
+###### d. IP 封禁
+
+    # firewall-cmd --permanent --add-rich-rule="rule family='ipv4' source address='222.222.222.222' reject"
+
 以上都是一些常用方法，更多高级方法，请参考：
 
 - <https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/sec-Using_Firewalls.html>
