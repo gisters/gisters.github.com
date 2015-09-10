@@ -8,11 +8,6 @@
       {% include header.html %}
 
       <article class="wrapper">
-        <div id="search-loader" class="img-wrap">
-          <div class="loading">
-            <img src="{{ site.assets_path }}/img/loading.png">
-          </div>
-        </div>
         <div class="row clearfix">
           {{ content }}
         </div>
@@ -50,5 +45,21 @@
     </script>
     <!-- duoshuo End -->
     {% endif %}
+	<script>
+	var option = {
+	  engineKey: 'f3490ee9b122d977470c'
+	};
+	(function(w,d,t,u,n,s,e){
+	  s = d.createElement(t);
+	  s.src = u;
+	  s.async = 1;
+	  w[n] = function(r){
+	    w[n].opts = r;
+	  };
+	  e = d.getElementsByTagName(t)[0];
+	  e.parentNode.insertBefore(s, e);
+	})(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
+	_ts(option);
+	</script>
   </body>
 </html>
