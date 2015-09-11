@@ -22,11 +22,11 @@ mitmproxy 包含 3 款工具：
 
 安装他非常简单，Linux 用户直接通过包管理命令来安装即可，OS X 用户通过 Homebrew 工具进行安装
 
-	brew install mitmproxy
+    brew install mitmproxy
 
 当然，你也可以通过 pip 进行安装
 
-	pip install mitmproxy
+    pip install mitmproxy
 
 使用上非常简单，移动方向类似 vi，使用 `h`、`j`、`k`、`l` 来进行操作向左、向上、向下、向右，以 `q` 键来返回，回车键进入。
 

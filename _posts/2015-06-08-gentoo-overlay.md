@@ -18,7 +18,7 @@ layman 是 Gentoo 下的一款管理第三方 overlay 工具，通过 layman 可
 <!-- more -->
 layman 的配置非常方便，几乎不用介入修改。譬如作为中文区用户，安装 layman 以后，都会增加一个 overlay：
 
-	layman -f -a gentoo-zh
+    layman -f -a gentoo-zh
 
 一些常用的参数如下，更多参数可以通过 `layman -h` 来查看：
 
@@ -69,13 +69,13 @@ sync-uri = git://github.com/microcai/gentoo-zh.git
 
 <repositories version="1.0">
     <repo priority="50" quality="experimental" status="unofficial">
-	<name>Havee</name>
-	<description>Havee's gentoo overlay</description>
-	<homepage>http://github.com/Ihavee/overlay</homepage>
-	<owner>
-	    <email>registerdedicated@yeah.net</email>
-	</owner>
-	<source type="git">git://github.com/Ihavee/overlay.git</source>
+    <name>Havee</name>
+    <description>Havee's gentoo overlay</description>
+    <homepage>http://github.com/Ihavee/overlay</homepage>
+    <owner>
+        <email>registerdedicated@yeah.net</email>
+    </owner>
+    <source type="git">git://github.com/Ihavee/overlay.git</source>
     </repo>
 </repositories>
 ```

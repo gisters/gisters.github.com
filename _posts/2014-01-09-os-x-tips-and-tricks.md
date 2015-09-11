@@ -72,13 +72,13 @@ tags: [Tips]
 - [OS X 上使用 GoAgent]({% post_url 2013-12-20-use-goagent-on-os-x %})
 - [CentOS 下打包 shadowsocks-libev]({% post_url 2014-08-20-package-shadowsocks-libev-on-centos %})
 
-#### 四. 开源软件
+#### 五. 开源软件
 
 可以通过 [MacPorts](http://www.macports.org)、[HomeBrew]({% post_url 2013-12-21-how-to-install-and-use-homebrew %}) 等包管理工具来使用开源软件。
 
 譬如[《OS X 上安装 Nginx + PHP-FPM + MariaDB》]({% post_url 2014-01-06-install-nginx-php-fpm-mysql-on-os-x %})
 
-#### 五. 重启 Finder
+#### 六. 重启 Finder
 
     $ killall Finder
 
@@ -86,11 +86,19 @@ tags: [Tips]
 
 Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，点击无线图标，则可以显示具体的无线网络状况。
 
-#### 六. 关掉调节音量时的提示声
+#### 七. 提示声
 
 按住 Shift 键再调节音量，即可临时静音调节
 
-#### 七. 刷新 DNS 缓存
+开启充电提示音
+
+    $ defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; open /System/Library/CoreServices/PowerChime.app
+
+关闭充电提示音
+
+    $ defaults write com.apple.PowerChime ChimeOnAllHardware -bool false; killall PowerChime
+
+#### 八. 刷新 DNS 缓存
 
 针对 OS X 10.4、10.5
 
@@ -109,7 +117,7 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
     $ sudo dscacheutil -flushcache
 
-#### 八. 视频播放
+#### 九. 视频播放
 
 尝试过 N 个播放器，包括收费的射手播放器在内都不太好用，最后确定以下几款视频播放器
 
@@ -141,7 +149,7 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
 
 ![XBMC](//cdn.09hd.com/images/2014/01/xbmc.png)
 
-#### 九. 生僻的快捷键
+#### 十. 生僻的快捷键
 
 - Ctrl + a/e：移动至行首/尾
 - Ctrl + l：清除屏幕
@@ -154,20 +162,24 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
 - Ctrl + Command + f：全屏，仅支持右上角双箭头的窗口
 - Ctrl + Command + d：取词翻译
 
-#### 十.  特殊符号
+#### 十一.  特殊符号
 
 - 版权符号：Option + G = ©
 - 人名币符号：Option + Y = ￥
 - 商标符号：Option + 2 = ™
 - 已注册的商标：Option + R = ®
 
-#### 十一. 清理右键菜单
+#### 十二. 清理右键菜单
 
 用了段时间后，右键菜单就开始臃肿不堪，有时会冒出重复项，打开终端，输入
 
     $ /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -seed -r -f -v -domain local -domain user -domain system; killall Finder
 
-#### 十二. app 归类
+#### 十三. 重建 Launchpad
+
+    $ rm ~/Library/Application Support/Dock/*.db; killall Dock
+
+#### 十四. app 归类
 
 用了段时间会发现，app目录存在两个地方，一个是用户家目录 `~/Applications`，一个是根目录 `/Applications`。
 
@@ -175,7 +187,7 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
 
 同样，能直接在 app store 安装的就直接安装，其次使用 HomeBrew 去安装病自动 ln 到 `~/Applications` 目录。
 
-#### 十三. 截屏
+#### 十五. 截屏
 
 系统默认的快捷键 Shift + Command + 3/4 截屏会带上阴影，部分人觉得不爽，要去掉阴影。
 
@@ -193,9 +205,21 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
     $ defaults write com.apple.screencapture type png
     $ defaults write com.apple.screencapture type pdf
 
-#### 十四. Mail.app 撰写邮件附件显示
+#### 十六. Mail.app 撰写邮件附件显示
 
     $ defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes/no
     $ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true/false
+
+#### 十七. 查看应用沙盒状态
+
+譬如查看 Mac App Store 安装的 QQ
+
+    $ codesign --display --entitlements - /Applications/QQ.app
+
+#### 十八. 黑果忽略一些硬件更新补丁
+
+黑苹果用的是模拟白苹果的方式，故一些针对白果硬件布丁，黑果可能一直在不断更新，那么忽略它吧，譬如上次的 Thunderbolt Firmware Update
+
+    $ sudo softwareupdate --ignore ThunderboltFirmwareUpdate1.2
 
 待更新……

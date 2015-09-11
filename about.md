@@ -7,6 +7,7 @@ description: "业余爱好的点滴记录，同时作为配置备份的存储地
 <div id="code" class="qrcode visible-lg"></div>
 #### ChangeLog
 
+- 2015 年 09 月：   使用微搜索作为搜索引擎
 - 2015 年 04 月：   给每篇文章加了二维码显示
 - 2015 年 03 月：   快成游客的留言测试场所了，故关闭游客留言
 - 2015 年 01 月：   因某些同学克隆模版后，经常忘记删掉鄙人文章，故博客重新转移至 GitCafe 私有仓库，模版还是去 GitHub 获取
@@ -31,6 +32,6 @@ description: "业余爱好的点滴记录，同时作为配置备份的存储地
 
 友情链接：只需原创文章超过 70% 即可，无其他要求，欢迎留言，拒绝一切营销信息。
 
-<span style="color:red;">**注意：**</span>如果你喜欢本站样式，欢迎 clone or fork，同时，由于本博客的样式由 Jekyll 内置 SCSS 预处理器直接生成 css，所以，你可能需要阅读 [CSS 的预处理器 SASS]({% post_url 2013-08-07-convert-scss-to-css %}) 这篇文章。
+<span style="color:red;">**注意：**</span>如果你喜欢本站样式，欢迎 clone or fork，同时，由于本博客的样式由 Jekyll 内置 SCSS 预处理器直接生成 css，所以，你可能需要阅读 [CSS 的预处理器 SASS]({% post_url 2014-09-15-use-built-in-sass-with-jekyll %}) 这篇文章。
 
 {% include comments.html %}

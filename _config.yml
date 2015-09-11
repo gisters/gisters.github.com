@@ -38,6 +38,12 @@ comments:
             title: 0
             admin: 0
             length: 26
+
+# tinysou.com
+search:
+    tinysou:
+        engineKey: f3490ee9b122d977470c
+
 # 网站统计
 analytics:
     baidu:
