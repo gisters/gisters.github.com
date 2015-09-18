@@ -216,7 +216,13 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
 
     $ codesign --display --entitlements - /Applications/QQ.app
 
-#### 十八. 黑果忽略一些硬件更新补丁
+#### 十八. 恢复 Spotlight 窗口位置
+
+OS X 10.11 中，Spotlight 可以移动位置，那么恢复默认位置的方法为
+
+    $ defaults delete com.apple.Spotlight userHasMovedWindow
+
+#### 十九. 黑果忽略一些硬件更新补丁
 
 黑苹果用的是模拟白苹果的方式，故一些针对白果硬件布丁，黑果可能一直在不断更新，那么忽略它吧，譬如上次的 Thunderbolt Firmware Update
 

@@ -7,7 +7,7 @@ tags: [KVM, Virtual]
 
 首先，需要对虚拟机系统对剩余空间写零操作：
 
-    # dd if=/dev/zero of=/zero.dat;
+    # dd if=/dev/zero of=/zero.dat
 
 删除 zero.dat：
 

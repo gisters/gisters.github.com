@@ -26,8 +26,8 @@ Slackware 官方源的软件包数量实在是太少了点，作为中文用户�
 
 方法：
 
-    $ wget http://sbopkg.googlecode.com/files/sbopkg-0.36.0-noarch-1_cng.tgz
-    $ su -l -c "installpkg sbopkg-0.36.0-noarch-1_cng.tgz"
+    $ wget https://github.com/sbopkg/sbopkg/releases/download/0.37.0/sbopkg-0.37.0-noarch-1_cng.tgz
+    $ su -l -c "installpkg sbopkg-0.37.0-noarch-1_cng.tgz"
     or
     # installpkg sbopkg-version-noarch-1_cng.tgz
 
@@ -40,7 +40,7 @@ Slackware 官方源的软件包数量实在是太少了点，作为中文用户�
     REPO_BRANCH=${REPO_BRANCH:-14.0}
     REPO_NAME=${REPO_NAME:-SBo}
 
-当然，也可以如此
+当然，最新的也可以如此
 
     REPO_BRANCH=${REPO_BRANCH:-current}
     REPO_NAME=${REPO_NAME:-SBo-git}
@@ -71,6 +71,10 @@ edit `/etc/profile.d/lang.sh`
 edit `/etc/slackpkg/slackpkg.conf`
 
     http://mirrors.ustc.edu.cn/slackware/slackware-14.0/
+
+如果你喜欢最新的话，则源更改为
+
+    http://mirrors.ustc.edu.cn/slackware/slackware-current/
 
 #### slackpkg 常用命令
 

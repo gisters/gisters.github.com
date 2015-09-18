@@ -9,7 +9,9 @@ tags: [Nginx]
 
 今天有人问起，如何让 HTTP 自动跳转至 HTTPS 呢？
 
-常见的写法有两种，即写两个 Server，大家都会，即：
+抛开性能问题，nginx 的跳转有三种写法，即 `rewrite`、`return`、`error_page`。
+
+一般，我们常见的写两个 Server，即：
 
 ```nginx
 server {
