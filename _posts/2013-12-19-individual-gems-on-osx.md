@@ -23,7 +23,7 @@ tags: [Ruby, Gem]
 
     # gem home
     if [ -f /usr/bin/gem ]; then
-        export Gem_home=$HOME/.gem
+        export GEM_HOME=$HOME/.gem
         export PATH=$GEM_HOME/bin:$PATH
     fi
 

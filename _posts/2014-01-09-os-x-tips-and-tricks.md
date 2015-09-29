@@ -222,10 +222,11 @@ OS X 10.11 中，Spotlight 可以移动位置，那么恢复默认位置的方�
 
     $ defaults delete com.apple.Spotlight userHasMovedWindow
 
-#### 十九. 黑果忽略一些硬件更新补丁
+#### 十九. 关闭 MobileBackups
 
-黑苹果用的是模拟白苹果的方式，故一些针对白果硬件布丁，黑果可能一直在不断更新，那么忽略它吧，譬如上次的 Thunderbolt Firmware Update
+你可能发现了，`/Volumes` 下挂载了 **MobileBackups**，去不去掉无所谓，这是快照的本地镜像，开启与关闭的方法
 
-    $ sudo softwareupdate --ignore ThunderboltFirmwareUpdate1.2
+    $ sudo tmutil disablelocal
+    $ sudo tmutil enablelocal
 
 待更新……
