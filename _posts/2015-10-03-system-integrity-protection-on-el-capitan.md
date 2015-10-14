@@ -2,7 +2,7 @@
 layout: post
 title: "El Capitan 中 SIP 介绍"
 category: Mac
-tags: [OS X, SIP]
+tags: [OS X, SIP, Clover]
 ---
 
 这两天大家纷纷将 OS X 系统升级到了 El Capitan，然后发现，一些注入的工具无法使用了，某些系统目录无法使用了，第三方未签名的 kext 无法加载了，问题一堆堆的。这是因为，Mac OS X 在 10.11 中全面启用了 System Integrity Protection (SIP) —— 系统完整性保护技术。
