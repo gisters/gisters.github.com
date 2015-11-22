@@ -40,7 +40,7 @@ dmtest 下载（任选其一）：[dmtest_Lion.zip](http://cdn.09hd.com/images/2
 
 譬如 OS X 10.10 的制作
 
-    $ sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia --volume /Volumes/iPlaySoft --applicationpath /Applications/Install\ OS\ X\ Yosemite.app --nointeraction
+    $ sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia --volume /Volumes/usb --applicationpath /Applications/Install\ OS\ X\ Yosemite.app --nointeraction
 
 ##### 忽略一些硬件更新补丁
 
