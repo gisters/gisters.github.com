@@ -12,70 +12,65 @@ tags: [Gentoo]
 笔记本打开 Gentoo handbook，变化好大....记录下吧，这就是有这边文章的原因。
 
 <!-- more -->
+
 双系统开始安装，一块 SSD 硬盘就分成2个分区，第一分区放 Windows 8.1，第二分区放 Gentoo。Windows 8.1 的安装就不做记录了，Gentoo 开始。
 
 liveusb 点亮机子，下载最新的 stage 与 portage 后，各种 mount 后 chroot
 
-```
-mkfs.ext4 /dev/sda2
-mount /dev/sda2 /mnt/gentoo
-mount -t proc proc /mnt/gentoo/proc
-mount --rbind /sys /mnt/gentoo/sys
-mount --rbind /dev /mnt/gentoo/dev
-chroot /mnt/gentoo /bin/bash
-env-update && . /etc/profile
-emerge --sync
-eselect profile list
-echo "Asia/Shanghai" > /etc/timezone
-emerge --config sys-libs/timezone-data
-nano -w /etc/locale.gen
-locale-gen
-eselect locale list
-eselect locale set n
-nano -w /etc/env.d/02locale
-env-update && . /etc/profile
-nano -w /etc/conf.d/net
-nano -w /etc/conf.d/hostname
-ln -sf /etc/init.d/net.lo /etc/init.d/net.enp3s0
-nano -w /etc/fstab
-nano -w /etc/hosts
-passwd root
-emerge syslog-ng
-rc-update add syslog-ng default
-emerge mlocate
-emerge dhcpcd
-```
+    mkfs.ext4 /dev/sda2
+    mount /dev/sda2 /mnt/gentoo
+    mount -t proc proc /mnt/gentoo/proc
+    mount --rbind /sys /mnt/gentoo/sys
+    mount --rbind /dev /mnt/gentoo/dev
+    chroot /mnt/gentoo /bin/bash
+    env-update && . /etc/profile
+    emerge --sync
+    eselect profile list
+    echo "Asia/Shanghai" > /etc/timezone
+    emerge --config sys-libs/timezone-data
+    nano -w /etc/locale.gen
+    locale-gen
+    eselect locale list
+    eselect locale set n
+    nano -w /etc/env.d/02locale
+    env-update && . /etc/profile
+    nano -w /etc/conf.d/net
+    nano -w /etc/conf.d/hostname
+    ln -sf /etc/init.d/net.lo /etc/init.d/net.enp3s0
+    nano -w /etc/fstab
+    nano -w /etc/hosts
+    passwd root
+    emerge syslog-ng
+    rc-update add syslog-ng default
+    emerge mlocate
+    emerge dhcpcd
 
 然后安装 syslinux
 
-```
-emerge -av syslinux
-dd bs=440 conv=notrunc count=1 if=/usr/share/syslinux/mbr.bin of=/dev/sda
-mkdir /boot/extlinux
-extlinux --install /boot/extlinux
-cp /usr/share/syslinux/{chain.c32,menu.c32,memdisk,libcom32.c32,libutil.c32} /boot/extlinux/
-```
+    emerge -av syslinux
+    dd bs=440 conv=notrunc count=1 if=/usr/share/syslinux/mbr.bin of=/dev/sda
+    mkdir /boot/extlinux
+    extlinux --install /boot/extlinux
+    cp /usr/share/syslinux/{chain.c32,menu.c32,memdisk,libcom32.c32,libutil.c32} /boot/extlinux/
 
 创建 `/boot/extlinux/extlinux.conf`，内容
 
-```
-UI menu.c32
-PROMPT 0
+    UI menu.c32
+    PROMPT 0
 
-MENU TITLE Boot Menu
-TIMEOUT 50
-DEFAULT gentoo
+    MENU TITLE Boot Menu
+    TIMEOUT 50
+    DEFAULT gentoo
 
-LABEL gentoo
-    MENU LABEL Gentoo Linux 3.14.3
-    LINUX /boot/3.14.3-gentoo
-    APPEND root=/dev/sda2 radeon.audio=1 radeon.dpm=1
+    LABEL gentoo
+        MENU LABEL Gentoo Linux 3.14.3
+        LINUX /boot/3.14.3-gentoo
+        APPEND root=/dev/sda2 radeon.audio=1 radeon.dpm=1
 
-LABEL windows
-    MENU LABEL Windows 7 Ultimate
-    COM32 chain.c32
-    APPEND hd0 1
-```
+    LABEL windows
+        MENU LABEL Windows 7 Ultimate
+        COM32 chain.c32
+        APPEND hd0 1
 
 最后安装内核
 
@@ -102,20 +97,16 @@ LABEL windows
 
 再看了下 /var/lib/portage/world，虽然是一年前的东东，但是还是蛮全的。
 
-```
-emerge -avuDN world
-```
+    emerge -avuDN world
 
 得益于强劲的 i7 与 16GB 内存。2个半小时所有软件全部安装完工。期间有几次 remerge，不管它，完成后再执行几次 `emerge -avuDN world` 直到全部安装完即可。当然一些软件包依赖 kernel 的 .config 中的配置，按照提示去修改即可。
 
 我使用的是 awesome，发现 .xinitrc 文件压根不用我们自己写了，现成的
 
-```
-useradd -m -G users havanna
-passwd havanna
-su - havanna
-cp /etc/X11/Sessions/awesome ~/.xinitrc
-```
+    useradd -m -G users havanna
+    passwd havanna
+    su - havanna
+    cp /etc/X11/Sessions/awesome ~/.xinitrc
 
 默认没有 `ctrl_alt_bksp` 回退到控制台的
 
@@ -124,5 +115,10 @@ cp /etc/X11/Sessions/awesome ~/.xinitrc
     setxkbmap -option terminate:ctrl_alt_bksp
 
 最后 startx，桌面起来了.......然后，又是漫长的各个软件的家目录配置。
+
+顺带提一下 ibus 的一个坑，如果你也在 gnome-shell 下使用 ibus 的话，会发现 ibus 配置无法保存的...
+
+    sudo dconf update
+    ibus-daemon -rdx
 
 END

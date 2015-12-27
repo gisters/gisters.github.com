@@ -9,21 +9,19 @@ tags: [Grub, Gentoo, Configuration]
 
 总的来说还是蛮简单的，首先 `/etc/default/grub` 中配置下，一目了然的配置
 
-```
-GRUB_DISTRIBUTOR="Gentoo"
-GRUB_DEFAULT=0                                        #默认启动grub菜单中的第一项，和grub1中一个意思
-GRUB_HIDDEN_TIMEOUT=1                                 #隐藏倒计时
-GRUB_HIDDEN_TIMEOUT_QUIET=true
-GRUB_TIMEOUT=0                                        #倒计时秒数
-GRUB_CMDLINE_LINUX_DEFAULT=""                         #kernel行的附加命令，譬如quiet splash等
-GRUB_CMDLINE_LINUX=""
-#GRUB_TERMINAL=console                                #图形终端
-#GRUB_GFXMODE=640x480                                 #分辨率
-#GRUB_THEME="/boot/grub2/themes/starfield/theme.txt"  #grub2主题配置的路径
-#GRUB_BACKGROUND="/boot/grub2/mybackground.png"       #背景图片
-#GRUB_DISABLE_LINUX_UUID=true                         #uuid
-#GRUB_DISABLE_RECOVERY=true                           #recovery模式
-```
+    GRUB_DISTRIBUTOR="Gentoo"
+    GRUB_DEFAULT=0                                        #默认启动grub菜单中的第一项，和grub1中一个意思
+    GRUB_HIDDEN_TIMEOUT=1                                 #隐藏倒计时
+    GRUB_HIDDEN_TIMEOUT_QUIET=true
+    GRUB_TIMEOUT=0                                        #倒计时秒数
+    GRUB_CMDLINE_LINUX_DEFAULT=""                         #kernel行的附加命令，譬如quiet splash等
+    GRUB_CMDLINE_LINUX=""
+    #GRUB_TERMINAL=console                                #图形终端
+    #GRUB_GFXMODE=640x480                                 #分辨率
+    #GRUB_THEME="/boot/grub2/themes/starfield/theme.txt"  #grub2主题配置的路径
+    #GRUB_BACKGROUND="/boot/grub2/mybackground.png"       #背景图片
+    #GRUB_DISABLE_LINUX_UUID=true                         #uuid
+    #GRUB_DISABLE_RECOVERY=true                           #recovery模式
 
 <!-- more -->
 
@@ -31,41 +29,37 @@ GRUB_CMDLINE_LINUX=""
 
 其次，`/etc/grub.d/40-custom`
 
-```bash
-#!/bin/sh
-exec tail -n +3 $0
-# This file provides an easy way to add custom menu entries.  Simply type the
-# menu entries you want to add after this comment.  Be careful not to change
-# the 'exec tail' line above.
+    #!/bin/sh
+    exec tail -n +3 $0
+    # This file provides an easy way to add custom menu entries.  Simply type the
+    # menu entries you want to add after this comment.  Be careful not to change
+    # the 'exec tail' line above.
 
-menuentry "Gentoo Linux 3.4.4" {
-set root=(hd0,1)
-linux   /boot/3.4.4-gentoo root=/dev/sda5 resume=/dev/sda6
-}
+    menuentry "Gentoo Linux 3.4.4" {
+    set root=(hd0,1)
+    linux   /boot/3.4.4-gentoo root=/dev/sda5 resume=/dev/sda6
+    }
 
-menuentry "Gentoo Linux 3.4.4 (rescue)" {
-set root=(hd0,1)
-linux   /boot/3.4.4-gentoo root=/dev/sda5 init=/bin/bb
-}
-```
+    menuentry "Gentoo Linux 3.4.4 (rescue)" {
+    set root=(hd0,1)
+    linux   /boot/3.4.4-gentoo root=/dev/sda5 init=/bin/bb
+    }
 
 很简单，和 grub1 没啥区别，当然如果有 windows 系统的话，则在上面文件中最下面加入
 
-```bash
-menuentry "Microsoft Windows XP" {
-    insmod chain
-    set root=(hd0,2)
-    chainloader +1
-}
+    menuentry "Microsoft Windows XP" {
+        insmod chain
+        set root=(hd0,2)
+        chainloader +1
+    }
 
-menuentry "Windows 7 BIOS/MBR" {
-     insmod part_msdos
-     insmod chain
-     parttool hd1,msdos1 hidden+ boot-
-     parttool hd1,msdos2 hidden- boot+
-     chainloader (hd1,msdos2)+1
-}
-```
+    menuentry "Windows 7 BIOS/MBR" {
+         insmod part_msdos
+         insmod chain
+         parttool hd1,msdos1 hidden+ boot-
+         parttool hd1,msdos2 hidden- boot+
+         chainloader (hd1,msdos2)+1
+    }
 
 最后生成配置文件
 

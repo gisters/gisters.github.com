@@ -12,6 +12,7 @@ tags: [phpMyAdmin, MySQL]
 对于运行低于版本 3.0 的 phpMyadmin，或低于版本 4.1.2 的 MySQL，需要注意的事项。
 
 <!-- more -->
+
 - MySQL 版本低于 4.1.2，使用 `./scripts/create_tables.sql`。
     - phpMyAdmin 3.0 以及以后的版本，将不支持低于 4.1.2 版本的 MySQL。
 - MySQL 版本高于 4.1.2，phpMyAdmin 低于 3.0的情况下，使用 `./scripts/create_tables_mysql_4_1_2+.sql`。
@@ -22,7 +23,7 @@ tags: [phpMyAdmin, MySQL]
 
 2. 编辑./config.inc.php
 
-```js+php
+```php
 /*
 * phpMyAdmin configuration storage settings.
 */

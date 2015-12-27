@@ -23,11 +23,12 @@ server {
     listen 443 ssl;
     server_name domain.com;
     ssl on;
-    ......
+    # other
 }
 ```
 
 <!-- more -->
+
 ```nginx
 server {
     listen 80;
@@ -38,7 +39,7 @@ server {
     listen 443 ssl;
     server_name domain.com;
     ssl on;
-    ......
+    # other
 }
 ```
 
@@ -52,7 +53,7 @@ server {
     listen 80;
     server_name domain.com;
     ssl on;
-    ......
+    # other
     error_page 497 https://$server_name$request_uri;
 }
 ```
@@ -63,7 +64,7 @@ server {
 server {
     listen 9443 ssl;
     server_name domain.com;
-    ......
+    # other
     error_page 497 https://$server_name$server_port$request_uri;
 }
 ```

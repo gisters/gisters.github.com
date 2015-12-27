@@ -16,6 +16,7 @@ KVM(Kernel-based Virtual Machine) 是一个全虚拟化的解决方案，它自 
     egrep '(vmx|svm)' /proc/cpuinfo
 
 <!-- more -->
+
 vmx 是Intel CPU 的，svm 则是 AMD CPU 的。我的 CPU 返回如下：
 
     flags : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm arat dts tpr_shadow vnmi flexpriority ept vpid

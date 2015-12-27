@@ -18,6 +18,7 @@ vsftpd 2.3.5 的 changelog 如下：
 > on chroot_local_user but such is life.
 
 <!-- more -->
+
 解决方法有两种
 
 #### 1. 如果你的 ftp 根目录必须要可写，那么：

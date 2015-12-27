@@ -16,17 +16,15 @@ tags: [MySQL, CLI]
     mysqladmin -uroot -p password 'newpassword'
 
 <!-- more -->
+
 重设 root 密码
 
     /etc/rc.d/mysqld stop
     mysqld_safe --skip-grant-tables &
     mysql -uroot mysql
 
-```mysql
-UPDATE user SET password=PASSWORD("newpassword") WHERE User='root';
-FLUSH PRIVILEGES;
-exit
-```
+    UPDATE user SET password=PASSWORD("newpassword") WHERE User='root';
+    FLUSH PRIVILEGES;
 
 #### 二、登录数据库
 
@@ -54,247 +52,170 @@ exit
 
 显示有多少数据库
 
-```mysql
-show databases;
-```
+    show databases;
 
 创建与删除molyx数据库
 
-```mysql
-create database molyx;
-drop database molyx;
-```
+    create database molyx;
+    drop database molyx;
 
 选定molyx数据库
 
-```mysql
-use molyx;
-```
+    use molyx;
+
 当前选择的数据库
 
-```
-select database();
-```
+    select database();
 
 查看状态
 
-```mysql
-show status;
-```
+    show status;
 
 查看进程
 
-```mysql
-show processlist;
-```
+    show processlist;
 
 显示当前用户
 
-```mysql
-select user();
-```
+    select user();
 
 显示所有用户
 
-```mysql
-select user,host,password from mysql.user;
-```
+    select user,host,password from mysql.user;
 
 显示用户molyxuser权限
 
-```mysql
-show grants for molyxuser@localhost;
-```
+    show grants for molyxuser@localhost;
 
 查看名为molyx的数据库
 
-```mysql
-mysqlshow -uroot -p molyx
-```
+    mysqlshow -uroot -p molyx
 
 #### 四、 数据表操作
 
 显示molyx库中的数据表
 
-```mysql
-show tables from molyx;
-```
+    show tables from molyx;
 
 当前数据包含的表信息
 
-```mysql
-show tables;
-```
+    show tables;
 
 查看表结构
 
-```mysql
-describe user;
-```
+    describe user;
 
 or
 
-```mysql
-desc tablename;
-```
+    desc tablename;
 
 or
 
-```mysql
-show columns from tablename;
-```
+    show columns from tablename;
 
 建表
 
-```mysql
-create table tablename(<column1><type1>,<column2><type2>,<column3><type3>);
-```
+    create table tablename(<column1><type1>,<column2><type2>,<column3><type3>);
 
 example:
 
-```mysql
-create table MyClass(
-id int(4) NOT NULL primary key auto_increment,
-name char(20) NOT NULL,
-sex int(4) NOT NULL default '0',
-degree double(16,2)) ENGINE = MYISAM;
-```
+    create table MyClass(
+    id int(4) NOT NULL primary key auto_increment,
+    name char(20) NOT NULL,
+    sex int(4) NOT NULL default '0',
+    degree double(16,2)) ENGINE = MYISAM;
 
 查询表中数据
 
 查询所有行
 
-```mysql
-select * from tablename;
-```
+    select * from tablename;
 
 查询并排序
 
-```mysql
-select * from tablename order by id desc;
-```
+    select * from tablename order by id desc;
 
 查询前几行数据
 
-```mysql
-select * from tablename order by id limit 0,2;
-```
+    select * from tablename order by id limit 0,2;
 
 指定条件查询
 
-```mysql
-select * from tablename where name = 'type';
-```
+    select * from tablename where name = 'type';
 
 查询唯一不重复记录
 
-```mysql
-select distinct name from tablename;
-```
+    select distinct name from tablename;
 
 插入数据
 
-```mysql
-insert into tablename (<column1>,<column2>,<column3>) values (type1,type2,type3);
-```
+    insert into tablename (<column1>,<column2>,<column3>) values (type1,type2,type3);
 
 or
 
-```mysql
-insert into tablename values(1,'Tom',96.45),(2,'Joan',82.99), (2,'Wang', 96.59);
-```
+    insert into tablename values(1,'Tom',96.45),(2,'Joan',82.99), (2,'Wang', 96.59);
 
 删除表中数据
 
-```mysql
-delete from tablename where id=N
-```
+    delete from tablename where id=N
 
 修改表中数据
 
-```mysql
-update tablename set column='value' where id=1;
-```
+    update tablename set column='value' where id=1;
 
 or
 
-```mysql
-update tablename set column=replace(column,'oldvalue','newvalue');
-```
+    update tablename set column=replace(column,'oldvalue','newvalue');
 
 example:
 
-```mysql
-update article set content=concat('你好',content);
-update user set pass='123456' where name='name';
-```
+    update article set content=concat('你好',content);
+    update user set pass='123456' where name='name';
 
 更改用户名
 
-```mysql
-update set user='newname' where user='oldname';
-```
+    update set user='newname' where user='oldname';
 
 更改表名
 
-```mysql
-rename table tablenameold to tablenamenew;
-```
+    rename table tablenameold to tablenamenew;
 
 在表中增加字段
 
-```mysql
-alter table tablename add column type default '0';
-```
+    alter table tablename add column type default '0';
 
 example:
 
-```mysql
-alter table user add column date char(8) after pass;
-```
+    alter table user add column date char(8) after pass;
 
 在user表中修改字段名及字段数据类型
 
-```mysql
-alter table tablename change column <column1> <type1> char(10);
-```
+    alter table tablename change column <column1> <type1> char(10);
 
 example:
 
-```mysql
-alter table user change column pass password char(10);
-```
+    alter table user change column pass password char(10);
 
 删除表中字段
 
-```mysql
-alter table tablename grop column <column1>;
-```
+    alter table tablename grop column <column1>;
 
 example:
 
-```mysql
-alter table user drop column date;
-```
+    alter table user drop column date;
 
 删除用户molyxuser
 
-```mysql
-use mysql;
-DELETE FROM user WHERE User='molyxuser';
-```
+    use mysql;
+    DELETE FROM user WHERE User='molyxuser';
 
 or
 
-```mysql
-drop user 'molyxuser'@'%';
-```
+    drop user 'molyxuser'@'%';
 
 删除表
 
-```mysql
-drop table tablename;
-```
+    drop table tablename;
 
 导出一个表
 
@@ -304,28 +225,20 @@ drop table tablename;
 
 先创建个molyx库，再创建个可以操作molyx库的用户molyxuser，密码为123456
 
-```mysql
-create database molyx;
-grant select,insert,update,delete,create,alter,create temporary tables,create view,show view,drop on molyx.* to 'molyxuser'@'localhost' identified by '123456';
-```
+    create database molyx;
+    grant select,insert,update,delete,create,alter,create temporary tables,create view,show view,drop on molyx.* to 'molyxuser'@'localhost' identified by '123456';
 
 or
 
-```mysql
-grant all on molyx.* to 'molyxuser’@localhost identified by '123456';
-```
+    grant all on molyx.* to 'molyxuser’@localhost identified by '123456';
 
 收回molyxuser针对molyx库的所有权限
 
-```mysql
-revoke all on molyx.* from 'molyxuser'@localhost identified by '123456';
-```
+    revoke all on molyx.* from 'molyxuser'@localhost identified by '123456';
 
 创建一个针对molyx库具有所有权限，可从任意IP登录的帐号molyxuser
 
-```mysql
-grant all on molyx.* to 'molyxuser'@'%' identified by '123456';
-```
+    grant all on molyx.* to 'molyxuser'@'%' identified by '123456';
 
 #### 六、备份与还原
 
@@ -351,10 +264,8 @@ grant all on molyx.* to 'molyxuser'@'%' identified by '123456';
 
 将文本数据导入数据库:
 
-```mysql
-use test;
-load data local infile 'filename' into table tablename;
-```
+    use test;
+    load data local infile 'filename' into table tablename;
 
 检查所有的.myi文件
 
@@ -383,10 +294,8 @@ load data local infile 'filename' into table tablename;
 
 安装升级
 
-```sh
-emerge --config =dev-db/mysql-5.1.53
-mysql_upgrade tool
-```
+    emerge --config =dev-db/mysql-5.1.53
+    mysql_upgrade tool
 
 ##### 2. mysqldump 命令的使用
 
@@ -411,111 +320,77 @@ mysql_upgrade tool
 
 将查询结果保存到文件
 
-```mysql
-select title from book into outfile '/tmp/outfile.txt';
-```
+    select title from book into outfile '/tmp/outfile.txt';
 
 查找表中多余的重复记录，重复记录是根据某个字段（peopleId）来判断
 
-```mysql
-select * from people where peopleId in (select peopleId from people group by
-peopleId having count(peopleId) > 1);
-```
+    select * from people where peopleId in (select peopleId from people group by
+    peopleId having count(peopleId) > 1);
 
 查询表中不重复记录(排除重复记录)
 
-```mysql
-select * from phome_ecms_wma where title in (select distinct title from phome_ecms_wma);
-```
+    select * from phome_ecms_wma where title in (select distinct title from phome_ecms_wma);
 
 删除表中重复记录,重复记录是根据某个字段（title）来判断
 
-```mysql
-select *,count(distinct title) INTO OUTFILE '/tmp/table.bak' from phome_ecms_wma group by title;
-delete from phome_ecms_wma;
-LOAD DATA INFILE '/tmp/table.bak' REPLACE INTO TABLE phome_ecms_wma character set utf8;
-```
+    select *,count(distinct title) INTO OUTFILE '/tmp/table.bak' from phome_ecms_wma group by title;
+    delete from phome_ecms_wma;
+    LOAD DATA INFILE '/tmp/table.bak' REPLACE INTO TABLE phome_ecms_wma character set utf8;
 
 查询数据库当前编码
 
-```mysql
-show variables like 'character_set%';
-```
+    show variables like 'character_set%';
 
 修改表字段类型
 
-```mysql
-alter table table_name change last_action last_action datetime NOT NULL default '0000-00-00 00:00:00';
-```
+    alter table table_name change last_action last_action datetime NOT NULL default '0000-00-00 00:00:00';
 
 给表添加一个新字段
 
-```mysql
-ALTER TABLE host ADD ks_mac VARCHAR(100);
-```
+    ALTER TABLE host ADD ks_mac VARCHAR(100);
 
 从表中删除一个字段
 
-```mysql
-ALTER TABLE table_name DROP field_name;
-```
+    ALTER TABLE table_name DROP field_name;
 
 重命名表
 
-```mysql
-alter table t1 rename t2;
-```
+    alter table t1 rename t2;
 
 给字段加索引
 
-```mysql
-alter table tablename add index 索引名 (字段名1[，字段名2 …]);
-alter table tablename add index emp_name (name);
-```
+    alter table tablename add index 索引名 (字段名1[，字段名2 …]);
+    alter table tablename add index emp_name (name);
 
 加主关键字的索引
 
-```mysql
-alter table tablename add primary key(id);
-```
+    alter table tablename add primary key(id);
 
 加唯一限制条件的索引
 
-```mysql
-alter table tablename add unique emp_name2(cardnumber);
-```
+    alter table tablename add unique emp_name2(cardnumber);
 
 删除某个索引
 
-```mysql
-alter table tablename drop index emp_name;
-```
+    alter table tablename drop index emp_name;
 
 远程访问mysql 设置
 
-```mysql
-GRANT ALL PRIVILEGES ON database_test.* to root@192.168.1.9 IDENTIFIED BY '123456';
-FLUSH PRIVILEGES;
-```
+    GRANT ALL PRIVILEGES ON database_test.* to root@192.168.1.9 IDENTIFIED BY '123456';
+    FLUSH PRIVILEGES;
 
 往表中加入记录
 
-```mysql
-insert into mytable values ('test','m');
-```
+    insert into mytable values ('test','m');
 
 用文本方式将数据装入数据库表中（例如 d:\mysql.txt）
 
-```mysql
-load data local infile 'd:/mysql.txt' into table mytable;
-```
+    load data local infile 'd:/mysql.txt' into table mytable;
 
 导入.sql文件命令（例如 d:\mysql.sql）
 
-```mysql
-use database;
-source d:/mysql.sql;
-```
+    use database;
+    source d:/mysql.sql;
 
 若要给此用户赋予他在相应对象上的权限的管理能力，可在grant后面添加with grant option选项。而对于用插入User表添加的用户，Password字段应用password函数进行更新加密，以防不轨之人窃看密码。对于那些已经不用的用户应给予清除，权限过界的用户应及时回收权限，回收权限可以通过更新User表相应字段，也可以使用revoke操作。以下是常用权限的解释：
 

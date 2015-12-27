@@ -14,7 +14,7 @@ Gentoo 默认的 git 真的很朴素，默认配置实在是太简单了。
 
 我们还是先将 git 的颜色部分配置好吧。
 
-```
+```ini
 [color]
     branch = auto
     diff = auto
@@ -41,25 +41,21 @@ Gentoo 默认的 git 真的很朴素，默认配置实在是太简单了。
 
 下面讲git diff的语法
 
-```
-git diff [options] [<commit>] [--] [<path>...]
-git diff [options] --cached [<commit>] [--] [<path>...]
-git diff [options] <commit> <commit> [--] [<path>...]
-git diff [options] [--no-index] [--] <path> <path>
-```
+    git diff [options] [<commit>] [--] [<path>...]
+    git diff [options] --cached [<commit>] [--] [<path>...]
+    git diff [options] <commit> <commit> [--] [<path>...]
+    git diff [options] [--no-index] [--] <path> <path>
 
-```
-$ git diff                                                比较工作目录树与缓存区之间的区别
-$ git diff head                                           比较工作目录树（包括暂存的和未暂存的修改）与版本库最后一个版本的差别
-$ git diff [filename]                                     比较具体的文件
-$ git diff --stat                                         统计用，显示每个修改的文件的统计
-$ git diff [commit] [filename]                            比较当前文件与之前某commit之间的区别
-$ git diff [commit]:[old-name] [new-name]                 比较重命名的文件
-$ git diff [branch]..[other-branch]                       比较两个branch之间的commit
-$ git diff [branch]...[other-branch]                      Compare the tip of other-branch and the closest ancestor (fork point) on [branch]
-$ git diff [branch]:[filename] [other-branch]:filename    比较两个分支之间的具体文件的区别
-$ git diff --no-index [filename] [filename]               Compare any two files, even if they’re not in a repo :O
-```
+    $ git diff                                                比较工作目录树与缓存区之间的区别
+    $ git diff head                                           比较工作目录树（包括暂存的和未暂存的修改）与版本库最后一个版本的差别
+    $ git diff [filename]                                     比较具体的文件
+    $ git diff --stat                                         统计用，显示每个修改的文件的统计
+    $ git diff [commit] [filename]                            比较当前文件与之前某commit之间的区别
+    $ git diff [commit]:[old-name] [new-name]                 比较重命名的文件
+    $ git diff [branch]..[other-branch]                       比较两个branch之间的commit
+    $ git diff [branch]...[other-branch]                      Compare the tip of other-branch and the closest ancestor (fork point) on [branch]
+    $ git diff [branch]:[filename] [other-branch]:filename    比较两个分支之间的具体文件的区别
+    $ git diff --no-index [filename] [filename]               Compare any two files, even if they’re not in a repo :O
 
 譬如如果想提取两次 commit 之间的 diff 的话就很简单
 

@@ -15,6 +15,7 @@ tags: [KVM, Virtual]
 通过指定 "hostaddr"，可以绑定到主机某个特点的接口上
 
 <!-- more -->
+
 例如
 
     -net user,hostfwd=tcp:127.0.0.1:6001-10.0.2.15:6000

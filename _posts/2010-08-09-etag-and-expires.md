@@ -18,30 +18,27 @@ tags: [Etag, Expires, Cache, Client, Server, Nginx, Lighttpd, Apache, Usage]
 在客户端通过浏览器发出第一次请求某一个 URL 时，根据 HTTP 协议的规定，浏览器会向服务器传送报头 (Http Request Header)，服务器端响应同时记录相关属性标记 (Http Reponse Header)，服务器端的返回状态会是 200，格式类似如下：
 
 <!-- more -->
-```http
-HTTP/1.1 200 OK
-Date: Tue, 03 Mar 2009 04:58:40 GMT
-Content-Type: image/jpeg
-Content-Length: 83185
-Last-Modified: Tue, 24 Feb 2009 08:01:04 GMT
-Cache-Control: max-age=2592000
 
-Expires: Thu, 02 Apr 2009 05:14:08 GMT
-Etag: “5d8c72a5edda8d6a:3239″
-```
+    HTTP/1.1 200 OK
+    Date: Tue, 03 Mar 2009 04:58:40 GMT
+    Content-Type: image/jpeg
+    Content-Length: 83185
+    Last-Modified: Tue, 24 Feb 2009 08:01:04 GMT
+    Cache-Control: max-age=2592000
+
+    Expires: Thu, 02 Apr 2009 05:14:08 GMT
+    Etag: “5d8c72a5edda8d6a:3239″
 
 客户端第二次请求此 URL 时，根据 HTTP 协议的规定，浏览器会向服务器传送报头 (Http Request Header)，服务器端响应并记录相关记录属性标记文件没有发生改动,服务器端返回 304，直接从缓存中读取：
 
-```http
-HTTP/1.x 304 Not Modified
-Date: Tue, 03 Mar 2009 05:03:56 GMT
-Content-Type: image/jpeg
-Content-Length: 83185
-Last-Modified: Tue, 24 Feb 2009 08:01:04 GMT
-Cache-Control: max-age=2592000
-Expires: Thu, 02 Apr 2009 05:14:08 GMT
-Etag: “5d8c72a5edda8d6a:3239″
-```
+    HTTP/1.x 304 Not Modified
+    Date: Tue, 03 Mar 2009 05:03:56 GMT
+    Content-Type: image/jpeg
+    Content-Length: 83185
+    Last-Modified: Tue, 24 Feb 2009 08:01:04 GMT
+    Cache-Control: max-age=2592000
+    Expires: Thu, 02 Apr 2009 05:14:08 GMT
+    Etag: “5d8c72a5edda8d6a:3239″
 
 其中 `Last-Modified`、`Expires` 和 `Etag`
 是标记页面缓存标识
@@ -123,7 +120,6 @@ HTTP 协议规格说明定义 `ETag` 为“被请求变量的实体标记” （
 
 使用 `Apache` 的 `mod_expires` 模块来设置，这包括控制应答时的 `Expires` 头内容和 `Cache-Control` 头的 `max-age` 指令
 
-```apacheconf
     ExpiresActive On
     ExpiresByType image/gif “access plus 1 month”
     ExpiresByType image/jpg “access plus 1 month”
@@ -137,18 +133,15 @@ HTTP 协议规格说明定义 `ETag` 为“被请求变量的实体标记” （
     ExpiresByType text/js ”access plus 30 minutes”
     ExpiresByType application/x-javascript ”access plus 30 minutes”
     ExpiresByType application/x-shockwave-flash ”access plus 30 minutes”
-```
 
 或
 
-```apacheconf
     <ifmodule mod_expires.c>
     <filesmatch “\.(jpg|gif|png|css|js)$”>
     ExpiresActive on
     ExpiresDefault “access plus 1 year”
     </filesmatch>
     </ifmodule>
-```
 
 当设置了 `expires` 后，会自动输出 `Cache-Control` 的 `max-age` 信息
 
@@ -197,16 +190,12 @@ HTTP 协议规格说明定义 `ETag` 为“被请求变量的实体标记” （
 
 ##### A.3、Nginx 中 Expires
 
-```nginx
-location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
-{
-expires 30d;
-}
-location ~ .*\.(js|css)?$
-{
-expires 1h;
-}
-```
+    location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
+        expires 30d;
+    }
+    location ~ .*\.(js|css)?$ {
+        expires 1h;
+    }
 
 这类文件并不常修改，通过 `expires` 指令来控制其在浏览器的缓存，以减少不必要的请求。 `expires` 指令可以控制 HTTP 应答中的 `Expires` 和 `Cache-Control` 的头标（起到控制页面缓存的作用）。其他请参考 `Nginx` 中 `Expires`
 
@@ -258,13 +247,11 @@ expires 1h;
 
 如 `expires.php`
 
-```php
-<?php
-header(’Cache-Control: max-age=86400,must-revalidate’);
-header(’Last-Modified: ‘ .gmdate(’D, d M Y H:i:s’) . ‘ GMT’ );
-header(”Expires: ” .gmdate (’D, d M Y H:i:s’, time() + ‘86400′ ). ‘ GMT’);
-?>
-```
+    <?php
+    header(’Cache-Control: max-age=86400,must-revalidate’);
+    header(’Last-Modified: ‘ .gmdate(’D, d M Y H:i:s’) . ‘ GMT’ );
+    header(”Expires: ” .gmdate (’D, d M Y H:i:s’, time() + ‘86400′ ). ‘ GMT’);
+    ?>
 
 以上信息表示该文件自请求后 24 小时后过期。
 
@@ -276,19 +263,17 @@ header(”Expires: ” .gmdate (’D, d M Y H:i:s’, time() + ‘86400′ ). �
 
 如 `etag.php`
 
-```php
-<?php
-cache();
-echo date(”Y-m-d H:i:s”);
-function cache()
-{
-$etag = “http://longrujun.name”;
-if ($_SERVER['HTTP_IF_NONE_MATCH'] == $etag)
-{
-header(’Etag:’.$etag,true,304);
-exit;
-}
-else header(’Etag:’.$etag);
-}
-?>
-```
+    <?php
+    cache();
+    echo date(”Y-m-d H:i:s”);
+    function cache()
+    {
+    $etag = “http://longrujun.name”;
+    if ($_SERVER['HTTP_IF_NONE_MATCH'] == $etag)
+    {
+    header(’Etag:’.$etag,true,304);
+    exit;
+    }
+    else header(’Etag:’.$etag);
+    }
+    ?>

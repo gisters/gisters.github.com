@@ -18,6 +18,7 @@ Import & Display 也是 Imagemagick 中的两个常用的组件。
     $ import -pause n /path/output.png
 
 <!-- more -->
+
 输出缩略图：
 
     $ import -resize 50% /path/output.png

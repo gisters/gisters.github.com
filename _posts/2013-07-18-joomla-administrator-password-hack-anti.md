@@ -9,27 +9,24 @@ tags: [Joomla]
 
 拿到 **error.php** 文件
 
-```
-……
-2013-07-17	16:47:54	INFO	213.203.234.132	Joomla FAILURE: 	Username and password do not match or you do not have an account yet.
-2013-07-17	16:47:57	INFO	213.203.234.132	Joomla FAILURE: 	Username and password do not match or you do not have an account yet.
-2013-07-17	16:48:00	INFO	213.203.234.132	Joomla FAILURE: 	Username and password do not match or you do not have an account yet.
-2013-07-17	16:48:03	INFO	213.203.234.132	Joomla FAILURE: 	Username and password do not match or you do not have an account yet.
-……
-```
+    ...
+    2013-07-17	16:47:54	INFO	213.203.234.132	Joomla FAILURE: 	Username and password do not match or you do not have an account yet.
+    2013-07-17	16:47:57	INFO	213.203.234.132	Joomla FAILURE: 	Username and password do not match or you do not have an account yet.
+    2013-07-17	16:48:00	INFO	213.203.234.132	Joomla FAILURE: 	Username and password do not match or you do not have an account yet.
+    2013-07-17	16:48:03	INFO	213.203.234.132	Joomla FAILURE: 	Username and password do not match or you do not have an account yet.
+    ...
 
 <!-- more -->
+
 仔细看了下，确实是几秒一次猜解，文档很大，IP 基本每分钟就变换下，传统的 netstat 统计 IP 再屏蔽方式已经不适用，考虑到 **Joomla** 平台 本身就有 logs 系统，为何不就对 **error.php** 动一些脑筋呢
 
 思路明确了，那么就开始，awk 取第四个字段，统计排序，取次数大于 4 的 IP 加入到 iptables 中加以屏蔽，配合 Linux 系统计划任务，每 5 分钟执行一次
 
-```
-/etc/init.d/iptables restart; [[ -f /tmp/block ]] && rm /tmp/block; awk '{print $4}' /var/www/YOURPATH/error.php | sort | uniq -c | sort -r | awk '($1>4) {print $2}' >> /tmp/block; for i in `awk '{print $1}' /tmp/block`;do iptables -I INPUT -p tcp -s $i -j DROP; done; rm /tmp/block; echo "" > /var/www/YOURPATH/error.php
-```
+    /etc/init.d/iptables restart; [[ -f /tmp/block ]] && rm /tmp/block; awk '{print $4}' /var/www/YOURPATH/error.php | sort | uniq -c | sort -r | awk '($1>4) {print $2}' >> /tmp/block; for i in `awk '{print $1}' /tmp/block`;do iptables -I INPUT -p tcp -s $i -j DROP; done; rm /tmp/block; echo "" > /var/www/YOURPATH/error.php
 
 可读性不强，整理下
 
-```bash
+```shell
 #!/bin/bash
 
 # 重启 iptables，系统路径可能有所不同
@@ -50,6 +47,7 @@ done
 rm /tmp/block
 echo "" > /var/www/YOURPATH/error.php
 ```
+
 存为 block 文件，加上执行权限 `chmod +x block`。
 
 放入计划任务中，编辑 /etc/crontab，在最后加上：

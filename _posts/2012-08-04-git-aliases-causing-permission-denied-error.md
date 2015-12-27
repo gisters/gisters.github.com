@@ -5,14 +5,12 @@ category: Linux
 tags: [Git]
 ---
 
-```
-^_^ ~/Documents/git/overlay $ git ll
-fatal: cannot exec 'git-ll': Permission denied
+    ^_^ ~/Documents/git/overlay $ git ll
+    fatal: cannot exec 'git-ll': Permission denied
 
-^_^ ~/Documents/git/overlay $ git config --get alias.ll
-log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, \
-%ar%Creset' --decorate --abbrev-commit --max-count=25
-```
+    ^_^ ~/Documents/git/overlay $ git config --get alias.ll
+    log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, \
+    %ar%Creset' --decorate --abbrev-commit --max-count=25
 
 <!-- more -->
 

@@ -13,7 +13,7 @@ layman 是 Gentoo 下的一款管理第三方 overlay 工具，通过 layman 可
 
     USE="git" emerge -av app-portage/layman
 
-具体需要开启哪些 use flag，完全是根据各 overlay 用哪种工具维护的，譬如 git、cvs、subversion、mercurial 等等。 
+具体需要开启哪些 use flag，完全是根据各 overlay 用哪种工具维护的，譬如 git、cvs、subversion、mercurial 等等。
 
 <!-- more -->
 layman 的配置非常方便，几乎不用介入修改。譬如作为中文区用户，安装 layman 以后，都会增加一个 overlay：
@@ -22,22 +22,20 @@ layman 的配置非常方便，几乎不用介入修改。譬如作为中文区�
 
 一些常用的参数如下，更多参数可以通过 `layman -h` 来查看：
 
-```
--a <name>       # 添加一个的 overlay
--d <name>       # 删除一个的 overlay
--D <name>       # 关闭一个的 overlay
--E <name>       # 开启一个的 overlay
--f <name>       # 获取远程的 overlay 列表
--i <name>       # 显示一个 overlay 信息
--L <name>       # 显示远程 overlay 列表
--l              # 显示本地 overlay 列表
--s <name>       # 同步一个本地 overlay
--S              # 同步所有本地 overlay
-```
+    -a <name>       # 添加一个的 overlay
+    -d <name>       # 删除一个的 overlay
+    -D <name>       # 关闭一个的 overlay
+    -E <name>       # 开启一个的 overlay
+    -f <name>       # 获取远程的 overlay 列表
+    -i <name>       # 显示一个 overlay 信息
+    -L <name>       # 显示远程 overlay 列表
+    -l              # 显示本地 overlay 列表
+    -s <name>       # 同步一个本地 overlay
+    -S              # 同步所有本地 overlay
 
 在 app-portage/layman-2.3.0 以及以后的版本，在通过 `layman -f -a <name>` 后会自动在 **/etc/portage/repos.conf/** 下生成一文件，譬如前面我们已经添加了 gentoo-zh overlay，则内容为：
 
-```
+```ini
 [gentoo-zh]
 priority = 50
 location = /var/lib/layman/gentoo-zh
@@ -47,7 +45,7 @@ layman-type = git
 
 如果你需要在更新 portage 树的同时也更新第三方的 overlay，那么只需将以上内容修改为如下即可：
 
-```
+```ini
 [gentoo-zh]
 priority = 50
 location = /var/lib/layman/gentoo-zh
@@ -64,9 +62,8 @@ sync-uri = git://github.com/microcai/gentoo-zh.git
 
 当然 repositories.xml 必须包含如下的基本信息：
 
-```
+```xml
 <?xml version="1.0" ?>
-
 <repositories version="1.0">
     <repo priority="50" quality="experimental" status="unofficial">
     <name>Havee</name>

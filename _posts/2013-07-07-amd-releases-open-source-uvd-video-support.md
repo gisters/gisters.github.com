@@ -16,32 +16,31 @@ tags: [Radeon, Kernel, Firmware]
 5. 最后编译 portage 中最新版 kernel
 
 <!-- more -->
+
 主要是 kernel 配置说明下
 
-```
-Processor type and features  --->
-    [*] MTRR (Memory Type Range Register) support
-Device Drivers  --->
-    Graphics support  --->
+    Processor type and features  --->
+        [*] MTRR (Memory Type Range Register) support
+    Device Drivers  --->
+        Graphics support  --->
 
-            Generic Driver Options  --->
-            [*]   Include in-kernel firmware blobs in kernel binary
-            (radeon/<YOUR-MODEL>.bin)
-            (/lib/firmware) Firmware blobs root directory
+                Generic Driver Options  --->
+                [*]   Include in-kernel firmware blobs in kernel binary
+                (radeon/<YOUR-MODEL>.bin)
+                (/lib/firmware) Firmware blobs root directory
 
-        <*> /dev/agpgart (AGP Support)  --->
-            <*> AMD Opteron/Athlon64 on-CPU GART support
+            <*> /dev/agpgart (AGP Support)  --->
+                <*> AMD Opteron/Athlon64 on-CPU GART support
 
-        <*> Direct Rendering Manager (XFree86 4.1.0 and higher DRI support)  --->
+            <*> Direct Rendering Manager (XFree86 4.1.0 and higher DRI support)  --->
+                <*> ATI Radeon
+                [*] Enable modesetting on radeon by default
+
             <*> ATI Radeon
-            [*] Enable modesetting on radeon by default
+                [ ]   Enable userspace modesetting on radeon (DEPRECATED)
 
-        <*> ATI Radeon
-            [ ]   Enable userspace modesetting on radeon (DEPRECATED)
-
-        -*- Support for frame buffer devices  --->
-            [*]   Enable firmware EDID
-```
+            -*- Support for frame buffer devices  --->
+                [*]   Enable firmware EDID
 
 其中，`Include in-kernel firmware blobs in kernel binary` 需要的文件按 [这里](http://wiki.gentoo.org/wiki/Radeon#Firmware) 来选择
 

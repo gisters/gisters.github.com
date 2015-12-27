@@ -18,18 +18,17 @@ redcarpet:
 ```
 
 <!-- more -->
+
 随后
 
     $ gem install redcarpet
 
 在 Markdwon 文件中可以依据以下语法进行书写
 
-```
-|head1 head1 head1|head2 head2 head2|head3 head3 head3|head4 head4 head4|
-|---|:---|:---:|---:|
-|row1text1|row1text3|row1text3|row1text4|
-|row2text1|row2text3|row2text3|row2text4|
-```
+    |head1 head1 head1|head2 head2 head2|head3 head3 head3|head4 head4 head4|
+    |---|:---|:---:|---:|
+    |row1text1|row1text3|row1text3|row1text4|
+    |row2text1|row2text3|row2text3|row2text4|
 
 其中 `:`所在位置表示表格的位置对齐
 
@@ -73,7 +72,7 @@ redcarpet有很多选项可以开启，譬如我就开启了
 
 ```yaml
 markdown: redcarpet
-redcarpet: 
+redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "with_toc_data", "strikethrough", "underline"]
 ```
 

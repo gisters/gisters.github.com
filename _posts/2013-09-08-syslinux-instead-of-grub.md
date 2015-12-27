@@ -19,26 +19,25 @@ tags: [Grub, Syslinux]
 - ISOLINUX - ISO-9660 (CDROM) bootloader
 
 <!-- more -->
+
 #### 操作：
 
 对于 `/boot` 独立分区的用户，需将 `/boot` 分区设置为 **active**：
 
-```
-fdisk /dev/sda
+    fdisk /dev/sda
 
-Command (m for help): a
-Partition number (1-4): 1
-Command (m for help): p
- ...
-   Device Boot      Start         End      Blocks   Id  System
-/dev/sda1   *        2048      206847      102400    83  Linux
-/dev/sda2          206848   122882047    61337600    7   HPFS/NTFS/exFAT
-/dev/sda3       122882048   225282047    51200000    83  Linux
-/dev/sda4       225282048   250066943    12392448    83  Linux
+    Command (m for help): a
+    Partition number (1-4): 1
+    Command (m for help): p
+     ...
+       Device Boot      Start         End      Blocks   Id  System
+    /dev/sda1   *        2048      206847      102400    83  Linux
+    /dev/sda2          206848   122882047    61337600    7   HPFS/NTFS/exFAT
+    /dev/sda3       122882048   225282047    51200000    83  Linux
+    /dev/sda4       225282048   250066943    12392448    83  Linux
 
-Command (m for help): w
- ...
-```
+    Command (m for help): w
+     ...
 
 写 MBR：
 
@@ -50,12 +49,10 @@ Command (m for help): w
 
 接下来就是引导文件安装，由于我的 **/boot** 是独立分区，且是 ext2 文件系统，所以我使用的是 extlinux。
 
-```
-mount /boot
-mkdir /boot/extlinux
-extlinux --install /boot/extlinux
-ln -snf . /boot/boot
-```
+    mount /boot
+    mkdir /boot/extlinux
+    extlinux --install /boot/extlinux
+    ln -snf . /boot/boot
 
 需要用到的一些模块：
 
@@ -71,37 +68,36 @@ ln -snf . /boot/boot
 - EXTLINUX: extlinux.conf
 - ISOLINUX: isolinux.cfg
 
-```
-touch /boot/extlinux/extlinux.conf
+**extlinux.conf** 配置如下
 
-UI menu.c32
-PROMPT 0
+    touch /boot/extlinux/extlinux.conf
 
-MENU TITLE Boot Menu
-TIMEOUT 50
-DEFAULT gentoo
+    UI menu.c32
+    PROMPT 0
 
-LABEL gentoo
-        MENU LABEL Gentoo Linux 3.11.0
-        LINUX /boot/3.11.0-gentoo
-        APPEND root=/dev/sda3 radeon.audio=1 radeon.dpm=1
+    MENU TITLE Boot Menu
+    TIMEOUT 50
+    DEFAULT gentoo
 
-LABEL gentoo-old
-        MENU LABEL Gentoo Linux 3.10.10
-        LINUX /boot/3.10.10-gentoo
-        APPEND root=/dev/sda3
-```
+    LABEL gentoo
+            MENU LABEL Gentoo Linux 3.11.0
+            LINUX /boot/3.11.0-gentoo
+            APPEND root=/dev/sda3 radeon.audio=1 radeon.dpm=1
+
+    LABEL gentoo-old
+            MENU LABEL Gentoo Linux 3.10.10
+            LINUX /boot/3.10.10-gentoo
+            APPEND root=/dev/sda3
 
 APPEND 指的是后面的命令接到上面 LINUX 行的后面，一般一些额外的 kernel 命令放入 APPEND 行。
 
 如果有 windows 系统，则：
 
-```
-LABEL windows
-        MENU LABEL Windows 7 Ultimate
-        COM32 chain.c32
-        APPEND hd0 2
-```
+    LABEL windows
+            MENU LABEL Windows 7 Ultimate
+            COM32 chain.c32
+            APPEND hd0 2
+
 这里我使用的是文本启动菜单，即 `UI menu.c32`，你也可以使用图形启动菜单 `UI vesamenu.c32`。
 
 具体的用法，可以参考：[http://git.kernel.org/cgit/boot/syslinux/syslinux.git/tree/doc/menu.txt](http://git.kernel.org/cgit/boot/syslinux/syslinux.git/tree/doc/menu.txt)。

@@ -14,6 +14,7 @@ tags: [Rime]
 OS X 下的用户配置文件在 **~/Library/Rime** 目录下，下面记录下使用 Rime 的一些个人配置。
 
 <!-- more -->
+
 ##### 1. installation.yaml
 
 ```yaml
@@ -103,49 +104,41 @@ patch:
 
 ##### 4. luna_pinyin.extended.dict.yaml
 
-```yaml
----
-name: luna_pinyin.extended
-version: "2015.05.27"
-sort: by_weight
-use_preset_vocabulary: true
-import_tables:
-  - luna_pinyin
-```
+    ---
+    name: luna_pinyin.extended
+    version: "2015.05.27"
+    sort: by_weight
+    use_preset_vocabulary: true
+    import_tables:
+      - luna_pinyin
 
 **import_tables_** 是添加扩展词库用的，可以添加第三方的词库文件，譬如 **luna_pinyin.sogou.dict.yaml**，则添加格式如下
 
-```yaml
----
-name: luna_pinyin.extended
-version: "2015.05.27"
-sort: by_weight
-use_preset_vocabulary: true
-import_tables:
-  - luna_pinyin
-  - luna_pinyin.sogou
-...
-```
+    ---
+    name: luna_pinyin.extended
+    version: "2015.05.27"
+    sort: by_weight
+    use_preset_vocabulary: true
+    import_tables:
+      - luna_pinyin
+      - luna_pinyin.sogou
+    ...
 
 #### 二、 添加词库
 
 词库转换工具 **rime_dict_manager** 是自带的，路径在 `/Library/Input Methods/Squirrel.app/Contents/MacOS` 下，可以写成 bash 脚本：
 
-```bash
-DYLD_LIBRARY_PATH="/Library/Input Methods/Squirrel.app/Contents/Frameworks" "/Library/Input Methods/Squirrel.app/Contents/MacOS/rime_dict_manager" $@
-```
+    DYLD_LIBRARY_PATH="/Library/Input Methods/Squirrel.app/Contents/Frameworks" "/Library/Input Methods/Squirrel.app/Contents/MacOS/rime_dict_manager" $@
 
 以上保存为 **rime_dict_manager**，并 `chmod +x ./rime_dict_manager` 加上执行权限。
 
 需要的最终词库格式如下：
 
-```
-力量    li liang    1
-能力    neng li     1
-那你    na ni       1
-内容    nei rong    1
-……
-```
+    力量    li liang    1
+    能力    neng li     1
+    那你    na ni       1
+    内容    nei rong    1
+    ...
 
 第三列是词频信息，可有可无，三列以 tab 制表符分割。如果你得到的第三方词库文件名为 **pyPhrase.dic**，则可以通过 opencc (通过 brew install opencc 安装) 转化为繁体后在转换成 kct 词库文件：
 
@@ -160,33 +153,29 @@ DYLD_LIBRARY_PATH="/Library/Input Methods/Squirrel.app/Contents/Frameworks" "/Li
 
 用文本编辑器编辑 **luna_pinyin.yourname.dict.yaml** 文件，头部添加
 
-```yaml
----
-name: luna_pinyin.yourname
-version: "2015.05.27"
-sort: by_weight
-use_preset_vocabulary: true
-...
+    ---
+    name: luna_pinyin.yourname
+    version: "2015.05.27"
+    sort: by_weight
+    use_preset_vocabulary: true
+    ...
 
-釣魚島    diao yu dao      1
-黑瞎子島  hei xia zi dao   1
-南沙羣島  nan sha qun dao  1
-……
-```
+    釣魚島    diao yu dao      1
+    黑瞎子島  hei xia zi dao   1
+    南沙羣島  nan sha qun dao  1
+        ...
 
 随后在 **luna_pinyin.extended.dict.yaml** 文件中的 `import_tables` 下引入自己制作的词库，这种方式需要按照文章开头概述中的第 3、4 步骤去做。
 
-```yaml
----
-name: luna_pinyin.extended
-version: "2015.05.27"
-sort: by_weight
-use_preset_vocabulary: true
-import_tables:
-  - luna_pinyin
-  - luna_pinyin.yourname
-...
-```
+    ---
+    name: luna_pinyin.extended
+    version: "2015.05.27"
+    sort: by_weight
+    use_preset_vocabulary: true
+    import_tables:
+      - luna_pinyin
+      - luna_pinyin.yourname
+    ...
 
 扩展词库文件，可以用网友整理的 [【朙月拼音擴充詞庫】](https://bintray.com/rime-aca/dictionaries/luna_pinyin.dict)。或者在这里下载整理好的 [【sogou for rime】](http://pan.baidu.com/s/1jGrJbtc)。
 

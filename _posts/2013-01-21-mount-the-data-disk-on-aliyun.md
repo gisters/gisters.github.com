@@ -7,22 +7,20 @@ tags: [aliyun, Server]
 
 取得了一台阿里云主机用于放置 `gentoo.org.cn` 的信息，之前试用过，效果不错，不过之前没有申请数据盘的经验。这次发现，阿里云主机默认是不会帮你挂载数据盘的，数据盘命名也与传统不太一样。具体的可以用 `fdisk -l` 来查看：
 
-```
-# fdisk -l
+    # fdisk -l
 
-Disk /dev/hda: 21.4 GB, 21474836480 bytes
-255 heads, 63 sectors/track, 2610 cylinders
-Units = cylinders of 16065 * 512 = 8225280 bytes
+    Disk /dev/hda: 21.4 GB, 21474836480 bytes
+    255 heads, 63 sectors/track, 2610 cylinders
+    Units = cylinders of 16065 * 512 = 8225280 bytes
 
-   Device Boot      Start         End      Blocks   Id  System
-/dev/hda1   *           1        2610    20964793+  83  Linux
+       Device Boot      Start         End      Blocks   Id  System
+    /dev/hda1   *           1        2610    20964793+  83  Linux
 
-Disk /dev/xvdb: 21.4 GB, 21474836480 bytes
-255 heads, 63 sectors/track, 2610 cylinders
-Units = cylinders of 16065 * 512 = 8225280 bytes
+    Disk /dev/xvdb: 21.4 GB, 21474836480 bytes
+    255 heads, 63 sectors/track, 2610 cylinders
+    Units = cylinders of 16065 * 512 = 8225280 bytes
 
-Disk /dev/xvdb doesn't contain a valid partition table
-```
+    Disk /dev/xvdb doesn't contain a valid partition table
 
 <!-- more -->
 

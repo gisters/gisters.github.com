@@ -22,6 +22,7 @@ archlinux:
     $ pip install pygments --user
 
 <!-- more -->
+
 ##### 2. 安装 pygments.rb
 
     $ gem install pygments.rb
@@ -35,49 +36,43 @@ archlinux:
 
 > 注意：新版本 Jekyll 中，`pygments: true` 替换为 `highlighter: pygments`。
 
-进到我们的网站目录，运行下面代码生成 [Pygments 样式](#pygments)
+进到我们的网站目录，运行下面代码生成 Pygments 样式
 
     $ pygmentize -S default -f html > your/path/pygments.css
 
 生成的样式文件加到我们的网页中
 
-```html
-<link rel="stylesheet" href="/your/path/pygments.css">
-```
+    <link rel="stylesheet" href="/your/path/pygments.css">
 
 #### 三. 使用
 
 语法高亮的代码片段要放在标签对 {% raw %}`{% highlight language %}`{% endraw %} 和 {% raw %}`{% endhighlight %}`{% endraw %} 之间，其中的 language 为[多种语言高亮](http://pygments.org/docs/lexers/)页面中的 **Short names**。
 
-{% highlight text %}
 {% raw %}
-{% highlight c %}
-/* hello world demo */
-#include <stdio.h>
-int main(int argc, char **argv)
-{
-    printf("Hello, World!\n");
-    return 0;
-}
-{% endhighlight %}
+    {% highlight c %}
+    /* hello world demo */
+    #include <stdio.h>
+    int main(int argc, char **argv)
+    {
+        printf("Hello, World!\n");
+        return 0;
+    }
+    {% endhighlight %}
 {% endraw %}
-{% endhighlight %}
 
 也可以采用这样的写法
 
-{% highlight text %}
 {% raw %}
-```c
-/* hello world demo */
-#include <stdio.h>
-int main(int argc, char **argv)
-{
-    printf("Hello, World!\n");
-    return 0;
-}
-```
+    ```c
+    /* hello world demo */
+    #include <stdio.h>
+    int main(int argc, char **argv)
+    {
+        printf("Hello, World!\n");
+        return 0;
+    }
+    ```
 {% endraw %}
-{% endhighlight %}
 
 生成的 html 高亮结果
 
@@ -93,15 +88,13 @@ int main(int argc, char **argv)
 
 #### 四. Pygments 样式
 
-<span id=pygments>Pygments 样式</span> 默认提供了 monokai、manni、rrt、perldoc、borland、colorful、default 等等，多种的样式。
+Pygments 样式默认提供了 monokai、manni、rrt、perldoc、borland、colorful、default 等等，多种的样式。
 
 可以通过以下命令列出当前 Pygments 支持的样式：
 
-```python
->>> from pygments.styles import STYLE_MAP
->>> STYLE_MAP.keys()
-['monokai', 'manni', 'rrt', 'perldoc', 'borland', 'colorful', 'default', 'murphy', 'vs', 'trac', 'tango', 'fruity', 'autumn', 'bw', 'emacs', 'vim', 'pastie', 'friendly', 'native']
-```
+    >>> from pygments.styles import STYLE_MAP
+    >>> STYLE_MAP.keys()
+    ['monokai', 'manni', 'rrt', 'perldoc', 'borland', 'colorful', 'default', 'murphy', 'vs', 'trac', 'tango', 'fruity', 'autumn', 'bw', 'emacs', 'vim', 'pastie', 'friendly', 'native']
 
 通过 `-S` 来选择，譬如要生成 monokai 的样式：
 

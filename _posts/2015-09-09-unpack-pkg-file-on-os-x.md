@@ -26,7 +26,7 @@ tags: [Pkgutil]
 
 实际上，**CMB Security Plugin.pkg** 本身就是一个 xar 包：
 
-    $ file CMB\ Security\ Plugin.pkg 
+    $ file CMB\ Security\ Plugin.pkg
     CMB Security Plugin.pkg: xar archive - version 1
 
 可以用如下命令直接解压：

@@ -62,11 +62,13 @@ csrutil 的一些常用命令
 
 这里只说 Clover 用户，你需要配置你的 Clover ，加入如下代码
 
-    <key>RtVariables</key>
-    <dict>
-        <key>CsrActiveConfig</key>
-        <string>0x11</string>
-    </dict>
+```xml
+<key>RtVariables</key>
+<dict>
+    <key>CsrActiveConfig</key>
+    <string>0x11</string>
+</dict>
+```
 
 `<key>RtVariables</key>` 跟 `<key>SMBIOS</key>` 同级，如下图
 

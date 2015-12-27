@@ -15,6 +15,7 @@ tags: [Nginx, PHP-FPM, MariaDB]
     $ brew tap homebrew/php
 
 <!-- more -->
+
 现在我们可以开始安装了
 
     $ brew install --without-apache --with-fpm php54
@@ -23,11 +24,9 @@ tags: [Nginx, PHP-FPM, MariaDB]
 
 如果你用的到 PHP cli，你需要更新下你的环境变量 `~/.bash_profile`
 
-```bash
     if [ -d $(brew --prefix Cellar/php54) ]; then
         export PATH=$(brew --prefix opt/php54)/bin:$PATH
     fi
-```
 
 自启动，检查有无目录 `~/Library/LaunchAgents`，没有的话新建个目录
 
@@ -70,8 +69,9 @@ tags: [Nginx, PHP-FPM, MariaDB]
 
 测试下
 
-```
-$ curl -IL http://localhost:8080
+    $ curl -IL http://localhost:8080
+
+```html
 HTTP/1.1 200 OK
 Server: nginx/1.4.4
 Date: Mon, 06 Jan 2014 07:50:26 GMT
@@ -279,7 +279,7 @@ Thanks for using MariaDB!
 
 为了后面管理方便，将命令 alias 下，`vim ~/.bash_aliases`
 
-```bash
+```shell
 alias nginx.start='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 alias nginx.stop='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 alias nginx.restart='nginx.stop && nginx.start'
@@ -289,7 +289,6 @@ alias php-fpm.restart='php-fpm.stop && php-fpm.start'
 alias mysql.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mariadb.plist"
 alias mysql.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mariadb.plist"
 alias mysql.restart='mysql.stop && mysql.start'
-
 ```
 
 接着编辑 `~/.bash_profile` 文件，添加
@@ -347,14 +346,17 @@ alias mysql.restart='mysql.stop && mysql.start'
 当然一些路径配置成自己的，譬如 php-fpm 的 sock 路径，譬如 www 路径，随后启动 apache 与 php-fpm
 
     $ curl -I localhost:8080
-    HTTP/1.1 200 OK
-    Date: Tue, 14 Oct 2014 01:30:21 GMT
-    Server: Apache/2.4.10 (Unix) mod_fastcgi/2.4.6
-    Last-Modified: Fri, 10 Jan 2014 16:40:21 GMT
-    ETag: "387-4efa061c5c740"
-    Accept-Ranges: bytes
-    Content-Length: 903
-    Content-Type: text/html
+
+```thml
+HTTP/1.1 200 OK
+Date: Tue, 14 Oct 2014 01:30:21 GMT
+Server: Apache/2.4.10 (Unix) mod_fastcgi/2.4.6
+Last-Modified: Fri, 10 Jan 2014 16:40:21 GMT
+ETag: "387-4efa061c5c740"
+Accept-Ranges: bytes
+Content-Length: 903
+Content-Type: text/html
+```
 
 apache 服务端以 mod_fastcgi 运行了。
 

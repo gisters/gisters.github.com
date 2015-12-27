@@ -10,31 +10,38 @@ tags: [Jekyll, Baidu]
 其实也非常的简单，修改 `_config.yml` 成如下
 
 ```yaml
-  analytics :
-    provider : custom
+# 网站统计
+analytics:
+    baidu:
+        siteid: xxxxxxxxxxxxxxxx        # 百度统计 js 代码后的字符串
 ```
 
 <!-- more -->
 
 随后，创建 `_includes/custom` 文件夹，如有的话进入该目录后直接创建 `analytics` 文件
 
-    cd _includes; mkdir custom; cd custom; touch analytics
+    cd _includes; touch baidu-analytics.html
 
-编辑 `analytics` 文件，填充你在百度站长平台获取到的统计代码，譬如
+编辑 `baidu-analytics.html` 文件，填充如下
 
-```html
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?1fedf5827cc1b56fe29a9ce806f5114a";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-```
+{% raw %}
+    {% if site.analytics.baidu.siteid %}
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?{{ site.analytics.baidu.siteid }}";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    {% endif %}
+{% endraw %}
+
+最后，添加一行至你的模版也的 `</body>` 之前
+
+    {% include baidu-analytics.html %}
 
 搞定收工。
 
-- - -
-为什么一定要 `custom` 呢，因为尽量不要动 `_includes/JB/` 文件夹下的文件吧，以后升级方便....
+如果你使用其他统计工具，方法类似。

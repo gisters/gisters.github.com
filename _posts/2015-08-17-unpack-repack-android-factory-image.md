@@ -17,6 +17,7 @@ checkout 你需要的版本，譬如 android-5.1.1_r13
     $ git checkout android-5.1.1_r13
 
 <!-- more -->
+
 编译 simg2img，这里你需要 gcc 工具，linux 用户基本都由现成的
 
     $ cd /your/path/extras/ext4_utils

@@ -16,15 +16,14 @@ tags: [Grub, Syslinux]
 等等。
 
 <!-- more -->
+
 此时就需要手动在 bootloader 界面去输入了
 
 #### Grub2
 
-```
-grub> set root=hd0,0
-grub> linux /boot/3.14.4-gentoo root=/dev/sda2
-grub> boot
-```
+    grub> set root=hd0,0
+    grub> linux /boot/3.14.4-gentoo root=/dev/sda2
+    grub> boot
 
 `hd0,0` 修改为自己的 grub2 所在分区。`sda2` 则为根分区所在的目录，忘记路径的时候可以按 `tab` 来提示。
 

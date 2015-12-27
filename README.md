@@ -1,3 +1,8 @@
+require:
+
+- jekyll >= 3.0.3
+- jekyll-paginate >= 1.1.0
+
 #### Create new post
 
     rake post title='A Title'
@@ -24,5 +29,4 @@ Then, follow tips to do
 - Font Awesome CSS, LESS, and SASS files are licensed under the [MIT License](http://opensource.org/licenses/mit-license.html)
 - Bootstrap is licensed under the [MIT License](http://opensource.org/licenses/mit-license.html)
 - Jekyll is licensed under the [MIT License](http://opensource.org/licenses/mit-license.html)
-- Pygments is licensed under the [BSD License](http://opensource.org/licenses/BSD-2-Clause)
 - Articles are licensed under the [CC BY 3.0 License](http://creativecommons.org/licenses/by/3.0/)

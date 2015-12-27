@@ -12,6 +12,7 @@ tags: [Jekyll, QRCode]
 不过作为 Jekyll 用户，写 Plugin 推静态 html 上去不为我所喜。于是找了下 jQuery，已经有现成的 [QR Code](https://github.com/jeromeetienne/jquery-qrcode) 了，按照说明，一步一步做下去。
 
 <!-- more -->
+
 每个 Jekyll 的模板不太一样，所以做法也不太一样，主要的就是在模板的相关区域添加：
 
     <script src="{{ site.assets_path }}/js/jquery.qrcode.min.js"></script>
@@ -19,17 +20,15 @@ tags: [Jekyll, QRCode]
 然后再需要生成二维码的页面模板中的相关部分，添加：
 
 {% raw %}
-```html
-<div id="code"></div>
+    <div id="code"></div>
 
-<script type="text/javascript">
-  $("#code").qrcode({
-    width: 150,
-    height: 150,
-    text: "http:{{ site.url }}{{ page.url }}"
-  });
-</script>
-```
+    <script type="text/javascript">
+      $("#code").qrcode({
+        width: 150,
+        height: 150,
+        text: "http:{{ site.url }}{{ page.url }}"
+      });
+    </script>
 {% endraw %}
 
 默认的参数

@@ -10,9 +10,10 @@ tags: [Grub, Syslinux, Windows]
 今天看到新闻说，微软 Windows 8 更新服务期限限制到6月10号，得知 Windows 的补丁是一环接一环，这个补丁不安装说不准导致下次什么补丁也装不上，于是，晚上下决心解决该问题。
 
 <!-- more -->
+
 放狗搜，不停的切换关键字，终于在一个社区找到了解决方案。
 
->You are getting INACCESSIBLE\_BOOT\_DEVICE when BFSVC AI tries to access the System Partition (the one with bootmgr). Using diskmgmt.msc, verify that the System Partition is marked Active.
+> You are getting INACCESSIBLE\_BOOT\_DEVICE when BFSVC AI tries to access the System Partition (the one with bootmgr). Using diskmgmt.msc, verify that the System Partition is marked Active.
 
 Grub2 用户非常简单，配置加一行让系统认为 Windows 8.1 分区是 bootable 分区
 
@@ -20,14 +21,12 @@ Grub2 用户非常简单，配置加一行让系统认为 Windows 8.1 分区是 
 
 msdos3 为你 Windows 8.1 所在的分区，最终的结果类似于
 
-```
-menuentry "Microsoft Windows 8.1" {
-    insmod chain
-    set root=(hd0,msdos3)
-    parttool (hd0,msdos3) boot+
-    chainloader +1
-}
-```
+    menuentry "Microsoft Windows 8.1" {
+        insmod chain
+        set root=(hd0,msdos3)
+        parttool (hd0,msdos3) boot+
+        chainloader +1
+    }
 
 然后重新生成下 Grub2 配置文件
 
@@ -35,7 +34,7 @@ menuentry "Microsoft Windows 8.1" {
 
 而我使用 Syslinux，不幸的是没有相关解决方案，翻篇了 Syslinux 的 [wiki](http://www.syslinux.org/wiki/index.php/Comboot/chain.c32) 也没有相关的说明。
 
->An alternate MBR which Syslinux provides is: altmbr.bin. This MBR does not scan for bootable partitions; instead, the last byte of the MBR is set to a value indicating which partition to boot from.
+> An alternate MBR which Syslinux provides is: altmbr.bin. This MBR does not scan for bootable partitions; instead, the last byte of the MBR is set to a value indicating which partition to boot from.
 
 实在是没辙了，只能使用笨办法：
 
@@ -51,12 +50,10 @@ menuentry "Microsoft Windows 8.1" {
 
 顺便说下，用 syslinux 引导 clover 黑苹果，也很简单。
 
-```
-LABLE macosx
-    MENU LABEL Mac OS X with Clover
-    com32 chain.c32
-    APPEND hd1 1
-```
+    LABLE macosx
+        MENU LABEL Mac OS X with Clover
+        com32 chain.c32
+        APPEND hd1 1
 
 很熟悉是不是，Syslinux 通过 BIOS 引导黑苹果所在硬盘的 mbr，从而启动 clover 来引导黑苹果。UEFI 则没尝试，有谁成功引导 win & mac 的可以告知下。
 

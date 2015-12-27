@@ -12,6 +12,7 @@ Widget Logic 插件给每个 widget 一个扩展控制 Widget logic，你可以�
 #### 插件使用方法
 
 <!-- more -->
+
 1. 首先在本页下方链接下载 Widget Logic 插件，安装到您的博客上并激活。
 2. 激活后进入 外观>小工具 里面发现在可用小工具的最下方多出了一项：Widget Logic options ，勾选 Widget Logic options 这个后面的复选框点击保存。
 3. 这时候您就可以根据自己的需要去更改您的侧边栏显示内容了。比如您要修改侧边栏里面的友情链接只在首页显示，那么您只需要在 Widget logic 后面的文本框里面输入：is_home() 就可以了

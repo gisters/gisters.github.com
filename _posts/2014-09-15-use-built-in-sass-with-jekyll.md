@@ -14,6 +14,7 @@ tags: [Jekyll, Usage, Sass]
 - 对 Sass 有一些了解
 
 <!-- more -->
+
 一般大家都喜欢将 Jekyll push 到 GitHub Pages 上，那么首先对比下 GitHub Pages 上对版本的要求吧：<https://pages.github.com/versions/>。
 
 一切准备就绪，下面开始安装 Sass：
@@ -24,7 +25,6 @@ tags: [Jekyll, Usage, Sass]
 
     ---
     ---
-    // your scss here
 
 那么，在 `$ jekyll build` 编译后，会自动将 `css/style.scss` 转化成 `_site/css/style.css`。
 
@@ -41,8 +41,10 @@ tags: [Jekyll, Usage, Sass]
 
 在你的 `_config.yml` 中的适当地方添加如下：
 
-    sass:
-        sass_dir: _sass
+```yaml
+sass:
+    sass_dir: _sass
+```
 
 最后在 `css/style.scss` 中引入：
 
@@ -57,13 +59,17 @@ tags: [Jekyll, Usage, Sass]
 
 `_sass` 是 Jekyll 默认的目录，你可以设置到其他地方，只需 `_config.yml` 中声明好即可：
 
-    sass:
-        sass_dir: path/_lib
+```yaml
+sass:
+    sass_dir: path/_lib
+```
 
 顺便提一下，内置的 Sass 编译器支持压缩：
 
-    sass:
-        sass_dir: path/_lib
-        style: :compressed
+```yaml
+sass:
+    sass_dir: path/_lib
+    style: :compressed
+```
 
 参考：<http://jekyllrb.com/docs/assets/>

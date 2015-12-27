@@ -12,6 +12,7 @@ tags: [Adblock, ChinaList]
 点击主页进去后才发现，ChinaList 项目已经于 **2014-03-26** 起不再维护。这究竟只是一种对 Adblock Plus 官网的抗议行为，还是今后永不再维护，不得而知。
 
 <!-- more -->
+
 事件的起因很简单，Adblock Plus 商业化运作后，有个小选项，**允许一些非侵入式广告**，且默认是勾选状态。这对于一些用户来说，是难以忍受的。我们留在广告中的 cookies 信息，可以轻易的让广告商定位我们，进而是定向推送精准广告，亦或是直接买卖资料就不得而知。而用户是难以相信所谓的行业自律的。所以，很多用户去掉了**允许一些非侵入式广告** 的勾选。另外，另外，加上 ChinaList 民间组织的项目被 Adblock Plus 重定向，ChinaList 项目维护者由于气愤不过，停止了维护。
 
 ![ChinaList Announcements](//cdn.09hd.com/images/2014/04/Chinalist-03.png)

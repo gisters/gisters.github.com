@@ -18,6 +18,7 @@ lilo 默认等待 2 分钟，够夸张的，编辑 `/etc/lilo.conf`
     timeout = 30            # 3 秒钟
 
 <!-- more -->
+
 随后运行以下命令使之生效
 
     $ su -l -c "/sbin/lilo -v"

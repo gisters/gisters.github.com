@@ -12,25 +12,24 @@ tags: [Localized]
 譬如创建个英文目录 "Virtual Machines", 想以中文 "虚拟机" 来显示。
 
 <!-- more -->
+
 #### 一. 系统级
 
 在目录 `/System/Library/CoreServices/SystemFolderLocalizations/zh_CN.lproj` 的文件 `SystemFolderLocalizations.strings` 定义了常用的中文目录名称的显示，内容如下：
 
-```
-{   Applications = "应用程序";
-    Compositions = "Compositions";
-    "Deleted Users" = "已删除的用户";
-    Desktop = "桌面";
-    Documents = "文稿";
-    Downloads = "下载";
-    ……
-    Sites = "站点";
-    System =Sites "系统";
-    Users = "用户";
-    Utilities = "实用工具";
-    "Web Receipts" = "Web Receipts";
-}
-```
+    {   Applications = "应用程序";
+        Compositions = "Compositions";
+        "Deleted Users" = "已删除的用户";
+        Desktop = "桌面";
+        Documents = "文稿";
+        Downloads = "下载";
+        ……
+        Sites = "站点";
+        System =Sites "系统";
+        Users = "用户";
+        Utilities = "实用工具";
+        "Web Receipts" = "Web Receipts";
+    }
 
 规则很清楚，含空格或特殊字符的目录，请用双引号，如果要中文化 **Virtial Machines** 目录，只需在其中添加如下一行即可：
 

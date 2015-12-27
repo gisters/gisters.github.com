@@ -10,42 +10,61 @@ tags: [Clover, EFI]
 ![Clover UEFI](http://cdn.09hd.com/images/2015/12/clover.jpg)
 
 <!-- more -->
-黑苹果不动，因为本身就是 Clover 引导的，Windows 10 则用 gpt 分区并重装了系统。而 Gentoo 的引导，有些复杂，因为 Clover 貌似不能直接启动 kernel （看到 [Archlinux Wiki](https://wiki.archlinux.org/index.php/Clover)）上的介绍，可惜不成功，Clover 中压根就不出现 linux 启动菜单。所以我的 Gentoo 引导的做法是 Clover -> Grub2 -> kernel。
 
-由于 Clover 能自动扫每块硬盘引导区，所以，不需要配置 Clover，唯一要做的，似乎也只剩下 grub2 UEFI 的安装了。
+黑苹果不动，因为本身就是 Clover 引导的，Windows 10 则用 gpt 分区并重装了系统。而 Gentoo 的引导，有些复杂，因为 Clover 貌似不能同时扫出另一块硬盘的两个系统，Clover 中只出现 Windows 10 的菜单，而不出现 Linux 菜单（不安装 Grub UEFI 的情况下）。幸好，ArchLinux wiki 上有一遍可以自定义 Clover 的 Linux 启动项配置。
 
-此时，出现一个问题，敝人的 Gentoo liveusb 是 mbr 的，chroot 进 Gentoo 后，无法完成 Grub2 UEFI 的安装。无奈，在 Windows 下用 [Rufus](http://rufus.akeo.ie) 制作了一个 ubuntu 的 UEFI 的 u 盘启动盘。启动后，chroot 进 Gentoo，才顺利完成 Grub UEFI 的安装。
+之前安装 windows 10 的时候是自动分区的，然后磁盘压缩一个空间给 Gentoo 使用，所以，我的两块 SSD 上的分区是这样的：
 
-之前安装 windows 10 的时候是自动分区的，然后磁盘压缩一个空间给 Gentoo 使用，所以，那块 SSD 上的分区是这样的：
+    /dev/sda1           Windows Recovery
+    /dev/sda2           EFI
+    /dev/sda3           Microsoft Reserved
+    /dev/sda4           Windows 10
+    /dev/sda5           Gentoo
+    /dev/sdb1           EFI
+    /dev/sdb2           Macintosh HD
+    /dev/sdb3           Recovery HD
 
+通过 Gentoo LiveUSB 启动后：
+
+    # mount /dev/sda5 /mnt/gentoo
+    # mount /dev/sda2 /mnt/gentoo/boot
+    # mount -t proc proc /mnt/gentoo
+    # mount --rbind /sys /mnt/gentoo/sys
+    # mount --rbind /dev /mnt/gentoo/dev
+    # chroot /mnt/gentoo /bin/bash
+    # env-update && . /etc/profile
+
+成功 chroot 进 Gentoo 环境后，按照文章 [《UEFI 固件启动 Gentoo EFI Stub kernel》]({% post_url 2015-12-25-efi-boot-stub-for-gentoo %}) 进行生成一个 EFISTUB kernel，并拷贝到 EFI 所在分区的 `\EFI\Gentoo\gentoo.efi`，即 `/boot/EFI/Gentoo/gentoo.efi`。最后，就是将 Clover 所在的硬盘的 EFI 挂载上，在我这里就是 `/dev/sdb1`，编辑下 Clover 配置，适当位置添加如下：
+
+```xml
+<key>Theme</key>
+<string>bootcamp</string>
+<key>Custom</key>   <!--GUI 的子项，与 Theme 并列-->
+<dict>
+    <key>Entries</key>
+    <array>
+        <dict>
+            <key>Disabled</key>
+            <false/>
+            <key>FullTitle</key>
+            <string>Gentoo Linux</string>
+            <key>Hidden</key>
+            <false/>
+            <key>Ignore</key>
+            <false/>
+            <key>Path</key>
+            <string>\EFI\Gentoo\gentoo.efi</string>
+            <key>Type</key>
+            <string>Linux</string>
+            <key>Volume</key>
+            <string>EFI</string>
+            <key>VolumeType</key>
+            <string>Internal</string>
+        </dict>
+    </array>
+</dict>
 ```
-/dev/sda1 			Windows Recovery
-/dev/sda2 			EFI
-/dev/sda3 			Nucrisift Reserved
-/dev/sda4 			Windows 10
-/dev/sda5 			Gentoo
-```
 
-ubuntu 的 UEFI 启动 u 盘启动，选试用，启动到桌面，打开终端
+OK，基本差不多了，Clover UEFI 能顺利识别。
 
-```
-$ sudo su -
-$ mkdir /mnt/gentoo
-$ mount /dev/sda5 /mnt/gentoo
-$ mkdir /mnt/gentoo/boot/efi
-$ mount /dev/sda2 /mnt/gentoo/boot/efi
-$ mount -t proc proc /mnt/gentoo
-$ mount --rbind /sys /mnt/gentoo/sys
-$ mount --rbind /dev /mnt/gentoo/dev
-$ chroot /mnt/gentoo /bin/bash
-$ env-update && . /etc/profile
-```
-
-成功 chroot 进 Gentoo 环境后，通过 emerge 安装一个 grub，再编辑下 `/etc/default/grub` 与 `/etc/grub.d/40-custom` 后，生成配置文件，并安装：
-
-```
-$ grub2-mkconfig -o /boot/grub/grub.cfg
-$ grub2-install --target=x86_64-efi --efi-directory=/boot/efi
-```
-
-OK，基本差不多了，主板开机项多出一个 Gentoo 启动项，Clover UEFI 也能顺利识别。
+参考：<https://wiki.archlinux.org/index.php/Clover>

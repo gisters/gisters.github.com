@@ -14,6 +14,7 @@ tags: [pptp, Configuration, CLI]
 ![pptp 1](//cdn.09hd.com/images/2011/08/1.png "pptp 1")
 
 <!-- more -->
+
 完毕后的配置文件类似于
 
     # cat /etc/ppp/peers/vpncup

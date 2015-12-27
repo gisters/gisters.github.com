@@ -10,6 +10,7 @@ tags: [Firewall, Usage]
 ![firewall stack](//cdn.09hd.com/images/2015/01/firewall_stack.png)
 
 <!-- more -->
+
 安装它，只需
 
     # yum install firewalld
@@ -92,7 +93,7 @@ Firewall 能将不同的网络连接归类到不同的信任级别，Zone 提供
 
     # firewall-cmd --panic-on           # 丢弃
     # firewall-cmd --panic-off          # 取消丢弃
-    $ firewall-cmd --query-panic        # 查看丢弃状态
+    # firewall-cmd --query-panic        # 查看丢弃状态
     # firewall-cmd --reload             # 更新规则，不重启服务
     # firewall-cmd --complete-reload    # 更新规则，重启服务
 
@@ -108,7 +109,7 @@ Firewall 能将不同的网络连接归类到不同的信任级别，Zone 提供
 
 列出 dmz 级别的被允许的进入端口
 
-    # firewall-cmd --zome=dmz --list-ports
+    # firewall-cmd --zone=dmz --list-ports
 
 允许 tcp 端口 8080 至 dmz 级别
 
@@ -116,7 +117,7 @@ Firewall 能将不同的网络连接归类到不同的信任级别，Zone 提供
 
 允许某范围的 udp 端口至 public 级别，并永久生效
 
-    # firewall-cmd --zome=public --add-port=5060-5059/udp --permanent
+    # firewall-cmd --zone=public --add-port=5060-5059/udp --permanent
 
 ###### b. 管理服务
 

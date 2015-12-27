@@ -20,6 +20,7 @@ tags: [Lftp, Usage, Configuration, CLI]
 也可以先不带用户名登录，然后在接口界面下用login命令来用指定账号登录，密码不显示。
 
 <!-- more -->
+
 #### 查看文件与改变目录
 
     ls
@@ -129,7 +130,7 @@ lftp 缺省不会显示 ftp 服务器的欢迎信息和错误信息，这在很�
 
     ftp> lcd ldir
 
-默认为 `/home/user`
+默认为 **/home/user**
 比如改成 `lcd /home/user/download`
 
 队列命令（不必等到下载完毕再输入命令）
@@ -174,26 +175,24 @@ ctrl+z 后台运行
 
 下面是我个人的配置
 
-```ini
-#debug 3
-set ftp:charset "gbk"
-set sftp:charset "UTF-8"
-set file:charset "UTF-8"
-alias gbk "set ftp:charset gbk; set file:charset UTF-8"
-alias utf8 "set ftp:charset UTF-8; set file:charset UTF-8"
-alias passive "set ftp:passive-mode"
-set ftp:ssl-auth TLS-P
-set ftp:ssl-protect-data yes
-set ftp:use-feat no
-set ssl:verify-certificate no
-set ftp:ssl-allow no
-set ftp:ssl-force no
-set ftp:passive-mode yes
-set pget:default-n 1
-#set persist-retries 5
-set reconnect-interval-base 999
-set reconnect-interval-multiplier 1
-set net:limit-rate 61440,1024000
-set prompt "\[\e[1;36m\]lftp\[\e[m\] \[\e[0;32m\]\S\? \u\@\h:\w>\[\e[m\] "
-set ftp:list-empty-ok yes
-```
+    #debug 3
+    set ftp:charset "gbk"
+    set sftp:charset "UTF-8"
+    set file:charset "UTF-8"
+    alias gbk "set ftp:charset gbk; set file:charset UTF-8"
+    alias utf8 "set ftp:charset UTF-8; set file:charset UTF-8"
+    alias passive "set ftp:passive-mode"
+    set ftp:ssl-auth TLS-P
+    set ftp:ssl-protect-data yes
+    set ftp:use-feat no
+    set ssl:verify-certificate no
+    set ftp:ssl-allow no
+    set ftp:ssl-force no
+    set ftp:passive-mode yes
+    set pget:default-n 1
+    #set persist-retries 5
+    set reconnect-interval-base 999
+    set reconnect-interval-multiplier 1
+    set net:limit-rate 61440,1024000
+    set prompt "\[\e[1;36m\]lftp\[\e[m\] \[\e[0;32m\]\S\? \u\@\h:\w>\[\e[m\] "
+    set ftp:list-empty-ok yes

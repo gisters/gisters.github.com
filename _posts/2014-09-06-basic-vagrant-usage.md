@@ -14,18 +14,17 @@ Vagrant 的安装非常简单，各个 linux 发行版可以直接通过包管�
     $ brew cask install vagrant
 
 <!-- more -->
+
 建立你自己的 Vagrant 也非常简单，
 
     $ mkdir /your/path/vagrant_name; cd /your/path/vagrant_name; vagrant init gentoo
 
 此命令会在 `/your/path/vagrant_name` 目录下建立 **Vagrantfile** 基础配置文件，你可以通过 git 等方式来分享。下面在此目录下执行 `vagrant box add xxx` 去拉一个现成的镜像下来，鄙人还是习惯拉 Gentoo 的一个 vbox 镜像。当然下面例子中的 Gentoo 镜像存放在 dropbox 中，内地的网络环境 **你懂得**，故需要一些 **你懂得** 操作，这里不做介绍了。
 
-```console
-$ vagrant box add gentoo https://dl.dropboxusercontent.com/s/xfl63k64zliixid/gentoo-20131029-i686.box
-==> box: Adding box 'gentoo' (v0) for provider:
-box: Downloading: https://dl.dropboxusercontent.com/s/xfl63k64zliixid/gentoo-20131029-i686.box
-==> box: Successfully added box 'gentoo' (v0) for 'virtualbox'!
-```
+    $ vagrant box add gentoo https://dl.dropboxusercontent.com/s/xfl63k64zliixid/gentoo-20131029-i686.box
+    ==> box: Adding box 'gentoo' (v0) for provider:
+    box: Downloading: https://dl.dropboxusercontent.com/s/xfl63k64zliixid/gentoo-20131029-i686.box
+    ==> box: Successfully added box 'gentoo' (v0) for 'virtualbox'!
 
 除了直接去网址下载，也可以直接下载 **Vagrant Cloud** 中的镜像
 
@@ -40,39 +39,33 @@ box: Downloading: https://dl.dropboxusercontent.com/s/xfl63k64zliixid/gentoo-201
 
 镜像拉下来后，就可以启动了
 
-```console
-$ vagrant up
-Bringing machine 'default' up with 'virtualbox' provider...
-==> default: Importing base box 'gentoo'...
-==> default: Matching MAC address for NAT networking...
-==> default: Setting the name of the VM: vagrant_default_1410100872394_79587
-==> default: Clearing any previously set forwarded ports...
-==> default: Clearing any previously set network interfaces...
-==> default: Preparing network interfaces based on configuration...
-    default: Adapter 1: nat
-==> default: Forwarding ports...
-    default: 22 => 2222 (adapter 1)
-==> default: Booting VM...
-==> default: Waiting for machine to boot. This may take a few minutes...
-    default: SSH address: 127.0.0.1:2222
-    default: SSH username: vagrant
-    default: SSH auth method: private key
-    default: Warning: Connection timeout. Retrying...
-==> default: Machine booted and ready!
-==> default: Checking for guest additions in VM...
-==> default: Mounting shared folders...
-    default: /vagrant => /Users/Havee/Documents/git/vagrant
-```
+    $ vagrant up
+    Bringing machine 'default' up with 'virtualbox' provider...
+    ==> default: Importing base box 'gentoo'...
+    ==> default: Matching MAC address for NAT networking...
+    ==> default: Setting the name of the VM: vagrant_default_1410100872394_79587
+    ==> default: Clearing any previously set forwarded ports...
+    ==> default: Clearing any previously set network interfaces...
+    ==> default: Preparing network interfaces based on configuration...
+        default: Adapter 1: nat
+    ==> default: Forwarding ports...
+        default: 22 => 2222 (adapter 1)
+    ==> default: Booting VM...
+    ==> default: Waiting for machine to boot. This may take a few minutes...
+        default: SSH address: 127.0.0.1:2222
+        default: SSH username: vagrant
+        default: SSH auth method: private key
+        default: Warning: Connection timeout. Retrying...
+    ==> default: Machine booted and ready!
+    ==> default: Checking for guest additions in VM...
+    ==> default: Mounting shared folders...
+        default: /vagrant => /Users/Havee/Documents/git/vagrant
 
 嗯，你的虚拟机已经起来了，连接的话，直接 `vagrant ssh` 即可
 
     $ vagrant ssh
-    vagrant@local ~ $
-
-```console
-vagrant@local ~ $ uname -a
-Linux local 3.10.7-gentoo-r1 #1 SMP Wed Oct 30 20:15:42 UTC 2013 i686 Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz GenuineIntel GNU/Linux
-```
+    vagrant@local ~ $ uname -a
+    Linux local 3.10.7-gentoo-r1 #1 SMP Wed Oct 30 20:15:42 UTC 2013 i686 Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz GenuineIntel GNU/Linux
 
 随后，你就可以随意的根据你的习惯，去部署你的一切。当然如果你觉得 vbox 笨重的话，Vagrant + CoreOS + docker 是一个非常好的解决方案。
 
@@ -180,13 +173,11 @@ end
 
 打包，当然是退出你的虚拟机后再操作的。
 
-```console
-$ vagrant package
-==> gentoo: Attempting graceful shutdown of VM...
-==> gentoo: Clearing any previously set forwarded ports...
-==> gentoo: Exporting VM...
-==> gentoo: Compressing package to: /Users/Havee/Documents/git/vagrant/package.box
-```
+    $ vagrant package
+    ==> gentoo: Attempting graceful shutdown of VM...
+    ==> gentoo: Clearing any previously set forwarded ports...
+    ==> gentoo: Exporting VM...
+    ==> gentoo: Compressing package to: /Users/Havee/Documents/git/vagrant/package.box
 
 将 package.box 拿给同事吧，让他们加入该 box，你们的开发环境就完全一致了
 

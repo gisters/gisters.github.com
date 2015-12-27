@@ -23,6 +23,7 @@ Convert 是 ImageMagick 中的一个常用组件。
     $ convert -fill color -font font -pointsize 20 -draw "text 10,20 'hello'" input.png output.png
 
 <!-- more -->
+
 给图片增加注释
 
     $ convert -font monospace -fill red -pointsize 36 -draw 'text 10,50 "ihavanna.org"' Shanghai.jpg comment.jpg

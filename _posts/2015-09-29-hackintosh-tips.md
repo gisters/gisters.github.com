@@ -25,6 +25,7 @@ tags: [OS X, Hackintosh]
     $ sudo kextcache -f -u /
 
 <!-- more -->
+
 ##### 修改显示机型
 
 1. 用 clover 配置文件修改机型，具体型号可以查询 <http://www.tonymacx86.com/wiki/index.php/Smbios.plist>

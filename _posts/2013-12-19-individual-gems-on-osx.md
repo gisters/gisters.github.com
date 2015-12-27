@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OS X 的 rubygems 用户目录"
-category: "MAC"
+category: "Mac"
 tags: [Ruby, Gem]
 ---
 
@@ -13,6 +13,7 @@ tags: [Ruby, Gem]
     You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory.
 
 <!-- more -->
+
 嗯，我知晓只要 `sudo` 安装即可解决问题，可 Gentoo 下养成的洁癖不是说改就能改的啊，好吧，方法：
 
 在 `~/.gemrc` 文件中添加如下
@@ -21,9 +22,10 @@ tags: [Ruby, Gem]
 
 然后在 `~/.profile` 中添加如下
 
-    # gem home
-    if [ -f /usr/bin/gem ]; then
-        export GEM_HOME=$HOME/.gem
-        export PATH=$GEM_HOME/bin:$PATH
-    fi
-
+```shell
+# gem home
+if [ -f /usr/bin/gem ]; then
+    export GEM_HOME=$HOME/.gem
+    export PATH=$GEM_HOME/bin:$PATH
+fi
+```

@@ -88,13 +88,11 @@ tags: [Gentoo, Arch, Android]
 
 关于卸载补充下，譬如安装 opera mobile，adb uninstall 后边的参数不应该是 .apk 文件，而是包名，即 AndroidMainifest.xml 文件中 <manifest> 节点下，package 元素所指定的名字。或者 adb shell 进设备看下
 
-```
-# cd .data/app
-# ls
-......
-com.opera.browser-1.apk
-......
-```
+    # cd .data/app
+    # ls
+    ......
+    com.opera.browser-1.apk
+    ......
 
 那么卸载就是
 
@@ -102,25 +100,23 @@ com.opera.browser-1.apk
 
 Archlinux 下配置也很简单，照着 wiki 跑就是，不过最后运行 android 时有个错误：
 
-```
-^_^ /opt/android-sdk/platform-tools $ android
-Exception in thread "main" java.lang.UnsupportedClassVersionError: org/eclipse/swt/widgets/Display : Unsupported major.minor version 51.0
-        at java.lang.ClassLoader.defineClass1(Native Method)
-        at java.lang.ClassLoader.defineClass(ClassLoader.java:634)
-        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
-        at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
-        at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
-        at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
-        at java.security.AccessController.doPrivileged(Native Method)
-        at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
-        at java.lang.ClassLoader.loadClass(ClassLoader.java:321)
-        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
-        at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
-        at com.android.sdkmanager.Main.showSdkManagerWindow(Main.java:328)
-        at com.android.sdkmanager.Main.doAction(Main.java:316)
-        at com.android.sdkmanager.Main.run(Main.java:118)
-        at com.android.sdkmanager.Main.main(Main.java:101)
-```
+    ^_^ /opt/android-sdk/platform-tools $ android
+    Exception in thread "main" java.lang.UnsupportedClassVersionError: org/eclipse/swt/widgets/Display : Unsupported major.minor version 51.0
+            at java.lang.ClassLoader.defineClass1(Native Method)
+            at java.lang.ClassLoader.defineClass(ClassLoader.java:634)
+            at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+            at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+            at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+            at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+            at java.security.AccessController.doPrivileged(Native Method)
+            at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+            at java.lang.ClassLoader.loadClass(ClassLoader.java:321)
+            at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+            at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+            at com.android.sdkmanager.Main.showSdkManagerWindow(Main.java:328)
+            at com.android.sdkmanager.Main.doAction(Main.java:316)
+            at com.android.sdkmanager.Main.run(Main.java:118)
+            at com.android.sdkmanager.Main.main(Main.java:101)
 
 两个方案：
 

@@ -5,35 +5,32 @@ category: Internet
 tags: [Nginx,Domain]
 ---
 
-最近，忽然又想重新拿起博客域名，想备案了，拿到阿里云上，等待4天左右，拿到备案号。
+最近，忽然又想重新拿起博客域名，想备案了，拿到阿里云上，等待 4 天左右，拿到备案号。
 
-由于阿里云的备案复查比较严，时不时给你个电话告诉你，你的域名没解析到备案IP。于是想了个办法，[Nginx](http://nginx.org/) 的域名反向代理。
+由于阿里云的备案复查比较严，时不时给你个电话告诉你，你的域名没解析到备案 IP。于是想了个办法，[Nginx](http://nginx.org/) 的域名反向代理。
 
-想到就做，将 `ihavanna.org` 解析到阿里云指定IP：
+想到就做，将 **ihavanna.org** 解析到阿里云指定 IP：
 
-```sh
-$ dig ihavanna.org +nostats +nocomments +nocmd
+    $ dig ihavanna.org +nostats +nocomments +nocmd
 
-; <<>> DiG 9.9.2-P2 <<>> ihavanna.org +nostats +nocomments +nocmd
-;; global options: +cmd
-;ihavanna.org.                  IN      A
-ihavanna.org.           3600    IN      A       111.111.111.111
-```
+    ; <<>> DiG 9.9.2-P2 <<>> ihavanna.org +nostats +nocomments +nocmd
+    ;; global options: +cmd
+    ;ihavanna.org.                  IN      A
+    ihavanna.org.           3600    IN      A       111.111.111.111
 
 <!-- more -->
-将 `www.ihavanna.org` cname 到 `ihavanna.org`：
 
-```sh
-$ dig www.ihavanna.org +nostats +nocomments +nocmd
+将 **www.ihavanna.org** cname 到 **ihavanna.org**：
 
-; <<>> DiG 9.9.2-P2 <<>> www.ihavanna.org +nostats +nocomments +nocmd
-;; global options: +cmd
-;www.ihavanna.org.              IN      A
-www.ihavanna.org.       3600    IN      CNAME   ihavanna.org.
-ihavanna.org.           3600    IN      A       111.111.111.111
-```
+    $ dig www.ihavanna.org +nostats +nocomments +nocmd
 
-同时ssh到阿里云，创建个主机配置文件：
+    ; <<>> DiG 9.9.2-P2 <<>> www.ihavanna.org +nostats +nocomments +nocmd
+    ;; global options: +cmd
+    ;www.ihavanna.org.              IN      A
+    www.ihavanna.org.       3600    IN      CNAME   ihavanna.org.
+    ihavanna.org.           3600    IN      A       111.111.111.111
+
+同时 ssh 到阿里云，创建个主机配置文件：
 
 ```nginx
 server {

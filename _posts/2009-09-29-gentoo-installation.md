@@ -10,22 +10,21 @@ tags: [Gentoo, CLI, Lerning]
 
 由于是在vbox3中练手，所以只给了4个G的空间
 
-首先从网上下载 install-x86-minimal-20090912.iso
+首先从网上下载 install-x86-minimal-xxx.iso
 
 找最近日期的下载，mirrors.163.com 是个不错的源，速度很不错。
 
 启动安装光盘，F1,比较讨厌 FB，更是由于在 vbox 中安装，所以选择启动 gentoo-nofb
 
 <!-- more -->
+
 接下来网络，net-setup eth0，回答几个问题，网络就上去了，测试网络ping -c 3 www.baidu.com
 
 然后分区，fdisk 看的晕头转向，这里我使用 cfdisk 来分区，比较直观
 
-```
-/dev/hda1 *  1   62  31216+    83  Linux
-/dev/hda2        63  1049996854  82 Linux swap
-/dev/hda3        1055 83223663072  83 Linux
-```
+    /dev/hda1 *  1   62  31216+    83  Linux
+    /dev/hda2        63  1049996854  82 Linux swap
+    /dev/hda3        1055 83223663072  83 Linux
 
 应用文件系统
 
@@ -43,7 +42,7 @@ tags: [Gentoo, CLI, Lerning]
 进入目录
 
     # cd /mnt/gentoo
-	
+
 下载 stage3-i686-2008.0.tar.bz2 与 portage-latest.tar.bz2
 
     # links http://mirrors.163.com
@@ -110,7 +109,7 @@ OK，准备工作完成。
 
     # nano -w /etc/locale.gen
     en_US ISO-8859-1
-    en_US.UTF-8 UTF-8425 
+    en_US.UTF-8 UTF-8425
     zh_CN.GB18030 GB18030
     zh_CN.GBK GBK
     zh_CN.UTF-8 UTF-8
@@ -225,6 +224,6 @@ OK，准备工作完成。
     grub> quit
     # exit
     # cd ~
-    # 
+    #
     # umount /mnt/gentoo/boot /mnt/gentoo/dev /mnt/gentoo/proc /mnt/gentoo
-    # reboot 
+    # reboot

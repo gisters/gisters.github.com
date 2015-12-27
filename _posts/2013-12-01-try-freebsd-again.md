@@ -14,6 +14,7 @@ tags: [freebsd]
     sm_meta[xxx]: My unqualified host name (hostname) unknown; sleeping for retry
 
 <!-- more -->
+
 按 `ctrl_c` 后继续，这个只需在 `/etc/hosts` 中 alias 下即可，譬如
 
     127.0.0.1   localhost   localhost.my.domain     hostname

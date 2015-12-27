@@ -16,6 +16,7 @@ tags: [Git, Usage]
     git rebase new
 
 <!-- more -->
+
 这样会将 new 分支的变更合并过来，并按照提交的顺序排序，出现冲突时，先解决冲突，然后
 
     git add .

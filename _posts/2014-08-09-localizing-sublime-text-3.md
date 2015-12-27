@@ -10,6 +10,7 @@ tags: [Localized]
 ![localizing Sublime Text 3](//cdn.09hd.com/images/2014/08/localizing-sublime-text-3.png)
 
 <!-- more -->
+
 网上溜达一圈，发现，原来已有前人早做了工作，只是个别用语不符合我的习惯。修改下，放 github 上以集众人智慧来完善 Sublime Text 的中文化。
 
 - 首先去 [https://github.com/Ihavee/st3-zh_CN/releases/latest](https://github.com/Ihavee/st3-zh_CN/releases/latest) 下载最新的 `Default.sublime-package` 两进制文件

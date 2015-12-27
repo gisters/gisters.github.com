@@ -19,164 +19,157 @@ tags: [Funtoo, Installation]
 
 下面是具体的安装步骤
 
-发现，Funtoo 相比于 Gentoo 最大的区别就是简化了安装步骤，Portage 改为 Git 管理且包含了 Sunrise Overlay，以及 Grub、net 设置变简单了。如果是第一次安装，则推荐 Funtoo；如果已经用上最新 Portage 的 Gentoo，则完全没有必要切换到 Fentoo。
+发现，Funtoo 相比于 Gentoo 最大的区别就是简化了安装步骤，Portage 改为 Git 管理且包含了 Sunrise Overlay，以及 Grub、net 设置变简单了。如果是第一次安装，则推荐 Funtoo；如果已经用上最新 Portage 的 Gentoo，则完全没有必要切换到 Funtoo。
 
-```
 Create ext4 filesystem with labels
-==================================
-# mkswap -L swap /dev/sda2
-# mkfs.ext4 -L root /dev/sda3
-# mkfs.ext4 -L home /dev/sda4
- 
+
+    # mkswap -L swap /dev/sda2
+    # mkfs.ext4 -L root /dev/sda3
+    # mkfs.ext4 -L home /dev/sda4
+
 Setting reserved blocks percentage
-==================================
-# tune2fs -m 1 /dev/sda3
-# tune2fs -m 0 /dev/sda4
- 
+
+    # tune2fs -m 1 /dev/sda3
+    # tune2fs -m 0 /dev/sda4
+
 Mount swap and other partitions
-================================
-# swapon /dev/sda2
-# mount /dev/sda3 /mnt/gentoo
- 
+
+    # swapon /dev/sda2
+    # mount /dev/sda3 /mnt/gentoo
+
 Check if the date is correct
-===========================
-# date
- 
+
+    # date
+
 Go to the installation directory
-=================================
-# cd /mnt/gentoo
- 
+
+    # cd /mnt/gentoo
+
 Download and extract the stage3 file for your system. I use amd64. You can find other architecturess here:
- 
+
 http://distro.ibiblio.org/pub/linux/distributions/funtoo/funtoo/
- 
-========================================================================
- 
-# wget http://distro.ibiblio.org/pub/linux/distributions/funtoo/funtoo/amd64/funtoo-amd64-2010.09.05/stage3-amd64-2010.09.05.tar.xz
- 
-# tar xpf stage3-amd64-2010.08.22.tar.xz
- 
+
+    # wget http://distro.ibiblio.org/pub/linux/distributions/funtoo/funtoo/amd64/funtoo-amd64-2010.09.05/stage3-amd64-2010.09.05.tar.xz
+
+    # tar xpf stage3-amd64-2010.08.22.tar.xz
+
 Download and extract the portage tree, you find the most recent snapshot here: http://distro.ibiblio.org/pub/linux/distributions/funtoo/~funtoo/snapshots/
-=====================================
-# wget http://distro.ibiblio.org/pub/linux/distributions/funtoo/~funtoo/snapshots/portage-2010.09.10.tar.xz
-# cd /mnt/gentoo/usr
-# tar xf /mnt/gentoo/portage-2010.08.27.tar.xz
- 
+
+    # wget http://distro.ibiblio.org/pub/linux/distributions/funtoo/~funtoo/snapshots/portage-2010.09.10.tar.xz
+    # cd /mnt/gentoo/usr
+    # tar xf /mnt/gentoo/portage-2010.08.27.tar.xz
+
 Mount your home partition (if you have one)
-============================================
-# mount /dev/sda4 /mnt/gentoo/home
- 
+
+    # mount /dev/sda4 /mnt/gentoo/home
+
 Configure your compile options
-==============================
-# nano -w /mnt/gentoo/etc/make.conf
- 
+
+    # nano -w /mnt/gentoo/etc/make.conf
+
 e.g. add for a quadcore processor to your make.conf
 MAKEOPTS="-j5"
- 
+
 Chroot in your Funtoo install
-=============================
-# cp -L /etc/resolv.conf /mnt/gentoo/etc/
-# mount -t proc none /mnt/gentoo/proc
-# mount -o bind /dev /mnt/gentoo/dev
- 
-# chroot /mnt/gentoo /bin/bash
-# env-update
-# source /etc/profile
-# export PS1="(chroot) $PS1"
- 
+
+    # cp -L /etc/resolv.conf /mnt/gentoo/etc/
+    # mount -t proc none /mnt/gentoo/proc
+    # mount -o bind /dev /mnt/gentoo/dev
+
+    # chroot /mnt/gentoo /bin/bash
+    # env-update
+    # source /etc/profile
+    # export PS1="(chroot) $PS1"
+
 Activate portage for first usage
-================================
-# cd /usr/portage
-# git checkout funtoo.org
-# emerge --sync
- 
+
+    # cd /usr/portage
+    # git checkout funtoo.org
+    # emerge --sync
+
 Select a profile, I choose a desktop profile
-=================
- 
-# eselect profile list
-# eselect profile set 2
- 
+
+    # eselect profile list
+    # eselect profile set 2
+
 Configure your timezone (mine is the Netherlands)
-=================================================
- 
-# ls /usr/share/zoneinfo
-# cp /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime
- 
+
+    # ls /usr/share/zoneinfo
+    # cp /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime
+
 Install a kernel. I use genkernel for convience
-===============================================
-# emerge gentoo-sources genkernel
- 
+
+    # emerge gentoo-sources genkernel
+
 Verify if /usr/src/linux is pointing to the right kernel
-========================================================
-# ls -l /usr/src/linux
- 
+
+    # ls -l /usr/src/linux
+
 Configure & compile the kernel
-==============================
-# genkernel --menuconfig all
- 
+
+    # genkernel --menuconfig all
+
 Edit the required config files
-==============================
-# nano -w /etc/fstab
-# nano -w /etc/conf.d/hostname
-# nano -w /etc/rc.conf
-# nano -w /etc/conf.d/keymaps
-# nano -w /etc/conf.d/hwclock
- 
+
+    # nano -w /etc/fstab
+    # nano -w /etc/conf.d/hostname
+    # nano -w /etc/rc.conf
+    # nano -w /etc/conf.d/keymaps
+    # nano -w /etc/conf.d/hwclock
+
 Enable dhcp at boot
-====================
-# rc-update add dhcpcd default
- 
+
+    # rc-update add dhcpcd default
+
 Set a root password
-===================
-# passwd
- 
+
+    # passwd
+
 Emerge neceserry system services and the grub bootloader.
-============================================
-# emerge syslog-ng vixie-cron grub boot-update
- 
+
+    # emerge syslog-ng vixie-cron grub boot-update
+
 Enable syslog and cron
-======================
-# rc-update add syslog-ng default
-# rc-update add vixie-cron default
- 
+
+    # rc-update add syslog-ng default
+    # rc-update add vixie-cron default
+
 Install grub
-============
-# grub-install --no-floppy /dev/sda
-# boot-update
- 
+
+    # grub-install --no-floppy /dev/sda
+    # boot-update
+
 Add a user
-==========
-# useradd -m -G audio,cdrom,portage,usb,users,plugdev,video,wheel -s /bin/bash john
-# passwd john
- 
+
+    # useradd -m -G audio,cdrom,portage,usb,users,plugdev,video,wheel -s /bin/bash john
+    # passwd john
+
 Remove portage snapshot & stage
-==============================
-# rm -v  /portage-2010.09.10.tar.xz
-# rm /stage3-amd64-2010.09.05.tar.xz
- 
+
+    # rm -v  /portage-2010.09.10.tar.xz
+    # rm /stage3-amd64-2010.09.05.tar.xz
+
 Exit & reboot in your funtoo installation
-=========================================
-# exit
-# cd
-# umount /mnt/gentoo/dev /mnt/gentoo/proc /mnt/gentoo/home /mnt/gentoo
-# reboot
- 
+
+    # exit
+    # cd
+    # umount /mnt/gentoo/dev /mnt/gentoo/proc /mnt/gentoo/home /mnt/gentoo
+    # reboot
+
 Post install configuration
-==========================
- 
+
 Install xorg
-============
-# emerge xorg-server
- 
+
+    # emerge xorg-server
+
 Enable hal
-==========
-# /etc/init.d/hald start
-# rc-update add hald default
- 
+
+    # /etc/init.d/hald start
+    # rc-update add hald default
+
 Install a DE
-========
-# emerge -av kdebase-meta
-```
+
+    # emerge -av kdebase-meta
 
 参考：
 

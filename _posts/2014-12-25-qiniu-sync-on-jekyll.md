@@ -13,6 +13,7 @@ tags: [Jekyll, Usage]
 - 每月 get 100 万次请求
 
 <!-- more -->
+
 好吧，作为一个个人博客来说，足够使用。再加上几个月前七牛工作人员联系上鄙人，希望能写篇有关 **Jekyll** 上使用七牛的文章，琢磨着过去好久了，于是今天就有了这篇文章。
 
 首先，以下所有的前提是：
@@ -26,16 +27,14 @@ Jekyll 相关的介绍本博客里有，可以直接上方输入框输入 Jekyll
 
 解压开，将 **qrsync** 两进制文件放入你的 **Jekyll** 根目录下，再在 **.gitignore** 文件中添加 `qrsync`，毕竟，你是不会希望一个 12 MB 大小的两进制包进入你的源代码中吧（嗯，我第一次就上传了 -_-!!）。如下
 
-```console
-$ cat .gitignore
-_site
-Thumbs.db
-.DS_Store
-!.gitkeep
-.sass-cache
-qrsync
-qiniu.json
-```
+    $ cat .gitignore
+    _site
+    Thumbs.db
+    .DS_Store
+    !.gitkeep
+    .sass-cache
+    qrsync
+    qiniu.json
 
 鄙人是创建了个 **qiniu** 目录用来同步图片到七牛的。
 

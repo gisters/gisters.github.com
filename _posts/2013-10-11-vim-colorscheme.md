@@ -14,6 +14,7 @@ tags: [Vim, Screen, Xterm]
     8
 
 <!-- more -->
+
 我得到的结果是 xterm，8 色。进入 screen 下执行看看
 
     $ echo $TERM; tput colors
@@ -28,7 +29,7 @@ tags: [Vim, Screen, Xterm]
 
 再在 .vimrc 中配置
 
-```vim
+```viml
 " color
 if $TERM =~ '^xterm' || $TERM =~ '^screen' || $TERM=~ '256color$'
     "set t_Co=256

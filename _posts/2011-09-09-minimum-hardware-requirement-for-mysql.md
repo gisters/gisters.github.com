@@ -32,11 +32,12 @@ tags: [MySQL, SQL]
 |binlog_stmt_cache_size|32K|4K|
 
 <!-- more -->
+
 你当然可以通过禁用 InnoDB 来节省内存，但一般不建议这么做，除非你的内存小到了极致。
 
 如此，我们针对便宜的小内存 vps 的 my.cnf 应该是如下：
 
-```mysql
+```ini
 # /etc/my.cnf:
 innodb_buffer_pool_size=5M
 innodb_log_buffer_size=256K
@@ -63,5 +64,4 @@ innodb_sort_buffer_size=64K
 #settings that relate to the binary log (if enabled)
 binlog_cache_size=4K
 binlog_stmt_cache_size=4K
-
 ```

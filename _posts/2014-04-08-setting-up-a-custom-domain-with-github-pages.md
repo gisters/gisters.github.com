@@ -13,6 +13,7 @@ tags: [GitHub, Domain]
 在同时拥有 **User Pages**、**Project Pages** 情况下，`//username.github.io/projectname` 将不会转向到 **Project Pages** 中 `gh-pages` 分支下设置的域名。而会以 **User Pages** 中 `master` 分支下设置的域名，加上 `/projectname` 路径来体现。
 
 <!-- more -->
+
 譬如：
 
 1. `zhlist/zhlist.github.io` 的 `master` 分支配置域名 `zhlist.org`；

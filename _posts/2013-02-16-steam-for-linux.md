@@ -44,12 +44,10 @@ Gentoo 用户可以通过添加 steam overlay 来安装
 
 添加 `games-util/steam-games-meta` 的use flag `s3tc`
 
-```
-# echo "games-util/steam-games-meta s3tc" >> /etc/portage/package.use
-# echo "media-libs/jasper abi_x86_32" >> /etc/portage/package.use
-# emerge --oneshot media-libs/jasper
-# emerge --oneshot games-util/steam-games-meta
-```
+    # echo "games-util/steam-games-meta s3tc" >> /etc/portage/package.use
+    # echo "media-libs/jasper abi_x86_32" >> /etc/portage/package.use
+    # emerge --oneshot media-libs/jasper
+    # emerge --oneshot games-util/steam-games-meta
 
 不过，intel 显示芯片的用户杯具了，启动 counter-strike:source 后黑屏。目前还没找到解决办法。
 

@@ -16,13 +16,14 @@ tags: [pip,Python]
     python setup.py install --home=<dir>
 
 <!-- more -->
+
 同理使用 pip 安装时只需
 
     pip install package --user
 
 当然，这样安装的包，不在用户路径变量中，需要 export 下 PATH。编辑 `~/.bash_profile`，最后加入
 
-```sh
+```shell
 if [ -d $HOME/Library/Python/2.7/bin ]; then
     export PATH=$HOME/Library/Python/2.7/bin:$PATH
 fi
@@ -37,7 +38,7 @@ fi
 
 编辑 `~/.pip/pip.conf`
 
-```cfg
+```ini
 [global]
 default-timeout = 60
 download-cache = ~/.pip/cache
@@ -68,10 +69,8 @@ index-url = http://pypi.douban.com/simple
 
 填入如下
 
-```cfg
-[install]
-install_lib = ~/Library/Python/$py_version_short/lib/python/site-packages
-```
+    [install]
+    install_lib = ~/Library/Python/$py_version_short/lib/python/site-packages
 
 完工。
 

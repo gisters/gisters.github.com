@@ -16,7 +16,9 @@ PHP SQlite 数据库对于拥有相当经验的 PHP 程序员来说是不会陌�
 // 发送一条 SQL 查询，并不获取和缓存结果的行。
 
     sqlite_busy_timeout
+
 <!-- more -->
+
 // 设置超时时间 (busy timeout duration)，或者频繁的用户失去权限 (disable busy handlers)
 
     sqlite_changes

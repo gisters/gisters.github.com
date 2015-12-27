@@ -12,6 +12,7 @@ tags: [Gentoo, VirtualBox, Alsa, Virtual]
 调 VirtualBox 的 guest 声卡为 oss or pulseaudio 来驱动，则 VirtualBox 中的客户机启动后，host 机的一切程序都不能使用 alsa.
 
 <!-- more -->
+
 解决方案为
 
     cd /usr/portage/media-libs/libsdl下，

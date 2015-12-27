@@ -16,10 +16,8 @@ PHP 的 FastCGI 使你的所有 php 应用软件通过 mod_fastci 运行，而�
 
 配置很简单，我本机版本是 php5.4，那么编辑文件 `/etc/php/fpm-php5.4/php-fpm.conf`，修改 listen address
 
-```ini
-;listen = 127.0.0.1:9000
-listen = /var/run/php-fpm.sock
-```
+    ;listen = 127.0.0.1:9000
+    listen = /var/run/php-fpm.sock
 
 <!-- more -->
 
@@ -40,6 +38,7 @@ location ~ .*\.php$ {
     include        fastcgi_params;
 }
 ```
+
 #### lighttpd
 
 打开 php USE 标记
@@ -49,17 +48,15 @@ location ~ .*\.php$ {
 
 编辑 `/etc/lighttpd/mod_fastcgi.conf`
 
-```javascript
-server.modules += ("mod_fastcgi")
-fastcgi.server = ( ".php" =>
-    ( "localhost" =>
-        (
-            "socket"    => "/var/run/php-fpm.sock",
+    server.modules += ("mod_fastcgi")
+    fastcgi.server = ( ".php" =>
+        ( "localhost" =>
+            (
+                "socket"    => "/var/run/php-fpm.sock",
+            )
         )
     )
-)
-fastcgi.map-extensions = ( ".php3" => ".php", ".php4" => ".php", ".php5" => ".php" )
-```
+    fastcgi.map-extensions = ( ".php3" => ".php", ".php4" => ".php", ".php5" => ".php" )
 
 #### apache
 
@@ -92,9 +89,7 @@ LoadModule fastcgi_handler_module modules/mod_fastcgi_handler.so
 
 编辑文件 `/etc/conf.d/apache2`，在 `-D php5` 后面添加 `-D FASTCGI_HANDLER`，告诉 apache2 以 fastcgi-handler 模式启动，如下是我的配置
 
-```ini
-APACHE2_OPTS="-D DEFAULT_VHOST -D INFO -D SSL -D SSL_DEFAULT_VHOST -D LANGUAGE -D PHP5 -D FASTCGI_HANDLER"
-```
+    APACHE2_OPTS="-D DEFAULT_VHOST -D INFO -D SSL -D SSL_DEFAULT_VHOST -D LANGUAGE -D PHP5 -D FASTCGI_HANDLER"
 
 参考资料
 

@@ -12,17 +12,14 @@ tags: [Jekyll, FancyBox, jQuery]
 ![FancyBox](//cdn.09hd.com/images/2013/10/fancybox.png "FancyBox")
 
 <!-- more -->
+
 其中有个问题，[**Markdown**]({% post_url 2013-07-02-markdown-syntax %}) 语法中的图片我们一般是如此写法
 
-```
-![tag](url "name")
-```
+    ![tag](url "name")
 
 生成的 html 为
 
-```html
-<image title="name" alt="name" src="url">
-```
+    <image title="name" alt="name" src="url">
 
 我们如果要使用（譬如）FancyBox 的话，则需要如下的链接才可
 
@@ -37,40 +34,34 @@ tags: [Jekyll, FancyBox, jQuery]
 首先[**下载**](https://github.com/fancyapps/fancyBox/zipball/v2.1.5) fancybox，解压到你的主题文件夹，譬如我的是 `assets/themes/havee` 下，编辑模板，在 head 区域添加
 
 {% raw %}
-```html
-<link href="{{ ASSET_PATH }}/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" media="all" />
-```
+    <link href="{{ ASSET_PATH }}/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" media="all" />
 {% endraw %}
 
 在 body 区域最下方添加
 
 {% raw %}
-```html
-<script src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" src="{{ ASSET_PATH }}/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
-<script>
-// 给图片添加链接
-$(document).ready(function() {
-  $("p img").each(function() {
-    var strA = "<a id='yourid' href='" + this.src + "'></a>";
-    $(this).wrapAll(strA);
-  });
-});
+    <script src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script>
+    // 给图片添加链接
+    $(document).ready(function() {
+      $("p img").each(function() {
+        var strA = "<a id='yourid' href='" + this.src + "'></a>";
+        $(this).wrapAll(strA);
+      });
+    });
 
-// fancybox
-$("#yourid").fancybox({
-  openEffect	: 'elastic',
-  closeEffect	: 'elastic',
-});
-</script>
-```
+    // fancybox
+    $("#yourid").fancybox({
+      openEffect	: 'elastic',
+      closeEffect	: 'elastic',
+    });
+    </script>
 {% endraw %}
 
 如果你模板本身就引用 jquery，则不必再次引用
 
-```html
-<script src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
-```
+    <script src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
 
 FancyBox 具体用法：
 

@@ -10,22 +10,21 @@ tags: [JavaScript]
 之前没使用 GitCafe 来托管博客的原因，是其分配的两级域名无法设置301重定向到博客域名上。众所周知，两个域名网站含有一模一样的内容，对 SEO 来说不是好事。今天上午，写了个JavaScript 解决重定向问题。
 
 <!-- more -->
+
 当然，JavaScript 无法实现 301 redirects。这是因为 301 redirects 是服务器状态码。而 JavaScript 则是客户端运行的。
 
 开始工作，首先将域名解析到 gitcafe 的 pages ip `117.79.146.98`
 
-```
-$ dig havee.me +nostats +nocomments +nocmd
+    $ dig havee.me +nostats +nocomments +nocmd
 
-; <<>> DiG 9.8.3-P1 <<>> havee.me +nostats +nocomments +nocmd
-;; global options: +cmd
-;havee.me.              IN          A
-havee.me.       60      IN          A       117.79.146.98
-```
+    ; <<>> DiG 9.8.3-P1 <<>> havee.me +nostats +nocomments +nocmd
+    ;; global options: +cmd
+    ;havee.me.              IN          A
+    havee.me.       60      IN          A       117.79.146.98
 
 JavaScript:
 
-```html
+```javascript
 <script>
   var url = "havee.me";
   var other = "havee.gitcafe.com";
@@ -56,8 +55,9 @@ JavaScript:
 
 今天下午，该问题已被 GitCafe 解决
 
-```
-$ curl -IL havee.gitcafe.com
+    $ curl -IL havee.gitcafe.com
+
+```html
 HTTP/1.1 301 Moved Permanently
 Server: nginx/1.4.5
 Date: Fri, 14 Mar 2014 11:18:00 GMT

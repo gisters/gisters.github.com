@@ -16,9 +16,10 @@ In file included from /usr/include/glib-2.0/glib/gspawn.h:28:0,
 ```
 
 <!-- more -->
+
 查了下 bugs.gentoo.org，嗯，自己给 awesome 源码打个补丁即可
 
-````diff
+```diff
 diff --git a/spawn.c b/spawn.c
 index 8f6a149..62be784 100644
 --- a/spawn.c
@@ -26,10 +27,10 @@ index 8f6a149..62be784 100644
 @@ -24,7 +24,7 @@
  #include <sys/types.h>
  #include <sys/wait.h>
- 
+
 -#include <glib/gspawn.h>
 +#include <glib.h>
- 
+
  #include "spawn.h"
  #include "screen.h"
-````
+```

@@ -13,41 +13,41 @@ tags: [Vim]
 
 可能这是最好的方式了，在 vimrc 中采用 `has()` 函数来检查这些功能的存在，并尝试相关的任何配置，譬如
 
-```vim
+```viml
 if has("spell")
     set spelllang=en_us
     nnoremap <leader>s :set spell!<CR>
 endif
 ```
+
 <!-- more -->
+
 这里设置 spelllang 存在的情况下，配置选项，并定义快捷键。
 
 在不同的 **Linux** 发行版下，Vim 被编译成默认包含不同功能的版本，不过你可以通过 `vim --version` 来列出你系统上 Vim 的功能列表清单，看看 Vim 包含哪些库，譬如：
 
-```
-^_^ ~ $ vim --version
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Sep 28 2013 07:48:12)
-Included patches: 1-41
-Modified by Gentoo-7.4.41
-Compiled by danny@Havee
-Huge version without GUI.  Features included (+) or not (-):
-+acl             +farsi           +mouse_netterm   +syntax
-+arabic          +file_in_path    +mouse_sgr       +tag_binary
-+autocmd         +find_in_path    -mouse_sysmouse  +tag_old_static
--balloon_eval    +float           +mouse_urxvt     -tag_any_white
-......
-   system vimrc file: "/etc/vim/vimrc"
-     user vimrc file: "$HOME/.vimrc"
- 2nd user vimrc file: "~/.vim/vimrc"
-      user exrc file: "$HOME/.exrc"
-  fall-back for $VIM: "/usr/share/vim"
-Compilation: x86_64-pc-linux-gnu-gcc -c -I. -Iproto -DHAVE_CONFIG_H     -march=corei7 -O2 -pipe -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1      
-Linking: x86_64-pc-linux-gnu-gcc   -Wl,-O1 -L/usr/local/lib -Wl,--as-needed -o vim    -lSM -lICE -lXpm -lXt -lX11 -lXdmcp -lSM -lICE  -lm -lncurses -lelf -lnsl  -lacl -lattr -ldl
-```
+    ^_^ ~ $ vim --version
+    VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Sep 28 2013 07:48:12)
+    Included patches: 1-41
+    Modified by Gentoo-7.4.41
+    Compiled by danny@Havee
+    Huge version without GUI.  Features included (+) or not (-):
+    +acl             +farsi           +mouse_netterm   +syntax
+    +arabic          +file_in_path    +mouse_sgr       +tag_binary
+    +autocmd         +find_in_path    -mouse_sysmouse  +tag_old_static
+    -balloon_eval    +float           +mouse_urxvt     -tag_any_white
+    ......
+       system vimrc file: "/etc/vim/vimrc"
+         user vimrc file: "$HOME/.vimrc"
+     2nd user vimrc file: "~/.vim/vimrc"
+          user exrc file: "$HOME/.exrc"
+      fall-back for $VIM: "/usr/share/vim"
+    Compilation: x86_64-pc-linux-gnu-gcc -c -I. -Iproto -DHAVE_CONFIG_H     -march=corei7 -O2 -pipe -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1
+    Linking: x86_64-pc-linux-gnu-gcc   -Wl,-O1 -L/usr/local/lib -Wl,--as-needed -o vim    -lSM -lICE -lXpm -lXt -lX11 -lXdmcp -lSM -lICE  -lm -lncurses -lelf -lnsl  -lacl -lattr -ldl
 
 列表中列出了很多不同的功能，譬如 `+statusline`，可能其他的发行版或其他的计算机默认没有包含次功能，那么可以如此设置：
 
-```vim
+```viml
 if has("statusline")
   hi Statusline cterm=bold ctermfg=yellow ctermbg=blue
   set statusline=%F%m%r%h%w\ %=[FORMAT=%{&ff}]\ %{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\"    ,B\":\"\").\"]\"}\ [TYPE=%Y]\ [POS=%l,%v][%p%%]
@@ -57,7 +57,7 @@ endif
 
 如果你经常在 **Windows & Linux** 下使用 Vim，那么可以如此设置：
 
-```vim
+```viml
 if has("unix")
     set some
 else
@@ -65,11 +65,15 @@ else
 endif
 ```
 
+你当然可以通过如下查看具体的 feature-list
+
+    :help feature-list
+
 #### 检查
 
 你可以检查一些功能是否存在其本身的一些选项，譬如
 
-```vim
+```viml
 if exists("&foldenable")
     set foldenable
 endif
@@ -77,7 +81,7 @@ endif
 
 一些功能可能只能存在高版本的 Vim 中
 
-```vim
+```viml
 if v:version >= 700
     set foldenable
 endif
@@ -85,7 +89,7 @@ endif
 
 不同的终端
 
-```vim
+```viml
 if &term == "xterm"
   " Do stuff for xterm
 elseif &term == "vt100"
@@ -99,7 +103,7 @@ endif
 
 如果你实在无法确定是否包含的功能与版本，则可以通过 `silent!` 来避免一旦没有包含相关功能选项时的出错。
 
-```vim
+```viml
 silent! call pathogen#infect()
 silent! colorscheme pablo
 ```
@@ -108,7 +112,7 @@ silent! colorscheme pablo
 
 你也可以使用 `try/catch/endtry` 来配置一些备用的选项，譬如
 
-```vim
+```viml
 try
   colorscheme pablo
 catch

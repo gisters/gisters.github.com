@@ -23,11 +23,9 @@ GNU 的 screen 是一个很好的工具。如果需要经常或者大量的登�
 
 比如说网上比较流行的一个配置是这样的：
 
-```ini
-hardstatus on
-hardstatus alwayslastline
-caption always "%?%F%{-b 4w}%:%{-b bb}%? %H | %l | %m-%d %c |%?%F%{-b 4w}%?%L=%-Lw%45>%{-b w4}%n%f* %t%{-}%+Lw%-0<"
-```
+    hardstatus on
+    hardstatus alwayslastline
+    caption always "%?%F%{-b 4w}%:%{-b bb}%? %H | %l | %m-%d %c |%?%F%{-b 4w}%?%L=%-Lw%45>%{-b w4}%n%f* %t%{-}%+Lw%-0<"
 
 下面的一个表是关于属性的设置的，其实也就是文字的颜色相关的一些设置
 
@@ -62,18 +60,16 @@ caption always "%?%F%{-b 4w}%:%{-b bb}%? %H | %l | %m-%d %c |%?%F%{-b 4w}%?%L=%-
 
 下面的就是我的配置
 
-```ini
-hardstatus on
-hardstatus alwayslastline
-hardstatus string "%{= G}%-Lw%{= .Y}%50> %n*%f %t%{= G}%+Lw%< %{= G}%-=%D %c:%s %m/%d/%Y"
-startup_message off
-vbell off
-autodetach on
-msgwait 1
-shell bash
-termcapinfo xterm|xterms|xs|rxvt|urxvt|tila ti@:te@
-bindkey -k F1 prev
-bindkey -k F2 next
-```
+    hardstatus on
+    hardstatus alwayslastline
+    hardstatus string "%{= G}%-Lw%{= .Y}%50> %n*%f %t%{= G}%+Lw%< %{= G}%-=%D %c:%s %m/%d/%Y"
+    startup_message off
+    vbell off
+    autodetach on
+    msgwait 1
+    shell bash
+    termcapinfo xterm|xterms|xs|rxvt|urxvt|tila ti@:te@
+    bindkey -k F1 prev
+    bindkey -k F2 next
 
 参考文档: [http://www.gnu.org/software/screen/manual/screen.html#Message-Line](http://www.gnu.org/software/screen/manual/screen.html#Message-Line)

@@ -10,13 +10,14 @@ tags: [Git, CLI]
 看到他人的 terminal 中显示出 git branch 名，查阅了一些资料，需要 `__git_ps1`，下面记录下如何安装使用。
 
 <!-- more -->
+
 #### OS X
 
 需要安装 Command Line Tools，在 10.9 的 OS X 中 Xcode 已经默认自带了 Command Line Tools。之前的版本需要 `xcode-select --install` 去安装。
 
 随后，在 `~/.bash_profile` 中
 
-```sh
+```shell
 if [ -f $(xcode-select -p)/usr/share/git-core/git-completion.bash ]; then
     . $(xcode-select -p)/usr/share/git-core/git-completion.bash
     . $(xcode-select -p)/usr/share/git-core/git-prompt.sh
@@ -25,9 +26,9 @@ fi
 
 最后，`~/.bashrc` 中去组织你的 PS1，在适当的地方添加上 `$(__git_ps1)`，譬如我的
 
-```sh
+```shell
 if [ `id -u` -ne 500 ]; then
-    export GIT_PS_SHOWDIRTYSTATE=1
+    export GIT_PS1_SHOWDIRTYSTATE=1
     export PS1='\[\e[1;36m\]→\[\e[m\] \[\e[0;32m\]\w\[\e[0;35m\]$(__git_ps1)\[\e[1;32m\] \$\[\e[m\] '
 fi
 ```
@@ -42,14 +43,12 @@ fi
 
 此时可以如此
 
-```sh
-$ curl -o ~/.git-prompt.sh \
-    https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-```
+    $ curl -o ~/.git-prompt.sh \
+        https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
 随后在 `~/.bash_profile` 中 source
 
-```sh
+```shell
 [[ -f ~/.git-prompt.sh ]] && . ~/.git-prompt.sh
 ```
 

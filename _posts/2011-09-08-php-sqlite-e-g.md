@@ -5,16 +5,14 @@ category: SQL
 tags: [PHP, SQLite, Usage]
 ---
 
-介绍下 SQLite API 所支持的重要方法，提供一个能够用在你开发中的简单脚本模板，从而告诉你如何使用 PHP 与 SQLite 数据库进行交互操作。假设你已经安装好了 (Apache|nginx) & PHP。
+介绍下 SQLite API 所支持的重要方法，提供一个能够用在你开发中的简单脚本模板，从而告诉你如何使用 PHP 与 SQLite 数据库进行交互操作。假设你已经安装好了 (Apache/nginx) & PHP。
 
 你的系统上并不是一定非要安装可交互的 SQLite 程序；但是为了能够简化创建本教程所需要的一系列初始表格，你应该下载和安装这个程序。然后，为你的 SQL 查询创建一个示例表格，方法是创建一个空白的文本文件，将该文件名作为下列命令（列表A）的参数在交互命令提示符下执行二进制程序：
 
-```sql
-sqlite> CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, country TEXT);
-sqlite> INSERT INTO users VALUES (1, 'john', 'IN');
-sqlite> INSERT INTO users VALUES (2, 'joe', 'UK');
-sqlite> INSERT INTO users VALUES (3, 'diana', 'US');
-```
+    sqlite> CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, country TEXT);
+    sqlite> INSERT INTO users VALUES (1, 'john', 'IN');
+    sqlite> INSERT INTO users VALUES (2, 'joe', 'UK');
+    sqlite> INSERT INTO users VALUES (3, 'diana', 'US');
 
 <!-- more -->
 

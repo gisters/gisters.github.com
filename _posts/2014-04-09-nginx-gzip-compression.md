@@ -23,6 +23,7 @@ gzip_disable        "MSIE [1-6]\.";
 ```
 
 <!-- more -->
+
 下面是我整理的参数的详细说明：
 
 表1：Gzip
@@ -35,13 +36,13 @@ gzip_disable        "MSIE [1-6]\.";
 |**gzip_desable**|regex ...|`"MSIE [1-6]\.";`|根据 "User-Agent" 头来关闭 Gzip，可用正则表达式。|
 |**gzip\_min\_length**|int|`gzip_min_length 1k;`|当返回内容大于此值是才开启 Gzip 进行压缩，以 k 为单位，当值设置为 0 时，所有页面都进行压缩。|
 |**gzip\_http\_version**|1.0<br>1.1|`gzip_http+version 1.0;`|用于识别 http 协议的版本，早期的浏览器不支持 Gzip 压缩，用户就会看到乱码，所以为了支持前期版本加上了这个选项，**如果你用了 Nginx 的反向代理并期望也启用 Gzip 压缩的话，由于末端通信是 `http/1.0`，故请设置为 `1.0`**。|
-|**gzip\_proxied**|off<br>expired<br>no-cache<br>no-store<br>private<br>no\_last\_modified<br>no\_etag<br>auth<br>any|`gzip_proxied no-cache;`|详细说明见[表格2：gzip\_proxied](#gzip_proxied)。|
+|**gzip\_proxied**|off<br>expired<br>no-cache<br>no-store<br>private<br>no\_last\_modified<br>no\_etag<br>auth<br>any|`gzip_proxied no-cache;`|详细说明见表格2：gzip\_proxied。|
 |**gzip\_types**|mime-type|`gzip_type text/html;`|设置需要压缩的 MIME 类型，不设置则不进行压缩。|
 |**gzip\_vary**|on<br>off|`gzip_vary on;`|加上 http 头信息`Vary: Accept-Encoding`给后端代理服务器识别是否启用 Gzip 压缩。|
 
 注：以上所有变量都可以在 `http {}`, `server {}`, `location {}` 中使用，是否全局开启起决于你的生产环境。
 
-<p id=gzip_proxied>表2：gzip_proxied</p>
+表2：gzip_proxied
 
 |**Parameter**|**Details**|
 |:---|:---|
@@ -61,7 +62,7 @@ gzip_disable        "MSIE [1-6]\.";
 
 如果包含下列字符串则表示 Gzip压缩开启成功
 
-```
+```http
 HTTP/1.1 200 OK
 Server: nginx/1.4.5
 Date: Wed, 09 Apr 2014 03:55:06 GMT

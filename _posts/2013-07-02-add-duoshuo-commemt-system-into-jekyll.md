@@ -10,10 +10,10 @@ tags: [Jekyll, duoshuo]
 首先按照如下格式编辑 `_config.yml`
 
 ```yaml
-  comments :
-    provider : duoshuo
-    duoshuo : 
-      short_name : havee
+comments :
+  provider : duoshuo
+  duoshuo :
+    short_name : havee
 ```
 
 <!-- more -->
@@ -25,27 +25,22 @@ tags: [Jekyll, duoshuo]
 填充如下内容
 
 {% raw %}
-```html
-<!-- Duoshuo Comment BEGIN -->
-    <div id="comments">
-        <div class="ds-thread" {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
-    </div>
-<!-- Duoshuo Comment END -->
-```
+    <!-- Duoshuo Comment BEGIN -->
+        <div id="comments">
+            <div class="ds-thread" {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
+        </div>
+    <!-- Duoshuo Comment END -->
 {% endraw %}
 
 由于同一页面调用多个多说系统的数据，其 js 只需加载一次即可。所以相关的 javascript 我们放到默认的 default 中，编辑 `_includes/themes/havee/default.html` 文件，在
 
 {% raw %}
-```
     {% include JB/analytics %}
-```
 {% endraw %}
 
 上面添加多说的 js 代码
 
 {% raw %}
-```html
     <!--多说js加载开始，一个页面只需要加载一次 -->
     <script type="text/javascript">
       var duoshuoQuery = {short_name:"{{ site.JB.comments.duoshuo.short_name }}"};
@@ -58,7 +53,6 @@ tags: [Jekyll, duoshuo]
       })();
     </script>
     <!--多说js加载结束，一个页面只需要加载一次 -->
-```
 {% endraw %}
 
 OK，完成手工。
@@ -70,20 +64,19 @@ OK，完成手工。
 由于默认所有页面都加载了多说的相关 js，所以现在只需在相关模板位置添加如下代码
 
 ```html
-      <section>
-        <h3>Latest Comments</h3>
-        <ul class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="18"></ul>
-      </section>
-
+<section>
+  <h3>Latest Comments</h3>
+  <ul class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="18"></ul>
+</section>
 ```
 
 最新的访客呢？
 
 ```html
-      <section style="width:250px;">
-        <h3>Recently Visitors</h3>
-          <ul class="ds-recent-visitors" data-num-items="4" data-avatar-size="45" style="margin-top:10px;"></ul>
-      </section>
+<section style="width:250px;">
+  <h3>Recently Visitors</h3>
+  <ul class="ds-recent-visitors" data-num-items="4" data-avatar-size="45" style="margin-top:10px;"></ul>
+</section>
 ```
 
 ##### Update:

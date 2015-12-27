@@ -17,6 +17,7 @@ tags: [Garbled]
     $ find . -inum 2428 -exec rm {} +
 
 <!-- more -->
+
 or
 
     $ rm -- ????.mp3

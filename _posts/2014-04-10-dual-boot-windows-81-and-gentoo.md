@@ -13,6 +13,7 @@ tags: [Windows, Gentoo]
 - 先安装 Gentoo，其次安装 Windows 8.1
 
 <!-- more -->
+
 #### 一、 先 Windows 8.1，后 Gentoo
 
 首先需要在 Windows 下打开`命令提示符(管理员)`，将启动分区设为 Windows 8.1 所在的分区。

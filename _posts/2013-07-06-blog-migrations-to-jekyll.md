@@ -19,33 +19,28 @@ tags: [Jekyll, Usage]
 4. 分别独立地运行下面的命令。
 
 <!-- more -->
+
 ### 从 WordPress 迁移
 
 #### 使用 Jekyll 和 Mysql 服务的链接
 
-```bash
-$ ruby -rubygems -e 'require "jekyll/migrators/wordpress";Jekyll::WordPress.process("database","user","pass")'
-```
+    $ ruby -rubygems -e 'require "jekyll/migrators/wordpress";Jekyll::WordPress.process("database","user","pass")'
 
 如果你使用的是 Webfaction，必须设置一个 [SSH 通道](http://docs.webfaction.com/user-guide/databases.html?highlight=mysql#starting-an-ssh-tunnel-with-ssh)，确保主机名是 (127.0.0.1)，否则 MySQL 可能会阻止你基于本地主机的访问，127.0.0.1 也不会在授权系统中具有等效的效果：
 
-```bash
-$ ruby -rubygems -e 'require "jekyll/migrators/wordpress";Jekyll::WordPress.process("database","user","pass","127.0.0.1")'
-```
+    $ ruby -rubygems -e 'require "jekyll/migrators/wordpress";Jekyll::WordPress.process("database","user","pass","127.0.0.1")'
 
 #### 使用 Jekyll 和 Wordpress 导出文件(适用于 wordpress.com)
 
 如果 hpricot 还没有被安装，请先运行 `gem install hpricot`。导出你的博客：https://YOUR-USER-NAME.wordpress.com/wp-admin/export.php，假设这个文件叫做 wordpress.xml:
 
-```bash
-$ ruby -rubygems -e 'require "jekyll/migrators/wordpress";jekyll::WordPress.process("wordpress.xml")'
-```
+    $ ruby -rubygems -e 'require "jekyll/migrators/wordpress";jekyll::WordPress.process("wordpress.xml")'
 
 #### 关于 WordPress 的更多内容和其他选择
 
 虽然以上的办法通常是有效的，但是他们却不能完全导入存储在 **wordpress** 文章和页面中的元数据。如果你想保留更多的页面、标签、图片和自定义数据等，你可能会对以下的资源感兴趣：
 
-- [Exitwp](https://github.com/thomasf/exitwp) 是一个用 Python 写成配置工具，专门用来将一个或多个 **wordpress** 博客转换成 Jekll | Markdown 格式，同时保留尽可能多的元数据，包括下载附件和页面。
+- [Exitwp](https://github.com/thomasf/exitwp) 是一个用 Python 写成配置工具，专门用来将一个或多个 **wordpress** 博客转换成 Jekll / Markdown 格式，同时保留尽可能多的元数据，包括下载附件和页面。
 - 这是一篇非常优秀的 [文章](http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/)，一步一步地教你在保持大部分元数据的前提下迁移 **wordpress** 博客。
 - [wpXml2Jekyll](https://github.com/theaob/wpXml2Jekyll) 是一个 windows 下的可执行工具，可以根据你 **wordpress** 博客导出的XML文件创建相应的 **Markdown** 文件。
 - [WordPress to Jekyll Exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter) 是一个 **wordpress** 的一键式插件，能够将所有文章、页面、分类信息、元数据和相关的设置信息转换成 **Jekyll** 能够使用的 **Markdown** 和 **YAML** 格式的文件。它使用的是 `the_content` 过滤器，导出的是用户看到的页面，而不是数据库中的数据。
@@ -55,47 +50,33 @@ $ ruby -rubygems -e 'require "jekyll/migrators/wordpress";jekyll::WordPress.proc
 
 注意：文本是为 **Drupal6.1** 写的，如果需要请进行升级。
 
-```bash
-$ ruby -rubygems -e 'require "jekyll/migrators/drupal"; Jekyll::Drupal.process("database", "user", "pass")'
-```
+    $ ruby -rubygems -e 'require "jekyll/migrators/drupal"; Jekyll::Drupal.process("database", "user", "pass")'
 
 ### Movable Type 迁移
 
-```bash
-$ ruby -rubygems -e 'require "jekyll/migrators/mt"; Jekyll::MT.process("database", "user", "pass")'
-```
+    $ ruby -rubygems -e 'require "jekyll/migrators/mt"; Jekyll::MT.process("database", "user", "pass")'
 
 
 ### 从 Typo 4+ 迁移
 
-```bash
-$ ruby -rubygems -e 'require "jekyll/migrators/typo"; Jekyll::Typo.process("database", "user", "pass")'
-```
+    $ ruby -rubygems -e 'require "jekyll/migrators/typo"; Jekyll::Typo.process("database", "user", "pass")'
 
 这些代码同样只在 **Typo4** 以上测试过。
 
 
 ### 从 TextPattern 迁移
 
-```bash
-$ ruby -rubygems -e 'require "jekyll/migrators/textpattern"; Jekyll::TextPattern.process("database_name", "username", "password", "hostname")'
-```
+    $ ruby -rubygems -e 'require "jekyll/migrators/textpattern"; Jekyll::TextPattern.process("database_name", "username", "password", "hostname")'
 
 在 _import 的上层目录下运行以上命令。例如，如果 _import 目录在 /path/source/_import，那就在 /path/source 中运行上面的命令。
 
 ### 从 Mephisto 迁移
 
-```bash
-$ ruby -rubygems -e 'require "jekyll/migrators/mephisto"; Jekyll::Mephisto.process("database", "user", "password")'
-```
+    $ ruby -rubygems -e 'require "jekyll/migrators/mephisto"; Jekyll::Mephisto.process("database", "user", "password")'
 
 如果你的数据在系统表中，你可以这样做：
 
-```bash
-$ ruby -rubygems -e 'require "jekyll/migrators/mephisto"; Jekyll::Mephisto.postgres({:database => "database", :username=>"username", :password =>"password"})'
-```
-
-
+    $ ruby -rubygems -e 'require "jekyll/migrators/mephisto"; Jekyll::Mephisto.postgres({:database => "database", :username=>"username", :password =>"password"})'
 
 ### 从博客平台迁移
 
@@ -113,15 +94,11 @@ $ ruby -rubygems -e 'require "jekyll/migrators/mephisto"; Jekyll::Mephisto.postg
 
 对于你原来的博客:
 
-```bash
-$ ruby -rubygems -e 'require "jekyll/migrators/posterous"; Jekyll::Posterous.process("my_email", "my_pass")'
-```
+    $ ruby -rubygems -e 'require "jekyll/migrators/posterous"; Jekyll::Posterous.process("my_email", "my_pass")'
 
 对于其他博客:
 
-```bash
-$ ruby -rubygems -e 'require "jekyll/migrators/posterous"; Jekyll::Posterous.process("my_email", "my_pass", "blog_id")'
-```
+    $ ruby -rubygems -e 'require "jekyll/migrators/posterous"; Jekyll::Posterous.process("my_email", "my_pass", "blog_id")'
 
 一个可选的迁移工具在 [这里](https://github.com/pepijndevos/jekyll/blob/patch-1/lib/jekyll/migrators/posterous.rb)，它可以保留永久链接地址，还会尝试导入图片。
 
@@ -129,23 +106,17 @@ $ ruby -rubygems -e 'require "jekyll/migrators/posterous"; Jekyll::Posterous.pro
 
 从 Tumblr 迁移同样需要 nokogiri:`gem install nokogiri`
 
-```bash
-$ ruby -rubygems -e 'require "jekyll/migrators/tumblr"; Jekyll::Tumblr.process("http://www.your_blog_url.com", true)'
-```
+    $ ruby -rubygems -e 'require "jekyll/migrators/tumblr"; Jekyll::Tumblr.process("http://www.your_blog_url.com", true)'
 
 [这里](https://github.com/stephenmcd/jekyll/blob/master/lib/jekyll/migrators/tumblr.rb) 是一个修改过的 Tumblr 迁移工具，它能将文章输出为 **Markdown** 文档，包括文章的标签。
 
 它需要 json gem 和用 Python 写的 html2text:
 
-```bash
-$ gem install json
-$ pip install html2text
-```
+    $ gem install json
+    $ pip install html2text
 
 一旦安装好之后，只要简单地使用格式化的参数:
 
-```bash
 $ ruby -rubygems -e 'require "jekyll/migrators/tumblr"; Jekyll::Tumblr.process("http://www.your_blog_url.com", format="md")'
-```
 
 转自：[【译文】Jekyll博客迁移](http://zhouyichu.com/%E7%BF%BB%E8%AF%91/Jekyll-Wiki-Blog-Migrations.html)

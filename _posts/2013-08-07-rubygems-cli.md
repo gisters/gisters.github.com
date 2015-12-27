@@ -18,6 +18,7 @@ tags: [Usage, Ruby, Gem]
     gem -v
 
 <!-- more -->
+
 **更新所有包**
 
     gem update
