@@ -2,7 +2,7 @@
 layout: post
 title: "CentOS 7 配置记录"
 category: Linux
-tags: [Nginx, PHP, PHP-FPM, SQL, Tips]
+tags: [Nginx, PHP, PHP-FPM, SQL, Tips, CentOS]
 ---
 
 几个 vps 逐步的升级到 CentOS 7，老是忘记一些配置，于是动手纪录下。

@@ -5,7 +5,7 @@ category: Internet
 tags: [UChome, RI, Usage]
 ---
 
-![uchome](//cdn.09hd.com/images/2010/09/uchome.png "uchome")
+![uchome]({{ site.cdn }}/images/2010/09/uchome.png "uchome")
 
 被注册机盯上了怎么办，特别是像 uchome 这样的 SNS 网站，批量注册一大堆用户，全部发些垃圾内容，整个网站一会就被弄的不成样。
 
@@ -120,6 +120,6 @@ ajaxget(’r_checkmail.php?mail=’+mail+’&time=’+new Date().getTime()+’&a
 
 #### 修改完以上步骤后，把压缩包的 `r_checkmail.php` 和 `phpmailer` 全都放到你的 `uchome` 根目录下
 
-下载：[codefile](//cdn.09hd.com/images/2010/09/codefile.zip)
+下载：[codefile]({{ site.cdn }}/images/2010/09/codefile.zip)
 
 转自：[被注册机困扰的问题 - uchome吧](http://www.uchome8.com/127)

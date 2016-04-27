@@ -20,6 +20,7 @@ tags: [Tips]
     $ defaults write ~/Library/Preferences/com.apple.finder.plist AppleShowAllFiles -bool true/false
 
 <!-- more -->
+
 ##### 2. 显示和隐藏普通文件
 
     $ chflags hidden/nohidden file or directory
@@ -62,7 +63,7 @@ tags: [Tips]
 
 下载一个 app，[CursorSense](http://plentycom.jp/en/cursorsense/download.php "CursorSense")
 
-![CursorSense](//cdn.09hd.com/images/2014/01/CursorSense.png)
+![CursorSense]({{ site.cdn }}/images/2014/01/CursorSense.png)
 
 #### 四. GoAgent
 
@@ -104,7 +105,6 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
     $ sudo lookupd -flushcache
 
-
 针对 OS X 10.6
 
     $ sudo dscacheutil -flushcache
@@ -113,9 +113,13 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
     $ sudo killall -HUP mDNSResponder
 
-针对 OS X 10.10
+针对 OS X 10.10 至 10.10.3
 
-    $ sudo dscacheutil -flushcache
+    $ sudo discoveryutil mdnsflushcache
+
+针对 OS X 10.10.4 以及以后的所有版本
+
+    $ sudo killall -HUP mDNSResponder
 
 #### 九. 视频播放
 
@@ -125,15 +129,15 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
 原汁原味的 Linux 下 Mplayer 的使用体验，强烈推荐，fork 自 mplayer2 与 Mplayer。
 
-![MPV screenshot](//cdn.09hd.com/images/2014/01/mpv.png)
+![MPV screenshot]({{ site.cdn }}/images/2014/01/mpv.png)
 
 ##### 2. [MPlayer OSX Extended](//mplayerosx.ch) 
 
 Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时间。
 
-![MPlayer OSX Extended](//cdn.09hd.com/images/2014/01/mplayer-osx.png)
+![MPlayer OSX Extended]({{ site.cdn }}/images/2014/01/mplayer-osx.png)
 
-![MPlayer OSX Preferences](//cdn.09hd.com/images/2014/01/mplayer-osx-preferences.png)
+![MPlayer OSX Preferences]({{ site.cdn }}/images/2014/01/mplayer-osx-preferences.png)
 
 ##### 3. [MplayerX](//mplayerx.org)
 
@@ -143,11 +147,11 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
 
 ###### a. 收费的 [Mac Blu-ray Player](//www.macblurayplayer.com)
 
-![Mac Blu-ray Player](//cdn.09hd.com/images/2014/01/mac-blu-ray-player.png)
+![Mac Blu-ray Player]({{ site.cdn }}/images/2014/01/mac-blu-ray-player.png)
 
 ###### b. 免费的 [XBMC](//kodi.tv/)
 
-![XBMC](//cdn.09hd.com/images/2014/01/xbmc.png)
+![XBMC]({{ site.cdn }}/images/2014/01/xbmc.png)
 
 #### 十. 生僻的快捷键
 
@@ -201,6 +205,17 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
 
 #### 十五. 截屏
 
+- Command + Shift + 3：全屏
+- Command + Shift + 4：窗口
+
+针对窗口截图有一些小技巧，即在 Command + Shift + 4 以后：
+
+- 直接鼠标拖动一个矩形区域
+- 按下空格来选取窗口
+- 拖动一个区域不松手，按住 Shift，来根据 X 或 Y 轴进行拖动
+- 拖动一个区域不松手，按住 Option，来按照圆心进行放大缩小
+- 以上任意动作操作同时按住 Control，截图保存至剪切板，去其他窗口直接粘贴。
+
 系统默认的快捷键 Shift + Command + 3/4 截屏会带上阴影，部分人觉得不爽，要去掉阴影。
 
     $ defaults write com.apple.screencapture disable-shadow -bool true
@@ -215,6 +230,7 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
     $ defaults write com.apple.screencapture type jpg
     $ defaults write com.apple.screencapture type gif
     $ defaults write com.apple.screencapture type png
+    $ defaults write com.apple.screencapture type tiff
     $ defaults write com.apple.screencapture type pdf
 
 修改默认的截图名
@@ -269,3 +285,22 @@ OS X 10.11 中，Spotlight 可以移动位置，那么恢复默认位置的方�
     # plutil -convert binary1 clients.plist
     # killall locationd
 
+#### 二十一. HostName 修改
+
+用了一段时间，偶尔发现，HostName 多了个后缀，譬如原来的 HostName 设置为 Havee，一段时间后变成了 Havee-2，一直搞不清为什么会这样，于是打开终端设置下
+
+    $ scutil --set ComputerName "your-name"
+    $ scutil --set LocalHostName "your-name"
+    $ scutil --set HostName "your-name"
+
+注意，LocalHostName 与 HostName 的 your-name 中不能有空格。设置完成后，检查下
+
+    $ scutil --get ComputerName
+    $ scutil --get LocalHostName
+    $ scutil --get HostName
+
+#### 二十二. Safari 显示 status bar
+
+是否开启原生 Safari 状态栏
+
+    $ defaults write com.apple.Safari ShowStatusBar -bool true/false

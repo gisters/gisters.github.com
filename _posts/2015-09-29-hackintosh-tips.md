@@ -2,7 +2,7 @@
 layout: post
 title: "黑苹果的一些技巧汇总"
 category: Mac
-tags: [OS X, Hackintosh]
+tags: [Hackintosh]
 ---
 
 白果虽然省心，但是如果要性能的话，那么就必须要 Mac Pro 了，移动的 U 不是用来干重力活的。可是吊丝一枚，囊中羞涩，所以，几乎黑苹果几乎是接下来的唯一选择。
@@ -35,7 +35,7 @@ tags: [OS X, Hackintosh]
 
     $ sudo dmtest ensureRecoveryPartition / /Volumes/OS\ X\ Install\ ESD/BaseSystem.dmg 0 0 /Volumes/OS\ X\ Install\ ESD/BaseSystem.chunklist
 
-dmtest 下载（任选其一）：[dmtest_Lion.zip](http://cdn.09hd.com/images/2015/09/dmtest_Lion.zip)、[dmtest_Mavericks.zip](http://cdn.09hd.com/images/2015/09/dmtest_Mavericks.zip)
+dmtest 下载（任选其一）：[dmtest_Lion.zip]({{ site.cdn }}/images/2015/09/dmtest_Lion.zip)、[dmtest_Mavericks.zip]({{ site.cdn }}/images/2015/09/dmtest_Mavericks.zip)
 
 ##### 制作 U 盘安装盘
 

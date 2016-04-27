@@ -3,7 +3,7 @@ title: Tools
 layout: page
 ---
 
-#### EditPlus Keygen
+#### EditPlus 密钥生成
 
 <div class="input-group">
   <input name="username" type="text" id="username" placeholder="input your name" class="form-control">

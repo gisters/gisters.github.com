@@ -7,7 +7,7 @@ tags: [Localized]
 
 昨晚摸索了下 Sublime Text 的一些功能，明确了一些基本的功能，参考了各方面的资料，于是动起了汉化 Sublime Text 的念头。
 
-![localizing Sublime Text 3](//cdn.09hd.com/images/2014/08/localizing-sublime-text-3.png)
+![localizing Sublime Text 3]({{ site.cdn }}/images/2014/08/localizing-sublime-text-3.png)
 
 <!-- more -->
 

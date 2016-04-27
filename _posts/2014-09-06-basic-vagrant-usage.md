@@ -67,7 +67,7 @@ Vagrant 的安装非常简单，各个 linux 发行版可以直接通过包管�
     vagrant@local ~ $ uname -a
     Linux local 3.10.7-gentoo-r1 #1 SMP Wed Oct 30 20:15:42 UTC 2013 i686 Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz GenuineIntel GNU/Linux
 
-随后，你就可以随意的根据你的习惯，去部署你的一切。当然如果你觉得 vbox 笨重的话，Vagrant + CoreOS + docker 是一个非常好的解决方案。
+随后，你就可以随意的根据你的习惯，去部署你的一切。当然如果你觉得 vbox 笨重的话，docker 是一个非常好的解决方案。
 
 #### 三. 配置
 

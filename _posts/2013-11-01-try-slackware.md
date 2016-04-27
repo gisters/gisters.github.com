@@ -108,8 +108,9 @@ edit `/etc/slackpkg/slackpkg.conf`
 
 配置自己常用的 prompt，单独拿出来说，主要是 Slackware 默认的 git 居然不包含 git-promt.sh。需要单独下载并 source 它
 
-    wget https://raw.github.com/git/git/master/conrtib/completion/git-promt.sh -O .bash_git
-    echo ". ~/.bash_git" >> ~/.bashrc
+    $ curl -o .bash_git https://raw.github.com/git/git/master/conrtib/completion/git-promt.sh
+    $ echo ". ~/.bash_git" >> ~/.bashrc
+    $ . .bashrc
 
 edit `~/.bashrc`
 
@@ -119,7 +120,3 @@ edit `~/.bashrc`
 最后 `source ~/.bashrc` 即可
 
 PS：由于 Slackware 不能很好的处理依赖，对一些选择安装的同学，经常出现某某包不存在的情况，给个连接，缺少的包去哪里找包名：[ftp://slackbuilds.org/14.1/TAGS.txt](ftp://slackbuilds.org/14.1/TAGS.txt)
-
-PS1：最近弃用海外邮箱，转用163、qq邮箱，再也受不了那鸟速度，放着现成的资源不用，非要去折腾去彰显自己的自由意识？哥过了那年纪了。至于安全问题，这是社会化工程问题，有安全意识更重要。
-
-PS2：什么时候才能将自己的台机转成UEFI + LVM ( Windows8 + Gentoo ) 方案呢，最近在考虑方案中。主要是当前 Gentoo 的N年的数据问题。

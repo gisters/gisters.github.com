@@ -2,7 +2,7 @@
 layout: post
 title: "El Capitan 中 SIP 介绍"
 category: Mac
-tags: [OS X, SIP, Clover]
+tags: [SIP, Clover]
 ---
 
 这两天大家纷纷将 OS X 系统升级到了 El Capitan，然后发现，一些注入的工具无法使用了，某些系统目录无法使用了，第三方未签名的 kext 无法加载了，问题一堆堆的。这是因为，Mac OS X 在 10.11 中全面启用了 System Integrity Protection (SIP) —— 系统完整性保护技术。
@@ -72,7 +72,7 @@ csrutil 的一些常用命令
 
 `<key>RtVariables</key>` 跟 `<key>SMBIOS</key>` 同级，如下图
 
-![Clover config.plist](http://cdn.09hd.com/images/2015/10/clover-config.png)
+![Clover config.plist]({{ site.cdn }}/images/2015/10/clover-config.png)
 
 其中 **CsrActiveConfig** 的值 0x 后跟的是十六进制，Clover 中我们完全开启的值是 **0x77**，其中 77 转化为两进制为 **01110111**。
 

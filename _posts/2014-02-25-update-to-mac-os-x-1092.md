@@ -5,7 +5,7 @@ category: Mac
 tags: [SSL]
 ---
 
-![00](//cdn.09hd.com/images/2014/02/update0.png)
+![00]({{ site.cdn }}/images/2014/02/update0.png)
 
 OS X 10.9.2 在经过 7 个测试版后，终于迎来了正式版，在 SSL 安全漏洞引起大家恐慌的时候，苹果适时的退出了更新。不过在 App Store 里面还没有更新提示，可以直接到苹果官网去[下载](http://support.apple.com/kb/DL1725?viewlocale=zh_CN)。
 
@@ -31,16 +31,16 @@ OS X 10.9.2 在经过 7 个测试版后，终于迎来了正式版，在 SSL 安
 发布日期：2014-2-25
 文件大小：859.7 MB
 
-![01](//cdn.09hd.com/images/2014/02/update1.png)
+![01]({{ site.cdn }}/images/2014/02/update1.png)
 
-![02](//cdn.09hd.com/images/2014/02/update2.png)
+![02]({{ site.cdn }}/images/2014/02/update2.png)
 
-![03](//cdn.09hd.com/images/2014/02/update3.png)
+![03]({{ site.cdn }}/images/2014/02/update3.png)
 
-![04](//cdn.09hd.com/images/2014/02/update4.png)
+![04]({{ site.cdn }}/images/2014/02/update4.png)
 
-![05](//cdn.09hd.com/images/2014/02/update5.png)
+![05]({{ site.cdn }}/images/2014/02/update5.png)
 
-![06](//cdn.09hd.com/images/2014/02/update6.png)
+![06]({{ site.cdn }}/images/2014/02/update6.png)
 
-![07](//cdn.09hd.com/images/2014/02/update7.png)
+![07]({{ site.cdn }}/images/2014/02/update7.png)

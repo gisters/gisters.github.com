@@ -5,7 +5,7 @@ category: Linux
 tags: [KVM, Kernel, Virtual]
 ---
 
-![kvm-xp](//cdn.09hd.com/images/2011/08/kvm-xp.png "kvm-xp")
+![kvm-xp]({{ site.cdn }}/images/2011/08/kvm-xp.png "kvm-xp")
 
 KVM(Kernel-based Virtual Machine) 是一个全虚拟化的解决方案，它自 2.6.20 以后正式成为 Linux 内核的一部分，也就是说，它是 Linux 内核官方支持的一个虚拟化方案。KVM 的硬件需求是 CPU 必须支持虚拟化，对于 Intel CPU 来说是 Intel VT，AMD CPU 则是 AMD-V。
 
@@ -48,7 +48,7 @@ Raw：
 
     dd if=/dev/zero of=/path/to/winxp.img bs=1024K count=4000
 
-![kvm-gentoo](//cdn.09hd.com/images/2011/08/kvm-gentoo.png "kvm-gentoo")
+![kvm-gentoo]({{ site.cdn }}/images/2011/08/kvm-gentoo.png "kvm-gentoo")
 
 - qemu-img： qemu 磁盘文件程序,主要用来创建、检查、转换等。
 - creat： 创建一个新的磁盘文件。

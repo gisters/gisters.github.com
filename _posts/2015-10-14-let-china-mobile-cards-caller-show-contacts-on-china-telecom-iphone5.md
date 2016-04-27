@@ -13,7 +13,7 @@ tags: [iPhone, iOS]
 
 #### 解决 +86 问题，来电不显示通讯录名
 
-下载附件： [Default.phoneformat.zip](http://cdn.09hd.com/images/2015/10/Default.phoneformat.zip)，解压缩后替换掉 `/System/Library/PrivateFrameworks/AppSupport.framework/Default.phoneformat`。
+下载附件： [Default.phoneformat.zip]({{ site.cdn }}/images/2015/10/Default.phoneformat.zip)，解压缩后替换掉 `/System/Library/PrivateFrameworks/AppSupport.framework/Default.phoneformat`。
 
     $ ssh root@ip
     # cd /System/Library/PrivateFrameworks/AppSupport.framework

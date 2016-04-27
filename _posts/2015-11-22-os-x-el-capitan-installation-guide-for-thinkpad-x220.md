@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "ThinkPad X220 安装黑苹果 OS X El Capitan"
+title: "ThinkPad X220 安装黑苹果 macOS"
 category: Mac
-tags: [ThinkPad, OS X]
+tags: [ThinkPad]
 ---
 
 手上的 ThinkPad X220 黑苹果已经用了一段时间了，博客中关于黑苹果介绍的文章并不多，一直想写一篇，今天周末，正好有空，就开写。
 
-![X220 El Capitan](http://cdn.09hd.com/images/2015/11/x220_El_Capitan.jpg)
+![X220 El Capitan]({{ site.cdn }}/images/2015/11/x220_El_Capitan.jpg)
 
 <!-- more -->
 
@@ -132,6 +132,10 @@ tags: [ThinkPad, OS X]
 16. 如果 iMessage 与 FaceTime 登陆 appid 后正常了，则可以重新隐藏默认隐藏的文件或文件夹了
     - `$ defaults write com.apple.finder AppleShowAllFiles`
     - `killall Finder`
+
+三. 已知问题
+
+- 关机变重启
 
 参考：
 

@@ -8,9 +8,11 @@
 
   <!-- fav and touch icons  -->
   <link rel="shortcut icon" href="{{ site.assets_path }}/images/favicon.png">
-  <link rel="apple-touch-icon" href="{{ site.assets_path }}/images/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.assets_path }}/images/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.assets_path }}/images/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" href="{{ site.assets_path }}/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.assets_path }}/images/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.assets_path }}/images/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.assets_path }}/images/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.assets_path }}/images/apple-touch-icon-180x180.png">
 
   <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html,'' }}">
   <link rel="stylesheet" href="{{ site.assets_path }}/css/style.css" media="all">
@@ -25,8 +27,11 @@
 
   <script>
     var domain = "havee.me";
+    var targetProtocol = "https:"
     var current = ["www.havee.me", "hae.coding.me"];
     for ( var i = 0; i < current.length; i++ ) {
+      //if ( document.location.host == current[i] || document.location.protocol != targetProtocol ) {
+        //document.location.href = targetProtocol + "\/\/" + domain + this.location.pathname;
       if ( document.location.host == current[i] ) {
         document.location.href = "\/\/" + domain + this.location.pathname;
       }
