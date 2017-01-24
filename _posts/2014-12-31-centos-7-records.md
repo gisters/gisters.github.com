@@ -86,7 +86,7 @@ tags: [Nginx, PHP, PHP-FPM, SQL, Tips, CentOS]
 
 确认下 sshd 服务
 
-    # ss -tnlp | grep sshd
+    # ss -alnptu | grep sshd
 
 #### Nginx
 

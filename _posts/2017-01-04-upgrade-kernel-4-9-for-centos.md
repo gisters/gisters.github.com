@@ -39,9 +39,25 @@ Linux Tovalds 于 2016 年 12 月 11 日发布了 Kernel 4.9 正式版本，带�
 
     yum --enablerepo=elrepo-kernel install kernel-ml
 
-当然，将 kernel-ml 选为第一启动
+当然，将 kernel-ml 选为第一启动，首先查看系统的内核以及顺序
 
-    grub2-set-default 0
+    awk -F\' '$1=="menuentry " {print i++ " : " $2}' /etc/grub2.cfg
+
+看下你当前默认启动项
+
+    grub2-editenv list
+
+将 kernel-ml 版本的内核设置为默认启动内核
+
+    grub2-set-default N
+
+以后升级内核默认启用 kernel-ml，编辑文件 `/etc/sysconfig/kernel`
+
+    DEFAULTKERNEL=kernel-ml
+
+同时编辑文件 `/etc/sysconfig/kernel`，在 `[elrepo-kernel]` 下
+
+    enabled=1
 
 重启后，通过 `uname -a` 查看内核是否切换到 4.9，譬如我的
 

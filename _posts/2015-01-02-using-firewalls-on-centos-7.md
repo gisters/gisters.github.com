@@ -225,6 +225,40 @@ eth0 存在与 public zone，将该网卡添加至 work zone，并将之从 publ
 
     # firewall-cmd --permanent --add-rich-rule="rule family='ipv4' source address='222.222.222.222' reject"
 
+当然，我们仍然可以通过 ipset 来封禁 ip
+
+封禁 ip
+
+    # firewall-cmd --permanent --zone=public --new-ipset=blacklist --type=hash:ip
+    # firewall-cmd --permanent --zone=public --ipset=blacklist --add-entry=222.222.222.222
+
+封禁网段
+
+    # firewall-cmd --permanent --zone=public --new-ipset=blacklist --type=hash:net
+    # firewall-cmd --permanent --zone=public --ipset=blacklist --add-entry=222.222.222.0/24
+
+导入 ipset 的 blacklist 规则
+
+    # firewall-cmd --permanent --zone=public --new-ipset-from-file=/path/blacklist.xml
+
+如果已经存 blacklist，则需要先删除
+
+    # firewall-cmd --get-ipsets
+    blacklist
+    # firewall-cmd --permanent --zone=public --delete-ipset=blacklist
+
+然后封禁 blacklist
+
+    # firewall-cmd --permanent --zone=public --add-rich-rule='rule source ipset=blacklist drop'
+
+重新载入以生效
+
+    # firewall-cmd --reload
+
+查看 blacklist
+
+    # firewall-cmd --ipset=blacklist --get-entries
+
 以上都是一些常用方法，更多高级方法，请参考：
 
 - <https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/sec-Using_Firewalls.html>

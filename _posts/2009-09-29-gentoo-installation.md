@@ -79,7 +79,8 @@ tags: [Gentoo, CLI, Lerning]
 挂载/proc和/dev文件系统
 
     # mount -t proc none /mnt/gentoo/proc
-    # mount -o bind /dev /mnt/gentoo/dev
+    # mount --rbind /sys /mnt/gentoo/sys
+    # mount --rbind /dev /mnt/gentoo/dev
 
 chroot到新环境里
 

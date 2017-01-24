@@ -35,7 +35,7 @@ collections:
 # comment
 comments:
     duoshuo:
-        name: havanna
+        name:
         rcomments:
             num: 10
             avatar: 0

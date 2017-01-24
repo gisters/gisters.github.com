@@ -6,7 +6,6 @@ sudo: false
 
 rvm:
   - 2.3.0
-  - 2.0.0
 
 branches:
   only:

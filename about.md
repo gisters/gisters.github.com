@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "About"
+title: "关于"
 description: "业余爱好的点滴记录，同时作为配置备份的存储地，好记性不如滥笔头。"
 ---
 
@@ -27,8 +27,3 @@ description: "业余爱好的点滴记录，同时作为配置备份的存储地
 
 <span style="color:red;">**注意：**</span>如果你喜欢本站样式，欢迎 clone or fork，同时，由于本博客的样式由 Jekyll 内置 SCSS 预处理器直接生成 css，所以，你可能需要阅读 [《使用 Jekyll 内置的 Sass 预处理器》]({% post_url 2014-09-15-use-built-in-sass-with-jekyll %}) 这篇文章。
 
-{% if site.comments.duoshuo.name %}
-<div id="comments">
-  <div class="ds-thread" data-thread-key="/about.html" data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}" data-url="{{ site.url }}{{ page.url }}"></div>
-</div>
-{% endif %}
