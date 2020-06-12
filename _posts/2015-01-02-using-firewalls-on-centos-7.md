@@ -7,7 +7,7 @@ tags: [Firewall, Usage, CentOS]
 
 在 CentOS 7 中，引入了一个新的服务，**Firewalld**，下面一张图，让大家明确的了解 Firewall 与 iptables 之间的关系与区别。
 
-![firewall stack]({{ site.cdn }}/images/2015/01/firewall_stack.png)
+![firewall stack](/cdn/images/2015/01/firewall_stack.png)
 
 <!-- more -->
 

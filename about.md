@@ -12,7 +12,7 @@ description: "业余爱好的点滴记录，同时作为配置备份的存储地
     - 给每篇文章加了二维码显示
 - 2014 年 08 月
     - 放弃 JB，转为 Jekyll
-    - 重新制作了模板 <https://github.com/iHavee/ihavee.github.io>
+    - 重新制作了模板 <https://github.com/vgist/vgist.github.io>
     - 适配移动终端
 - 2013 年 09 月
     - 域名切换到 Havee.me

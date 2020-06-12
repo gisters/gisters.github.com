@@ -3,29 +3,24 @@ layout: null
 title: {{ page.title | xml_escscape }}
 ---
 
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
     <channel>
-        <title><![CDATA[{{ site.title }}]]></title>
-        <image>
-            <url>{{ site.assets_path }}/images/favicon.png</url>
-            <title><![CDATA[{{ site.title }}]]></title>
-            <link>{{ site.url }}</link>
-        </image>
-        <description><![CDATA[{{ site.description }}]]></description>
+        <title>{{ site.title | xml_escscape }}</title>
         <link>{{ site.url }}</link>
-        <author>{{ site.author.name }}</author>
+        <description>{{ site.description | xml_escape }}</description>
+        <author>{{ site.author.name | xml_escape }}</author>
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
         <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
         <ttl>1800</ttl>
 
         {% for post in site.posts limit:10 %}
         <item>
-            <title><![CDATA[{{ post.title }}]]></title>
-            <description>{{ post.content | xml_escape }}</description>
-            <link>{{ site.url }}{{ post.url }}</link>
-            <guid>{{ site.url }}{{ post.id }}</guid>
-            <category><![CDATA[{{ post.category }}]]></category>
+            <title>{{ post.title | xml_escape }}</title>
+            <link>{{ post.url | prepend: site.url }}</link>
+            <description>{{ post.content | escape | truncate: '400' }}</description>
+            <guid>{{ post.id | prepend: site.url }}</guid>
+            <category>{{ post.category | xml_escape }}</category>
             <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         </item>
         {% endfor %}

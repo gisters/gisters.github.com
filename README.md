@@ -1,10 +1,8 @@
-[![Build Status](https://travis-ci.org/iHavee/iHavee.github.io.svg?branch=sources)](https://travis-ci.org/iHavee/iHavee.github.io)
-
 ### Generic
 
-#### require:
+#### Requirement:
 
-- jekyll >= 3.0.3
+- jekyll >= 3.9.0
 - jekyll-paginate >= 1.1.0
 
 #### Create new post
@@ -17,7 +15,7 @@
 
     rake page name='about.html'
 
-#### Define your color
+#### Define colour
 
 Edit the file:  `assets/_sass/_custom.scss`
 
@@ -36,7 +34,6 @@ Then, follow tips to do
     docker exec -ti jekyll rake post title='A Title'
     or
     docker exec -ti jekyll rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
-    ...
 
 #### License
 

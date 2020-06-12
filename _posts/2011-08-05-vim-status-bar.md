@@ -5,7 +5,7 @@ category: Linux
 tags: [Vim, Usage, Configuration]
 ---
 
-![utf8-bomb]({{ site.cdn }}/images/2011/08/utf8-bomb.png "utf8-bomb")
+![utf8-bomb](/cdn/images/2011/08/utf8-bomb.png "utf8-bomb")
 
 玩无损音乐，其中接触到 `.cue` 的索引文件，由于 windows 与 linux 默认的文件编码差异，导致我本地的 `.cue` 全部转为 utf-8 编码，但是如此则共享给其他 PT fans 时，出现了问题。
 

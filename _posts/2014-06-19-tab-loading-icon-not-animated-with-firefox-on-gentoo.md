@@ -11,7 +11,7 @@ tags: [Firefox]
 
 <!-- more -->
 
-Archlinux 的 bug report 上的解决方案是在 userChrome.css 中替换个 loading.png 的图片，下载图片 [firefox-loading]({{ site.cdn }}/images/2014/06/firefox-loading.png)，并置入 Firefox 的 profiles 下的 chrome 文件夹中。
+Archlinux 的 bug report 上的解决方案是在 userChrome.css 中替换个 loading.png 的图片，下载图片 [firefox-loading](/cdn/images/2014/06/firefox-loading.png)，并置入 Firefox 的 profiles 下的 chrome 文件夹中。
 
 编辑 userChrome.css 文件，添加如下：
 

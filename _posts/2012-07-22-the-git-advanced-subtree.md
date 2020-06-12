@@ -27,7 +27,7 @@ tags: [Git, Usage]
 #### 2. 增加一个 subtree bash
 
     $ git remote add bash git@github.com:Ihavee/bash.git        # 可以理解为远程仓库的别名
-    $ git subtree add pull -P home/.bash bash master --squash   # 拉取远程仓库 bash 到本地仓库的home/.bash 目录。
+    $ git subtree add -P home/.bash bash master --squash   # -P 指定本地目录，--squash 获取子项目最近一次commit。
 
 嗯，就是如此的简单。
 

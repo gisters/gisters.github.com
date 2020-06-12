@@ -5,7 +5,7 @@ category: Linux
 tags: [MuPDF]
 ---
 
-![MuPDF]({{ site.cdn }}/images/2011/10/Mupdf.png "Mupdf")
+![MuPDF](/cdn/images/2011/10/Mupdf.png "Mupdf")
 
 <!-- more -->
 

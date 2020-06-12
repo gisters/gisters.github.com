@@ -16,7 +16,7 @@ layman 是 Gentoo 下的一款管理第三方 overlay 工具，通过 layman 可
 具体需要开启哪些 use flag，完全是根据各 overlay 用哪种工具维护的，譬如 git、cvs、subversion、mercurial 等等。
 
 <!-- more -->
-layman 的配置非常方便，几乎不用介入修改。譬如作为中文区用户，安装 layman 以后，都会增加一个 overlay：
+layman 的配置非常方便，几乎不用介入修改。譬如作为中文区用户，安装 layman 以后，基本都会增加一个 overlay：
 
     layman -f -a gentoo-zh
 
@@ -56,9 +56,9 @@ sync-uri = git://github.com/microcai/gentoo-zh.git
 
 对于 app-portage/layman-2.3.0 之前升级上来的用户而言，如果之前就添加了各个 overlay，那么通过 `layman-updater -R` 重建一下即可。
 
-很多 Gentoo user 喜欢自己维护一个个人的 overlay，添加进去也很方便，譬如我的：
+很多 Gentoo user 喜欢自己维护一个个人的 overlay，添加进去也很方便：
 
-    layman -o https://raw.githubusercontent.com/Ihavee/overlay/master/repositories.xml -f -a Havee
+    layman -o https://raw.githubusercontent.com/user/overlay-name/master/repositories.xml -f -a overlay-name
 
 当然 repositories.xml 必须包含如下的基本信息：
 
@@ -66,13 +66,14 @@ sync-uri = git://github.com/microcai/gentoo-zh.git
 <?xml version="1.0" ?>
 <repositories version="1.0">
     <repo priority="50" quality="experimental" status="unofficial">
-    <name>Havee</name>
-    <description>Havee's gentoo overlay</description>
-    <homepage>http://github.com/Ihavee/overlay</homepage>
+    <name>overlay name</name>
+    <description>personal overlay</description>
+    <homepage>http://github.com/user/overlay-name</homepage>
     <owner>
-        <email>registerdedicated@yeah.net</email>
+        <email>name@domain.com</email>
+        <name>user</name>
     </owner>
-    <source type="git">git://github.com/Ihavee/overlay.git</source>
+    <source type="git">git://github.com/user/overlay-name.git</source>
     </repo>
 </repositories>
 ```

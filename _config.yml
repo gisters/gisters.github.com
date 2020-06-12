@@ -1,6 +1,6 @@
 # Site settings
 title: "Havee's Space"
-url: "//havee.me"
+url: "https://havee.me"
 paginate: 5
 author:
     name: Havee
@@ -11,17 +11,16 @@ author:
     facebook:
     googleplus:
     weibo:
-atom_path: /atom.xml
 rss_path: /rss.xml
 
 # Build settings
 kramdown:
     input: GFM
 permalink: /:categories/:year-:month/:title.html
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 exclude: [Gemfile, Gemfile.lock, qrsync, Rakefile, README.md, docker-compose.yml]
 assets_path: /assets
-cdn: "//cdn.09hd.com"
+cdn:
 sass:
     sass_dir: assets/_sass
     style: :compressed
@@ -47,7 +46,7 @@ comments:
 # 网站统计
 analytics:
     baidu:
-        siteid: 625169d97c95b10732a31bbe33aa305d        # 百度统计 js 代码后的字符串
+        siteid:         # 百度统计 js 代码后的字符串
 webmaster:
     baidu:
         verify: BvD3CNBzK6

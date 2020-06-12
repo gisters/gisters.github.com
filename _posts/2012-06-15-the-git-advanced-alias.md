@@ -43,13 +43,13 @@ tags: [Git, Usage]
 
     $ git config --global alias.l "log --stat --decorate --abbrev-commit --max-count=3"
 
-![git l]({{ site.cdn }}/images/2012/06/git-l.png "git l")
+![git l](/cdn/images/2012/06/git-l.png "git l")
 
 那么以后只需 `git l` 即可得到你所需要的信息。上图现在很清晰明了了吧，什么？还是凌乱，看得头晕乎？那么再来个规则点的
 
     git config --global alias.ll "log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset' --decorate --abbrev-commit --max-count=20"
 
-![git ll]({{ site.cdn }}/images/2012/06/git-ll.png "git ll")
+![git ll](/cdn/images/2012/06/git-ll.png "git ll")
 
 通过 `git ll` 来查看，感觉怎么样了？
 

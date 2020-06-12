@@ -22,9 +22,6 @@ tags: [Gentoo, Packager]
 #! /usr/bin/env sh
 #
 # depend.sh
-# Copyright (C) 2014 Havee <registerdedicated(at)yeah.net>
-#
-# Distributed under terms of the GPLv3 license.
 #
 # Depends on app-portage/pfl
 #

@@ -5,7 +5,7 @@ category: Linux
 tags: [DeadBeef, Patch]
 ---
 
-![DeadBeef]({{ site.cdn }}/images/2011/11/deadbeef.png "DeadBeef")
+![DeadBeef](/cdn/images/2011/11/deadbeef.png "DeadBeef")
 
 用了 linux 平台的同学自然知道，音乐的 id 信息与 windows 平台有些不兼容，这是由于大陆 M$ windows 平台采用的是 gb2312 编码，而 linux 采用的是 UTF-8 编码，由此，在 linux 下播放 windows 平台下的音乐文件，id 信息自然就乱码了。
 

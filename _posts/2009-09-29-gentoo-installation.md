@@ -96,11 +96,11 @@ OK，准备工作完成。
 
 增加一个用户
 
-    #useradd -m -G users danny
+    #useradd -m -G users username
 
 设置用户密码
 
-    #passwd danny
+    #passwd username
 
 更新Portage树
 
@@ -179,7 +179,7 @@ OK，准备工作完成。
 
 这里我显示的是
 
-    lrwxrwxrwx    1 root   root    22 Oct 5 06:07 /usr/src/linux -> linux-2.6.30-gentoo-r6
+    lrwxrwxrwx    1 root   root    22 Oct 5 06:07 /usr/src/linux -> linux-2.6.24-gentoo-r5
 
 检查下你的内核配置选项
 
@@ -212,7 +212,7 @@ OK，准备工作完成。
     timeout 30
     title Gentoo Linux 2.6.24-r5
     root (hd0,0)
-    kernel /boot/kernel-2.6.30-gentoo-r6 root=/dev/sda3
+    kernel /boot/kernel-2.6.24-gentoo-r5 root=/dev/sda3
     title Gentoo Linux 2.6.24-r5 (rescue)
     root (hd0,0)
     kernel /boot/kernel-2.6.30-gentoo-r6 root=/dev/sda3 init=/bin/bb

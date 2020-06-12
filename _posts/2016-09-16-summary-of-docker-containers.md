@@ -22,7 +22,7 @@ Docker 已经成熟并被大量的应用到生产环境，所以概念部分就�
 
 Docker 的出现，并非是为了取代 Virtual Machine，前者是为了 devops，后者则是为了统一开发环境。Docker 是一个容器，底层的实现是利用下层操作系统内核提供的功能，是进程级别的。而 VM 则是完全的虚拟化，底层则基本是虚拟机，下图是一个极简的对比图。
 
-![Docker VS VM]({{ site.cdn }}/images/2010/09/docker-vs-vm.png)
+![Docker VS VM](/cdn/images/2016/09/docker-vs-vm.png)
 
 #### 使用方法
 
@@ -240,6 +240,71 @@ xhost 是用来控制 X server 访问权限的。通常当你从 hostA 登陆到
     xhost +inet:user@domain: 使 domain 上的 inet 用户能够访问
     xhost +local:wheel: 使本地用户wheel 能够访问
 
+#### 镜像导入导出
+
+    docker save imageID -o name.tar
+    docker load -i name.tar
+    docker tag imageID name:tag
+
+#### 容器导入导出
+
+    docker export containerID > name.tar
+    docker import name.tar
+    docker tag imageID name:tag
+
+
+
+#### 群集模式
+
+swarm 在现在的 docker 中是内建的，直接可以开启
+
+创建
+
+    docker swarm init
+    docker swarm join-token worker
+    docker swarm join-token manager
+
+让其他 docker 加入该集群，可以按照提示操作，可以选择加入 worker 还是 manager
+
+如果有防火墙，注意开启如下防火墙端口
+
+| 协议 | 端口 | 描述 |
+|:----|:-----|:-------------|
+| tcp | 2377 | 集群管理通信 |
+| tcp & udp  | 7946 | 节点间通信 |
+| udp | 4789 | overlay 网络 |
+| esp | all  | overlay 加密网络 |
+
+譬如 iptables
+
+    iptables -A INPUT -p tcp -m conntrack --ctstate NEW -m tcp --dport 2377 -j ACCEPT
+    iptables -A INPUT -p udp -m conntrack --ctstate NEW -m udp --dport 4789 -j ACCEPT
+    iptables -A INPUT -p tcp -m conntrack --ctstate NEW -m tcp --dport 7946 -j ACCEPT
+    iptables -A INPUT -p udp -m conntrack --ctstate NEW -m udp --dport 7946 -j ACCEPT
+    iptables -A INPUT -p esp -j ACCEPT
+
+譬如 nftables
+
+    nft add rule inet filter input tcp dport 2377 accept
+    nft add rule inet filter input udp dport 4789 accpet
+    nft add rule inet filter input tcp dport 7946 accpet
+    nft add rule inet filter input udp dport 7946 accept
+    nft add rule inet filter input ip protocol esp accept
+
+#### dockerhub
+
+登陆 dockerhub 网站，获取 access tokens 后
+
+    echo xxxxxxxxxxxxxxxx | docker login -u username --password-stdin
+
+打开试验性功能，方便 buildx 等试验性功能
+
+    ~/.docker/config.json
+    {
+        "experimental": "enabled"
+    }
+
+
 未完待续......
 
-参考：<https://docs.docker.com>
+参考： <https://docs.docker.com>

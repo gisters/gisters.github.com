@@ -104,79 +104,79 @@ Pygments 样式默认提供了 monokai、manni、rrt、perldoc、borland、color
 
 - monokai
 
-![monokai]({{ site.cdn }}/images/2013/08/pygments-monokai.png)
+![monokai](/cdn/images/2013/08/pygments-monokai.png)
 
 - manni
 
-![manni]({{ site.cdn }}/images/2013/08/pygments-manni.png)
+![manni](/cdn/images/2013/08/pygments-manni.png)
 
 - rrt
 
-![rrt]({{ site.cdn }}/images/2013/08/pygments-rrt.png)
+![rrt](/cdn/images/2013/08/pygments-rrt.png)
 
 - perldoc
 
-![perldoc]({{ site.cdn }}/images/2013/08/pygments-perldoc.png)
+![perldoc](/cdn/images/2013/08/pygments-perldoc.png)
 
 - borland
 
-![borland]({{ site.cdn }}/images/2013/08/pygments-borland.png)
+![borland](/cdn/images/2013/08/pygments-borland.png)
 
 - colorful
 
-![colorful]({{ site.cdn }}/images/2013/08/pygments-colorful.png)
+![colorful](/cdn/images/2013/08/pygments-colorful.png)
 
 - default
 
-![default]({{ site.cdn }}/images/2013/08/pygments-default.png)
+![default](/cdn/images/2013/08/pygments-default.png)
 
 - murphy
 
-![murphy]({{ site.cdn }}/images/2013/08/pygments-murphy.png)
+![murphy](/cdn/images/2013/08/pygments-murphy.png)
 
 - vs
 
-![vs]({{ site.cdn }}/images/2013/08/pygments-vs.png)
+![vs](/cdn/images/2013/08/pygments-vs.png)
 
 - trac
 
-![trac]({{ site.cdn }}/images/2013/08/pygments-trac.png)
+![trac](/cdn/images/2013/08/pygments-trac.png)
 
 - tango
 
-![tango]({{ site.cdn }}/images/2013/08/pygments-tango.png)
+![tango](/cdn/images/2013/08/pygments-tango.png)
 
 - fruity
 
-![fruity]({{ site.cdn }}/images/2013/08/pygments-fruity.png)
+![fruity](/cdn/images/2013/08/pygments-fruity.png)
 
 - autumn
 
-![autumn]({{ site.cdn }}/images/2013/08/pygments-autumn.png)
+![autumn](/cdn/images/2013/08/pygments-autumn.png)
 
 - bw
 
-![bw]({{ site.cdn }}/images/2013/08/pygments-bw.png)
+![bw](/cdn/images/2013/08/pygments-bw.png)
 
 - emacs
 
-![emacs]({{ site.cdn }}/images/2013/08/pygments-emacs.png)
+![emacs](/cdn/images/2013/08/pygments-emacs.png)
 
 - vim
 
-![vim]({{ site.cdn }}/images/2013/08/pygments-vim.png)
+![vim](/cdn/images/2013/08/pygments-vim.png)
 
 - pastie
 
-![pastie]({{ site.cdn }}/images/2013/08/pygments-pastie.png)
+![pastie](/cdn/images/2013/08/pygments-pastie.png)
 
 - friendly
 
-![friendly]({{ site.cdn }}/images/2013/08/pygments-friendly.png)
+![friendly](/cdn/images/2013/08/pygments-friendly.png)
 
 - native
 
-![native]({{ site.cdn }}/images/2013/08/pygments-native.png)
+![native](/cdn/images/2013/08/pygments-native.png)
 
 参考：
 

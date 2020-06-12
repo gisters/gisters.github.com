@@ -7,7 +7,7 @@ tags: [ThinkPad]
 
 手上的 ThinkPad X220 黑苹果已经用了一段时间了，博客中关于黑苹果介绍的文章并不多，一直想写一篇，今天周末，正好有空，就开写。
 
-![X220 El Capitan]({{ site.cdn }}/images/2015/11/x220_El_Capitan.jpg)
+![X220 El Capitan](/cdn/images/2015/11/x220_El_Capitan.jpg)
 
 <!-- more -->
 

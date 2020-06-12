@@ -63,23 +63,15 @@ tags: [Tips]
 
 下载一个 app，[CursorSense](http://plentycom.jp/en/cursorsense/download.php "CursorSense")
 
-![CursorSense]({{ site.cdn }}/images/2014/01/CursorSense.png)
+![CursorSense](/cdn/images/2014/01/CursorSense.png)
 
-#### 四. GoAgent
-
-关于 Proxy，有很多开源的解决方案，譬如 Goagent
-
-- [Homebrew 脚本 GoAgent ]({% post_url 2014-05-23-homebrew-formula-for-goagent %})
-- [OS X 上使用 GoAgent]({% post_url 2013-12-20-use-goagent-on-os-x %})
-- [CentOS 下打包 shadowsocks-libev]({% post_url 2014-08-20-package-shadowsocks-libev-on-centos %})
-
-#### 五. 开源软件
+#### 四. 开源软件
 
 可以通过 [MacPorts](http://www.macports.org)、[HomeBrew]({% post_url 2013-12-21-how-to-install-and-use-homebrew %}) 等包管理工具来使用开源软件。
 
 譬如[《OS X 上安装 Nginx + PHP-FPM + MariaDB》]({% post_url 2014-01-06-install-nginx-php-fpm-mysql-on-os-x %})
 
-#### 六. 重启 Finder
+#### 五. 重启 Finder
 
     $ killall Finder
 
@@ -87,7 +79,7 @@ tags: [Tips]
 
 Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，点击无线图标，则可以显示具体的无线网络状况。
 
-#### 七. 提示声
+#### 六. 提示声
 
 按住 Shift 键再调节音量，即可临时静音调节
 
@@ -99,7 +91,7 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
     $ defaults write com.apple.PowerChime ChimeOnAllHardware -bool false; killall PowerChime
 
-#### 八. 刷新 DNS 缓存
+#### 七. 刷新 DNS 缓存
 
 针对 OS X 10.4、10.5
 
@@ -121,7 +113,7 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
     $ sudo killall -HUP mDNSResponder
 
-#### 九. 视频播放
+#### 八. 视频播放
 
 尝试过 N 个播放器，包括收费的射手播放器在内都不太好用，最后确定以下几款视频播放器
 
@@ -129,15 +121,15 @@ Option 键，顾名思义，具体选项的键，譬如按住 Option 键后，�
 
 原汁原味的 Linux 下 Mplayer 的使用体验，强烈推荐，fork 自 mplayer2 与 Mplayer。
 
-![MPV screenshot]({{ site.cdn }}/images/2014/01/mpv.png)
+![MPV screenshot](/cdn/images/2014/01/mpv.png)
 
 ##### 2. [MPlayer OSX Extended](//mplayerosx.ch) 
 
 Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时间。
 
-![MPlayer OSX Extended]({{ site.cdn }}/images/2014/01/mplayer-osx.png)
+![MPlayer OSX Extended](/cdn/images/2014/01/mplayer-osx.png)
 
-![MPlayer OSX Preferences]({{ site.cdn }}/images/2014/01/mplayer-osx-preferences.png)
+![MPlayer OSX Preferences](/cdn/images/2014/01/mplayer-osx-preferences.png)
 
 ##### 3. [MplayerX](//mplayerx.org)
 
@@ -147,39 +139,51 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
 
 ###### a. 收费的 [Mac Blu-ray Player](//www.macblurayplayer.com)
 
-![Mac Blu-ray Player]({{ site.cdn }}/images/2014/01/mac-blu-ray-player.png)
+![Mac Blu-ray Player](/cdn/images/2014/01/mac-blu-ray-player.png)
 
 ###### b. 免费的 [XBMC](//kodi.tv/)
 
-![XBMC]({{ site.cdn }}/images/2014/01/xbmc.png)
+![XBMC](/cdn/images/2014/01/xbmc.png)
 
-#### 十. 生僻的快捷键
+#### 九. 终端快捷键
 
-- Ctrl + a/e：移动至行首/尾
-- Ctrl + l：清除屏幕
-- Ctrl + u：清除当前行
-- Ctrl + k：清除至当前行尾
-- Ctrl + w：向前删除一个单词
-- Ctrl + y：粘贴用 Ctrl + w/k/u 删除的单词
-- Option + right/left：向右/左移动一个单词
-- Fn + up/down：相当于 Page up/down
-- Ctrl + Command + f：全屏，仅支持右上角双箭头的窗口
-- Ctrl + Command + d：取词翻译
+MacOS 终端默认也是使用 emacs 编辑模式，如果想尝试 vi 编辑模式，可以通过 `set -o vi`来设置。
 
-#### 十一.  特殊符号
+    $ echo $SHELLOPTS
+    braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor
+    $ set -o vi
+    $ echo $SHELLOPTS
+    braceexpand:hashall:histexpand:history:interactive-comments:monitor:vi
+
+emacs 编辑模式下一些常用的快捷键
+
+|命令|说明|命令|说明
+|Ctrl + a|移动到行首|Ctrl + e|移动到行尾
+|Ctrl + f|按字符右移|Ctrl + b|按字符左移
+|Esc + f|按单词右移|Option + b|按单词左移
+|Ctrl + u|从光标处剪切至行首|Ctrl +k| 从光标处剪切至行尾
+|Ctrl + w|从光标处向左剪切单词|Option + d|从光标处向右剪切单词
+|Ctrl + d|删除光标处的字符|Ctrl + h|删除光标签的字符
+|Ctrl + ]|从光标处向后搜索字符|Ctrl + Option + ]|从当前光标处向前搜索字符
+|Ctrl + y|粘贴至光标后|!$|显示系统最近的一条参数
+|↑(Ctrl + p)|显示上一条命令|↓(Ctrl + n)|显示下一条命令
+
+MacOS 的键盘为非标准键盘，需要在Apple Terminal的设置面板里将“使用option键作为meta键”勾上。详细的 MacOS 终端快捷键，可以访问官网：<https://support.apple.com/zh-cn/guide/terminal/trmlshtcts/mac>
+
+#### 十.  特殊符号
 
 - 版权符号：Option + G = ©
 - 人名币符号：Option + Y = ￥
 - 商标符号：Option + 2 = ™
 - 已注册的商标：Option + R = ®
 
-#### 十二. 清理右键菜单
+#### 十一. 清理右键菜单
 
 用了段时间后，右键菜单就开始臃肿不堪，有时会冒出重复项，打开终端，输入
 
     $ /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -seed -r -f -v -domain local -domain user -domain system; killall Finder
 
-#### 十三. 重建 Launchpad
+#### 十二. 重建 Launchpad
 
     $ defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 
@@ -195,7 +199,7 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
     $ defaults delete com.apple.dock springboard-columns
     $ killall Dock
 
-#### 十四. app 归类
+#### 十三. app 归类
 
 用了段时间会发现，app目录存在两个地方，一个是用户家目录 `~/Applications`，一个是根目录 `/Applications`。
 
@@ -203,7 +207,7 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
 
 同样，能直接在 app store 安装的就直接安装，其次使用 HomeBrew 去安装病自动 ln 到 `~/Applications` 目录。
 
-#### 十五. 截屏
+#### 十四. 截屏
 
 - Command + Shift + 3：全屏
 - Command + Shift + 4：窗口
@@ -243,31 +247,31 @@ Mplayer OSX Extended 是个非常不错的视频播放器，使用过一段时�
     $ defaults write com.apple.screencapture "include-date" 0
     $ killall SystemUIServer
 
-#### 十六. Mail.app 撰写邮件附件显示
+#### 十五. Mail.app 撰写邮件附件显示
 
     $ defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes/no
     $ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true/false
 
-#### 十七. 查看应用沙盒状态
+#### 十六. 查看应用沙盒状态
 
 譬如查看 Mac App Store 安装的 QQ
 
     $ codesign --display --entitlements - /Applications/QQ.app
 
-#### 十八. 恢复 Spotlight 窗口位置
+#### 十七. 恢复 Spotlight 窗口位置
 
 OS X 10.11 中，Spotlight 可以移动位置，那么恢复默认位置的方法为
 
     $ defaults delete com.apple.Spotlight userHasMovedWindow
 
-#### 十九. 关闭 MobileBackups
+#### 十八. 关闭 MobileBackups
 
 你可能发现了，`/Volumes` 下挂载了 **MobileBackups**，去不去掉无所谓，这是快照的本地镜像，开启与关闭的方法
 
     $ sudo tmutil disablelocal
     $ sudo tmutil enablelocal
 
-#### 二十. 移除隐私定位中的残留项
+#### 十九. 移除隐私定位中的残留项
 
 需要编辑文件 `/var/db/locationd/clients.plist`，防止意外，你可以现备份到另外地方，注意权限，location 文件夹属于 `_locationd` 的用户用户组。
 
@@ -285,7 +289,7 @@ OS X 10.11 中，Spotlight 可以移动位置，那么恢复默认位置的方�
     # plutil -convert binary1 clients.plist
     # killall locationd
 
-#### 二十一. HostName 修改
+#### 二十. HostName 修改
 
 用了一段时间，偶尔发现，HostName 多了个后缀，譬如原来的 HostName 设置为 Havee，一段时间后变成了 Havee-2，一直搞不清为什么会这样，于是打开终端设置下
 
@@ -299,8 +303,15 @@ OS X 10.11 中，Spotlight 可以移动位置，那么恢复默认位置的方�
     $ scutil --get LocalHostName
     $ scutil --get HostName
 
-#### 二十二. Safari 显示 status bar
+#### 二一. Safari 显示 status bar
 
 是否开启原生 Safari 状态栏
 
     $ defaults write com.apple.Safari ShowStatusBar -bool true/false
+
+#### 二二. 打开 terminal.app 缓慢
+
+清理下日志
+
+    $ sudo rm /private/var/log/asl/*.asl
+

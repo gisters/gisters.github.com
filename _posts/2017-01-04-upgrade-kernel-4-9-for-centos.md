@@ -55,7 +55,7 @@ Linux Tovalds 于 2016 年 12 月 11 日发布了 Kernel 4.9 正式版本，带�
 
     DEFAULTKERNEL=kernel-ml
 
-同时编辑文件 `/etc/sysconfig/kernel`，在 `[elrepo-kernel]` 下
+同时编辑文件 `/etc/yum.repo.d/elrepo.repo`，在 `[elrepo-kernel]` 下
 
     enabled=1
 
@@ -77,6 +77,15 @@ Linux Tovalds 于 2016 年 12 月 11 日发布了 Kernel 4.9 正式版本，带�
 查看 tcp_bbr 模块是否加载：
 
     lsmod | grep tcp_bbr
+
+#### 重新生成 rescue 镜像
+
+这一步不是必须的。
+
+确认下 `/usr/lib/dracut/dracut.conf.d/02-rescue.conf` 中的 `dracut_rescue_image` 是否为 `yes`，然后：
+
+    rm -f /boot/vmlinuz-0-rescue-* /boot/initramfs-0-rescue-*.img
+    /etc/kernel/postinst.d/51-dracut-rescue-postinst.sh $(uname -r) /boot/vmlinuz-$(uname -r)
 
 ##### Gentoo Kernel
 

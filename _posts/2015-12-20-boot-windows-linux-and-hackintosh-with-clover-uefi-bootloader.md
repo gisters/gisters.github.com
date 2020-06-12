@@ -7,7 +7,7 @@ tags: [Clover, EFI]
 
 这两天花了点时间，将 windows 10 & Gentoo 所在的硬盘全部换成 gpt，然后全部由 Clover 来引导。我本机的情况是，windows 10 & Gentoo 共用一块 SSD，黑苹果单独一块 SSD。
 
-![Clover UEFI]({{ site.cdn }}/images/2015/12/clover.jpg)
+![Clover UEFI](/cdn/images/2015/12/clover.jpg)
 
 <!-- more -->
 

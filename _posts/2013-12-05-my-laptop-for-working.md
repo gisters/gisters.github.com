@@ -7,7 +7,7 @@ tags: [Laptop]
 
 不知何时起，对自己的工作机越来越不满，屏幕太小，有时几个终端一开，就开始不停 ctrl_tab 切换中度过，i3 处理器落后，一个自定义的 F5 编译键就干等，4GB 内存，开个 chromium 浏览器因为内存耗尽而在一下午重启两次，不知道能干啥。
 
-![Desktop]({{ site.cdn }}/images/2013/12/desktop.jpg)
+![Desktop](/cdn/images/2013/12/desktop.jpg)
 
 <!-- more -->
 
@@ -19,6 +19,6 @@ tags: [Laptop]
 
 上月折腾了下 emacs，太不习惯了，按键记不住，结果 emacs 的配置文件仍然用 vim 来写，感觉自己太挫了点。
 
-![Browser]({{ site.cdn }}/images/2013/12/browser.jpg)
+![Browser](/cdn/images/2013/12/browser.jpg)
 
 纯抱怨，今年最后一次发发牢骚，准备调整心态，积极面对年尾及其新的一年。

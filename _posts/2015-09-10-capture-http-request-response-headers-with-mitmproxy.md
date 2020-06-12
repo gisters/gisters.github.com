@@ -7,7 +7,7 @@ tags: [Proxy]
 
 之前使用的是 Wireshark 进行 HTTP 的一些分析，功能很全面，不过有些大材小用。同类型的简化工具其实很多，甚至 Firefox & Google Chrome 本身就自带，只是浏览器自带的工具又无法满足我们的需求，下面介绍下 [mitmproxy](http://mitmproxy.org) 工具，简单又不失强大。
 
-![mitmproxy 1]({{ site.cdn }}/images/2015/09/mitmproxy-1.png)
+![mitmproxy 1](/cdn/images/2015/09/mitmproxy-1.png)
 
 <!-- more -->
 mitmproxy 是一款基于 Python，支持 ssl 的中间人代理框架，他提供了一个控制台用于动态拦截和编辑 HTTP/HTTPS 数据包。官方介绍：
@@ -32,10 +32,10 @@ mitmproxy 包含 3 款工具：
 
 在 Request/Response 界面按 `e` 键进入编辑，`m` 键进入显示模式选择，`tab` 键切换 Request/Response/Detail。
 
-![mitmproxy 1]({{ site.cdn }}/images/2015/09/mitmproxy-2.png)
+![mitmproxy 1](/cdn/images/2015/09/mitmproxy-2.png)
 
-![mitmproxy 1]({{ site.cdn }}/images/2015/09/mitmproxy-3.png)
+![mitmproxy 1](/cdn/images/2015/09/mitmproxy-3.png)
 
-![mitmproxy 1]({{ site.cdn }}/images/2015/09/mitmproxy-4.png)
+![mitmproxy 1](/cdn/images/2015/09/mitmproxy-4.png)
 
 详情请参考：<http://mitmproxy.org/doc/index.html>

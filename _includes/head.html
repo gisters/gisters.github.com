@@ -18,8 +18,7 @@
   <link rel="stylesheet" href="{{ site.assets_path }}/css/style.css" media="all">
 
   <!-- atom & rss feed -->
-  <link href="{{ site.rss_path }}" type="application/rss+xml" rel="alternate" title="{{ site.title }} RSS Feed">
-  <link href="{{ site.atom_path }}" type="application/atom+xml" rel="alternate" title="{{ site.title }} ATOM Feed">
+  <link rel="alternate" type="application/rss+xml" href="{{ site.rss_path | prepend: site.url }}" title="{{ site.title }} RSS Feed">
 
   {% if site.webmaster.baidu.verify %}<meta name="baidu-site-verification" content="{{ site.webmaster.baidu.verify }}" />{% endif %}
   {% if site.webmaster.google.verify %}<meta name="google-site-verification" content="{{ site.webmaster.google.verify }}" />{% endif %}

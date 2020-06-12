@@ -42,7 +42,7 @@ tags: [Gentoo, Arch, Android]
 
 来下载最新的 platform-tools 工具包如下图所示
 
-![Android SDK Platform Tools]({{ site.cdn }}/images/2012/06/android-sdk-platform-tools.png "Android SDK Platform Tools")
+![Android SDK Platform Tools](/cdn/images/2012/06/android-sdk-platform-tools.png "Android SDK Platform Tools")
 
 最后加入 udev 规则（不是必须，如果 lsusb 能认到你安卓设备的话）。ATTR{idVendor} 信息，即厂商的设备号，可以通过这个地址来查询：[http://developer.android.com/tools/device.html#VendorIds](http://developer.android.com/tools/device.html#VendorIds)
 
@@ -58,7 +58,7 @@ tags: [Gentoo, Arch, Android]
 
 即可看到你的手机了
 
-![adb shell]({{ site.cdn }}/images/2012/06/adb-shell.png "adb shell")
+![adb shell](/cdn/images/2012/06/adb-shell.png "adb shell")
 
 如果你有手机 root 权限，想要对手机进行一些操作
 

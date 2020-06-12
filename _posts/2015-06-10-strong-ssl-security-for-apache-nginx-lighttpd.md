@@ -78,7 +78,7 @@ Forward Secrecy 也加上，终端运行：
 
 最后，你可以去 [SSL Labs](https://www.ssllabs.com/ssltest/) 跑下域名，过段时间回来看看你的 SSL Server 得分。
 
-![SSL LABS]({{ site.cdn }}/images/2015/06/SSL-LABS.png)
+![SSL LABS](/cdn/images/2015/06/SSL-LABS.png)
 
 参考：
 

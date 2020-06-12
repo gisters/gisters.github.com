@@ -319,9 +319,9 @@ alias mysql.restart='mysql.stop && mysql.start'
 
 搞定，收工！
 
-![nginx localhost]({{ site.cdn }}/images/2014/01/localhost.jpg)
+![nginx localhost](/cdn/images/2014/01/localhost.jpg)
 
-![php info]({{ site.cdn }}/images/2014/01/phpinfo.jpg)
+![php info](/cdn/images/2014/01/phpinfo.jpg)
 
 #### 五. 其他
 

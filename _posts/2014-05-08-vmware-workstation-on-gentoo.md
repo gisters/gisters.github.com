@@ -29,7 +29,7 @@ Gentoo 的 Portage 系统本身就有 VMware Player 的 ebuild，安装很简单
 
 安装说明，打 3 个补丁，再 patch 一下 ebuild，随后顺利安装。
 
-![Windows 8.1 on VMware]({{ site.cdn }}/images/2014/05/vmware-windows.png)
+![Windows 8.1 on VMware](/cdn/images/2014/05/vmware-windows.png)
 
 当然，期间因为 ati 闭源驱动更新，重新编译下 kernel。由于我的显卡是 radeon hd 7850，芯片代号为 **PITCAIRN**，于是
 

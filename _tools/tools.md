@@ -12,5 +12,5 @@ layout: page
   </span>
   <input class="form-control" name="regcode" type="text" id="regcode" placeholder="output your code" readonly="readonly" />
 </div>
-<script src="//cdn.09hd.com/js/epkeygen.js"></script>
+<script src="/cdn/js/epkeygen.js"></script>
 

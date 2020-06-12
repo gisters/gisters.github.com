@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta content="charset=utf-8" />
-<title>身份证号码生成器</title>
+---
+title: "身份证号码"
+layout: page
+---
 
-</head>
-
-<body onload="YYYYMMDDstart(document.form1,document.form1.SYear,document.form1.SMonth,document.form1.SDay),YYYYMMDDstart(document.form1,document.form1.EYear,document.form1.EMonth,document.form1.EDay)">
 <form name="form1">
     <input type="hidden" value="select" name="action">
     <div>
@@ -28,14 +24,10 @@
 </form>
 <div class="rNo" id="rNo"></div>
 
-<script language="javascript" src="//cdn.09hd.com/js/id-gen.js"></script>
+<script language="javascript" src="/cdn/js/id-gen.js"></script>
 <script language="javascript">
-new PCAS("p","c","r","110000-北京市","110100-市辖区","110101-东城区");
+    window.onload = function(){
+        YYYYMMDDstart(document.form1,document.form1.SYear,document.form1.SMonth,document.form1.SDay),YYYYMMDDstart(document.form1,document.form1.EYear,document.form1.EMonth,document.form1.EDay)
+    }
+    new PCAS("p","c","r","110000-北京市","110100-市辖区","110101-东城区");
 </script>
-</body>
-</html>
-
-
-
-
-
